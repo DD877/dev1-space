@@ -1,0 +1,168 @@
+<mvc:View controllerName="com.merckgroup.Moet_O2C_OrderCreation_UI5.controller.Home" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:uxap="sap.uxap" xmlns:smartTable="sap.ui.comp.smarttable" xmlns:table="sap.ui.table" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
+    <Page showHeader="false">
+        <landmarkInfo>
+            <PageAccessibleLandmarkInfo rootRole="Region" rootLabel="{i18n>Home_rootLabel}" contentRole="Main" contentLabel="{i18n>Home_contentLabel}" />
+        </landmarkInfo>
+        <HeaderContainer scrollStep="200">
+            <TileContent footer="{i18n>Draft}">
+                <content>
+                    <NumericContent value="{jsonCount>/Draft}" valueColor="Critical" class="critical" icon="sap-icon://create" press="press" />
+                </content>
+            </TileContent>
+            <TileContent footer="{i18n>Created/TobeApproved}">
+                <content>
+                    <NumericContent value="{jsonCount>/Approve}" class="normal" icon="sap-icon://accept" press="pressAppr" />
+                </content>
+            </TileContent>
+            <TileContent footer="{i18n>Confirmed/Transferred}">
+                <content>
+                    <NumericContent value="{jsonCount>/Confirm}" class="normal" icon="sap-icon://approvals" press="pressTran" />
+                </content>
+            </TileContent>
+            <TileContent footer="{i18n>Order Tracking}">
+                <content>
+                    <NumericContent value="{jsonCount>/Confirm}" class="normal" icon="sap-icon://approvals" press="pressTrack" />
+                </content>
+            </TileContent>
+        </HeaderContainer>
+        <l:BlockLayout id="BlockLayout" background="Default">
+            <l:BlockLayoutRow>
+                <l:BlockLayoutCell backgroundColorSet="ColorSet6" backgroundColorShade="ShadeD">
+                    <HBox width="100%" class="homeHbox">
+                        <HBox width="100%" class="homeHbox1">
+                            <VBox width="100%" id="vizFrameDonut" class="vizbg" />
+                        </HBox>
+                        <HBox width="100%" justifyContent="Center" class="homeHbox2" alignItems="Center">
+                            <GenericTile header="{i18n>PlaceanOrder}" visible="{jsonHomeVisible>/visible}" subheader="" frameType="OneByOne" class="sapUiLargeMarginBegin sapUiMarginTop neworder" press="handlePressOpenNewOrderPage">
+                                <tileContent>
+                                    <TileContent footer="{i18n>NewOrderCreation}" unit="">
+                                        <content>
+                                            <ImageContent src="sap-icon://create" />
+                                        </content>
+                                    </TileContent>
+                                </tileContent>
+                            </GenericTile>
+                        </HBox>
+                    </HBox>
+                </l:BlockLayoutCell>
+            </l:BlockLayoutRow>
+            <l:BlockLayoutRow>
+                <l:BlockLayoutCell backgroundColorSet="ColorSet6" backgroundColorShade="ShadeA" width="2">
+                    <smartTable:SmartTable
+                        id="smartTableHome"
+                        persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.SOTracking.SmartTable"
+                        enableAutoBinding="true"
+                        enableCustomFilter="false"
+                        entitySet="OrderHeaderDetails"
+                        tableType="Table"
+                        useExportToExcel="false"
+                        useVariantManagement="false"
+                        useTablePersonalisation="true"
+                        header="{i18n>Orders}"
+                        showRowCount="true"
+                        initialise="onAfterSmartTableInitialize"
+                        beforeRebindTable="onBeforeRebindTable"
+                        showFullScreenButton="true"
+                        beforeExport="onBeforeDataExport"
+                        dataReceived="onDataReceived"
+                        ignoreFromPersonalisation=""
+                        requestAtLeastFields="ZORD_STATUS,ZINTR_ORDNUM,ZORD_NUM"
+                        class="stable"
+                        initiallyVisibleFields="ZCUST_NUM"
+                    >
+                        <smartTable:customToolbar>
+                            <OverflowToolbar design="Transparent">
+                                <ToolbarSpacer />
+                            </OverflowToolbar>
+                        </smartTable:customToolbar>
+                        <table:Table id="atablePr" rowActionCount="1" selectionMode="None">
+                            <table:columns>
+                                <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZINTR_ORDNUM" width="10rem" filterProperty="ZINTR_ORDNUM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZINTR_ORDNUM", "leadingProperty":"ZINTR_ORDNUM", "sortProperty": "ZINTR_ORDNUM", "filterProperty": "ZINTR_ORDNUM"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>InternalOrderNumber}" />
+                                    <table:template>
+                                        <Text text="{ZINTR_ORDNUM}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZCUST_PONUM" width="10rem" filterProperty="ZCUST_PONUM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZCUST_PONUM", "leadingProperty":"ZCUST_PONUM", "sortProperty": "ZCUST_PONUM", "filterProperty": "ZCUST_PONUM"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>PONumber}" />
+                                    <table:template>
+                                        <Text text="{ZCUST_PONUM}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZORD_NUM" width="8rem" filterProperty="ZORD_NUM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZORD_NUM", "leadingProperty":"ZORD_NUM", "sortProperty": "ZORD_NUM", "filterProperty": "ZORD_NUM"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>SalesDocumentNo}" />
+                                    <table:template>
+                                        <Text text="{ZORD_NUM}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZCREATED_BY" width="5rem" filterProperty="ZCREATED_BY" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZCREATED_BY", "leadingProperty":"ZCREATED_BY", "sortProperty": "ZCREATED_BY", "filterProperty": "ZCREATED_BY"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>User}" />
+                                    <table:template>
+                                        <Text text="{ZCREATED_BY}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZCUST_NUM" width="6rem" filterProperty="ZCUST_NUM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZCUST_NUM", "leadingProperty":"ZCUST_NUM", "sortProperty": "ZCUST_NUM", "filterProperty": "ZCUST_NUM"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>Customer}" />
+                                    <table:template>
+                                        <Text text="{ZCUST_NUM}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column autoResizable="true" visible="false" hAlign="Begin" sortProperty="ZSHIP_PRTY" width="6rem" filterProperty="ZSHIP_PRTY" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZSHIP_PRTY", "leadingProperty":"ZSHIP_PRTY", "sortProperty": "ZSHIP_PRTY", "filterProperty": "ZSHIP_PRTY"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>ShiptoParty}" />
+                                    <table:template>
+                                        <Text text="{ZSHIP_PRTY}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZTOTAL_AMT" width="8rem" filterProperty="ZTOTAL_AMT" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZTOTAL_AMT", "leadingProperty":"ZTOTAL_AMT", "sortProperty": "ZTOTAL_AMT", "filterProperty": "ZTOTAL_AMT"}' />
+                                    </table:customData>
+                                    <Label text="Total Amount" />
+                                    <table:template>
+                                        <Text text="{parts:[{path:'ZTOTAL_AMT'},'EUR'],formatter:'.formatter.numberUnit'}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZORDER_STATUS_TEXT" width="8rem" filterProperty="ZORDER_STATUS_TEXT" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZORDER_STATUS_TEXT", "leadingProperty":"ZORDER_STATUS_TEXT", "sortProperty": "ZORDER_STATUS_TEXT", "filterProperty": "ZORDER_STATUS_TEXT"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>OrderStatus}" />
+                                    <table:template>
+                                        <Text text="{ZORDER_STATUS_TEXT}" />
+                                        <!-- {path: 'ZORDER_STATUS_TEXT', formatter:'.formatter.colorChange'} -->
+                                    </table:template>
+                                </table:Column>
+                            </table:columns>
+                            <table:rowActionTemplate>
+                                <table:RowAction>
+                                    <table:RowActionItem icon="sap-icon://edit" visible="{= (${ZORD_STATUS} === 'DRFT') || (${ZORD_STATUS} === 'SNOR') ? true : false}" text="Edit" press="onEditPress" />
+                                    <!--<table:RowActionItem icon="sap-icon://delete" text="Edit" press="onDeletePress"></table:RowActionItem>-->
+                                    <table:RowActionItem class="approveIcon" icon="sap-icon://detail-view" visible="{= (${ZORD_STATUS} === 'SNOA') ? true : false}" text="View" press="onPressApproveOrder" />
+                                    <table:RowActionItem icon="sap-icon://detail-view" visible="{= (${ZORD_STATUS} === 'ORCR') ? true : false}" text="Confirm" press="onPressConfirmHome" />
+                                </table:RowAction>
+                            </table:rowActionTemplate>
+                        </table:Table>
+                    </smartTable:SmartTable>
+                </l:BlockLayoutCell>
+            </l:BlockLayoutRow>
+        </l:BlockLayout>
+    </Page>
+</mvc:View>

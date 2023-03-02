@@ -1,0 +1,63 @@
+{
+  "d": {
+    "results": [
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_CHAT_SRV/ChatItemSet(ObjectKey='051MdhHO7jQChGOEzodQw0',UDate=datetime'2016-07-26T23%3A10%3A30',UserId='CAHOSHINRE')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_CHAT_SRV/ChatItemSet(ObjectKey='051MdhHO7jQChGOEzodQw0',UDate=datetime'2016-07-26T23%3A10%3A30',UserId='CAHOSHINRE')",
+          "type": "1GTPT_CHAT_SRV.ChatItem"
+        },
+        "ObjectKey": "051MdhHO7jQChGOEzodQw0",
+        "UDate": "\/Date(1469574630000)\/",
+        "UserId": "CAHOSHINRE",
+        "Type": "Comment",
+        "ChatText": "GR was on July 5th.",
+        "FirstName": "Regis",
+        "LastName": "Hoshino",
+        "ChatHeader": {
+          "__deferred": {
+            "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_CHAT_SRV/ChatItemSet(ObjectKey='051MdhHO7jQChGOEzodQw0',UDate=datetime'2016-07-26T23%3A10%3A30',UserId='CAHOSHINRE')/ChatHeader"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_CHAT_SRV/ChatItemSet(ObjectKey='051MdhHO7jQChGOEzodQw0',UDate=datetime'2016-06-23T16%3A47%3A06',UserId='CATAMK')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_CHAT_SRV/ChatItemSet(ObjectKey='051MdhHO7jQChGOEzodQw0',UDate=datetime'2016-06-23T16%3A47%3A06',UserId='CATAMK')",
+          "type": "1GTPT_CHAT_SRV.ChatItem"
+        },
+        "ObjectKey": "051MdhHO7jQChGOEzodQw0",
+        "UDate": "\/Date(1466700426000)\/",
+        "UserId": "CATAMK",
+        "Type": "Log",
+        "ChatText": "Container 'HLBU1484861' mailed to below users:<octicon>name=email|color=#666666</octicon><octtext>kevin.behan@ca.nestle.com| keith.tam@ca.nestle.com</octtext>",
+        "FirstName": "Keith",
+        "LastName": "Tam",
+        "ChatHeader": {
+          "__deferred": {
+            "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_CHAT_SRV/ChatItemSet(ObjectKey='051MdhHO7jQChGOEzodQw0',UDate=datetime'2016-06-23T16%3A47%3A06',UserId='CATAMK')/ChatHeader"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_CHAT_SRV/ChatItemSet(ObjectKey='051MdhHO7jQChGOEzodQw0',UDate=datetime'2016-06-14T12%3A47%3A22',UserId='CABEHANK')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_CHAT_SRV/ChatItemSet(ObjectKey='051MdhHO7jQChGOEzodQw0',UDate=datetime'2016-06-14T12%3A47%3A22',UserId='CABEHANK')",
+          "type": "1GTPT_CHAT_SRV.ChatItem"
+        },
+        "ObjectKey": "051MdhHO7jQChGOEzodQw0",
+        "UDate": "\/Date(1465908442000)\/",
+        "UserId": "CABEHANK",
+        "Type": "Log",
+        "ChatText": "Kevin Behan updated the container number from Unidentified to HLBU1484861",
+        "FirstName": "Kevin",
+        "LastName": "Behan",
+        "ChatHeader": {
+          "__deferred": {
+            "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_CHAT_SRV/ChatItemSet(ObjectKey='051MdhHO7jQChGOEzodQw0',UDate=datetime'2016-06-14T12%3A47%3A22',UserId='CABEHANK')/ChatHeader"
+          }
+        }
+      }
+    ]
+  }
+}

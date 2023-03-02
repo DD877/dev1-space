@@ -1,0 +1,94 @@
+{
+    "OTCHealthCareReport": [
+        {
+            "__metadata": {
+                "type": "com.capgemini.moet.services.odata.moet.OTCHealthCareReportType",
+                "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/capgemini/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005099',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+            },
+            "ZSO_NO": "1200005099",
+            "ZDELIVERY_NO": "",
+            "ZCREATED_BY": "DD",
+            "ZSO_CREATED_DATE": "20210331",
+            "ZSOLD_TO_PARTY": "0210142853",
+            "Z_SOLD_TO_DESC": "ZAO-0000192362",
+            "ZSHIP_TO_PARTY": "0210142853",
+            "Z_SHIP_TO_DESC": "ZAO-0000192362",
+            "Z_SO_SORG": "DE50",
+            "ZHDR_STATUS": "OPENSO",
+            "CA_ZREQEST_DELV_DATE": "1626307200000",
+            "CA_ZDELV_DATE": "1626307200000"
+        },
+        {
+            "__metadata": {
+                "type": "com.capgemini.moet.services.odata.moet.OTCHealthCareReportType",
+                "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/capgemini/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005100',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+            },
+            "ZSO_NO": "1200005100",
+            "ZDELIVERY_NO": "",
+            "ZCREATED_BY": "DD",
+            "ZSO_CREATED_DATE": "20210331",
+            "ZSOLD_TO_PARTY": "0210142853",
+            "Z_SOLD_TO_DESC": "ZAO-0000192362",
+            "ZSHIP_TO_PARTY": "0210142853",
+            "Z_SHIP_TO_DESC": "ZAO-0000192362",
+            "Z_SO_SORG": "DE50",
+            "ZHDR_STATUS": "OPENSO",
+            "CA_ZREQEST_DELV_DATE": "1617235200000",
+            "CA_ZDELV_DATE": "1617235200000"
+        },
+        {
+            "__metadata": {
+                "type": "com.capgemini.moet.services.odata.moet.OTCHealthCareReportType",
+                "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/capgemini/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005101',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+            },
+            "ZSO_NO": "1200005101",
+            "ZDELIVERY_NO": "",
+            "ZCREATED_BY": "DD",
+            "ZSO_CREATED_DATE": "20210331",
+            "ZSOLD_TO_PARTY": "0210142853",
+            "Z_SOLD_TO_DESC": "ZAO-0000192362",
+            "ZSHIP_TO_PARTY": "0210142853",
+            "Z_SHIP_TO_DESC": "ZAO-0000192362",
+            "Z_SO_SORG": "DE50",
+            "ZHDR_STATUS": "OPENSO",
+            "CA_ZREQEST_DELV_DATE": "1617235200000",
+            "CA_ZDELV_DATE": "1617235200000"
+        },
+        {
+            "__metadata": {
+                "type": "com.capgemini.moet.services.odata.moet.OTCHealthCareReportType",
+                "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/capgemini/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005101',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+            },
+            "ZSO_NO": "1200005101",
+            "ZDELIVERY_NO": "",
+            "ZCREATED_BY": "DD",
+            "ZSO_CREATED_DATE": "20210331",
+            "ZSOLD_TO_PARTY": "0210142853",
+            "Z_SOLD_TO_DESC": "ZAO-0000192362",
+            "ZSHIP_TO_PARTY": "0210142853",
+            "Z_SHIP_TO_DESC": "ZAO-0000192362",
+            "Z_SO_SORG": "DE50",
+            "ZHDR_STATUS": "OPENSO",
+            "CA_ZREQEST_DELV_DATE": "1617235200000",
+            "CA_ZDELV_DATE": "1617235200000"
+        },
+        {
+            "__metadata": {
+                "type": "com.capgemini.moet.services.odata.moet.OTCHealthCareReportType",
+                "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/capgemini/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005101',ZSO_ITM_NO='000030',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+            },
+            "ZSO_NO": "1200005101",
+            "ZDELIVERY_NO": "",
+            "ZCREATED_BY": "DD",
+            "ZSO_CREATED_DATE": "20210331",
+            "ZSOLD_TO_PARTY": "0210142853",
+            "Z_SOLD_TO_DESC": "ZAO-0000192362",
+            "ZSHIP_TO_PARTY": "0210142853",
+            "Z_SHIP_TO_DESC": "ZAO-0000192362",
+            "Z_SO_SORG": "DE50",
+            "ZHDR_STATUS": "OPENSO",
+            "CA_ZREQEST_DELV_DATE": "1617235200000",
+            "CA_ZDELV_DATE": "1617235200000"
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+<core:FragmentDefinition xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:uxap="sap.uxap"
+	xmlns:table="sap.ui.table" xmlns:sl="sap.ui.comp.navpopover" xmlns:u="sap.ui.unified"
+	xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Dialog contentHeight="auto" contentWidth="90%" showHeader="false" resizable="false">
+		<uxap:ObjectPageLayout enableLazyLoading="true" headerContentPinnable="false" showTitleInHeaderContent="true" showHeaderContent="false"
+			class="newOrder" height="350px">
+			<uxap:headerTitle>
+				<uxap:ObjectPageHeader objectImageURI="/img/merck-logo.png" objectImageShape="Circle" objectTitle="" objectImageAlt=""
+					isObjectIconAlwaysVisible="true" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true" isActionAreaAlwaysVisible="true"
+					showPlaceholder="true" class="newOrderH">
+					<HBox justifyContent="End" width="100%" height="100%">
+						<Button icon="sap-icon://add" text="{i18n>ItemCategoryAssignment}" class="ordbtn sapUiSmallMarginEnd" press="onAssignItemCategoryPress"/>
+						<Button tooltip="{i18n>Close}" icon="sap-icon://decline" press="onAItemClose"/>
+					</HBox>
+				</uxap:ObjectPageHeader>
+			</uxap:headerTitle>
+			<uxap:sections>
+				<uxap:ObjectPageSection title="{i18n>ItemCategorytotheMaterial}">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection>
+							<table:Table class="shipclass" rows="{matItemAssignment>/}" rowActionCount="2" selectionMode="None" visibleRowCount="8"
+								ariaLabelledBy="title">
+								<table:columns>
+									<table:Column filterProperty="ZMAT_NUM" sortProperty="ZMAT_NUM" defaultFilterOperator="StartsWith">
+										<Label text="{i18n>Material}"/>
+										<table:template>
+											<Text text="{matItemAssignment>ZMAT_NUM}" wrapping="false"/>
+										</table:template>
+									</table:Column>
+									<table:Column filterProperty="ZITM_CATEGORY" sortProperty="ZITM_CATEGORY" defaultFilterOperator="StartsWith">
+										<Label text="{i18n>ItemCategory}"/>
+										<table:template>
+											<Text text="{matItemAssignment>ZITM_CATEGORY} - {path:'matItemAssignment>ZITM_CATEGORY',formatter:'.custFormatter.focSmplVal' }"
+												wrapping="false"/>
+										</table:template>
+									</table:Column>
+									<table:Column filterProperty="ZSYSTEM" sortProperty="ZSYSTEM" defaultFilterOperator="StartsWith">
+										<Label text="{i18n>System}"/>
+										<table:template>
+											<Text text="{= (${matItemAssignment>ZSYSTEM} === 'L') ? 'LEAN' : 'TEMPO'}"/>
+										</table:template>
+									</table:Column>
+									<!--<table:Column filterProperty="ZDEL_FLAG" sortProperty="ZDEL_FLAG" defaultFilterOperator="StartsWith">
+										<Label text="{i18n>DeletionFlag}"/>
+										<table:template>
+											<Text text="{matItemAssignment>ZDEL_FLAG}" wrapping="false"/>
+										</table:template>
+									</table:Column>-->
+									<table:Column  defaultFilterOperator="StartsWith">
+                                        <Label text="{i18n>DeletionFlag}"/>
+                                        <table:template>
+                                            <Switch change="onUpdateMaterialItem" enabled="{= (${matItemAssignment>ZDEL_FLAG} === 'X') ? true : false }" type="AcceptReject"
+                                                state="{= (${matItemAssignment>ZDEL_FLAG} === 'X') ? true : false }"/>
+                                        </table:template>
+                                    </table:Column>
+								</table:columns>
+								<table:rowActionTemplate>
+									<table:RowAction>
+										<table:items>
+											<table:RowActionItem icon="sap-icon://delete" text="{i18n>Delete}" press="onDeleteMaterialAssign"></table:RowActionItem>
+										</table:items>
+									</table:RowAction>
+								</table:rowActionTemplate>
+							</table:Table>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+			</uxap:sections>
+		</uxap:ObjectPageLayout>
+	</Dialog>
+</core:FragmentDefinition>

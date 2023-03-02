@@ -1,0 +1,25 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<ResponsivePopover id="myPopover" title="User Profile" class="sapUiPopupWithPadding respTitle" placement="Horizontal">
+		<content>
+			<VBox>
+				<HBox>
+					<Image src="/webapp/img/user.png" width="2em"/>
+					<VBox class="sapUiSmallMarginBegin">
+						<Label text="{oModel_UserInfo>/0/ZUSR_NAME}" design="Bold" class="respUser sapUiResponsivePadding"/>
+						<Label text="{oModel_UserInfo>/0/ZROLE_NAME}" class="respRole sapUiResponsivePadding"/>
+					</VBox>
+				</HBox>
+				<HBox class="sapUiTinyMarginTop">
+					<core:Icon src="sap-icon://email" class="size1" color="#031E48"></core:Icon>
+					<Label text="{oModel_UserInfo>/0/ZUSR_EMAILADD}" class="respEmail sapUiSmallMarginBegin sapUiResponsivePadding"/>
+				</HBox>
+			</VBox>
+			<VBox class="sapUiTinyMarginTop">
+				<HBox>
+					<Button text="Settings" icon="sap-icon://settings" class="sapUiSmallMarginBegin" press="fnSettingsPress"/>
+					<!--<Button text="Logout" icon="sap-icon://log" class="sapUiMediumMarginBegin" press="fnHandleUserMenuItemPress"/>-->
+				</HBox>
+			</VBox>
+		</content>
+	</ResponsivePopover>
+</core:FragmentDefinition>

@@ -1,0 +1,45 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+  xmlns:l="sap.ui.layout" xmlns="sap.m" xmlns:ux="sap.ui.ux3">
+  <ux:QuickView width="100%" class="batchQuickView"
+    showActionBar="false">
+    <ux:content>
+       <Panel class="overflowShowQV noHeaderHdr bgInheritBatch">
+                      <Table id="batchDetailTable" inset="false"
+                        items= "{ path: 'batchDtl>/BatchDetails' }">
+                        <columns>
+                          <Column width="25%">
+                            <Text text="{i18n>batch}" />
+                          </Column>
+                          <Column hAlign="Begin" width="15%">
+                            <Text class="desc" text="{i18n>qty}" />
+                          </Column>
+                          <Column hAlign="Center" width="25%">
+                            <Text class="desc" text="{i18n>prodDate}" />
+                          </Column>
+                          <Column hAlign="Center" width="20%">
+                            <Text class="desc" text="{i18n>SLED}" />
+                          </Column>
+                          <Column hAlign="Center" width="15%">
+                            <Text class="desc" text="{i18n>SLEDPerc}" />
+                          </Column>
+
+
+                        </columns>
+                        <items>
+                          <ColumnListItem type="Active">
+                            <cells>
+                              <Text text="{batchDtl>Batch}" />
+                              <!-- <Text text="{SKU}"/> -->
+                              <Text text="{parts:[{path:'batchDtl>OrderQty'},{path:'batchDtl>OrderUnit'}],formatter:'glb.gtmh.oct.util.Formatter.getOrderAndUnit'}" />
+                              <Text text="{path:'batchDtl>ProdDate',formatter:'glb.gtmh.oct.util.Formatter.formatDateBatchDtl'}" />
+                              <Text text="{path:'batchDtl>SLED',formatter:'glb.gtmh.oct.util.Formatter.formatDateBatchDtl'}" />
+                              <Text text="{batchDtl>SLEDPerc}%" />
+
+                            </cells>
+                          </ColumnListItem>
+                        </items>
+                      </Table>
+                    </Panel>
+                   </ux:content>
+  </ux:QuickView>
+</core:FragmentDefinition>

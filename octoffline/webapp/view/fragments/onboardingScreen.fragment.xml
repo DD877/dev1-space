@@ -1,0 +1,102 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+  xmlns:l="sap.ui.layout" xmlns="sap.m">
+  <Dialog class="sapUiPopupWithPadding overlayDialog strech"
+    showHeader="false" title="">
+    <content>
+      <Carousel class="carouselCenter" height="425px"
+        pageChanged="onOverlayPageChange" width="100%">
+        <pages>
+          <l:VerticalLayout class="sapUiLargeMarginTop">
+              <core:Icon src="sap-icon://decline" color="#666666" size="1rem" class="obCloseIcon" tooltip="{i18n>closeOB}" press="closeOnBoarding"></core:Icon>
+            <l:HorizontalLayout class="firstChildFloatLeft width80">
+              <!-- <Text class="sapUiSmallMarginBeginEnd sapUiSmallMarginTop text-large"
+                maxLines="1" text="{i18n>screen1Hdr}"></Text> -->
+              <Image src="img/OCT-1-Picture.png" />
+              <VBox class="sapUiLargeMarginTop secondChildLeftAlign">
+                <Text
+                  class="sapUiSmallMarginBeginEnd sapUiSmallMarginTop screenFirstFont2rem"
+                  maxLines="1" text="{i18n>OCT}"></Text>
+                <Text class="sapUiSmallMarginBegin sapUiTinyMarginTop font125" maxLines="1" text="{i18n>screenFirstOne}"></Text>
+              </VBox>
+
+              <!-- <Image height="180px" src="img/OCT-1.png" width="70%"/> -->
+            </l:HorizontalLayout>
+
+          </l:VerticalLayout>
+
+          <l:VerticalLayout class="overlayVL">
+
+            <Image height="220px" src="img/OCT-2-Picture.png" width="634px"
+              class="marginTop5" />
+            <Panel class="bgBlue overlayBase fontColorWhite" height="100%">
+              <HBox class="overlayIcons">
+                <Image src="" />
+                <Text class="marginBE8 sapUiSmallMarginTop" maxLines="2" text="{i18n>octMsg}"></Text>
+              </HBox>
+            </Panel>
+
+          </l:VerticalLayout>
+
+
+
+
+
+
+
+          <l:VerticalLayout class="overlayVL overlayVLIE">
+            <Image height="214px" src="img/OCT-3-Picture_new.png" width="634px"
+              class="marginTop5" />
+
+            <Panel class="bgGreen overlayBase fontColorWhite" height="100%">
+              <HBox class="overlayIcons overlayIcon2Pos">
+                <Image src="" />
+                <Text class="sapUiSmallMarginTop marginBE8" maxLines="3"
+                  text="{i18n>updMsg}"></Text>
+              </HBox>
+            </Panel>
+            <!-- <Button press="closeOnBoarding" text="{i18n>startNow}"></Button> -->
+          </l:VerticalLayout>
+
+
+
+
+          <l:VerticalLayout class="overlayVL">
+            <Image height="220px" src="img/OCT-4-Picture.png" width="646px"
+              class="marginTop5" />
+
+            <Panel class="bgPink overlayBase fontColorWhite" height="100%">
+              <HBox class="overlayIcons overlayIcon3Pos">
+                <Image src="" />
+                <Text class="sapUiSmallMarginTop marginBE8" maxLines="1"
+                  text="{i18n>signal}"></Text>
+              </HBox>
+            </Panel>
+            <!-- <Button press="closeOnBoarding" text="{i18n>startNow}"></Button> -->
+          </l:VerticalLayout>
+
+
+          <l:VerticalLayout class="overlayVL">
+            <HBox width="100%" class="imgOverlayPlacement">
+              <Image height="230px" src="img/OCT-5-Picture.png" width="600px" class="marginTop5 marginLeft10" />
+<!--              <Button press="closeOnBoarding" class="circleButton marginTop5_5" -->
+<!--                icon="sap-icon://accept" text=""></Button> -->
+                            <Image src="img/Tick.png" class="marginTop5OverLay cirPadOverlay" press="closeOnBoarding">
+
+                            </Image>
+            </HBox>
+            <Panel class="bgYellow overlayBase fontColorWhite" height="100%">
+
+              <HBox class="overlayIcons overlayIcon4Pos">
+                <Image src="" />
+
+                <Text class="sapUiSmallMarginTop marginBE8" maxLines="1"
+                  text="{i18n>chartTxt}"></Text>
+              </HBox>
+            </Panel>
+
+          </l:VerticalLayout>
+        </pages>
+      </Carousel>
+    </content>
+  </Dialog>
+</core:FragmentDefinition>

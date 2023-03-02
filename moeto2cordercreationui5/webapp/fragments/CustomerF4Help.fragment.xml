@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog noDataText="{i18n>No Data}" title="{i18n>SelectCustomer}" search="handleCustomerSearch" confirm="onPressCustomerValueListClose" cancel="onPressCustomerValueListClose"
+		items="{ path: '/EmployeeDetails' }">
+		<StandardListItem title="{USERID}" description="{FULL_NAME}" iconDensityAware="false" iconInset="false" type="Active"/>
+	</SelectDialog>
+</core:FragmentDefinition>

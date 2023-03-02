@@ -1,0 +1,167 @@
+<mvc:View
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    xmlns:f="sap.f"
+    xmlns:sv="sap.ui.comp.smartvariants"
+    xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:table="sap.ui.table"
+    controllerName="entrytool.controller.MaterialMaster"
+>
+    <f:DynamicPage class="custSOHTDynamicPage newOrder">
+        <f:title>
+            <f:DynamicPageTitle class="custDynPageTitle">
+                <f:heading>
+                    <Title text="{i18n>MaterialMaster}" />
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:header>
+            <f:DynamicPageHeader pinnable="false" class="custDynPageHeader">
+                <f:content>
+                    <smartFilterBar:SmartFilterBar
+                        id="sfbMaterialDetails"
+                        smartVariant="__SVM04"
+                        useToolbar="false"
+                        entitySet="MaterialDetails"
+                        persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.FilterBar"
+                        class="smfil"
+                        assignedFiltersChanged="onAssignedFiltersChanged"
+                        initialise="onAfterSmartFilterInitialize"
+                        liveMode="true"
+                    >
+                        <smartFilterBar:controlConfiguration>
+                            <smartFilterBar:ControlConfiguration key="Z_MATRL_NUM" label="{i18n>MaterialNumber}" visibleInAdvancedArea="true" />
+                            <smartFilterBar:ControlConfiguration key="ZMATRL_DESC" label="{i18n>MaterialDescription}" visibleInAdvancedArea="true" />
+                            <smartFilterBar:ControlConfiguration key="ZBASE_UNIT_MEASURE" label="{i18n>BaseUnit}" visibleInAdvancedArea="true" />
+                            <smartFilterBar:ControlConfiguration key="ZMIN_ORDER_QUAN" label="{i18n>MinimumOrderQuantity}" visibleInAdvancedArea="false" />
+                        </smartFilterBar:controlConfiguration>
+                    </smartFilterBar:SmartFilterBar>
+                </f:content>
+            </f:DynamicPageHeader>
+        </f:header>
+        <f:content>
+            <smartTable:SmartTable
+                id="smartTable"
+                smartVariant="__SVM03"
+                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.SmartTable"
+                enableAutoBinding="true"
+                enableCustomFilter="false"
+                entitySet="MaterialDetails"
+                smartFilterId="sfbMaterialDetails"
+                tableType="Table"
+                useExportToExcel="true"
+                useVariantManagement="true"
+                useTablePersonalisation="true"
+                header="{i18n>Materials}"
+                showRowCount="true"
+                initialise="onAfterSmartTableInitialize"
+                beforeRebindTable="onBeforeRebindTable"
+                showFullScreenButton="true"
+                beforeExport="onBeforeDataExport"
+                dataReceived="onDataReceived"
+                ignoreFromPersonalisation="ZMIN_ORDER_QUAN"
+                requestAtLeastFields="Z_MATRL_NUM"
+                class="stable"
+                initiallyVisibleFields=""
+            >
+                <smartTable:customToolbar>
+                    <OverflowToolbar design="Transparent">
+                        <ToolbarSpacer />
+                        <!--<Button text="export" press="onExportPress"/>-->
+                        <Button text="Download" icon="sap-icon://download" press="onExportAllData" class="ordbtn" />
+                        <Button icon="sap-icon://add" text="{i18n>AddMaterial}" class="ordbtn" press="onAddCMPress" />
+                    </OverflowToolbar>
+                </smartTable:customToolbar>
+                <table:Table id="atable" rowActionCount="2" fixedColumnCount="1" selectionMode="None" visibleRowCountMode="Auto">
+                    <table:columns>
+                        <table:Column hAlign="Begin" sortProperty="Z_MATRL_NUM" width="8rem" filterProperty="Z_MATRL_NUM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                            <table:customData>
+                                <core:CustomData key="p13nData" value='\{"columnKey": "Z_MATRL_NUM", "leadingProperty":"Z_MATRL_NUM", "sortProperty": "Z_MATRL_NUM", "filterProperty": "Z_MATRL_NUM"}' />
+                            </table:customData>
+                            <Label text="{i18n>MaterialNumber}" />
+                            <table:template>
+                                <Text text="{Z_MATRL_NUM}" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column hAlign="Begin" sortProperty="ZMATRL_DESC" width="10rem" filterProperty="ZMATRL_DESC" showFilterMenuEntry="true" showSortMenuEntry="true">
+                            <table:customData>
+                                <core:CustomData key="p13nData" value='\{"columnKey": "ZMATRL_DESC", "leadingProperty":"ZMATRL_DESC", "sortProperty": "ZMATRL_DESC", "filterProperty": "ZMATRL_DESC"}' />
+                            </table:customData>
+                            <Label text="{i18n>MaterialDescription}" />
+                            <table:template>
+                                <Text text="{ZMATRL_DESC}" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column hAlign="Begin" sortProperty="ZBASE_UNIT_MEASURE" width="6rem" filterProperty="ZBASE_UNIT_MEASURE" showFilterMenuEntry="true" showSortMenuEntry="true">
+                            <table:customData>
+                                <core:CustomData key="p13nData" value='\{"columnKey": "ZBASE_UNIT_MEASURE", "leadingProperty":"ZBASE_UNIT_MEASURE", "sortProperty": "ZBASE_UNIT_MEASURE", "filterProperty": "ZBASE_UNIT_MEASURE"}' />
+                            </table:customData>
+                            <Label text="{i18n>BaseUnit}" />
+                            <table:template>
+                                <Text text="{ZBASE_UNIT_MEASURE}" />
+                            </table:template>
+                        </table:Column>
+                        <!---->
+                        <table:Column hAlign="Begin" sortProperty="ZFROZEN_PERIOD" width="6rem" filterProperty="ZFROZEN_PERIOD" showFilterMenuEntry="true" showSortMenuEntry="true">
+                            <table:customData>
+                                <core:CustomData key="p13nData" value='\{"columnKey": "ZFROZEN_PERIOD", "leadingProperty":"ZFROZEN_PERIOD", "sortProperty": "ZFROZEN_PERIOD", "filterProperty": "ZFROZEN_PERIOD"}' />
+                            </table:customData>
+                            <Label text="{i18n>FrozenPeriod}" />
+                            <table:template>
+                                <Text text="{ZFROZEN_PERIOD}" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column hAlign="Begin" sortProperty="ZGRP_DEVLPR" width="8rem" filterProperty="ZGRP_DEVLPR" showFilterMenuEntry="true" showSortMenuEntry="true">
+                            <table:customData>
+                                <core:CustomData key="p13nData" value='\{"columnKey": "ZGRP_DEVLPR", "leadingProperty":"ZGRP_DEVLPR", "sortProperty": "ZGRP_DEVLPR", "filterProperty": "ZGRP_DEVLPR"}' />
+                            </table:customData>
+                            <Label text="Group Developer" />
+                            <table:template>
+                                <Text text="{ZGRP_DEVLPR}" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column hAlign="Begin" sortProperty="ZSYSTEM" width="6rem" filterProperty="ZSYSTEM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                            <table:customData>
+                                <core:CustomData key="p13nData" value='\{"columnKey": "ZSYSTEM", "leadingProperty":"ZSYSTEM", "sortProperty": "ZSYSTEM", "filterProperty": "ZSYSTEM"}' />
+                            </table:customData>
+                            <Label text="{i18n>System}" />
+                            <table:template>
+                                <Text text="{= (${ZSYSTEM} === 'L') ? 'LEAN' : 'TEMPO'}" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column hAlign="Begin" sortProperty="ZDEL_FLAG" width="8rem" filterProperty="ZDEL_FLAG" showFilterMenuEntry="true" showSortMenuEntry="true">
+                            <table:customData>
+                                <core:CustomData key="p13nData" value='\{"columnKey": "ZDEL_FLAG", "leadingProperty":"ZDEL_FLAG", "sortProperty": "ZDEL_FLAG", "filterProperty": "ZDEL_FLAG"}' />
+                            </table:customData>
+                            <Label text="{i18n>DeletionFlag}" />
+                            <table:template>
+                                <!--	<Text text="{ZDEL_FLAG}"/>-->
+                                <Switch change="onUpdateMaterial" enabled="{= (${ZDEL_FLAG} === 'X') ? true : false }" type="AcceptReject" state="{= (${ZDEL_FLAG} === 'X') ? true : false }" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column hAlign="Center" sortProperty="ZCHANGED_BY" width="10rem" showSortMenuEntry="true">
+                            <table:customData>
+                                <core:CustomData key="p13nData" value='\{"columnKey": "ZCHANGED_BY", "leadingProperty":"ZCHANGED_BY", "sortProperty": "ZCHANGED_BY"}' />
+                            </table:customData>
+                            <Label text="{i18n>AssignItemCategory}" />
+                            <table:template class="addect">
+                                <Button icon="sap-icon://add" tooltip="{i18n>AssignItemCategory}" press="onAItemPress" />
+                            </table:template>
+                        </table:Column>
+                    </table:columns>
+                    <table:rowActionTemplate>
+                        <table:RowAction>
+                            <table:items>
+                                <table:RowActionItem icon="sap-icon://edit" text="{i18n>Edit}" press="onEditPress" />
+                                <table:RowActionItem icon="sap-icon://delete" text="{i18n>Delete}" press="onDeleteMatPress" />
+                            </table:items>
+                        </table:RowAction>
+                    </table:rowActionTemplate>
+                </table:Table>
+            </smartTable:SmartTable>
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>

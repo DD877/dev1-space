@@ -1,0 +1,1052 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:micro="sap.suite.ui.microchart"
+    xmlns:suite="sap.suite.ui.commons"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:uxap="sap.uxap"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:sv="sap.ui.comp.smartvariants"
+    xmlns:table="sap.ui.table"
+    controllerName="com.merckgroup.Moet_O2C_OrderCreation_UI5.controller.AuditTrail"
+>
+    <uxap:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="true" headerContentPinnable="false" showTitleInHeaderContent="true" showHeaderContent="false" useIconTabBar="true" class="newOrder" sectionChange="onSectionCahnges">
+        <uxap:headerTitle>
+            <uxap:ObjectPageHeader
+                objectImageURI="/img/merck-logo.png"
+                objectImageShape="Circle"
+                objectTitle="{i18n>objTitelAuditTrail}"
+                objectImageAlt=""
+                isObjectIconAlwaysVisible="true"
+                isObjectTitleAlwaysVisible="true"
+                isObjectSubtitleAlwaysVisible="true"
+                isActionAreaAlwaysVisible="true"
+                showPlaceholder="true"
+                class="newOrderH tpfrm"
+            />
+        </uxap:headerTitle>
+        <uxap:sections>
+            <uxap:ObjectPageSection title="{i18n>objSectUserMaintenance}" class="bbm tpfrm" visible="{path: 'currentUser>/utype', formatter:'.USVisible'} ">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection>
+                        <VBox fitContainer="true">
+                            <smartFilterBar:SmartFilterBar
+                                id="SFBUserMaintenance"
+                                smartVariant="__SVM01"
+                                useToolbar="false"
+                                entitySet="UserMaitainLog"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.UserMaintenance.FilterBar"
+                                class="smfil"
+                                assignedFiltersChanged="onAssignedFiltersChanged"
+                                liveMode="true"
+                            >
+                                <smartFilterBar:controlConfiguration>
+                                    <smartFilterBar:ControlConfiguration key="FIELD_NAME" label="{i18n>FieldName}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="CREATED_BY" label="{i18n>ChangedBy}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="LOG_TIME" label="{i18n>LogTime}" visibleInAdvancedArea="true" conditionType="sap.ui.comp.config.condition.DateRangeType" />
+                                </smartFilterBar:controlConfiguration>
+                            </smartFilterBar:SmartFilterBar>
+                            <smartTable:SmartTable
+                                id="STUserMaintenance"
+                                smartVariant="__SVM01"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.UserMaintenance.SmartTable"
+                                enableAutoBinding="true"
+                                enableCustomFilter="false"
+                                entitySet="UserMaitainLog"
+                                smartFilterId="SFBUserMaintenance"
+                                tableType="Table"
+                                useExportToExcel="true"
+                                useVariantManagement="true"
+                                useTablePersonalisation="true"
+                                header="{i18n>UserMaintenanceLogs}"
+                                showRowCount="true"
+                                initialise="onAfterSmartTableInitialize"
+                                beforeRebindTable="onBeforeRebindTable"
+                                showFullScreenButton="true"
+                                beforeExport="onBeforeDataExport"
+                                dataReceived="onDataReceived"
+                                initiallyVisibleFields="ZUSR_ID,ZUSR_NAME,FIELD_NAME,OLD_VALUE,NEW_VALUE,LOG_TIME"
+                            >
+                                <table:Table rowActionCount="2" selectionMode="None">
+                                    <table:columns>
+                                        <table:Column autoResizable="true" hAlign="Begin" width="10rem" sortProperty="CREATED_BY" filterProperty="CREATED_BY" showFilterMenuEntry="false" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "CREATED_BY", "leadingProperty":"CREATED_BY", "sortProperty": "CREATED_ON", "columnIndex":"5", "filterProperty": "CREATED_BY"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>ChangedBy}" />
+                                            <table:template>
+                                                <Text text="{CREATED_BY}" />
+                                            </table:template>
+                                        </table:Column>
+                                    </table:columns>
+                                </table:Table>
+                            </smartTable:SmartTable>
+                        </VBox>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection title="{i18n>CustomerMaintenance}" class="bbm tpfrm">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection>
+                        <VBox fitContainer="true">
+                            <smartFilterBar:SmartFilterBar
+                                id="SFBCustMaintenA"
+                                smartVariant="__SVM01"
+                                useToolbar="false"
+                                entitySet="CustMaitainLog"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.ustMainten.FilterBar"
+                                class="smfil"
+                                assignedFiltersChanged="onAssignedFiltersChanged"
+                                liveMode="true"
+                            >
+                                <smartFilterBar:controlConfiguration>
+                                    <smartFilterBar:ControlConfiguration key="ZCUSTMR_NUM" label="{i18n>CustomerNumber}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="FIELD_NAME" label="{i18n>FieldName}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="CHANGED_BY" label="{i18n>ChangedBy}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="LOG_TIME" label="{i18n>LogTime}" index="4" visibleInAdvancedArea="true" conditionType="sap.ui.comp.config.condition.DateRangeType" />
+                                </smartFilterBar:controlConfiguration>
+                            </smartFilterBar:SmartFilterBar>
+
+                            <smartTable:SmartTable
+                                id="STCustMainten"
+                                smartVariant="__SVM01"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.ustMainten.SmartTable"
+                                enableAutoBinding="true"
+                                enableCustomFilter="false"
+                                entitySet="CustMaitainLog"
+                                smartFilterId="SFBCustMaintenA"
+                                tableType="Table"
+                                useExportToExcel="true"
+                                useVariantManagement="true"
+                                useTablePersonalisation="true"
+                                header="{i18n>CustomerMaintenanceLogs}"
+                                showRowCount="true"
+                                beforeRebindTable="onBeforeRebindTable"
+                                showFullScreenButton="true"
+                                beforeExport="onBeforeDataExport1"
+                                dataReceived="onDataReceivedCM"
+                                ignoreFromPersonalisation=""
+                                requestAtLeastFields=""
+                                class="stable"
+                                initiallyVisibleFields="ZCUSTMR_NUM,FIELD_NAME,OLD_VALUE,NEW_VALUE,CHANGED_BY,LOG_TIME"
+                            >
+                                <table:Table rowActionCount="2" id="IDSTCustMainten" selectionMode="None">
+                                    <table:columns>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZCUSTMR_NUM" filterProperty="ZCUSTMR_NUM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "ZCUSTMR_NUM", "leadingProperty":"ZCUSTMR_NUM", "sortProperty": "ZCUSTMR_NUM", "filterProperty": "ZCUSTMR_NUM"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>CustomerNumber}" />
+                                            <table:template>
+                                                <Text text="{ZCUSTMR_NUM}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="FIELD_NAME" filterProperty="FIELD_NAME" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "FIELD_NAME", "leadingProperty":"FIELD_NAME", "sortProperty": "FIELD_NAME", "filterProperty": "FIELD_NAME"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>FieldName}" />
+                                            <table:template>
+                                                <Text text="{FIELD_NAME}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="OLD_VALUE" filterProperty="OLD_VALUE" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "OLD_VALUE", "leadingProperty":"OLD_VALUE", "sortProperty": "OLD_VALUE", "filterProperty": "OLD_VALUE"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>Oldvalue}" />
+                                            <table:template>
+                                                <Text text="{OLD_VALUE}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="NEW_VALUE" filterProperty="NEW_VALUE" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "NEW_VALUE", "leadingProperty":"NEW_VALUE", "sortProperty": "NEW_VALUE", "filterProperty": "NEW_VALUE"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>Newvalue}" />
+                                            <table:template>
+                                                <Text text="{NEW_VALUE}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="CHANGED_BY" filterProperty="CHANGED_BY" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "CHANGED_BY", "leadingProperty":"CHANGED_BY", "sortProperty": "CHANGED_BY", "filterProperty": "CHANGED_BY"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>ChangedBy}" />
+                                            <table:template>
+                                                <Text text="{CHANGED_BY}" />
+                                            </table:template>
+                                        </table:Column>
+                                    </table:columns>
+                                </table:Table>
+                            </smartTable:SmartTable>
+                        </VBox>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection title="{i18n>MaterialMaintenance}" class="bbm tpfrm">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection>
+                        <VBox fitContainer="true">
+                            <smartFilterBar:SmartFilterBar
+                                id="SFBMatMaitainLog"
+                                smartVariant="__SVM01"
+                                useToolbar="false"
+                                entitySet="MatMaitainLog"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.MatMaitainLog.FilterBar"
+                                class="smfil"
+                                assignedFiltersChanged="onAssignedFiltersChanged"
+                                liveMode="true"
+                            >
+                                <smartFilterBar:controlConfiguration>
+                                    <smartFilterBar:ControlConfiguration key="Z_MATRL_NUM" label="{i18n>MaterialNumber}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="CHANGED_BY" label="{i18n>ChangedBy}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="LOG_TIME" label="{i18n>LogTime}" visibleInAdvancedArea="true" conditionType="sap.ui.comp.config.condition.DateRangeType" />
+                                </smartFilterBar:controlConfiguration>
+                            </smartFilterBar:SmartFilterBar>
+
+                            <smartTable:SmartTable
+                                id="STMatMaitainLog"
+                                smartVariant="__SVM01"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.MatMaitainLog.SmartTable"
+                                enableAutoBinding="true"
+                                enableCustomFilter="false"
+                                entitySet="MatMaitainLog"
+                                smartFilterId="SFBMatMaitainLog"
+                                tableType="Table"
+                                useExportToExcel="true"
+                                useVariantManagement="true"
+                                useTablePersonalisation="true"
+                                header="{i18n>MaterialMaintenanceLogs}"
+                                showRowCount="true"
+                                beforeRebindTable="onBeforeRebindTable2"
+                                showFullScreenButton="true"
+                                beforeExport="onBeforeDataExport1"
+                                dataReceived="onDataMater"
+                                ignoreFromPersonalisation=""
+                                requestAtLeastFields=""
+                                class="stable"
+                                initiallyVisibleFields="FIELD_NAME,CHANGED_BY,OLD_VALUE,NEW_VALUE,LOG_TIME"
+                            >
+                                <table:Table rowActionCount="2" selectionMode="None">
+                                    <table:columns>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="Z_MATRL_NUM" filterProperty="Z_MATRL_NUM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "Z_MATRL_NUM", "leadingProperty":"Z_MATRL_NUM", "sortProperty": "Z_MATRL_NUM", "filterProperty": "Z_MATRL_NUM"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>MaterialNumber}" />
+                                            <table:template>
+                                                <Text text="{Z_MATRL_NUM}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZMATRL_DESC" filterProperty="ZMATRL_DESC" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "ZMATRL_DESC", "leadingProperty":"ZMATRL_DESC", "sortProperty": "ZMATRL_DESC", "filterProperty": "ZMATRL_DESC"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>Description}" />
+                                            <table:template>
+                                                <Text text="{ZMATRL_DESC}" />
+                                            </table:template>
+                                        </table:Column>
+                                    </table:columns>
+                                </table:Table>
+                            </smartTable:SmartTable>
+                        </VBox>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection title="{i18n>UserCustomerAssignment}" class="bbm tpfrm">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection>
+                        <VBox fitContainer="true">
+                            <smartFilterBar:SmartFilterBar
+                                id="SFBUserCustMaitain"
+                                smartVariant="__SVM01"
+                                useToolbar="false"
+                                entitySet="UserCustMaitainLog"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.ustMainten.FilterBar"
+                                class="smfil"
+                                assignedFiltersChanged="onAssignedFiltersChanged"
+                                liveMode="true"
+                            >
+                                <smartFilterBar:controlConfiguration>
+                                    <smartFilterBar:ControlConfiguration key="ZUSR_ID" label="{i18n>UserId}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="ZCUST_NUM" label="{i18n>CustomerNumber}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="FIELD_NAME" label="{i18n>FieldName}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="LOG_TIME" label="{i18n>LogTime}" index="4" visibleInAdvancedArea="true" conditionType="sap.ui.comp.config.condition.DateRangeType" />
+                                </smartFilterBar:controlConfiguration>
+                            </smartFilterBar:SmartFilterBar>
+
+                            <smartTable:SmartTable
+                                id="STSFBUserCustMaitain"
+                                smartVariant="__SVM01"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.ustMainten.SmartTable"
+                                enableAutoBinding="true"
+                                enableCustomFilter="false"
+                                entitySet="UserCustMaitainLog"
+                                smartFilterId="SFBUserCustMaitain"
+                                tableType="Table"
+                                useExportToExcel="true"
+                                useVariantManagement="true"
+                                useTablePersonalisation="true"
+                                header="{i18n>UserCustomerAssignmentLogs}"
+                                showRowCount="true"
+                                beforeRebindTable="onBeforeRebindTable"
+                                showFullScreenButton="true"
+                                beforeExport="onBeforeDataExport1"
+                                dataReceived="onDataReceivedUC"
+                                ignoreFromPersonalisation=""
+                                requestAtLeastFields=""
+                                class="stable"
+                                initiallyVisibleFields="ZCUST_NUM,ZUSR_ID,FIELD_NAME,OLD_VALUE,NEW_VALUE,CHANGED_BY,LOG_TIME"
+                            >
+                                <table:Table rowActionCount="2" id="STSFBUserCustMaitainT" selectionMode="None">
+                                    <table:columns>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZCUST_NUM" filterProperty="ZCUST_NUM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "ZCUST_NUM", "leadingProperty":"ZCUST_NUM", "sortProperty": "ZCUST_NUM", "filterProperty": "ZCUST_NUM"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>CustomerNumber}" />
+                                            <table:template>
+                                                <Text text="{ZCUST_NUM}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZUSR_ID" filterProperty="ZUSR_ID" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "ZUSR_ID", "leadingProperty":"ZUSR_ID", "sortProperty": "ZUSR_ID", "filterProperty": "ZUSR_ID"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>UserId}" />
+                                            <table:template>
+                                                <Text text="{ZUSR_ID}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="FIELD_NAME" filterProperty="FIELD_NAME" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "FIELD_NAME", "leadingProperty":"FIELD_NAME", "sortProperty": "FIELD_NAME", "filterProperty": "FIELD_NAME"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>FieldName}" />
+                                            <table:template>
+                                                <Text text="{FIELD_NAME}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="OLD_VALUE" filterProperty="OLD_VALUE" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "OLD_VALUE", "leadingProperty":"OLD_VALUE", "sortProperty": "OLD_VALUE", "filterProperty": "OLD_VALUE"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>Oldvalue}" />
+                                            <table:template>
+                                                <Text text="{OLD_VALUE}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="NEW_VALUE" filterProperty="NEW_VALUE" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "NEW_VALUE", "leadingProperty":"NEW_VALUE", "sortProperty": "NEW_VALUE", "filterProperty": "NEW_VALUE"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>Newvalue}" />
+                                            <table:template>
+                                                <Text text="{NEW_VALUE}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="CHANGED_BY" filterProperty="CHANGED_BY" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "CHANGED_BY", "leadingProperty":"CHANGED_BY", "sortProperty": "CHANGED_BY", "filterProperty": "CHANGED_BY"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>ChangedBy}" />
+                                            <table:template>
+                                                <Text text="{CHANGED_BY}" />
+                                            </table:template>
+                                        </table:Column>
+                                    </table:columns>
+                                </table:Table>
+                            </smartTable:SmartTable>
+                        </VBox>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection title="{i18n>CustomerMaterialAssignment}" class="bbm tpfrm">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection>
+                        <VBox fitContainer="true">
+                            <smartFilterBar:SmartFilterBar
+                                id="SFBCustMatMaitain"
+                                smartVariant="__SVMCMA01"
+                                useToolbar="false"
+                                entitySet="CustMatMaitainLog"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.CustMatMaitain.FilterBar"
+                                class="smfil"
+                                assignedFiltersChanged="onAssignedFiltersChanged"
+                                liveMode="true"
+                            >
+                                <smartFilterBar:controlConfiguration>
+                                    <smartFilterBar:ControlConfiguration key="ZCUST_NUM" label="{i18n>CustomerNumber}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="ZMAT_NUM" label="{i18n>MaterialNumber}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="FIELD_NAME" label="{i18n>FieldName}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="LOG_TIME" label="{i18n>LogTime}" index="4" visibleInAdvancedArea="true" conditionType="sap.ui.comp.config.condition.DateRangeType" />
+                                </smartFilterBar:controlConfiguration>
+                            </smartFilterBar:SmartFilterBar>
+
+                            <smartTable:SmartTable
+                                id="STSFBCustMatMaitain"
+                                smartVariant="__SVMCMA01"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.CustMatMaitain.SmartTable"
+                                enableAutoBinding="true"
+                                enableCustomFilter="false"
+                                entitySet="CustMatMaitainLog"
+                                smartFilterId="SFBCustMatMaitain"
+                                tableType="Table"
+                                useExportToExcel="true"
+                                useVariantManagement="true"
+                                useTablePersonalisation="true"
+                                header="{i18n>CustomerMaterialAssignmentLogs}"
+                                showRowCount="true"
+                                beforeRebindTable="onBeforeRebindTable"
+                                showFullScreenButton="true"
+                                beforeExport="onBeforeDataExport1"
+                                dataReceived="onDataReceivedCMAT"
+                                ignoreFromPersonalisation=""
+                                requestAtLeastFields=""
+                                class="stable"
+                            >
+                                <table:Table rowActionCount="2" selectionMode="None">
+                                    <table:columns>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZCUST_NUM" filterProperty="ZCUST_NUM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "ZCUST_NUM", "leadingProperty":"ZCUST_NUM", "sortProperty": "ZCUST_NUM", "filterProperty": "ZCUST_NUM"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>CustomerNumber}" />
+                                            <table:template>
+                                                <Text text="{ZCUST_NUM}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZMAT_NUM" filterProperty="ZMAT_NUM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "ZMAT_NUM", "leadingProperty":"ZMAT_NUM", "sortProperty": "ZMAT_NUM", "filterProperty": "ZMAT_NUM"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>MaterialNumber}" />
+                                            <table:template>
+                                                <Text text="{ZMAT_NUM}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="FIELD_NAME" filterProperty="FIELD_NAME" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "FIELD_NAME", "leadingProperty":"FIELD_NAME", "sortProperty": "FIELD_NAME", "filterProperty": "FIELD_NAME"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>FieldName}" />
+                                            <table:template>
+                                                <Text text="{FIELD_NAME}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="OLD_VALUE" filterProperty="OLD_VALUE" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "OLD_VALUE", "leadingProperty":"OLD_VALUE", "sortProperty": "OLD_VALUE", "filterProperty": "OLD_VALUE"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>Oldvalue}" />
+                                            <table:template>
+                                                <Text text="{OLD_VALUE}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="NEW_VALUE" filterProperty="NEW_VALUE" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "NEW_VALUE", "leadingProperty":"NEW_VALUE", "sortProperty": "NEW_VALUE", "filterProperty": "NEW_VALUE"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>Newvalue}" />
+                                            <table:template>
+                                                <Text text="{NEW_VALUE}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="CHANGED_BY" filterProperty="CHANGED_BY" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "CHANGED_BY", "leadingProperty":"CHANGED_BY", "sortProperty": "CHANGED_BY", "filterProperty": "CHANGED_BY"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>ChangedBy}" />
+                                            <table:template>
+                                                <Text text="{CHANGED_BY}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="LOG_TIME" filterProperty="LOG_TIME" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "LOG_TIME", "leadingProperty":"LOG_TIME", "sortProperty": "LOG_TIME", "filterProperty": "LOG_TIME"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>LogTime}" />
+                                            <table:template>
+                                                <Text text="{LOG_TIME}" />
+                                            </table:template>
+                                        </table:Column>
+                                    </table:columns>
+                                </table:Table>
+                            </smartTable:SmartTable>
+                        </VBox>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection title="{i18n>CustomerShipToPartyAssignment}" class="bbm tpfrm">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection>
+                        <VBox fitContainer="true">
+                            <smartFilterBar:SmartFilterBar
+                                id="SFBCustShipToMaitain"
+                                smartVariant="__SVM01"
+                                useToolbar="false"
+                                entitySet="CustShipToMaitainLog"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.CustShipToMaitain.FilterBar"
+                                class="smfil"
+                                assignedFiltersChanged="onAssignedFiltersChanged"
+                                liveMode="true"
+                            >
+                                <smartFilterBar:controlConfiguration>
+                                    <smartFilterBar:ControlConfiguration key="ZCUSTMR_NUM" label="{i18n>CustomerNumber}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="ZSHIP_TO_PARTY" label="{i18n>ShipToParty}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="ZSHIP_TO_PARTY_DESC" label="{i18n>ShiptoPartyDescription}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="FIELD_NAME" label="{i18n>FieldName}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="LOG_TIME" label="{i18n>LogTime}" visibleInAdvancedArea="true" conditionType="sap.ui.comp.config.condition.DateRangeType" />
+                                </smartFilterBar:controlConfiguration>
+                            </smartFilterBar:SmartFilterBar>
+
+                            <smartTable:SmartTable
+                                id="STCustShipToMaitain"
+                                smartVariant="__SVM01"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.CustShipToMaitain.SmartTable"
+                                enableAutoBinding="true"
+                                enableCustomFilter="false"
+                                entitySet="CustShipToMaitainLog"
+                                smartFilterId="SFBCustShipToMaitain"
+                                tableType="Table"
+                                useExportToExcel="true"
+                                useVariantManagement="true"
+                                useTablePersonalisation="true"
+                                header="{i18n>CustomerShipToPartyAssignmentLogs}"
+                                showRowCount="true"
+                                beforeRebindTable="onBeforeRebindTable5"
+                                showFullScreenButton="true"
+                                beforeExport="onBeforeDataExport5"
+                                dataReceived="onDataReceivedCSHIP"
+                                ignoreFromPersonalisation=""
+                                requestAtLeastFields=""
+                                class="stable"
+                            >
+                                <table:Table rowActionCount="2" selectionMode="None">
+                                    <table:columns>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZCUSTMR_NUM" filterProperty="ZCUSTMR_NUM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "ZCUSTMR_NUM", "leadingProperty":"ZCUSTMR_NUM", "sortProperty": "ZCUSTMR_NUM", "filterProperty": "ZCUSTMR_NUM"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>CustomerNumber}" />
+                                            <table:template>
+                                                <Text text="{ZCUSTMR_NUM}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZSHIP_TO_PARTY" filterProperty="ZSHIP_TO_PARTY" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "ZSHIP_TO_PARTY", "leadingProperty":"ZSHIP_TO_PARTY", "sortProperty": "ZSHIP_TO_PARTY", "filterProperty": "ZSHIP_TO_PARTY"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>ShipToParty}" />
+                                            <table:template>
+                                                <Text text="{ZSHIP_TO_PARTY}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="FIELD_NAME" filterProperty="FIELD_NAME" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "FIELD_NAME", "leadingProperty":"FIELD_NAME", "sortProperty": "FIELD_NAME", "filterProperty": "FIELD_NAME"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>FieldName}" />
+                                            <table:template>
+                                                <Text text="{FIELD_NAME}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="OLD_VALUE" filterProperty="OLD_VALUE" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "OLD_VALUE", "leadingProperty":"OLD_VALUE", "sortProperty": "OLD_VALUE", "filterProperty": "OLD_VALUE"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>Oldvalue}" />
+                                            <table:template>
+                                                <Text text="{OLD_VALUE}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="NEW_VALUE" filterProperty="NEW_VALUE" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "NEW_VALUE", "leadingProperty":"NEW_VALUE", "sortProperty": "NEW_VALUE", "filterProperty": "NEW_VALUE"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>Newvalue}" />
+                                            <table:template>
+                                                <Text text="{NEW_VALUE}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="CHANGED_BY" filterProperty="CHANGED_BY" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "CHANGED_BY", "leadingProperty":"CHANGED_BY", "sortProperty": "CHANGED_BY", "filterProperty": "CHANGED_BY"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>ChangedBy}" />
+                                            <table:template>
+                                                <Text text="{CHANGED_BY}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="LOG_TIME" filterProperty="LOG_TIME" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "LOG_TIME", "leadingProperty":"LOG_TIME", "sortProperty": "LOG_TIME", "filterProperty": "LOG_TIME"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>LogTime}" />
+                                            <table:template>
+                                                <Text text="{LOG_TIME}" />
+                                            </table:template>
+                                        </table:Column>
+                                    </table:columns>
+                                </table:Table>
+                            </smartTable:SmartTable>
+                        </VBox>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection title="{i18n>CustomerFTRADEAssignment}" class="bbm tpfrm">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection>
+                        <VBox fitContainer="true">
+                            <smartFilterBar:SmartFilterBar
+                                id="SFBCustFTradeMaitain"
+                                smartVariant="__SVM01"
+                                useToolbar="false"
+                                entitySet="CustFTradeMaitainLog"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.CustFTradeMaitainLog.FilterBar"
+                                class="smfil"
+                                assignedFiltersChanged="onAssignedFiltersChanged"
+                                liveMode="true"
+                            >
+                                <smartFilterBar:controlConfiguration>
+                                    <smartFilterBar:ControlConfiguration key="ZCUST_NUM" label="{i18n>CustomerNumber}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="ZFTRADE" label="{i18n>ForeignTrade}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="FIELD_NAME" label="{i18n>FieldName}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="LOG_TIME" label="{i18n>LogTime}" visibleInAdvancedArea="true" conditionType="sap.ui.comp.config.condition.DateRangeType" />
+                                </smartFilterBar:controlConfiguration>
+                            </smartFilterBar:SmartFilterBar>
+
+                            <smartTable:SmartTable
+                                id="STCustFTradeMaitain"
+                                smartVariant="__SVM01"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.CustFTradeMaitainLog.SmartTable"
+                                enableAutoBinding="true"
+                                enableCustomFilter="false"
+                                entitySet="CustFTradeMaitainLog"
+                                smartFilterId="SFBCustFTradeMaitain"
+                                tableType="Table"
+                                useExportToExcel="true"
+                                useVariantManagement="true"
+                                useTablePersonalisation="true"
+                                header="{i18n>CustomerFTRADEAssignmentLogs}"
+                                showRowCount="true"
+                                beforeRebindTable="onBeforeRebindTable"
+                                showFullScreenButton="true"
+                                beforeExport="onBeforeDataExport6"
+                                dataReceived="onDataReceivedCFT"
+                                ignoreFromPersonalisation=""
+                                requestAtLeastFields=""
+                                class="stable"
+                            >
+                                <table:Table rowActionCount="2" selectionMode="None">
+                                    <table:columns>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZCUST_NUM" filterProperty="ZCUST_NUM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "ZCUST_NUM", "leadingProperty":"ZCUST_NUM", "sortProperty": "ZCUST_NUM", "filterProperty": "ZCUST_NUM"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>CustomerNumber}" />
+                                            <table:template>
+                                                <Text text="{ZCUST_NUM}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZFTRADE" filterProperty="ZFTRADE" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "ZFTRADE", "leadingProperty":"ZFTRADE", "sortProperty": "ZFTRADE", "filterProperty": "ZFTRADE"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>ForeignTrade}" />
+                                            <table:template>
+                                                <Text text="{ZFTRADE}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="FIELD_NAME" filterProperty="FIELD_NAME" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "FIELD_NAME", "leadingProperty":"FIELD_NAME", "sortProperty": "FIELD_NAME", "filterProperty": "FIELD_NAME"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>FieldName}" />
+                                            <table:template>
+                                                <Text text="{FIELD_NAME}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="OLD_VALUE" filterProperty="OLD_VALUE" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "OLD_VALUE", "leadingProperty":"OLD_VALUE", "sortProperty": "OLD_VALUE", "filterProperty": "OLD_VALUE"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>Oldvalue}" />
+                                            <table:template>
+                                                <Text text="{OLD_VALUE}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="NEW_VALUE" filterProperty="NEW_VALUE" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "NEW_VALUE", "leadingProperty":"NEW_VALUE", "sortProperty": "NEW_VALUE", "filterProperty": "NEW_VALUE"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>Newvalue}" />
+                                            <table:template>
+                                                <Text text="{NEW_VALUE}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="CHANGED_BY" filterProperty="CHANGED_BY" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "CHANGED_BY", "leadingProperty":"CHANGED_BY", "sortProperty": "CHANGED_BY", "filterProperty": "CHANGED_BY"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>ChangedBy}" />
+                                            <table:template>
+                                                <Text text="{CHANGED_BY}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="LOG_TIME" filterProperty="LOG_TIME" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "LOG_TIME", "leadingProperty":"LOG_TIME", "sortProperty": "LOG_TIME", "filterProperty": "LOG_TIME"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>LogTime}" />
+                                            <table:template>
+                                                <Text text="{LOG_TIME}" />
+                                            </table:template>
+                                        </table:Column>
+                                    </table:columns>
+                                </table:Table>
+                            </smartTable:SmartTable>
+                        </VBox>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection title="{i18n>MaterialItemCategoryAssignment}" class="bbm tpfrm">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection>
+                        <VBox fitContainer="true">
+                            <smartFilterBar:SmartFilterBar
+                                id="SFBMatItemCategory"
+                                smartVariant="__SVM01"
+                                useToolbar="false"
+                                entitySet="MatItemCategoryMaitainLog"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.MatItemCategory.FilterBar"
+                                class="smfil"
+                                assignedFiltersChanged="onAssignedFiltersChanged"
+                                liveMode="true"
+                            >
+                                <smartFilterBar:controlConfiguration>
+                                    <smartFilterBar:ControlConfiguration key="ZMAT_NUM" label="{i18n>MaterialNumber}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="ZMATRL_DESC" label="{i18n>MaterialDesc}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="ZITM_CATEGORY" label="{i18n>ItemCategory}" visibleInAdvancedArea="true" />
+                                </smartFilterBar:controlConfiguration>
+                            </smartFilterBar:SmartFilterBar>
+
+                            <smartTable:SmartTable
+                                id="STMatItemCategory"
+                                smartVariant="__SVM01"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.MatItemCategory.SmartTable"
+                                enableAutoBinding="true"
+                                enableCustomFilter="false"
+                                entitySet="MatItemCategoryMaitainLog"
+                                smartFilterId="SFBMatItemCategory"
+                                tableType="Table"
+                                useExportToExcel="true"
+                                useVariantManagement="true"
+                                useTablePersonalisation="true"
+                                header="{i18n>MaterialItemCategoryAssignmentLogs}"
+                                showRowCount="true"
+                                beforeRebindTable="onBeforeRebindTable7"
+                                showFullScreenButton="true"
+                                beforeExport="onBeforeDataExport7"
+                                dataReceived="onDataReceivedMATI"
+                                ignoreFromPersonalisation=""
+                                requestAtLeastFields=""
+                                class="stable"
+                            >
+                                <table:Table rowActionCount="2" selectionMode="None">
+                                    <table:columns>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZMAT_NUM" filterProperty="ZMAT_NUM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "ZMAT_NUM", "leadingProperty":"ZMAT_NUM", "sortProperty": "ZMAT_NUM", "filterProperty": "ZMAT_NUM"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>MaterialNumber}" />
+                                            <table:template>
+                                                <Text text="{ZMAT_NUM}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZMATRL_DESC" filterProperty="ZMATRL_DESC" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "ZMATRL_DESC", "leadingProperty":"ZMATRL_DESC", "sortProperty": "ZMATRL_DESC", "filterProperty": "ZMATRL_DESC"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>MaterialDesc}" />
+                                            <table:template>
+                                                <Text text="{ZMATRL_DESC}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZITM_CATEGORY" filterProperty="ZITM_CATEGORY" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "ZITM_CATEGORY", "leadingProperty":"ZITM_CATEGORY", "sortProperty": "ZITM_CATEGORY", "filterProperty": "ZITM_CATEGORY"}' />
+                                            </table:customData>
+                                            <Label text="Item Category" />
+                                            <table:template>
+                                                <Text text="{ZITM_CATEGORY}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="FIELD_NAME" filterProperty="FIELD_NAME" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "FIELD_NAME", "leadingProperty":"FIELD_NAME", "sortProperty": "FIELD_NAME", "filterProperty": "FIELD_NAME"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>FieldName}" />
+                                            <table:template>
+                                                <Text text="{FIELD_NAME}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="OLD_VALUE" filterProperty="OLD_VALUE" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "OLD_VALUE", "leadingProperty":"OLD_VALUE", "sortProperty": "OLD_VALUE", "filterProperty": "OLD_VALUE"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>Oldvalue}" />
+                                            <table:template>
+                                                <Text text="{OLD_VALUE}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="NEW_VALUE" filterProperty="NEW_VALUE" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "NEW_VALUE", "leadingProperty":"NEW_VALUE", "sortProperty": "NEW_VALUE", "filterProperty": "NEW_VALUE"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>Newvalue}" />
+                                            <table:template>
+                                                <Text text="{NEW_VALUE}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="CHANGED_BY" filterProperty="CHANGED_BY" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "CHANGED_BY", "leadingProperty":"CHANGED_BY", "sortProperty": "CHANGED_BY", "filterProperty": "CHANGED_BY"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>ChangedBy}" />
+                                            <table:template>
+                                                <Text text="{CHANGED_BY}" />
+                                            </table:template>
+                                        </table:Column>
+                                    </table:columns>
+                                </table:Table>
+                            </smartTable:SmartTable>
+                        </VBox>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection title="{i18n>OrderHeaderDetails}" class="bbm tpfrm">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection>
+                        <VBox fitContainer="true">
+                            <smartFilterBar:SmartFilterBar
+                                id="SFBOrderHeader"
+                                smartVariant="__SVM01"
+                                useToolbar="false"
+                                entitySet="OrderHeaderMaitainLog"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.OrderHeader.FilterBar"
+                                class="smfil"
+                                assignedFiltersChanged="onAssignedFiltersChanged"
+                                liveMode="true"
+                            >
+                                <smartFilterBar:controlConfiguration>
+                                    <smartFilterBar:ControlConfiguration key="ZINTR_ORDNUM" label="{i18n>InternalOrderNumber}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="FIELD_NAME" label="{i18n>FieldName}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="CHANGED_BY" label="{i18n>ChangedBy}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="LOG_TIME" label="{i18n>LogTime}" index="4" visibleInAdvancedArea="true" conditionType="sap.ui.comp.config.condition.DateRangeType" />
+                                </smartFilterBar:controlConfiguration>
+                            </smartFilterBar:SmartFilterBar>
+
+                            <smartTable:SmartTable
+                                id="STOrderHeader"
+                                smartVariant="__SVM01"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.OrderHeader.SmartTable"
+                                enableAutoBinding="true"
+                                enableCustomFilter="false"
+                                entitySet="OrderHeaderMaitainLog"
+                                smartFilterId="SFBOrderHeader"
+                                tableType="Table"
+                                useExportToExcel="true"
+                                useVariantManagement="true"
+                                useTablePersonalisation="true"
+                                header="{i18n>OrderItemDetailsLogs}"
+                                showRowCount="true"
+                                beforeRebindTable="onBeforeRebindTable9"
+                                showFullScreenButton="true"
+                                beforeExport="onBeforeDataExport9"
+                                dataReceived="onDataReceivedOH"
+                                ignoreFromPersonalisation=""
+                                requestAtLeastFields=""
+                                class="stable"
+                                initiallyVisibleFields="ZINTR_ORDNUM,ZSYSTEM,FIELD_NAME,OLD_VALUE,NEW_VALUE,CHANGED_BY,LOG_TIME"
+                            >
+                                <table:Table rowActionCount="2" selectionMode="None">
+                                    <table:columns>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZINTR_ORDNUM" filterProperty="ZINTR_ORDNUM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "ZINTR_ORDNUM", "leadingProperty":"ZINTR_ORDNUM", "sortProperty": "ZINTR_ORDNUM", "filterProperty": "ZINTR_ORDNUM"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>InternalOrderNumber}" />
+                                            <table:template>
+                                                <Text text="{ZINTR_ORDNUM}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZSYSTEM" filterProperty="ZSYSTEM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "ZSYSTEM", "leadingProperty":"ZSYSTEM", "sortProperty": "ZSYSTEM", "filterProperty": "ZSYSTEM"}' />
+                                            </table:customData>
+                                            <Label text="System" />
+                                            <table:template>
+                                                <Text text="{= (${ZSYSTEM} === 'L') ? 'LEAN' : 'TEMPO'}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="FIELD_NAME" filterProperty="FIELD_NAME" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "FIELD_NAME", "leadingProperty":"FIELD_NAME", "sortProperty": "FIELD_NAME", "filterProperty": "FIELD_NAME"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>FieldName}" />
+                                            <table:template>
+                                                <Text text="{FIELD_NAME}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="OLD_VALUE" filterProperty="OLD_VALUE" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "OLD_VALUE", "leadingProperty":"OLD_VALUE", "sortProperty": "OLD_VALUE", "filterProperty": "OLD_VALUE"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>Oldvalue}" />
+                                            <table:template>
+                                                <Text text="{OLD_VALUE}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="NEW_VALUE" filterProperty="NEW_VALUE" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "NEW_VALUE", "leadingProperty":"NEW_VALUE", "sortProperty": "NEW_VALUE", "filterProperty": "NEW_VALUE"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>Newvalue}" />
+                                            <table:template>
+                                                <Text text="{NEW_VALUE}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="CHANGED_BY" filterProperty="CHANGED_BY" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "CHANGED_BY", "leadingProperty":"CHANGED_BY", "sortProperty": "CHANGED_BY", "filterProperty": "CHANGED_BY"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>ChangedBy}" />
+                                            <table:template>
+                                                <Text text="{CHANGED_BY}" />
+                                            </table:template>
+                                        </table:Column>
+                                    </table:columns>
+                                </table:Table>
+                            </smartTable:SmartTable>
+                        </VBox>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection title="{i18n>OrderItemDetails}" class="bbm tpfrm">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection>
+                        <VBox fitContainer="true">
+                            <smartFilterBar:SmartFilterBar
+                                id="SFBOrderItem"
+                                smartVariant="__SVM01"
+                                useToolbar="false"
+                                entitySet="OrderItemMaitainLog"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.OrderHeader.FilterBar"
+                                class="smfil"
+                                assignedFiltersChanged="onAssignedFiltersChanged"
+                                liveMode="true"
+                            >
+                                <smartFilterBar:controlConfiguration>
+                                    <smartFilterBar:ControlConfiguration key="ZINTR_ORDNUM" label="{i18n>InternalOrderNumber}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="FIELD_NAME" label="{i18n>FieldName}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="CHANGED_BY" label="{i18n>ChangedBy}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="LOG_TIME" label="{i18n>LogTime}" index="4" visibleInAdvancedArea="true" conditionType="sap.ui.comp.config.condition.DateRangeType" />
+                                </smartFilterBar:controlConfiguration>
+                            </smartFilterBar:SmartFilterBar>
+
+                            <smartTable:SmartTable
+                                id="STOrderItem"
+                                smartVariant="__SVM01"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.OrderHeader.SmartTable"
+                                enableAutoBinding="true"
+                                enableCustomFilter="false"
+                                entitySet="OrderItemMaitainLog"
+                                smartFilterId="SFBOrderItem"
+                                tableType="Table"
+                                useExportToExcel="true"
+                                useVariantManagement="true"
+                                useTablePersonalisation="true"
+                                header="{i18n>OrderItemDetailsLogs}"
+                                showRowCount="true"
+                                beforeRebindTable="onBeforeRebindTable9"
+                                showFullScreenButton="true"
+                                beforeExport="onBeforeDataExport9"
+                                dataReceived="onDataReceivedOI"
+                                initiallyVisibleFields="ZINTR_ORDNUM,Z,SYSTEM,FIELD_NAME,OLD_VALUE,NEW_VALUE,CHANGED_BY,LOG_TIME"
+                                ignoreFromPersonalisation=""
+                                requestAtLeastFields=""
+                                class="stable"
+                            >
+                                <table:Table rowActionCount="2" selectionMode="None">
+                                    <table:columns>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZINTR_ORDNUM" filterProperty="ZINTR_ORDNUM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "ZINTR_ORDNUM", "leadingProperty":"ZINTR_ORDNUM", "sortProperty": "ZINTR_ORDNUM", "filterProperty": "ZINTR_ORDNUM"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>InternalOrderNumber}" />
+                                            <table:template>
+                                                <Text text="{ZINTR_ORDNUM}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="ZSYSTEM" filterProperty="ZSYSTEM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "ZSYSTEM", "leadingProperty":"ZSYSTEM", "sortProperty": "ZSYSTEM", "filterProperty": "ZSYSTEM"}' />
+                                            </table:customData>
+                                            <Label text="System" />
+                                            <table:template>
+                                                <Text text="{= (${ZSYSTEM} === 'L') ? 'LEAN' : 'TEMPO'}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="FIELD_NAME" filterProperty="FIELD_NAME" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "FIELD_NAME", "leadingProperty":"FIELD_NAME", "sortProperty": "FIELD_NAME", "filterProperty": "FIELD_NAME"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>FieldName}" />
+                                            <table:template>
+                                                <Text text="{FIELD_NAME}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="OLD_VALUE" filterProperty="OLD_VALUE" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "OLD_VALUE", "leadingProperty":"OLD_VALUE", "sortProperty": "OLD_VALUE", "filterProperty": "OLD_VALUE"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>Oldvalue}" />
+                                            <table:template>
+                                                <Text text="{OLD_VALUE}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="NEW_VALUE" filterProperty="NEW_VALUE" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "NEW_VALUE", "leadingProperty":"NEW_VALUE", "sortProperty": "NEW_VALUE", "filterProperty": "NEW_VALUE"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>Newvalue}" />
+                                            <table:template>
+                                                <Text text="{NEW_VALUE}" />
+                                            </table:template>
+                                        </table:Column>
+                                        <table:Column autoResizable="true" hAlign="Begin" sortProperty="CHANGED_BY" filterProperty="CHANGED_BY" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                            <table:customData>
+                                                <core:CustomData key="p13nData" value='\{"columnKey": "CHANGED_BY", "leadingProperty":"CHANGED_BY", "sortProperty": "CHANGED_BY", "filterProperty": "CHANGED_BY"}' />
+                                            </table:customData>
+                                            <Label text="{i18n>ChangedBy}" />
+                                            <table:template>
+                                                <Text text="{CHANGED_BY}" />
+                                            </table:template>
+                                        </table:Column>
+                                    </table:columns>
+                                </table:Table>
+                            </smartTable:SmartTable>
+                        </VBox>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
+    </uxap:ObjectPageLayout>
+</mvc:View>

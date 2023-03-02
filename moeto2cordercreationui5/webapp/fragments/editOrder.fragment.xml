@@ -1,0 +1,200 @@
+<core:FragmentDefinition xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:uxap="sap.uxap"
+	xmlns:table="sap.ui.table" xmlns:u="sap.ui.unified" xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Dialog contentHeight="auto" contentWidth="90%" showHeader="false" resizable="false" class="sapUiSizeCompact">
+		<uxap:ObjectPageLayout enableLazyLoading="true" headerContentPinnable="false" showTitleInHeaderContent="true" showHeaderContent="false"
+			class="newOrder" height="520px" width="auto">
+			<uxap:headerTitle>
+				<uxap:ObjectPageHeader objectImageURI="/img/merck-logo.png" objectImageShape="Circle" objectTitle="{i18n>UpdateanOrder}" objectImageAlt=""
+					isObjectIconAlwaysVisible="true" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true" isActionAreaAlwaysVisible="true"
+					showPlaceholder="true" class="newOrderH">
+					<HBox justifyContent="End" width="100%" height="100%">
+						<Button class="whiteButton sapUiSmallMarginEnd" icon="sap-icon://simulate" id="upSimbtn" text="{i18n>Simulate}" visible="true"
+							press="onSimulate"/>
+						<!--<Button class="whiteButton sapUiSmallMarginEnd" id="upUpdatebtn" text="{i18n>Submit}" visible="false" press="onUpdateOrder"/>-->
+						<Button class="whiteButton sapUiSmallMarginEnd" id="btnEditSave" icon="sap-icon://save" text="{i18n>Save}" visible="true" press="_onSaveOrderInEdit"/>
+						<Button class="whiteButton" icon="sap-icon://sys-cancel" text="{i18n>Cancel}" press="onUpdateClose"/>
+					</HBox>
+				</uxap:ObjectPageHeader>
+			</uxap:headerTitle>
+			<uxap:sections>
+				<uxap:ObjectPageSection title="{i18n>SalesOrderHeaderInfo}">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection>
+							<f:SimpleForm title="" columnsL="2" columnsM="2" editable="true" layout="ResponsiveGridLayout">
+								<f:content>
+									<core:Title text=""/>
+									<Label text="{i18n>SelectCustomer}" labelFor="firstNameInput"/>
+									<Input id="f4hCustomer" textFormatMode="ValueKey" placeholder="{i18n>EnterCustomerNo..}" showValueHelp="true"
+										valueHelpRequest="onArticleValueHelpRequest" valueHelpIconSrc="sap-icon://customer" value="{viewProperties>/ZCUSTOMER_NAME}"
+										showSuggestion="true" suggestionItems="{custJson>/}" change="onChangeEmp" valueHelpOnly="true">
+										<suggestionItems>
+											<core:ListItem text="{custJson>ZCUST_NUM}" additionalText="{custJson>ZCUSTOMER_NAME}"/>
+										</suggestionItems>
+									</Input>
+									<Label text="Sales Area"/>
+									<Input id="f4hSalesOffc" textFormatMode="ValueKey" placeholder="{i18n>SalesArea}" showValueHelp="true" valueHelpRequest="onSalesRequest"
+										value="{viewProperties>/ZSALES_AREA}" valueHelpIconSrc="sap-icon://sales-order" showSuggestion="true" suggestionItems="{SalesOffice>/}"
+										valueHelpOnly="true">
+										<suggestionItems>
+											<core:ListItem text="{SalesOffice>Salesorg}" additionalText="{SalesOffice>Salesorg}"/>
+										</suggestionItems>
+									</Input>
+									<Label text="{i18n>Currency}"/>
+									<ComboBox id="idNewSelectCurrEdit" selectedKey="{viewProperties>/ZHCURR}" change="onCurrencyChange" items="{ path: 'currencyJson>/'}">
+										<core:Item key="{currencyJson>ZCURR}" text="{currencyJson>ZCURR}"/>
+									</ComboBox>
+									<Label labelFor="lastNameInput" text="{i18n>ShipToParty}"/>
+									<Input id="f4hShipto" showValueHelp="true" valueHelpRequest="onShipToPartyValueHelpRequest" value="{viewProperties>/ZSHIP_TO_PARTY_DESC}"
+										showSuggestion="true" suggestionItems="{hipToPartyJson>/}" valueHelpIconSrc="sap-icon://shipping-status" change="onChangeEmp"
+										valueHelpOnly="true">
+										<suggestionItems>
+											<core:ListItem text="{shipToPartyJson>ZSHIP_TO_PARTY}" additionalText="{shipToPartyJson>ZNAME_1}"/>
+										</suggestionItems>
+									</Input>
+									<Label text="{i18n>ForeignTrade}"/>
+									<Input id="f4hFtrade" showValueHelp="true" placeholder="Select FTrade" valueHelpRequest="onFtradeValueHelpRequest"
+										value="{viewProperties>/ZFTRADE_DESC}" showSuggestion="true" valueHelpIconSrc="sap-icon://opportunity" suggestionItems="{fTradeJson>/}"
+										change="onChangeEmp" valueHelpOnly="true">
+										<suggestionItems>
+											<core:ListItem text="{fTradeJson>ZSHIP_TO_PARTY}" additionalText="{fTradeJson>ZNAME_1}"/>
+										</suggestionItems>
+									</Input>
+									<Label text="{i18n>AdditionalDiscount(%)}"/>
+									<!--<Input enabled="true" id="iddiscount" value="{viewProperties>/ZDISCNT}"></Input>-->
+									<Input enabled="{= (${viewProperties>/sUserRole} === 'CUST') ? false : true}"
+										editable="{= (${viewProperties>/ZSYSTEM} === 'L') ? true : false}" id="iddiscount" value="{viewProperties>/ZDISCNT}"></Input>
+									<core:Title text=""/>
+									<Label id="oordrefl" labelFor="faxNumberInput" required="true" visible="false" text="{i18n>EnterOldOrderReferenceNumber}"/>
+									<Input id="oordref" maxTokens="1" type="Text" textFormatMode="ValueKey" visible="false" placeholder="Enter Order Ref No ..."
+										showSuggestion="true" showTableSuggestionValueHelp="false" change="handleChangeNo" suggestionRows="{OrderData>/}">
+										<suggestionColumns>
+											<Column hAlign="Begin" popinDisplay="Inline" demandPopin="true">
+												<Label text="{i18n>Order}"/>
+											</Column>
+										</suggestionColumns>
+										<suggestionRows>
+											<ColumnListItem>
+												<cells>
+													<Label text="{OrderData>order}"/>
+												</cells>
+											</ColumnListItem>
+										</suggestionRows>
+									</Input>
+									<Label text="{i18n>CustomerPONumber}"/>
+									<Input enabled="true" id="idcpono" value="{viewProperties>/ZCUST_PONUM}" change="handleChangeCPONO"></Input>
+									<Label text="{i18n>CustomerPODate}"/>
+									<DatePicker id="idcpodate" value="{path: 'viewProperties>/ZCUST_PODAT', formatter:'.custFormatter.dateFormat'}" valueFormat="dd-MM-yyyy"
+										displayFormat="dd-MM-yyyy" change="onChangePODate"/>
+									<Label text="{i18n>ShiptoAddress}"/>
+									<Input editable="false" value="{viewProperties>/ShipToAddr}"></Input>
+									<Label text="{i18n>System}"/>
+									<Input editable="false" id="idsystem" value="{= (${viewProperties>/ZSYSTEM} === 'L') ? 'LEAN' : 'TEMPO'}"></Input>
+									<Label text="{i18n>TenderFlag}"/>
+									<!--<CheckBox id="idTenderFlag" selected="{viewProperties>/ZTEDER_FLAG}" select="onSelectTenderFlag"></CheckBox>-->
+									<Switch id="idTenderFlag" change="onSelectTenderFlag" type="AcceptReject" state="{viewProperties>/ZTEDER_FLAG}"/>
+									<Label text="{i18n>UploadDocument}" visible="{path: 'currentUser>/utype', formatter:'.USUVisible'}"/>
+									<Label text="Attached file Name"/>
+									<Link  id="idUploadFileLink" press="pressAddAttachment" text="{viewProperties>/FileName}"></Link>
+									<Button icon="sap-icon://delete" visible="{UIState>/visible}" text="" press="onFileDeleted" width="30%" type="Reject"/>
+									<Label text="{i18n>UploadDocument}"/>
+									<Input editable="false" value="{viewProperties>/pdfFile}"></Input>
+									<u:FileUploader change="onAttachmentChange" uploadUrl="upload/" buttonOnly="true"
+										enabled="{= (${viewProperties>/sUserRole} === 'CUST') ? false : true}" uploadComplete="onUploadComplete"/>
+									<!--<core:Icon src="sap-icon://sys-cancel" class="sapUiTinyMarginTop" press="onClearDoc" color="#ea6969"/>-->
+									<Button icon="sap-icon://sys-cancel" text="" press="onClearDoc" type="Reject"/>
+								</f:content>
+							</f:SimpleForm>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+				<uxap:ObjectPageSection title="{i18n>SalesOrderItemInfo}">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection>
+							<VBox >
+								<Table id="tblupdateorder" items="{OrderData12>/Products}" mode="SingleSelect" fixedLayout="false">
+									<headerToolbar>
+										<Toolbar design="Transparent">
+											<Title text="{i18n>AddItems}" class="bbm" level="H3"/>
+											<ToolbarSpacer/>
+											<Button icon="sap-icon://copy" text="{i18n>Copy}" class="btnadd" press="copyRow"/>
+											<Button icon="sap-icon://add" text="{i18n>Row}" class="btnadd" press="addRow"/>
+										</Toolbar>
+									</headerToolbar>
+									<columns>
+										<Column minScreenWidth="Desktop" width="8rem">
+											<Text text="{i18n>MaterialNo}"/>
+										</Column>
+										<Column minScreenWidth="Desktop" width="10rem">
+											<Text text="{i18n>Description}"/>
+										</Column>
+										<Column minScreenWidth="Desktop">
+											<Text text="{i18n>MinOrderQuantity}"/>
+										</Column>
+										<Column width="4rem">
+											<Text text="{i18n>Pallet}"/>
+										</Column>
+										<Column width="6rem">
+											<Text text="{i18n>Quantity}"/>
+										</Column>
+										<Column minScreenWidth="Tablet" demandPopin="true">
+											<Text text="{i18n>RequestDeliveryDate}"/>
+										</Column>
+										<Column minScreenWidth="Tablet" demandPopin="true">
+											<Text text="{i18n>ItemCategory}"/>
+										</Column>
+										<Column minScreenWidth="Tablet" demandPopin="true">
+											<Text text="{i18n>AdditionalDiscount(%)}"/>
+										</Column>
+										<Column hAlign="Center">
+											<Text text=""/>
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem>
+											<cells>
+												<Input class="matInput" showValueHelp="true" enabled="{= ${OrderData12>ZFOC_ITMC_FLAG} === 'X' ? false : true}" valueHelpRequest="onMaterialValueHelpRequest"
+													value="{OrderData12>ZMAT_NUM}" showSuggestion="true" suggestionItems="{ path: '/MaterialDetails' }"
+													valueHelpIconSrc="sap-icon://add-product" change="onChangeEmp" valueHelpOnly="true">
+													<suggestionItems>
+														<core:ListItem text="{ZMAT_NUM}" additionalText="{ZMAT_NUM}"/>
+													</suggestionItems>
+												</Input>
+												<Text text="{OrderData12>ZMATRL_DESC}"/>
+												<Text text="{OrderData12>ZMIN_QTY}"/>
+												<Text text="{OrderData12>ZPAL_QUAN}"/>
+												<!--<Input value="{OrderData12>ZTRGT_QTY}"/>-->
+												<StepInput min="0" enabled="{= ${OrderData12>ZFOC_ITMC_FLAG} === 'X' ? false : true}" value="{OrderData12>ZTRGT_QTY}" step="1"
+													textAlign="Center"/>
+												<DatePicker enabled="{= ${OrderData12>ZFOC_ITMC_FLAG} === 'X' ? false : true}"
+													value="{path: 'OrderData12>ZREQ_DLVRYDAT', formatter:'.custFormatter.dateFormat'}" valueFormat="dd.MM.yyyy" displayFormat="dd.MM.yyyy"
+													change="handleDate"/>
+												<!--<ComboBox enabled="{= ${OrderData12>ZFOC_ITMC_FLAG} === 'X' ? false : true}" items="{ItemCatJson>/}"
+													selectedKey="{OrderData12>ZFOC_SMPL}" valueStateText="Select a Item Category" change="onSelectFOC" visible="true">
+													<core:Item key="{ItemCatJson>ZITM_CATEGORY}" text="{path:'ItemCatJson>ZITM_CATEGORY',formatter:'.custFormatter.focSmplVal'}"/>
+												</ComboBox>-->
+												<ComboBox enabled="{= ${OrderData12>ZFOC_ITMC_FLAG} === 'X' ? false : true}" items="{OrderData12>ItemCategorySug}"
+                                                    selectedKey="{OrderData12>ZFOC_SMPL}" valueStateText="Select a Item Category" change="onSelectFOC" visible="true">
+                                                    <core:Item key="{OrderData12>ZITM_CATEGORY}" text="{path:'OrderData12>ZITM_CATEGORY',formatter:'.custFormatter.focSmplVal'}"/>
+                                                </ComboBox>
+												
+											<!--	<ComboBox id="idNewSelectCurrEdit" selectedKey="{viewProperties>/ZHCURR}" change="onCurrencyChange" items="{ path: 'currencyJson>/'}">
+													<core:Item key="{currencyJson>ZCURR}" text="{currencyJson>ZCURR}"/>
+												</ComboBox>-->
+												<!--<Input enabled="{= ${OrderData12>ZFOC_ITMC_FLAG} === 'X' ? false : true}" value="{OrderData12>ZDISCNT}"/>-->
+												<Input enabled="{= ${OrderData12>ZFOC_ITMC_FLAG} === 'X' ? false : true}"
+													editable="{= (${viewProperties>/sUserRole} === 'CUST') ? false : true}" value="{OrderData12>ZDISCNT}"/>
+												<Button icon="sap-icon://delete" press="deleteRow" type="Reject"/>
+												<Input value="{OrderData12>ZALT_UOM}" visible="true"/>
+												<Text text="{OrderData12>ZGRP_DEVLPR}" visible="false"/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</VBox>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+			</uxap:sections>
+		</uxap:ObjectPageLayout>
+	</Dialog>
+</core:FragmentDefinition>

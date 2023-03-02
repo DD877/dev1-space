@@ -1,0 +1,19 @@
+{
+    "d": {
+        "results": [
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OrderStatusCountType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OrderStatusCount(P_USR_ID='X234869',P_USER_ROLE='ADMIN',ZUSR_ID='X234869')"
+                },
+                "P_USR_ID": "X234869",
+                "P_USER_ROLE": "ADMIN",
+                "ZUSR_ID": "X234869",
+                "DRFT": 88,
+                "SNOA": 171,
+                "ORCR": 168,
+                "SNOR": 19
+            }
+        ]
+    }
+}

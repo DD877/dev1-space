@@ -1,0 +1,38 @@
+specVersion: "2.4"
+metadata:
+  name: com.merckgroup.Moet_O2C_OrderCreation_UI5
+type: application
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        ignoreCertError: false
+        backend:
+          - path: /sap
+            url: ""
+            destination: MANUAL_INPUT
+          - path: /HANAXS
+            destination: MANUAL_INPUT
+            url: ""
+            pathPrefix: /
+          - path: /CMIS
+            destination: CMIS
+            url: ""
+            pathPrefix: /
+        ui5:
+          path:
+            - /resources
+            - /test-resources
+          url: https://ui5.sap.com
+    - name: fiori-tools-appreload
+      afterMiddleware: compression
+      configuration:
+        port: 35729
+        path: webapp
+        delay: 300
+    - name: fiori-tools-preview
+      afterMiddleware: fiori-tools-appreload
+      configuration:
+        component: com.merckgroup.Moet_O2C_OrderCreation_UI5
+        ui5Theme: sap_fiori_3

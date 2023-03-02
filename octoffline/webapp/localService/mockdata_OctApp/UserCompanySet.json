@@ -1,0 +1,48 @@
+[
+  {
+    "error": {
+      "code": "SY/530",
+      "message": {
+        "lang": "en",
+        "value": "Company Code not found for User ID: NBROYBI"
+      },
+      "innererror": {
+        "application": {
+          "component_id": "",
+          "service_namespace": "/GLB/",
+          "service_id": "1GTPT_OCT_APP_SRV",
+          "service_version": "0001"
+        },
+        "transactionid": "578934CB012C1A47E10000008D7A4530",
+        "timestamp": "20160728070413.1852220",
+        "Error_Resolution": {
+          "SAP_Transaction": "Run transaction /IWFND/ERROR_LOG on SAP Gateway hub system and search for entries with the timestamp above for more details",
+          "SAP_Note": "See SAP Note 1797736 for error analysis (https://service.sap.com/sap/support/notes/1797736)"
+        },
+        "errordetails": [
+          {
+            "code": "/GLB/1GTPT_OCT/007",
+            "message": "Company Code not found for User ID: NBROYBI",
+            "propertyref": "",
+            "severity": "error",
+            "target": ""
+          },
+          {
+            "code": "/GLB/1GTPT_OCT/007",
+            "message": "Company Code not found for User ID: NBROYBI",
+            "propertyref": "",
+            "severity": "error",
+            "target": ""
+          },
+          {
+            "code": "/IWBEP/CX_MGW_BUSI_EXCEPTION",
+            "message": "",
+            "propertyref": "",
+            "severity": "error",
+            "target": ""
+          }
+        ]
+      }
+    }
+  }
+]

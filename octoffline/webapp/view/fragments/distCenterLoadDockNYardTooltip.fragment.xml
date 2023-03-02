@@ -1,0 +1,21 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout" xmlns="sap.m" xmlns:ux="sap.ui.ux3">
+	<ux:QuickView class="quickArrow quickdockandyard dockandyardCol" 
+		showActionBar="false">
+		<ux:content>
+
+			<HBox width="100%">
+<!-- 					<items> -->
+					<VBox class="" width="100%">
+
+						<items>
+							
+<!-- 							<Label text="{i18n>dockandyard}" class="dockandyardfont"></Label> -->
+							<Text text="{i18n>dockandyard}" maxLines="4"  class="dockandyardText"></Text>
+						</items>
+					</VBox>
+<!-- 					</items> -->
+					</HBox>
+		</ux:content>
+	</ux:QuickView>
+</core:FragmentDefinition>

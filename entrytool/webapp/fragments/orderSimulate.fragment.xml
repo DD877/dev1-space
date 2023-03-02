@@ -1,0 +1,115 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:uxap="sap.uxap">
+	<Dialog contentHeight="auto" contentWidth="90%" showHeader="false" resizable="false">
+		<uxap:ObjectPageLayout enableLazyLoading="true" headerContentPinnable="false" showTitleInHeaderContent="true" showHeaderContent="false"
+			class="newOrder" height="520px" width="auto">
+			<uxap:headerTitle>
+				<uxap:ObjectPageHeader objectImageURI="/img/merck-logo.png" objectImageShape="Circle" objectTitle="{i18n>OrderSimulatedSubmittoSave}"
+					objectImageAlt="" isObjectIconAlwaysVisible="true" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true"
+					isActionAreaAlwaysVisible="true" showPlaceholder="true" class="newOrderH">
+					<HBox justifyContent="End" width="100%" height="100%">
+						<Button class="whiteButton sapUiSmallMarginEnd" icon="sap-icon://save" id="idOrdrSimBtn" text="{i18n>Submit}" press="onSimulateSubmit"/>
+						<Button class="whiteButton" icon="sap-icon://sys-cancel" text="{i18n>Cancel}" press="onSimulateClose"/>
+					</HBox>
+				</uxap:ObjectPageHeader>
+			</uxap:headerTitle>
+			<uxap:sections>
+				<uxap:ObjectPageSection title="{i18n>SalesOrderHeaderInfo}">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection>
+							<f:SimpleForm backgroundDesign="Translucent" layout="ResponsiveGridLayout" labelSpanXL="6" labelSpanL="6" labelSpanM="6" labelSpanS="12"
+								adjustLabelSpan="true" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="3" columnsM="3"
+								singleContainerFullSize="false" class="formsrti">
+								<f:content>
+									<core:Title text=""/>
+									<Label text="{i18n>Customer}" design="Bold"/>
+									<Text text="{salesorderData>/cusId}"/>
+									<Label text="{i18n>ShiptoParty}" design="Bold"/>
+									<Text text="{salesorderData>/ShipToId}"/>
+									<Label text="{i18n>ShipAddress}" design="Bold"/>
+									<Text text="{salesorderData>/ShipToAddr}"/>
+									<Label text="{i18n>FtradeDescription}" design="Bold"/>
+									<Text text="{salesorderData>/ZFTRADE_DESC}"/>
+									<core:Title text=""/>
+									<Label text="{i18n>OrderReferenceNo}" design="Bold"/>
+									<Text text="{salesorderData>/CustomerPOnumber}"/>
+									<Label text="{i18n>System}" design="Bold"/>
+									<Text text="{salesorderData>/system}"/>
+									<Label text="{i18n>OrderReason}" design="Bold"/>
+									<Text text="{= (${salesorderData>/tenderFlag} === 'X') ? 'Tender' : ''}"/>
+									<core:Title text=""/>
+									<Label text="{i18n>CustomerPODate}" design="Bold"/>
+									<Text text="{path: 'salesorderData>/CustomerPODate', formatter:'.custFormatter.dateFormat'}"/>
+									<Label text="{i18n>TotalAmount}" design="Bold"/>
+									<Text text="{parts:[{path:'salesorderData>/HDRNETVAL'},{path:'salesorderData>/herderCurr'}],formatter:'.custFormatter.numberUnit'} {path:'salesorderData>/herderCurr'}"/>
+									<Label text="{i18n>AdditionalDiscount(%)}" design="Bold"/>
+									<Text text="{salesorderData>/Discount}"/>
+								</f:content>
+							</f:SimpleForm>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+				<uxap:ObjectPageSection title="{i18n>SalesOrderItemInfo}">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection>
+							<VBox >
+								<Table id="ID_OPEN_ORDER12" items="{salesorderData>/TrustpaymatterSet}" fixedLayout="false">
+									<headerToolbar></headerToolbar>
+									<columns>
+										<Column>
+											<Text text="{i18n>ItemNo}"/>
+										</Column>
+										<Column minScreenWidth="Desktop">
+											<Text text="{i18n>MaterialNo}"/>
+										</Column>
+										<Column minScreenWidth="Desktop">
+											<Text text="{i18n>Description}"/>
+										</Column>
+										<Column minScreenWidth="Desktop">
+											<Text text="{i18n>MinOrderQuantity}"/>
+										</Column>
+										<Column minScreenWidth="Desktop" demandPopin="true" width="4rem">
+											<Text text="{i18n>Pallet}"/>
+										</Column>
+										<Column minScreenWidth="Tablet">
+											<Text text="{i18n>Quantity}"/>
+										</Column>
+										<Column minScreenWidth="Tablet">
+											<Text text="{i18n>NetValue}"/>
+										</Column>
+										<Column minScreenWidth="Tablet" demandPopin="true">
+											<Text text="{i18n>RequestDeliveryDate}"/>
+										</Column>
+										<Column minScreenWidth="Tablet" demandPopin="true">
+											<Text text="{i18n>ItemCategory}"/>
+										</Column>
+										<Column minScreenWidth="Tablet" demandPopin="true">
+											<Text text="{i18n>AdditionalDiscount(%)}"/>
+										</Column>
+										<Column hAlign="Center"></Column>
+									</columns>
+									<items>
+										<ColumnListItem>
+											<cells>
+												<Text text="{salesorderData>ZINTR_ITEMNUM}"/>
+												<Text text="{salesorderData>ZMAT_NUM}"/>
+												<Text text="{salesorderData>ZMATRL_DESC}"/>
+												<Text text="{path:'salesorderData>ZMIN_QTY',formatter:'.removePrecedingZero'}"/>
+												<Text text="{salesorderData>ZPAL_QUAN}"/>
+												<Text text="{path:'salesorderData>ZTRGT_QTY',formatter:'.removePrecedingZero'} {salesorderData>UNITPC}"/>
+												<Text text="{parts:[{path:'salesorderData>NetQty'},{path:'salesorderData>currency'}],formatter:'.custFormatter.numberUnit'} {salesorderData>currency}"/>
+												<Text text="{path: 'salesorderData>ZREQ_DLVRYDAT', formatter:'.custFormatter.dateFormat'}" wrapping="false"/>
+												<Text text="{path:'salesorderData>ZFOC_SMPL',formatter:'.custFormatter.focSmplVal'}"/>
+												<Text text="{salesorderData>ZDISCNT}"/>
+												<Button icon="sap-icon://sales-order-item" press="soLineShow" type="Reject"/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</VBox>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+			</uxap:sections>
+		</uxap:ObjectPageLayout>
+	</Dialog>
+</core:FragmentDefinition>

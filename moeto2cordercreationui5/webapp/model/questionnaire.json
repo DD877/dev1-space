@@ -1,0 +1,98 @@
+{
+	"questionnaire": [{
+			"question": "Hi",
+			"answer": "Hi, how can I help you?"
+		}, {
+			"question": "Hello",
+			"answer": "Hello, how can I help you?"
+		},
+
+		{
+			"question": "How are you",
+			"answer": "I am doing good hope you are good too..."
+		}, {
+			"question": "How are you doing",
+			"answer": "I am doing good hope you are good too..."
+		}, {
+			"question": "How are you going",
+			"answer": "I am doing good hope you are good too..."
+		}, {
+			"question": "What’s up?",
+			"answer": "I am good hope you are good too..."
+		},
+
+		{
+			"question": "What is your name",
+			"answer": "Well, people call me Bot."
+		}, {
+			"question": "Good Morning",
+			"answer": "A very Good Morning"
+		}, {
+			"question": "Good evening",
+			"answer": "A very Good Evening"
+		}, {
+			"question": "Good afternoon",
+			"answer": "A very Good Afternoon"
+		}, {
+			"question": "Good night",
+			"answer": "A very Good Night"
+		}, {
+			"question": "Tell me something",
+			"answer": "How may i help you?"
+		},{
+			"question": "Thank you",
+			"answer": "Thank you for your valuable time."
+		}, {
+			"question": "Goodbye",
+			"answer": "Good bye ..Have a nice day"
+		}, {
+			"question": "How can you help me?",
+			"answer": "I can help in getting the Order status details"
+		}, {
+			"question": "what can you do?",
+			"answer": "I can help in getting the Order status details"
+		}, {
+			"question": "I have a question",
+			"answer": "I can help in getting the Order status details"
+		}, {
+			"question": "can you help me?",
+			"answer": "I can help in getting the Order status details"
+		}, {
+			"question": "Are you human?",
+			"answer": "How may I help you?"
+		}, {
+			"question": "Are you a robot?",
+			"answer": "How may I help you?"
+		}, {
+			"question": "Ask A Question",
+			"answer": "Please enter in your question"
+		},
+		{
+			"question": "See you later",
+			"answer": "Goodbye!"
+		},{
+			"question": "what should I call you",
+			"answer": "You can call me bot"
+		},{
+			"question": "Who is this chat bot",
+			"answer": "I am an AI chatbot. If you provide an order number, I can give you the order status"
+		},{
+			"question": "Place an Order",
+			"answer": "Navigating to Order creation page, Thanks"
+		}, {
+			"question": "Open Orders",
+			"answer": "Navigating to Open Orders page, Thanks "
+		}, {
+			"question": "Confirmed Orders",
+			"answer": "Navigating to Confirmed Orders page, Thanks "
+		}, {
+			"question": "Order Report",
+			"answer": "Navigating to Order Report page, Thanks "
+		},
+			{
+				"question":"ADMIN",
+				"answer":"Sorry you are not authorised to see this Order"
+			}
+
+	]
+}

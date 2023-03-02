@@ -1,0 +1,116 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:f="sap.f" xmlns:sv="sap.ui.comp.smartvariants" xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:smartTable="sap.ui.comp.smarttable" xmlns:table="sap.ui.table" controllerName="com.merckgroup.Moet_O2C_OrderCreation_UI5.controller.UserMaintenance">
+	<f:DynamicPage class="custSOHTDynamicPage newOrder" >
+		<f:title>
+			<f:DynamicPageTitle  class="custDynPageTitle">
+					<f:heading>
+				<Title text="{i18n>UserMaintenance}"/>
+			</f:heading>
+			</f:DynamicPageTitle>
+		</f:title>
+		<f:header>
+			<f:DynamicPageHeader pinnable="false" class="custDynPageHeader">
+				<f:content>
+					<smartFilterBar:SmartFilterBar id="sfbUserMaintenance" smartVariant="__SVM01" useToolbar="false" entitySet="UserDetails"
+						persistencyKey="com.MOET.view.SOTracking.FilterBar" class="smfil" assignedFiltersChanged="onAssignedFiltersChanged"
+						initialise="onAfterSmartFilterInitialize" liveMode="true">
+						<smartFilterBar:controlConfiguration>
+							<smartFilterBar:ControlConfiguration key="ZUSR_ID" label="{i18n>UserId}" visibleInAdvancedArea="false"></smartFilterBar:ControlConfiguration>
+							<smartFilterBar:ControlConfiguration key="ZUSR_NAME" label="{i18n>UserName}" visibleInAdvancedArea="true"></smartFilterBar:ControlConfiguration>
+							<smartFilterBar:ControlConfiguration key="ZUSR_EMAILADD" label="{i18n>UserEmail}" visibleInAdvancedArea="true"></smartFilterBar:ControlConfiguration>
+							<smartFilterBar:ControlConfiguration key="ZUSR_ROLE" label="{i18n>UserRole}" visibleInAdvancedArea="true"></smartFilterBar:ControlConfiguration>
+							<smartFilterBar:ControlConfiguration key="ZUSR_STATUS_TXT" label="{i18n>UserStatusText}" visibleInAdvancedArea="true"></smartFilterBar:ControlConfiguration>
+							<smartFilterBar:ControlConfiguration key="CA_ZUSR_NAME" visible="false"></smartFilterBar:ControlConfiguration>
+							<smartFilterBar:ControlConfiguration key="CA_ZROLE_NAME" visible="false"></smartFilterBar:ControlConfiguration>
+							<smartFilterBar:ControlConfiguration key="CA_ZUSR_EMAILADD" visible="false"></smartFilterBar:ControlConfiguration>
+							<smartFilterBar:ControlConfiguration key="CA_ZUSR_STATUS_TXT" visible="false"></smartFilterBar:ControlConfiguration>
+						</smartFilterBar:controlConfiguration>
+					</smartFilterBar:SmartFilterBar>
+				</f:content>
+			</f:DynamicPageHeader>
+		</f:header>
+		<f:content>
+			<smartTable:SmartTable id="smartTable" smartVariant="__SVM01" persistencyKey="com.MOET.view.SOTracking.SmartTable" enableAutoBinding="true"
+								enableCustomFilter="false" entitySet="UserDetails" smartFilterId="sfbUserMaintenance" tableType="Table" useExportToExcel="true"
+								useVariantManagement="true" useTablePersonalisation="true" header="{i18n>Users}" showRowCount="true"
+								initialise="onAfterSmartTableInitialize" beforeRebindTable="onBeforeRebindTable" showFullScreenButton="true"
+								beforeExport="onBeforeDataExport" dataReceived="onDataReceived" ignoreFromPersonalisation="CA_ZUSR_NAME,CA_ZROLE_NAME,CA_ZUSR_EMAILADD,CA_ZUSR_STATUS_TXT" requestAtLeastFields="ZUSR_ID,ZUSR_ROLE"
+								class="stable" initiallyVisibleFields="ZUSR_ID">
+								<smartTable:customToolbar>
+									<OverflowToolbar design="Transparent">
+										<ToolbarSpacer/>
+										<Button text="Download" icon="sap-icon://download" press="onExportAllData" class="ordbtn"/>
+										<Button icon="sap-icon://add" text="{i18n>AddUser}" class="ordbtn" press="onAddCMPress"/>
+									</OverflowToolbar>
+								</smartTable:customToolbar>
+								<table:Table id="atable" rowActionCount="3" selectionMode="None" visibleRowCountMode="Auto">
+									<table:columns>
+										<table:Column filterProperty="ZUSR_ID" sortProperty="ZUSR_ID">
+											<Label text="{i18n>UserId}"/>
+											<table:customData>
+												<core:CustomData key="p13nData" value='\{"columnKey": "ZUSR_ID", "leadingProperty": "ZUSR_ID"}'/>
+											</table:customData>
+											<table:template>
+												<Text text="{ZUSR_ID}" wrapping="true"/>
+											</table:template>
+										</table:Column>
+										<table:Column filterProperty="ZUSR_NAME" sortProperty="ZUSR_NAME">
+											<Label text="{i18n>UserName}"/>
+											<table:customData>
+												<core:CustomData key="p13nData" value='\{"columnKey": "ZUSR_NAME", "leadingProperty": "ZUSR_NAME"}'/>
+											</table:customData>
+											<table:template>
+												<Text text="{ZUSR_NAME}" wrapping="true"/>
+											</table:template>
+										</table:Column>
+										<table:Column filterProperty="ZUSR_EMAILADD" sortProperty="ZUSR_EMAILADD">
+											<Label text="{i18n>UserEmail}"/>
+											<table:customData>
+												<core:CustomData key="p13nData" value='\{"columnKey": "ZUSR_EMAILADD", "leadingProperty": "ZUSR_EMAILADD"}'/>
+											</table:customData>
+											<table:template>
+												<Text text="{ZUSR_EMAILADD}" wrapping="true"/>
+											</table:template>
+										</table:Column>
+										<table:Column filterProperty="ZROLE_NAME" sortProperty="ZROLE_NAME">
+											<Label text="{i18n>RoleName}"/>
+											<table:customData>
+												<core:CustomData key="p13nData" value='\{"columnKey": "ZROLE_NAME", "leadingProperty": "ZROLE_NAME"}'/>
+											</table:customData>
+											<table:template>
+												<Text text="{ZROLE_NAME}" wrapping="true"/>
+											</table:template>
+										</table:Column>
+										<table:Column filterProperty="ZUSR_STATUS_TXT" sortProperty="ZUSR_STATUS_TXT">
+											<Label text="{i18n>UserStatusText}"/>
+											<table:customData>
+												<core:CustomData key="p13nData" value='\{"columnKey": "ZUSR_STATUS_TXT", "leadingProperty": "ZUSR_STATUS_TXT"}'/>
+											</table:customData>
+											<table:template>
+												<Text text="{ZUSR_STATUS_TXT}" wrapping="true"/>
+											</table:template>
+										</table:Column>
+										<table:Column hAlign="Center" class="addec">
+											<Label text="{i18n>AssignCustomer}"/>
+											<table:customData>
+												<core:CustomData key="p13nData" value='\{"columnKey": "ZUSR_TYP", "leadingProperty": "ZUSR_TYP"}'/>
+											</table:customData>
+											<table:template class="addect">
+												<Button icon="sap-icon://add-employee" tooltip="{i18n>AssignCustomer}" press="onCusAssign"/>
+											</table:template>
+										</table:Column>
+									</table:columns>
+									<table:rowActionTemplate>
+										<table:RowAction>
+											<table:items>
+												<table:RowActionItem icon="sap-icon://edit" text="{i18n>Edit}" press="onEditPress"></table:RowActionItem>
+												<table:RowActionItem icon="sap-icon://delete" text="{i18n>Delete}" press="onDeletePress"></table:RowActionItem>
+											</table:items>
+										</table:RowAction>
+									</table:rowActionTemplate>
+								</table:Table>
+							</smartTable:SmartTable>
+		</f:content>
+	</f:DynamicPage>
+</mvc:View>

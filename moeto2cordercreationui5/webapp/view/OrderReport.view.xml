@@ -1,0 +1,127 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:f="sap.f" xmlns:sv="sap.ui.comp.smartvariants" xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:smartTable="sap.ui.comp.smarttable" xmlns:table="sap.ui.table" controllerName="com.merckgroup.Moet_O2C_OrderCreation_UI5.controller.OrderReport">
+	<f:DynamicPage class="custSOHTDynamicPage newOrder" >
+		<f:title>
+			<f:DynamicPageTitle  class="custDynPageTitle">
+					<f:heading>
+				<Title text="OTC Health Care Report"/>
+			</f:heading>
+			</f:DynamicPageTitle>
+		</f:title>
+		<f:header>
+			<f:DynamicPageHeader pinnable="false" class="custDynPageHeader">
+				<f:content>
+					<smartFilterBar:SmartFilterBar id="smartFilterBar" smartVariant="__SVM01" useToolbar="false" entitySet="OTCHealthCareReport"
+								persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.SOTracking.FilterBar" class="smfil"
+								assignedFiltersChanged="onAssignedFiltersChanged" initialise="onAfterSmartFilterInitialize" liveMode="true">
+								<smartFilterBar:controlConfiguration>
+									<smartFilterBar:ControlConfiguration key="ZSO_NO" visibleInAdvancedArea="true"></smartFilterBar:ControlConfiguration>
+									<smartFilterBar:ControlConfiguration key="ZCREATED_BY" label="Created By" visibleInAdvancedArea="true"></smartFilterBar:ControlConfiguration>
+									<smartFilterBar:ControlConfiguration key="ZHDR_STATUS" label="Header Status" visibleInAdvancedArea="true"></smartFilterBar:ControlConfiguration>
+									<smartFilterBar:ControlConfiguration key="ZREQEST_DELV_DATE" visible="false"></smartFilterBar:ControlConfiguration>
+									<smartFilterBar:ControlConfiguration key="ZDELV_DATE" visible="false"></smartFilterBar:ControlConfiguration>
+									<smartFilterBar:ControlConfiguration key="ZSO_CREATED_DATE" visible="false"></smartFilterBar:ControlConfiguration>
+									<smartFilterBar:ControlConfiguration key="CA_ZREQEST_DELV_DATE" label="{i18n>RequestedDeliveryDate}" visibleInAdvancedArea="false"
+										conditionType="sap.ui.comp.config.condition.DateRangeType"></smartFilterBar:ControlConfiguration>
+									<smartFilterBar:ControlConfiguration key="CA_ZDELV_DATE" label="{i18n>DeliveryDate}" visibleInAdvancedArea="false"
+										conditionType="sap.ui.comp.config.condition.DateRangeType"></smartFilterBar:ControlConfiguration>
+								</smartFilterBar:controlConfiguration>
+							</smartFilterBar:SmartFilterBar>
+				</f:content>
+			</f:DynamicPageHeader>
+		</f:header>
+		<f:content>
+			<smartTable:SmartTable id="smartTable" smartVariant="__SVM01"
+								persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.SOTracking.SmartTable" enableAutoBinding="true" enableCustomFilter="false"
+								entitySet="OTCHealthCareReport" smartFilterId="smartFilterBar" tableType="Table" useExportToExcel="true" useVariantManagement="true"
+								useTablePersonalisation="true" header="Orders" showRowCount="true" initialise="onAfterSmartTableInitialize"
+								beforeRebindTable="onBeforeRebindTable" showFullScreenButton="true" beforeExport="onBeforeDataExport" dataReceived="onDataReceived"
+								ignoreFromPersonalisation="ZDELV_DATE,ZREQEST_DELV_DATE,ZSO_CREATED_DATE,Z_MATERIAL_NO,Z_SHIP_PGI_DATE,CA_Z_SHIP_PGI_DATE" requestAtLeastFields="" class="stable"
+								initiallyVisibleFields="ZSOLD_TO_PARTY,ZSHIP_TO_PARTY,ZSO_NO,ZDELIVERY_NO,CA_ZSO_CREATED_DATE,CA_ZREQEST_DELV_DATE,CA_ZDELV_DATE,Z_SO_SORG,ZHDR_STATUS,Z_CUST_PO_NO,Z_MATERIAL_DESC,ZSO_ITM_NO,Z_ITEM_QTY,ZDELV_QTY,Z_ITEM_STATUS,Z_PGI_QTY,Z_PLANT,Z_SALES_UNIT">
+								<smartTable:customToolbar>
+									<OverflowToolbar design="Transparent">
+										<ToolbarSpacer/>
+										<!--<Button icon="sap-icon://add" text="Add Customer" class="ordbtn" press="onAddCMPress"/>-->
+									</OverflowToolbar>
+								</smartTable:customToolbar>
+								<table:Table id="atable" selectionMode="None" visibleRowCountMode="Auto">
+									<table:columns>
+										<table:Column  hAlign="Begin" sortProperty="CA_ZSO_CREATED_DATE" width="10rem" filterProperty="CA_ZSO_CREATED_DATE"
+											showFilterMenuEntry="false" showSortMenuEntry="true">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "CA_ZSO_CREATED_DATE", "leadingProperty":"CA_ZSO_CREATED_DATE","columnIndex":"4", "sortProperty": "CA_ZSO_CREATED_DATE" ,"type":"date"}'/>
+											</table:customData>
+											<Label text="{i18n>SoDate}"/>
+											<table:template>
+												<Text text="{path:'CA_ZSO_CREATED_DATE',formatter:'.custFormatter.dateFormat' } "/>
+											</table:template>
+										</table:Column>
+										<table:Column  hAlign="Begin" sortProperty="CA_ZDELV_DATE" width="10rem" filterProperty="CA_ZDELV_DATE"
+											showFilterMenuEntry="false" showSortMenuEntry="true">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "CA_ZDELV_DATE", "leadingProperty":"CA_ZDELV_DATE", "columnIndex":"5", "sortProperty": "CA_ZDELV_DATE","type":"date"}'/>
+											</table:customData>
+											<Label text="{i18n>DeliveryDate}"/>
+											<table:template>
+												<Text text="{path:'CA_ZDELV_DATE',formatter:'.custFormatter.dateFormatWithTime'} "/>
+											</table:template>
+										</table:Column>
+										<table:Column  hAlign="Begin" sortProperty="CA_ZREQEST_DELV_DATE" width="10rem" filterProperty="CA_ZREQEST_DELV_DATE"
+											showFilterMenuEntry="false" showSortMenuEntry="true">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "CA_ZREQEST_DELV_DATE", "leadingProperty":"CA_ZREQEST_DELV_DATE","columnIndex":"8", "sortProperty": "CA_ZREQEST_DELV_DATE" ,"type":"date"}'/>
+											</table:customData>
+											<Label text="{i18n>RequestedDeliveryDate}"/>
+											<table:template>
+												<Text text="{path:'CA_ZREQEST_DELV_DATE',formatter:'.custFormatter.dateFormatWithTime' } "/>
+											</table:template>
+										</table:Column>
+										<table:Column  hAlign="Begin" sortProperty="Z_MATERIAL_NO " width="10rem" filterProperty="Z_MATERIAL_NO "
+											showFilterMenuEntry="false" showSortMenuEntry="true">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "Z_MATERIAL_NO ", "leadingProperty":"Z_MATERIAL_NO ","columnIndex":"10", "sortProperty": "Z_MATERIAL_NO "}'/>
+											</table:customData>
+											<Label text="Material Number"/>
+											<table:template>
+												<Text text="{Z_MATERIAL_NO} "/>
+											</table:template>
+										</table:Column>
+									<!--	<table:Column  hAlign="Begin" sortProperty="Z_MATERIAL_DESC " width="10rem" filterProperty="Z_MATERIAL_DESC "
+											showFilterMenuEntry="false" showSortMenuEntry="true">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "Z_MATERIAL_DESC ", "leadingProperty":"Z_MATERIAL_DESC ","columnIndex":"11", "sortProperty": "Z_MATERIAL_DESC "}'/>
+											</table:customData>
+											<Label text="Material Description"/>
+											<table:template>
+												<Text text="{Z_MATERIAL_DESC} "/>
+											</table:template>
+										</table:Column>-->
+										<table:Column  hAlign="Begin" sortProperty="CA_Z_SHIP_PGI_DATE " width="10rem" filterProperty="CA_Z_SHIP_PGI_DATE "
+											showFilterMenuEntry="false" showSortMenuEntry="true">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "CA_Z_SHIP_PGI_DATE ", "leadingProperty":"CA_Z_SHIP_PGI_DATE ","columnIndex":"16", "sortProperty": "CA_Z_SHIP_PGI_DATE " ,"type":"date"}'/>
+											</table:customData>
+											<Label text="PGI Date"/>
+											<table:template>
+												<!--<Text text="{path:'CA_Z_SHIP_PGI_DATE ',formatter:'.custFormatter.SalesOrderDateOrderReport' } "/>-->
+												<Text text="{path:'CA_Z_SHIP_PGI_DATE',formatter:'.custFormatter.dateFormatOReport' } "/>
+											</table:template>
+										</table:Column>
+									</table:columns>
+									<table:rowActionTemplate>
+										<table:RowAction>
+											<table:items ></table:items>
+										</table:RowAction>
+									</table:rowActionTemplate>
+								</table:Table>
+							</smartTable:SmartTable>
+		</f:content>
+	</f:DynamicPage>
+</mvc:View>

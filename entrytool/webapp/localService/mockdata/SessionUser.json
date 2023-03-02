@@ -1,0 +1,18 @@
+{
+    "d": {
+        "results": [
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.SessionUserType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/SessionUser('X234869')"
+                },
+                "ZUSR_ID": "X234869",
+                "ZUSR_NAME": "DIBYA",
+                "ZUSR_EMAILADD": "dibyakanta.deo@capgemini.com",
+                "ZUSR_TYP": "I",
+                "ZUSR_ROLE": "ADMIN",
+                "ZROLE_NAME": "CG Admin"
+            }
+        ]
+    }
+}

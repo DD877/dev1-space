@@ -1,0 +1,87 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"
+  xmlns:core="sap.ui.core">
+  <Dialog id="ratingDialog" title=""
+    class="dDateUpdDialogratingApp popUPPad" showHeader="false" modal="true">
+    <content>
+      <FlexBox alignItems="Start" justifyContent="SpaceBetween"
+        class="popUPColorTop">
+        <items>
+          <Label text="{i18n>ratingAppHeader}" class="blackHdrLblratingApp ratingAppFont" />
+          <FlexBox alignItems="Start" justifyContent="SpaceBetween"
+            class="">
+            <items>
+              <core:Icon src="sap-icon://decline" class="btnClose"
+                color="#736F6E" press="closeOverlay">
+              </core:Icon>
+            </items>
+          </FlexBox>
+        </items>
+      </FlexBox>
+      <FlexBox id="fbContentDisplayBefore" alignItems="Center"
+        justifyContent="Center" width="70%" class="fboxContent" visible="{ratingModel>/dispBeforeVis}">
+        <items>
+          <l:VerticalLayout class="fboxContentbefore">
+            <l:HorizontalLayout>
+              <Label text="{i18n>rateApp}"
+                class="nestleSizeappRating fboxContentbeforeRatingPadlbl "></Label>
+            </l:HorizontalLayout>
+
+            <RatingIndicator id="ratingAppId" maxValue="5"
+              class="fboxContentbeforeRatingPad" value="{ratingModel>/ratingVal}" tooltip="{i18n>rating}"
+              liveChange="liveChange" change="selectChange" />
+
+            <Label id="LblForText"
+              class="nestleSizeapp fboxContentbeforeRatingPadlblChoice" text="{ratingModel>/ratingText}"></Label>
+          </l:VerticalLayout>
+        </items>
+      </FlexBox>
+      <FlexBox id="fbContentDisplayAfter" alignItems="Start"
+        justifyContent="SpaceBetween" class="fboxContentAfter ratingAppFullTextArea" visible="{ratingModel>/dispAfterVis}">
+        <items>
+          <l:VerticalLayout class="sapUiContentPadding">
+            <l:HorizontalLayout>
+              <Label text="{i18n>ratingAppAfterSend}" class="nestleSizeappRating rateAppLblPadRateApp">
+              </Label>
+            </l:HorizontalLayout>
+            <TextArea id="feedback" value="{ratingModel>/feedback}" cols="35" class="textArearateApp">
+            </TextArea>
+          </l:VerticalLayout>
+        </items>
+      </FlexBox>
+      <FlexBox id="fbContentDisplayAfterSend" alignItems="Center"
+        justifyContent="Center" class="fbContentAfterSend" visible="{ratingModel>/dispAfterSendVis}">
+        <items>
+          <l:HorizontalLayout>
+            <core:Icon src="sap-icon://accept" class="ratingAppSuccessIcon"
+              size="2rem" color="green" press="closeOverlay">
+            </core:Icon>
+          </l:HorizontalLayout>
+          <l:VerticalLayout>
+            <Label text="{i18n>ratingAppFeedBack}" class="nestleSizeappRating"></Label>
+            <Label text="{i18n>ratingAppFeedBack1}" class="nestleSizeappRating"></Label>
+          </l:VerticalLayout>
+        </items>
+      </FlexBox>
+      <FlexBox alignItems="Start" justifyContent="End"
+        class=" btnPaddingUicFont popUPColorBottomrateApp ratingAppBtnPad ">
+        <items>
+          <l:VerticalLayout id="ratingAppSkip" class="" visible="{ratingModel>/ratingSkipVis}">
+            <Button id="btnCancelratingApp" text="{i18n>btnskip}"
+              class="gapbtn1 gapbtnrateAppPad ovalEdgeBtn btnPaddingRateAppSkip"
+              emphasized="true" press="closeOverlay" />
+          </l:VerticalLayout>
+          <l:VerticalLayout class="">
+            <Button id="btnratingApp" text="{i18n>send}"
+              class="gapbtnrateApp  ovalEdgeBtn btnPaddingUno" emphasized="true"
+              press="sendRatingApp" visible="{ratingModel>/btnRatingVis}"/>
+          </l:VerticalLayout>
+          <l:VerticalLayout class="">
+            <Button id="btnratingAppClose" text="{i18n>close}"
+              class="gapbtnrateApp gapbtnrateAppPad ovalEdgeBtn btnPaddingUno"
+              emphasized="true" press="closeOverlay" visible="{ratingModel>/btnRatingCloseVis}" />
+          </l:VerticalLayout>
+        </items>
+      </FlexBox>
+    </content>
+  </Dialog>
+</core:FragmentDefinition>

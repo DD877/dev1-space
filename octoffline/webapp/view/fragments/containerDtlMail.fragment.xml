@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+  xmlns:l="sap.ui.layout" xmlns="sap.m">
+  <Dialog class="mailDialogFooter" title="Mail" contentWidth="60%"
+    contentHeight="400px">
+    <content>
+      <l:VerticalLayout class="totalWidth">
+        <Label text="{i18n>recipient}" width="100%"></Label>
+        <Input id="mailRecipients" width="100%" value='{/recipients}' placeholder="{i18n>placeholderRecipient}" class="ovalEdgeTextArea"></Input>
+        <Label text="{i18n>subject}" width="100%"></Label>
+        <Input id="mailSubject" width="100%" value='{/subject}' placeholder="{i18n>placeholderSubject}" class="ovalEdgeTextArea"></Input>
+        <Label text="{i18n>body}" width="100%"></Label>
+        <TextArea id="mailBody" value='{/body}' width="100%" height="200px" rows="5" placeholder="{i18n>placeholderBody}" class="ovalEdgeTextArea"></TextArea>
+      </l:VerticalLayout>
+    </content>
+    <buttons>
+      <Button text="{i18n>send}"  press="onSendMail" class="gapbtn2 ovalEdgeBtn btnPaddingUic"></Button>
+      <Button text="{i18n>btnCancel}" id="mailCancel" press="onCloseMailDialog" class="gapbtn2 ovalEdgeBtn btnPaddingUic"></Button>
+    </buttons>
+  </Dialog>
+</core:FragmentDefinition>

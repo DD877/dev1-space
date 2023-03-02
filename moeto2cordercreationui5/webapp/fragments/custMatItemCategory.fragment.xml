@@ -1,0 +1,71 @@
+<core:FragmentDefinition xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:uxap="sap.uxap"
+	xmlns:table="sap.ui.table" xmlns:sl="sap.ui.comp.navpopover" xmlns:micro="sap.suite.ui.microchart" xmlns:u="sap.ui.unified"
+	xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Dialog contentHeight="auto" contentWidth="90%" showHeader="false" resizable="false">
+		<uxap:ObjectPageLayout enableLazyLoading="true" headerContentPinnable="false" showTitleInHeaderContent="true" showHeaderContent="false"
+			class="newOrder" height="350px">
+			<uxap:headerTitle>
+				<uxap:ObjectPageHeader objectImageURI="/img/merck-logo.png" objectImageShape="Circle" objectTitle="" objectImageAlt=""
+					isObjectIconAlwaysVisible="true" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true" isActionAreaAlwaysVisible="true"
+					showPlaceholder="true" class="newOrderH">
+					<HBox justifyContent="End" width="100%" height="100%">
+						<Button icon="sap-icon://add" text="Item Category Assignment" class="ordbtn sapUiSmallMarginEnd" press="onAssignCMItemCategoryPress"/>
+						<Button tooltip="Close" text="Close" icon="sap-icon://decline" press="onACMItemClose"/>
+					</HBox>
+				</uxap:ObjectPageHeader>
+			</uxap:headerTitle>
+			<uxap:sections>
+				<uxap:ObjectPageSection title="Item Category to the Material">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection>
+							<table:Table class="shipclass" rows="{cmatItemAssignment>/}" rowActionCount="2" selectionMode="None" visibleRowCount="8"
+								ariaLabelledBy="title">
+								<table:columns>
+									<table:Column filterProperty="ZCUST_NUM" sortProperty="ZCUST_NUM" defaultFilterOperator="StartsWith">
+										<Label text="Customer"/>
+										<table:template>
+											<Text text="{cmatItemAssignment>ZCUST_NUM}" wrapping="false"/>
+										</table:template>
+									</table:Column>
+									<table:Column filterProperty="ZMAT_NUM" sortProperty="ZMAT_NUM" defaultFilterOperator="StartsWith">
+										<Label text="Material"/>
+										<table:template>
+											<Text text="{cmatItemAssignment>ZMAT_NUM}" wrapping="false"/>
+										</table:template>
+									</table:Column>
+									<table:Column filterProperty="ZITM_CATEGORY" sortProperty="ZITM_CATEGORY" defaultFilterOperator="StartsWith">
+										<Label text="Item Category"/>
+										<table:template>
+											<Text text="{cmatItemAssignment>ZITM_CATEGORY} - {path:'cmatItemAssignment>ZITM_CATEGORY',formatter:'.custFormatter.focSmplVal'}"
+												wrapping="false"/>
+										</table:template>
+									</table:Column>
+								<!--	<table:Column filterProperty="ZDEL_FLAG" sortProperty="ZDEL_FLAG" defaultFilterOperator="StartsWith">
+										<Label text="{i18n>DeletionFlag}"/>
+										<table:template>
+											<Text text="{cmatItemAssignment>ZDEL_FLAG}" wrapping="false"/>
+										</table:template>
+									</table:Column>-->
+									<table:Column  defaultFilterOperator="StartsWith">
+                                        <Label text="{i18n>DeletionFlag}"/>
+                                        <table:template>
+                                            <Switch change="onUpdateMaterialItemCat" enabled="{= (${cmatItemAssignment>ZDEL_FLAG} === 'X') ? true : false }" type="AcceptReject"
+                                                state="{= (${cmatItemAssignment>ZDEL_FLAG} === 'X') ? true : false }"/>
+                                        </table:template>
+                                    </table:Column>
+								</table:columns>
+								<table:rowActionTemplate>
+									<table:RowAction>
+										<table:items>
+											<table:RowActionItem icon="sap-icon://delete" text="Delete" press="onDeleteCMItemAssign"></table:RowActionItem>
+										</table:items>
+									</table:RowAction>
+								</table:rowActionTemplate>
+							</table:Table>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+			</uxap:sections>
+		</uxap:ObjectPageLayout>
+	</Dialog>
+</core:FragmentDefinition>

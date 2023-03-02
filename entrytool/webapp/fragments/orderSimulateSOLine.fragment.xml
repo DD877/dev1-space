@@ -1,0 +1,78 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:uxap="sap.uxap"
+	xmlns:table="sap.ui.table">
+	<Dialog contentHeight="auto" contentWidth="90%" showHeader="false" resizable="false">
+		<uxap:ObjectPageLayout enableLazyLoading="true" headerContentPinnable="false" showTitleInHeaderContent="true" showHeaderContent="false"
+			class="newOrder" height="520px">
+			<uxap:headerTitle>
+				<uxap:ObjectPageHeader objectImageURI="/img/merck-logo.png" objectImageShape="Circle" objectTitle="{i18n>ScheduleLines}" objectImageAlt=""
+					isObjectIconAlwaysVisible="true" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true" isActionAreaAlwaysVisible="true"
+					showPlaceholder="true" class="newOrderH">
+					<HBox justifyContent="End" width="100%" height="100%">
+						<Button tooltip="{i18n>Close}" icon="sap-icon://decline" text="{i18n>Close}"  press="soLineClose"/>
+					</HBox>
+				</uxap:ObjectPageHeader>
+			</uxap:headerTitle>
+			<uxap:sections>
+				<uxap:ObjectPageSection title="Schedule Line Header Info">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection>
+							<f:SimpleForm backgroundDesign="Translucent" layout="ResponsiveGridLayout" labelSpanXL="6" labelSpanL="6" labelSpanM="6" labelSpanS="12"
+								adjustLabelSpan="true" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="3" columnsM="3"
+								singleContainerFullSize="false" class="formsrti">
+								<f:content>
+									<core:Title text=""/>
+									<Label text="{i18n>Customer}" design="Bold"/>
+									<Text text="{ssoLineJson1>/cusId}"/>
+									<Label text="{i18n>ShiptoParty}" design="Bold"/>
+									<Text text="{ssoLineJson1>/ShipToId}"/>
+									<core:Title text=""/>
+									<Label text="{i18n>TotalQuantity}" design="Bold"/>
+									<Text text="{path:'ssoLineJson>/ReqQty',formatter:'.removePrecedingZero'}"/>
+									<core:Title text=""/>
+									<Label text="{i18n>MaterialNo}" design="Bold"/>
+									<Text text="{ssoLineJson>/Material}"/>
+								</f:content>
+							</f:SimpleForm>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+				<uxap:ObjectPageSection title="{i18n>ScheduleLines}">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection>
+							<VBox >
+								<table:Table class="tableBorder textblack" rows="{ssoLineJson>/}" rowActionCount="2" selectionMode="None" visibleRowCount="1"
+									ariaLabelledBy="title">
+									<table:toolbar>
+										<Toolbar>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</table:toolbar>
+									<table:columns>
+										<table:Column filterProperty="order" sortProperty="order" defaultFilterOperator="StartsWith">
+											<Label text="{i18n>RequestDate}"/>
+											<table:template>
+												<Text text="{path: 'ssoLineJson>/ReqDate', formatter:'.custFormatter.dateFormatWithTime'}" wrapping="false"/>
+											</table:template>
+										</table:Column>
+										<table:Column filterProperty="quantity" sortProperty="quantity" defaultFilterOperator="StartsWith">
+											<Label text="{i18n>ConfirmQuantity}"/>
+											<table:template>
+												<Text text="{path:'ssoLineJson>/ComQty',formatter:'.removePrecedingZero'}" wrapping="false"/>
+											</table:template>
+										</table:Column>
+										<table:Column filterProperty="status" sortProperty="status" defaultFilterOperator="StartsWith">
+											<Label text="{i18n>ConfirmationDate}"/>
+											<table:template>
+												<Text text="{path: 'ssoLineJson>/ComDate', formatter:'.custFormatter.dateFormatWithTime'}" wrapping="false"/>
+											</table:template>
+										</table:Column>
+									</table:columns>
+								</table:Table>
+							</VBox>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+			</uxap:sections>
+		</uxap:ObjectPageLayout>
+	</Dialog>
+</core:FragmentDefinition>

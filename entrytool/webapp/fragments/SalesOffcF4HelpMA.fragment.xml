@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog noDataText="{i18n>NoData}" title="{i18n>SelectSalesOffice}" search="handleSalesOffcSearchMA" confirm="onPressSalesOffcValueListMAClose" cancel="onPressSalesOffcValueListMAClose"
+		items="{SalesOfficeMA>/}">
+		<StandardListItem title="{SalesOfficeMA>Salesorg}" description="{SalesOfficeMA>Distrchn}" iconDensityAware="false" iconInset="false" type="Active"/>
+	</SelectDialog>
+</core:FragmentDefinition>

@@ -1,0 +1,56 @@
+<core:FragmentDefinition xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:uxap="sap.uxap"
+	xmlns:table="sap.ui.table" xmlns:sl="sap.ui.comp.navpopover" xmlns:micro="sap.suite.ui.microchart" xmlns:u="sap.ui.unified"
+	xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Dialog contentHeight="auto" contentWidth="90%" showHeader="false" resizable="false">
+		<uxap:ObjectPageLayout enableLazyLoading="true" headerContentPinnable="false" showTitleInHeaderContent="true" showHeaderContent="false"
+			class="newOrder" height="350px">
+			<uxap:headerTitle>
+				<uxap:ObjectPageHeader objectImageURI="/img/merck-logo.png" objectImageShape="Circle" objectTitle="{i18n>CustomerMasterEdit}"
+					objectImageAlt="" isObjectIconAlwaysVisible="true" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true"
+					isActionAreaAlwaysVisible="true" showPlaceholder="true" class="newOrderH">
+					<HBox justifyContent="End" width="100%" height="100%">
+						<Button class="whiteButton sapUiSmallMarginEnd" icon="sap-icon://save" text="{i18n>Save}" press="onEditCust"/>
+						<Button class="whiteButton" tooltip="{i18n>Close}" text="{i18n>Close}" icon="sap-icon://decline" press="onCEditClose"/>
+					</HBox>
+				</uxap:ObjectPageHeader>
+			</uxap:headerTitle>
+			<uxap:sections>
+				<uxap:ObjectPageSection title="{i18n>EditCustomer}">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection>
+							<f:SimpleForm maxContainerCols="2" editable="true" backgroundDesign="Translucent" layout="ResponsiveGridLayout" labelSpanL="4"
+								labelSpanM="4" class="tpfrm" labelSpanS="12" emptySpanL="0" emptySpanM="0" columnsL="2" columnsM="2" width="100%">
+								<f:content>
+									<core:Title class="tp" text=""/>
+									<Label text="{i18n>CustomerNumber}" required="true"/>
+									<Input id="idECCustNo" enabled="false" value="{editCustomer>/ZCUSTMR_NUM}"></Input>
+									<Label text="{i18n>CustomerName}" required="true"/>
+									<Input id="idECCustName" enabled="false" value="{editCustomer>/ZNAME_1}"></Input>
+									
+									<Label text="{i18n>Street}" required="true"/>
+									<Input change="handleChange" value="{editCustomer>/ZSTREET}" enabled="false" id="idECustStreet"></Input>
+									
+									
+									<Label text="{i18n>City}" required="true"/>
+									<Input id="idECCity" enabled="false" value="{editCustomer>/ZCITY}"></Input>
+									
+									<core:Title class="tp" text=""/>
+									<Label text="{i18n>BackendSystem}" required="true"/>
+									<Input id="idECSystem" enabled="false" value="{= (${editCustomer>/ZSYSTEM} === 'L') ? 'LEAN' : 'TEMPO'}"></Input>
+									<Label text="{i18n>PostalCode}" required="true"/>
+									<Input id="idECPCode" enabled="false" value="{editCustomer>/ZPOSTAL_CODE}"></Input>
+									<Label text="{i18n>Region}" required="true"/>
+									<Input id="idECRegion" enabled="false" value="{editCustomer>/ZREGION}"></Input>
+									<Label text="{i18n>DeliveryBlock}"/>
+									<Select forceSelection="false" id="selBlockId" selectedKey="{editCustomer>/ZDEL_BLOCK_ID}" items="{ path: 'DeliveryBlock>/'}">
+										<core:Item key="{DeliveryBlock>ZDELIVERY_BLOCK_ID}" text="{DeliveryBlock>ZDELIVERY_BLOCK_ID} - {DeliveryBlock>ZDELIVERY_BLOCK_DESC}"/>
+									</Select>
+								</f:content>
+							</f:SimpleForm>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+			</uxap:sections>
+		</uxap:ObjectPageLayout>
+	</Dialog>
+</core:FragmentDefinition>

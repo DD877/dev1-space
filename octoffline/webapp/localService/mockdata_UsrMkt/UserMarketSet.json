@@ -1,0 +1,20 @@
+[
+  {
+    "__metadata": {
+      "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/PGTPT_USER_MARKET_SRV/UserMarketSet('NBROYBI')",
+      "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/PGTPT_USER_MARKET_SRV/UserMarketSet('NBROYBI')",
+      "type": "/GLB/PGTPT_USER_MARKET_SRV.UserMarket"
+    },
+    "UserId": "NBROYBI",
+    "SupportMktInd": "X",
+    "CompCode": "CA10,CA19,US43,AU11,FR12,US16",
+    "Plant": "",
+    "ShippingPoint": "",
+    "Warehouse": "",
+    "Yard": "",
+    "Market": "CA",
+    "PortalURL": "http://globe7.nestle.com/irj/servlet/prt/portal/prtroot/com.nestle.globe.ep7core.xx.redirect.Redirect?mobile=true&REDIRECTURL=%3C!gatewayhostname!%3E",
+    "SysAliAPO": "",
+    "Page": 10
+  }
+]

@@ -1,0 +1,88 @@
+{
+    "CustomerMatAssignDetails": [
+        {
+            "__metadata": {
+                "type": "com.merckgroup.moet.services.odata.moet.CustomerMatAssignDetailsType",
+                "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/CustomerMatAssignDetails(ZCUST_NUM='10019973',ZMAT_NUM='10035976',ZSYSTEM='T')"
+            },
+            "ZCUST_NUM": "10019973",
+            "ZMAT_NUM": "10035976",
+            "ZCUSTOMER_NAME": "APHP PHARMACIE CENTRALE NANTER",
+            "ZMATRL_DESC": null,
+            "ZSYSTEM": "T",
+            "ZDEL_FLAG": "",
+            "ZCREATED_BY": "FHAQ",
+            "ZCREATED_ON": "1622195707865",
+            "ZCHANGED_BY": "FHAQ",
+            "ZCHANGED_ON": "1622195707865",
+            "ZSALES_ORG": "FR10",
+            "ZDISTR_CHNL": "42",
+            "ZDIVISION": "00",
+            "ZCURR": "",
+            "ZMAT_DEL_FLAG": null
+        },
+        {
+            "__metadata": {
+                "type": "com.merckgroup.moet.services.odata.moet.CustomerMatAssignDetailsType",
+                "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/CustomerMatAssignDetails(ZCUST_NUM='10019973',ZMAT_NUM='U1255502',ZSYSTEM='T')"
+            },
+            "ZCUST_NUM": "10019973",
+            "ZMAT_NUM": "U1255502",
+            "ZCUSTOMER_NAME": "APHP PHARMACIE CENTRALE NANTER",
+            "ZMATRL_DESC": "EASYPOD TRAVEL BAG (1) - FRA",
+            "ZSYSTEM": "T",
+            "ZDEL_FLAG": "",
+            "ZCREATED_BY": "X179083",
+            "ZCREATED_ON": "1615799636569",
+            "ZCHANGED_BY": "X179083",
+            "ZCHANGED_ON": "1615799636569",
+            "ZSALES_ORG": "FR10",
+            "ZDISTR_CHNL": "42",
+            "ZDIVISION": "00",
+            "ZCURR": "",
+            "ZMAT_DEL_FLAG": ""
+        },
+        {
+            "__metadata": {
+                "type": "com.merckgroup.moet.services.odata.moet.CustomerMatAssignDetailsType",
+                "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/CustomerMatAssignDetails(ZCUST_NUM='10019973',ZMAT_NUM='3023310401',ZSYSTEM='T')"
+            },
+            "ZCUST_NUM": "10019973",
+            "ZMAT_NUM": "3023310401",
+            "ZCUSTOMER_NAME": "APHP PHARMACIE CENTRALE NANTER",
+            "ZMATRL_DESC": "ERBITUX 5 MG/ML - (100 ML) FRA",
+            "ZSYSTEM": "T",
+            "ZDEL_FLAG": "",
+            "ZCREATED_BY": "ACHINCHO",
+            "ZCREATED_ON": "1614768370834",
+            "ZCHANGED_BY": "ACHINCHO",
+            "ZCHANGED_ON": "1614768370834",
+            "ZSALES_ORG": "FR10",
+            "ZDISTR_CHNL": "42",
+            "ZDIVISION": "00",
+            "ZCURR": "",
+            "ZMAT_DEL_FLAG": ""
+        },
+        {
+            "__metadata": {
+                "type": "com.merckgroup.moet.services.odata.moet.CustomerMatAssignDetailsType",
+                "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/CustomerMatAssignDetails(ZCUST_NUM='10019973',ZMAT_NUM='3045710403',ZSYSTEM='T')"
+            },
+            "ZCUST_NUM": "10019973",
+            "ZMAT_NUM": "3045710403",
+            "ZCUSTOMER_NAME": "APHP PHARMACIE CENTRALE NANTER",
+            "ZMATRL_DESC": "LEVOTHYROX 50MCG TABS NF - (30) HOP FRA",
+            "ZSYSTEM": "T",
+            "ZDEL_FLAG": "",
+            "ZCREATED_BY": "X179083",
+            "ZCREATED_ON": "1614180482573",
+            "ZCHANGED_BY": "X179083",
+            "ZCHANGED_ON": "1614180482573",
+            "ZSALES_ORG": "FR10",
+            "ZDISTR_CHNL": "42",
+            "ZDIVISION": "00",
+            "ZCURR": "",
+            "ZMAT_DEL_FLAG": ""
+        }
+    ]
+}

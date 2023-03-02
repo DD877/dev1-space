@@ -1,0 +1,46 @@
+<core:FragmentDefinition xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:uxap="sap.uxap"
+	xmlns:table="sap.ui.table" xmlns:sl="sap.ui.comp.navpopover" xmlns:micro="sap.suite.ui.microchart" xmlns:u="sap.ui.unified"
+	xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Dialog contentHeight="auto" contentWidth="90%" showHeader="false" resizable="false">
+		<uxap:ObjectPageLayout enableLazyLoading="true" headerContentPinnable="false" showTitleInHeaderContent="true" showHeaderContent="false"
+			class="newOrder" height="500px">
+			<uxap:headerTitle>
+				<uxap:ObjectPageHeader objectImageURI="/img/merck-logo.png" objectImageShape="Circle" objectTitle="{i18n>CustomerMaintenance}"
+					objectImageAlt="" isObjectIconAlwaysVisible="true" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true"
+					isActionAreaAlwaysVisible="true" showPlaceholder="true" class="newOrderHP">
+					<HBox justifyContent="End" width="100%" height="100%">
+						<Button class="whiteButton sapUiSmallMarginEnd" icon="sap-icon://save" text="Save" press="onSaveFtrademaster"/>
+						<Button tooltip="{i18n>Close}" text="{i18n>Close}" icon="sap-icon://decline" press="onAssignFtradeClose"/>
+					</HBox>
+				</uxap:ObjectPageHeader>
+			</uxap:headerTitle>
+			<uxap:sections>
+				<uxap:ObjectPageSection title="{i18n>ForeignTradeAssignment}" class="tabsc">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection>
+							<f:SimpleForm maxContainerCols="2" editable="true" backgroundDesign="Translucent" layout="ResponsiveGridLayout" labelSpanL="4"
+								labelSpanM="4" labelSpanS="12" emptySpanL="0" emptySpanM="0" columnsL="2" columnsM="2" width="100%">
+								<f:content>
+									<Label id="idFtradeCust" text="{i18n>CustomerNumber}" required="true" visible="true"/>
+									<Input id="idFtradeCustinput" enabled="false" type="Text" value="{viewPropertiesCust>/custNo}"/>
+									<Label id="idFtradeSytA" text="{i18n>System}" required="true" visible="true"/>
+									<Input id="idFtradeSystAinput" type="Text" enabled="false" value="{path:'viewPropertiesCust>/bsystem',formatter:'.formatShipTo'}"/>
+									<Label id="idFtradeA" text="{i18n>FtradeNumber}" required="true" visible="true"/>
+									<Input id="idFtradeAinput" type="Text" change="handleChangeFtrade"/>
+									<Label id="idFtradeADesc" text="{i18n>FtradeDescription}" required="true" visible="true"/>
+									<Input id="idFtradeADescinput" enabled="false" type="Text"/>
+									<Label id="idFtCityA" text="{i18n>FtradeCity}" required="true"/>
+									<Input id="idFtCityAinput" enabled="false"></Input>
+									<Label id="idFtRegA" text="{i18n>FtradeRegion}" required="true"/>
+									<Input id="idFtRegAinput" enabled="false"></Input>
+									<Label id="idFtPcA" text="{i18n>FtradePostalCode}" required="true"/>
+									<Input id="idFtPcAinput" enabled="false"></Input>
+								</f:content>
+							</f:SimpleForm>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+			</uxap:sections>
+		</uxap:ObjectPageLayout>
+	</Dialog>
+</core:FragmentDefinition>

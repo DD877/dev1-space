@@ -1,0 +1,15 @@
+{
+    "d": {
+        "results": [
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.SNOOrdersType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/SNOOrders(ZINTR_ORDNUM='ss',ZSYSTEM='sas',ZORD_NUM='asd')"
+                },
+                "ZINTR_ORDNUM": "ss",
+                "ZSYSTEM": "sas",
+                "ZORD_NUM": "asd"
+            }
+        ]
+    }
+}

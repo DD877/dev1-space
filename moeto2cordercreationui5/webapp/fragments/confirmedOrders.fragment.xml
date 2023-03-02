@@ -1,0 +1,156 @@
+<core:FragmentDefinition xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:uxap="sap.uxap"
+	xmlns:table="sap.ui.table" xmlns:sl="sap.ui.comp.navpopover" xmlns:u="sap.ui.unified"
+	xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Dialog contentHeight="auto" contentWidth="90%" showHeader="false" resizable="false">
+		<uxap:ObjectPageLayout enableLazyLoading="true" headerContentPinnable="false" showTitleInHeaderContent="true" showHeaderContent="false"
+			class="newOrder" height="520px">
+			<uxap:headerTitle>
+				<uxap:ObjectPageHeader objectImageURI="/img/merck-logo.png" objectImageShape="Circle" objectTitle="Order Detail" objectImageAlt=""
+					isObjectIconAlwaysVisible="true" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true" isActionAreaAlwaysVisible="true"
+					showPlaceholder="true" class="newOrderH">
+					<HBox justifyContent="End" width="100%" height="100%">
+						<Button class="whiteButton" tooltip="{i18n>Close}" text="{i18n>Close}" icon="sap-icon://decline" press="onConfirmDilogClose"/>
+					</HBox>
+				</uxap:ObjectPageHeader>
+			</uxap:headerTitle>
+			<uxap:sections>
+				<uxap:ObjectPageSection title="{i18n>SalesOrderHeaderInfo}">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection> <!--id="idSalesAppForm"-->
+							<f:SimpleForm  backgroundDesign="Translucent" layout="ResponsiveGridLayout" labelSpanXL="6" labelSpanL="6" labelSpanM="6"
+								labelSpanS="12" adjustLabelSpan="true" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="3" columnsM="3"
+								singleContainerFullSize="false" class="formsrti">
+								<f:content>
+									<core:Title text=""/>
+									<Label text="{i18n>Customer}" design="Bold"/>
+									<Text text="{OrderData1>/ZCUSTOMER_NAME}"/>
+									<Label text="{i18n>ShiptoParty}" design="Bold"/>
+									<Text text="{OrderData1>/ZSHIP_TO_PARTY_DESC}"/>
+									<Label text="{i18n>ShiptoAddress}" design="Bold"/>
+									<Text text="{viewProperties1>/ShipToAddr}"/>
+									<Label text="{i18n>FtradeDescription}" design="Bold"/>
+									<Text text="{OrderData1>/ZFTRADE_DESC}"/>
+									<core:Title text=""/>
+									<Label text="{i18n>OrderReferenceNo}" design="Bold"/>
+									<Text text="{OrderData1>/ZCUST_PONUM}"/>
+									<Label text="{i18n>InternalOrderNo}" design="Bold"/>
+									<Text text="{OrderData1>/ZINTR_ORDNUM}"/>
+									<Label text="{i18n>SalesDocumentNo}" design="Bold"/>
+									<Text text="{OrderData1>/ZORD_NUM}"/>
+									<Label text="{i18n>System}" design="Bold"/>
+									<Text text="{= (${OrderData1>/ZSYSTEM} === 'L') ? 'LEAN' : 'TEMPO'}"/>
+									<core:Title text=""/>
+									<Label text="{i18n>CustomerPODate}" design="Bold"/>
+									<Text text="{path:'OrderData1>/ZCUST_PODAT',formatter:'.custFormatter.dateFormatWithTime'}"/>
+									<Label text="{i18n>TotalAmount}" design="Bold"/>
+									<!--<Text text="{path:'OrderData1>/ZTOTAL_AMT',formatter:'.custFormatter.removePrecedingZero'} {OrderData1>/ZCURR}"/>-->
+									<Text text="{parts:[{path:'OrderData1>/ZTOTAL_AMT'},{path:'OrderData1>/ZCURR'}],formatter:'.custFormatter.numberUnit'} {OrderData1>/ZCURR}" />
+									<Label text="{i18n>AdditionalDiscount(%)}" design="Bold"/>
+									<Text text="{OrderData1>/ZDISCNT}"/>
+									<Label text="{i18n>OrderReason}" design="Bold"/>
+									<Text text="{= (${OrderData1>/ZTEDER_FLAG} === 'X') ? 'Tender' : ''}"/>
+									<Label text="Attached file Name" design="Bold"/>
+									<Link press="pressAddAttachment" text="{viewProperties1>/FileName}"></Link>
+								</f:content>
+							</f:SimpleForm>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+				<uxap:ObjectPageSection title="{i18n>SalesOrderItemInformation}">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection>
+							<VBox > <!--id="ID_OPEN_ORDER121"-->
+								<table:Table  class="tableBorder textblack" rows="{OrderData12>/}" rowActionCount="2" selectionMode="None"
+									visibleRowCount="8" ariaLabelledBy="title">
+									<table:toolbar>
+										<Toolbar>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</table:toolbar>
+									<table:columns>
+										<table:Column filterProperty="order" sortProperty="order" defaultFilterOperator="StartsWith">
+											<Label text="{i18n>ItemNo}"/>
+											<table:template>
+												<Text text="{OrderData12>ZINTR_ITEMNUM}" wrapping="false"/>
+											</table:template>
+										</table:Column>
+										<table:Column filterProperty="order" sortProperty="order" defaultFilterOperator="StartsWith">
+											<Label text="{i18n>MaterialNo}"/>
+											<table:template>
+												<Text text="{OrderData12>ZMAT_NUM}" wrapping="false"/>
+											</table:template>
+										</table:Column>
+										<table:Column filterProperty="order" sortProperty="order" defaultFilterOperator="StartsWith">
+											<Label text="{i18n>Description}"/>
+											<table:template>
+												<Text text="{OrderData12>ZMATRL_DESC}" wrapping="false"/>
+											</table:template>
+										</table:Column>
+										<table:Column filterProperty="order" sortProperty="order" defaultFilterOperator="StartsWith">
+											<Label text="{i18n>MinOrderQuantity}"/>
+											<table:template>
+												<Text text="{OrderData12>ZMIN_QTY} {OrderData12>ZTRGT_QTYUOM}" wrapping="false"/>
+											</table:template>
+										</table:Column>
+										<table:Column filterProperty="order" sortProperty="order" defaultFilterOperator="StartsWith">
+											<Label text="{i18n>Pallet}"/>
+											<table:template>
+												<Text text="{OrderData12>ZPAL_QUAN}" wrapping="false"/>
+											</table:template>
+										</table:Column>
+										<table:Column filterProperty="order" sortProperty="order" defaultFilterOperator="StartsWith">
+											<Label text="{i18n>TargetQty}"/>
+											<table:template>
+												<Text text="{OrderData12>ZTRGT_QTY} {OrderData12>ZTRGT_QTYUOM}" wrapping="false"/>
+											</table:template>
+										</table:Column>
+										<table:Column filterProperty="order" sortProperty="order" defaultFilterOperator="StartsWith">
+											<Label text="{i18n>NetValue}"/>
+											<table:template>
+												<!--<Text text="{path:'OrderData12>ZCOST',formatter:'.custFormatter.removePrecedingZero'} {OrderData1>/ZCURR}" wrapping="false"/>-->
+												
+												<Text text="{parts:[{path:'OrderData12>ZCOST'},{path:'OrderData1>/ZCURR'}],formatter:'.custFormatter.numberUnit'} {OrderData1>/ZCURR}" />
+												
+											</table:template>
+										</table:Column>
+										<table:Column filterProperty="order" sortProperty="order" defaultFilterOperator="StartsWith">
+											<Label text="{i18n>RequestDeliveryDate}"/>
+											<table:template>
+												<Text text="{path:'OrderData12>ZREQ_DLVRYDAT',formatter:'.custFormatter.dateFormat'}" wrapping="false"/>
+											</table:template>
+										</table:Column>
+										<table:Column filterProperty="order" sortProperty="order" defaultFilterOperator="StartsWith">
+											<Label text="{i18n>ItemCategory}"/>
+											<table:template>
+												<Text text="{path:'OrderData12>ZFOC_SMPL',formatter:'.custFormatter.focSmplVal'}" wrapping="false"/>
+											</table:template>
+										</table:Column>
+										<table:Column filterProperty="order" sortProperty="order" defaultFilterOperator="StartsWith">
+											<Label text="{i18n>Discount}"/>
+											<table:template>
+												<Text text="{OrderData12>ZDISCNT}" wrapping="false"/>
+											</table:template>
+										</table:Column>
+										<table:Column filterProperty="order" sortProperty="order" visible="false" defaultFilterOperator="StartsWith">
+											<Label text="{i18n>Unit}"/>
+											<table:template>
+												<Text text="{OrderData12>UNITPC}" wrapping="false"/>
+											</table:template>
+										</table:Column>
+									</table:columns>
+									<table:rowActionTemplate>
+										<table:RowAction>
+											<table:items>
+												<table:RowActionItem icon="sap-icon://sales-order-item" press="soLineShow"></table:RowActionItem>
+											</table:items>
+										</table:RowAction>
+									</table:rowActionTemplate>
+								</table:Table>
+							</VBox>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+			</uxap:sections>
+		</uxap:ObjectPageLayout>
+	</Dialog>
+</core:FragmentDefinition>

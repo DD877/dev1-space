@@ -1,0 +1,18 @@
+{
+    "d": {
+        "results": [
+            {
+                "__metadata": {
+                    "id": "https://hecdlchttp.merckgroup.com/sap/opu/odata/sap/YSD_MOET_SRV/ysaleAreaInputSet(IvCustomer='10000006',IvSyssid='C01CLNT100')",
+                    "uri": "https://hecdlchttp.merckgroup.com/sap/opu/odata/sap/YSD_MOET_SRV/ysaleAreaInputSet(IvCustomer='10000006',IvSyssid='C01CLNT100')",
+                    "type": "YSD_MOET_SRV.ysaleAreaInput"
+                },
+                "IvCustomer": "10000006",
+                "IvSyssid": "C01CLNT100",
+                "NavsalesArea": {
+                    "results": []
+                }
+            }
+        ]
+    }
+}

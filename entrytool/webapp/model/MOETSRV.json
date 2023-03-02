@@ -1,0 +1,61 @@
+{
+    "ZORDER_HEADER": [
+        {
+            "ZINTR_ORDNUM": 404,
+            "ZSYSTEM": "L",
+            "ZORD_REF": "X",
+            "ZCUST_NUM": "210100781",
+            "ZSHIP_PRTY": "210100781",
+            "ZPO_TYP": "X",
+            "ZDISCNT": "0",
+            "ZCUST_PONUM": "67867867jjjjjjj",
+            "ZCUST_PODAT": "2022-01-27",
+            "ZDOC_ID": "",
+            "ZORD_STATUS": "ORCR",
+            "ZORD_NUM": "5100001005",
+            "ZAPPROVAL_STATUS": "Order Created",
+            "ZLEAD_TIME": "X",
+            "ZMIN_ORDER_QUAN": "X",
+            "ZORDER_FORECAST": "X",
+            "ZFIT_CONTRACT_COND": "X",
+            "ZREQ_DELV_DAT": "2022-01-28",
+            "ZTEDER_FLAG": "",
+            "ZSALES_AREA": "BE50",
+            "ZTOTAL_AMT": "1500.00",
+            "ZFTRADE": "",
+            "ZFTRADE_DESC": "",
+            "ZCURR": "EUR",
+            "ZHCURR": "",
+            "ZDISTR_CHNL": "41",
+            "ZDIVISION": "00",
+            "ZDEL_BLOCK_ID": "",
+            "ZORD_APPROVAL_STATUS": "A",
+            "ZCOMMENTS": "",
+            "ZCREATED_BY": "KK1",
+            "ZCHANGED_BY": "KK1"
+        }
+    ],
+    "ZORDER_ITEM": [
+        {
+            "ZINTR_ORDNUM": 404,
+            "ZSYSTEM": "L",
+            "ZINTR_ITEMNUM": 1,
+            "ZMAT_NUM": "ES01-FERT",
+            "ZTRGT_QTY": "3",
+            "ZTRGT_QTYUOM": "PC",
+            "ZALT_UOM": "PC",
+            "ZREQ_DLVRYDAT": "2022-01-28",
+            "ZMIN_QTY": "0",
+            "ZFOC_SMPL": "YTAN",
+            "ZORD_NUM": "5100001005",
+            "ZITEM_NUM": "000001",
+            "ZDISCNT": "0",
+            "ZCOST": "1500.00",
+            "ZGRP_DEVLPR": "Merck Santé",
+            "ZFROZEN_PERIOD": "02",
+            "ZPAL_QUAN": "0",
+            "ZFOC_ITMC_FLAG": "",
+            "ZSCHD_TYPE": "NU"
+        }
+    ]
+}

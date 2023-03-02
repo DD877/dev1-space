@@ -1,0 +1,131 @@
+<mvc:View
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    xmlns:f="sap.f"
+    xmlns:sv="sap.ui.comp.smartvariants"
+    xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:table="sap.ui.table"
+    controllerName="com.merckgroup.Moet_O2C_OrderCreation_UI5.controller.ItemCategory"
+>
+    <f:DynamicPage class="custSOHTDynamicPage newOrder">
+        <f:title>
+            <f:DynamicPageTitle class="custDynPageTitle">
+                <f:heading>
+                    <Title text="Item Category Details" />
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:header>
+            <f:DynamicPageHeader pinnable="false" class="custDynPageHeader">
+                <f:content>
+                    <smartFilterBar:SmartFilterBar
+                        id="sfbItemCatDetails"
+                        smartVariant="__SVM03"
+                        useToolbar="false"
+                        entitySet="ItemCategory"
+                        persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.FilterBar"
+                        class="smfil"
+                        assignedFiltersChanged="onAssignedFiltersChanged"
+                        initialise="onAfterSmartFilterInitialize"
+                        liveMode="true"
+                    >
+                        <smartFilterBar:controlConfiguration>
+                            <smartFilterBar:ControlConfiguration key="ZITM_CATEGORY" label="Item Category" visibleInAdvancedArea="true" />
+                            <!--<smartFilterBar:ControlConfiguration key="ZSYSTEM" label="System" visibleInAdvancedArea="false"></smartFilterBar:ControlConfiguration>-->
+                            <smartFilterBar:ControlConfiguration key="ZITM_CATEGORY_DESC" label="Item Category Description" visibleInAdvancedArea="true" />
+                            <smartFilterBar:ControlConfiguration key="ZSYSTEM" label="System" visibleInAdvancedArea="true" />
+                            <!--<smartFilterBar:ControlConfiguration key="ZUSR_EMAILADD" label="Email" visibleInAdvancedArea="true"></smartFilterBar:ControlConfiguration>-->
+                            <!--<smartFilterBar:ControlConfiguration key="ZUSR_ROLE" label="User Role" visibleInAdvancedArea="true"></smartFilterBar:ControlConfiguration>-->
+                            <!--<smartFilterBar:ControlConfiguration key="ZUSR_STATUS_TXT" label="User Status" visibleInAdvancedArea="true"></smartFilterBar:ControlConfiguration>-->
+                        </smartFilterBar:controlConfiguration>
+                    </smartFilterBar:SmartFilterBar>
+                </f:content>
+            </f:DynamicPageHeader>
+        </f:header>
+        <f:content>
+            <smartTable:SmartTable
+                id="smartTableItemCat"
+                smartVariant="__SVM03"
+                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.SmartTable"
+                enableAutoBinding="true"
+                enableCustomFilter="false"
+                entitySet="ItemCategory"
+                smartFilterId="sfbItemCatDetails"
+                tableType="Table"
+                useExportToExcel="true"
+                useVariantManagement="true"
+                useTablePersonalisation="true"
+                header="Item Category"
+                showRowCount="true"
+                initialise="onAfterSmartTableInitialize"
+                beforeRebindTable="onBeforeRebindTable"
+                showFullScreenButton="true"
+                beforeExport="onBeforeDataExport"
+                dataReceived="onDataReceived"
+                ignoreFromPersonalisation=""
+                requestAtLeastFields="ZITM_CATEGORY,ZDEL_FLAG"
+                class="stable"
+                initiallyVisibleFields=""
+            >
+                <smartTable:customToolbar>
+                    <OverflowToolbar design="Transparent">
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://add" text="Add Item Category" class="ordbtn" press="onAddItmCatPress" />
+                    </OverflowToolbar>
+                </smartTable:customToolbar>
+                <table:Table id="atable" rowActionCount="2" selectionMode="None" visibleRowCountMode="Auto">
+                    <table:columns>
+                        <table:Column hAlign="Begin" sortProperty="ZITM_CATEGORY" filterProperty="ZITM_CATEGORY" showFilterMenuEntry="true" showSortMenuEntry="true">
+                            <table:customData>
+                                <core:CustomData key="p13nData" value='\{"columnKey": "ZITM_CATEGORY", "leadingProperty":"ZITM_CATEGORY", "sortProperty": "ZITM_CATEGORY", "filterProperty": "ZITM_CATEGORY"}' />
+                            </table:customData>
+                            <Label text="Item Category" />
+                            <table:template>
+                                <Text text="{ZITM_CATEGORY}" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column hAlign="Begin" sortProperty="ZITM_CATEGORY_DESC" filterProperty="ZITM_CATEGORY_DESC" showFilterMenuEntry="true" showSortMenuEntry="true">
+                            <table:customData>
+                                <core:CustomData key="p13nData" value='\{"columnKey": "ZITM_CATEGORY_DESC", "leadingProperty":"ZITM_CATEGORY_DESC", "sortProperty": "ZITM_CATEGORY_DESC", "filterProperty": "ZITM_CATEGORY_DESC"}' />
+                            </table:customData>
+                            <Label text="Item Category Description" />
+                            <table:template>
+                                <Text text="{ZITM_CATEGORY_DESC}" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column hAlign="Begin" sortProperty="ZSYSTEM" filterProperty="ZSYSTEM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                            <table:customData>
+                                <core:CustomData key="p13nData" value='\{"columnKey": "ZSYSTEM", "leadingProperty":"ZSYSTEM", "sortProperty": "ZSYSTEM", "filterProperty": "ZSYSTEM"}' />
+                            </table:customData>
+                            <Label text="System" />
+                            <table:template>
+                                <Text text="{= (${ZSYSTEM} === 'L') ? 'LEAN' : 'TEMPO'}" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column hAlign="Begin" sortProperty="ZDEL_FLAG" filterProperty="ZDEL_FLAG" showFilterMenuEntry="true" showSortMenuEntry="true" visible="true">
+                            <table:customData>
+                                <core:CustomData key="p13nData" value='\{"columnKey": "ZDEL_FLAG", "leadingProperty":"ZDEL_FLAG", "sortProperty": "ZDEL_FLAG", "filterProperty": "ZDEL_FLAG"}' />
+                            </table:customData>
+                            <Label text="{i18n>FlagforDeletion}" />
+                            <table:template>
+                                <!--	<Text text="{ZDEL_FLAG}"/>-->
+                                <Switch change="onUpdateItem" enabled="{= (${ZDEL_FLAG} === 'X') ? true : false }" type="AcceptReject" state="{= (${ZDEL_FLAG} === 'X') ? true : false }" />
+                            </table:template>
+                        </table:Column>
+                    </table:columns>
+                    <table:rowActionTemplate>
+                        <table:RowAction>
+                            <table:items>
+                                <table:RowActionItem icon="sap-icon://edit" text="Update" press="onUpdateItmPress" />
+                                <table:RowActionItem icon="sap-icon://delete" text="Delete" press="onDeleteItmPress" />
+                            </table:items>
+                        </table:RowAction>
+                    </table:rowActionTemplate>
+                </table:Table>
+            </smartTable:SmartTable>
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>

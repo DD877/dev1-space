@@ -1,0 +1,67 @@
+{
+  "routes": [
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/HANAXS",
+      "target": {
+        "type": "destination",
+        "name": "HANAXS"
+      },
+      "description": "hanaxshcp App2AppSSO"
+    },
+    {
+      "path": "/CMIS",
+      "target": {
+        "type": "destination",
+        "name": "CMIS"
+      },
+      "description": "Destination to CMIS Java Service for Document Service"
+    },
+    {
+      "path": "/sap/opu/odata",
+      "target": {
+        "type": "destination",
+        "name": "MOET_FE_BA",
+        "entryPath": "/sap/opu/odata"
+      },
+      "description": "LEAN"
+    }
+  ],
+  "welcomeFile": "/index.html",
+  "sendWelcomeFileRedirect": true
+}

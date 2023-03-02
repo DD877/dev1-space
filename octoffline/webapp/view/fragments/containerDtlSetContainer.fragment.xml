@@ -1,0 +1,185 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"
+  xmlns:core="sap.ui.core">
+
+  <Dialog title=""
+    class=" dDateUpdDialog1 popUPPad sectionOverFlow setContainerPopup"
+    showHeader="false" modal="true">
+    <content>
+      <FlexBox alignItems="Start" justifyContent="SpaceBetween"
+        class="popUPColorTop">
+        <items>
+          <Label
+            text="{path:'/Container',formatter:'glb.gtmh.oct.util.Formatter.setContainerText' }"
+            class="blackHdrLbl uicPadding colorBlack" />
+          <FlexBox alignItems="Start" justifyContent="SpaceBetween"
+            width="50%" class="">
+            <items>
+              <l:VerticalLayout class="">
+                <Label text="{i18n>poNumber}" class="nestleSize" visible="{path:'/PO',formatter:'glb.gtmh.oct.util.Formatter.showIfExists'}">
+                </Label>
+                <Label text="{/PO}" design="Bold" class="font1rem colorBlack" />
+              </l:VerticalLayout>
+
+              <l:VerticalLayout class="">
+                <Label text="{i18n>onlyASN}" class="nestleSize" visible="{path:'/ASN',formatter:'glb.gtmh.oct.util.Formatter.showIfExists'}"/>
+                <Label text="{/ASN}" design="Bold" class="font1rem colorBlack" />
+              </l:VerticalLayout>
+
+              <l:VerticalLayout class="">
+                <Label text="{i18n>sto}" class="nestleSize" visible="{path:'/STO',formatter:'glb.gtmh.oct.util.Formatter.showIfExists'}">
+                </Label>
+                <Label text="{/STO}" design="Bold" class="font1rem colorBlack" />
+
+              </l:VerticalLayout>
+
+              <core:Icon src="sap-icon://decline" class="btnClose"
+                color="#736F6E" press="closeDialogUIC">
+              </core:Icon>
+            </items>
+
+          </FlexBox>
+        </items>
+      </FlexBox>
+      <FlexBox id="fbbefore" height="7.5rem" alignItems="Start" justifyContent="SpaceBetween"
+        class="paddingLeftUIC">
+        <items>
+          <l:VerticalLayout>
+            <!-- <Label text=""> -->
+            <!-- </Label> -->
+            <l:HorizontalLayout class="width95">
+            <core:Icon
+                    src="sap-icon://message-warning"
+                    size="1.5rem"
+                    class="sapUiSmallMarginTop"
+                    color="{path:'/Container',formatter:'glb.gtmh.oct.util.Formatter.setWarningIcon'}" >
+                    <core:layoutData>
+                      <FlexItemData growFactor="1" />
+                    </core:layoutData>
+             </core:Icon>
+            <Text maxLines="3"
+              class="sapUiSmallMarginBeginEnd sapUiSmallMarginTop font1rem containerText"
+              width="100%"
+              text="{parts:[{path:'/PO'},{path:'/ASN'},{path:'/Container'}],formatter:'glb.gtmh.oct.util.Formatter.setPOTextInPopup' }"></Text>
+              </l:HorizontalLayout>
+            <HBox id="hBoxError" class="setContainerErrTxtSize" displayInline="{path:'/Container',formatter:'glb.gtmh.oct.util.Formatter.setLeftMargin'}">
+              <Label id="containerNoLbl" text="{i18n>containerSearch}" design="Bold"
+                class="font2rem paddingTop15 colorBlack" />
+              <Input id="containerinputId"
+                class="sapUiSmallMarginBottom inputContainerWidth containerPadInput"
+                width="10rem" />
+            <Text id="errorlblId" maxLines="5"  class="errorTextlbl"></Text>
+            </HBox>
+
+          </l:VerticalLayout>
+
+
+        </items>
+      </FlexBox>
+
+
+      <FlexBox id="fbafterProcess" height="7.5rem" alignItems="Center"
+        justifyContent="Center" width="100%" class="fbafterUIC">
+        <items>
+          <!-- <l:VerticalLayout> -->
+          <!-- <Label text=""> -->
+          <!-- </Label> -->
+
+
+          <HBox class="marginTop10" justifyContent="Center" width="100%">
+            <Image id="idImgLogoProcess" src="./img/updating.gif"></Image>
+            <Label text="{i18n>processingUpdate}" class="processLbl colorBlack" />
+          </HBox>
+
+          <!-- </l:VerticalLayout> -->
+
+
+        </items>
+      </FlexBox>
+
+      <FlexBox id="fbafterProcessSuccess" height="7.5rem" alignItems="Center" justifyContent="Center"
+        class="fbafterUIC">
+        <items>
+
+
+
+          <HBox class="marginTop10">
+
+            <Image id="idImgLogoProcessRight" src="./img/Right.PNG"
+              class="crossImg" press=""></Image>
+            <Text maxLines="2"
+              text="{parts:[{path:'/Container'},{path:'/ASN'}],formatter:'glb.gtmh.oct.util.Formatter.setASNTextInPopupSuccess'}"
+              class="padTopPoint8Rem colorBlack" />
+          </HBox>
+
+
+
+
+        </items>
+      </FlexBox>
+
+      <FlexBox id="fbafter" height="7.5rem" alignItems="Center" justifyContent="Center"
+        class="fbafterUIC">
+        <items>
+          <!-- <l:VerticalLayout> -->
+          <!-- <Label text=""> -->
+          <!-- </Label> -->
+
+
+          <HBox class="marginTop10">
+            <!-- <core:Icon -->
+            <!-- src="sap-icon://decline" -->
+            <!-- class="btnClose" -->
+            <!-- color="#736F6E" -->
+            <!-- > -->
+            <!-- </core:Icon> -->
+            <Image id="idImgLogoProcessCross" src="./img/crossuic.png"
+              class="crossImg" press="closeDialogUIC"></Image>
+            <Text maxLines="2"
+              text="{path:'/ASN',formatter:'glb.gtmh.oct.util.Formatter.setASNTextInPopuptryAgain'}"
+              class="padTopPoint8Rem colorBlack" tooltip="{cUpdError>/error}"/>
+          </HBox>
+
+          <!-- </l:VerticalLayout> -->
+
+
+        </items>
+      </FlexBox>
+
+      <FlexBox alignItems="Start" justifyContent="End"
+        class="popUPColorBottom btnPaddingUicFont ratingAppBtnPad">
+        <items>
+          <Button id="dummy" class="visHidden"/>
+
+
+          <l:VerticalLayout class="">
+            <Button id="btnCancel12" text="{i18n>btnCancel}"
+              class="gapbtn1 ovalEdgeBtn btnPaddingUic" press="closeDialogUIC" />
+
+          </l:VerticalLayout>
+
+
+          <l:VerticalLayout id="setContainerid" class="">
+            <Button id="btnAsn12" text="{i18n>setContainer}"
+              class="gapbtn ovalEdgeBtn btnPaddingUicno" emphasized="true"
+              press="setContainerUICPOP" />
+
+          </l:VerticalLayout>
+          <l:VerticalLayout id="" class="">
+            <Button id="thankyou" text="{i18n>thankyou}"
+              class="gapbtn ovalEdgeBtn btnPaddingUicno" emphasized="true"
+              press="onThankYou" />
+
+          </l:VerticalLayout>
+          <l:VerticalLayout id="" class="">
+            <Button id="tryAgain" text="{i18n>tryAgain}"
+              class="gapbtn ovalEdgeBtn btnPaddingUicno" emphasized="true"
+              press="onTryAgain" />
+
+          </l:VerticalLayout>
+        </items>
+      </FlexBox>
+
+    </content>
+  </Dialog>
+
+</core:FragmentDefinition>

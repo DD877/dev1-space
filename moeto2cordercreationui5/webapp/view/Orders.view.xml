@@ -1,0 +1,256 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:f="sap.f" xmlns:sv="sap.ui.comp.smartvariants" xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:smartTable="sap.ui.comp.smarttable" xmlns:table="sap.ui.table" controllerName="com.merckgroup.Moet_O2C_OrderCreation_UI5.controller.Orders">
+	<f:DynamicPage class="custSOHTDynamicPage newOrder" >
+		<f:title>
+			<f:DynamicPageTitle  class="custDynPageTitle">
+					<f:heading>
+				<Title text="{i18n>SalesOrders}"/>
+			</f:heading>
+			</f:DynamicPageTitle>
+		</f:title>
+		<f:header>
+			<f:DynamicPageHeader pinnable="false" class="custDynPageHeader">
+				<f:content>
+					<smartFilterBar:SmartFilterBar id="smartFilterBar" smartVariant="__SVM01" useToolbar="false" entitySet="OrderHeaderDetails"
+								persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.SOTracking.FilterBar" class="smfil"
+								assignedFiltersChanged="onAssignedFiltersChanged" initialise="onAfterSmartFilterInitialize" liveMode="true">
+								<smartFilterBar:controlConfiguration>
+									<smartFilterBar:ControlConfiguration key="ZINTR_ORDNUM" visibleInAdvancedArea="true"></smartFilterBar:ControlConfiguration>
+									<smartFilterBar:ControlConfiguration key="ZCREATED_BY" visibleInAdvancedArea="true"></smartFilterBar:ControlConfiguration>
+									<smartFilterBar:ControlConfiguration key="ZORD_STATUS" visibleInAdvancedArea="true"></smartFilterBar:ControlConfiguration>
+									<smartFilterBar:ControlConfiguration key="ZCREATED_ON" visibleInAdvancedArea="true"
+										conditionType="sap.ui.comp.config.condition.DateRangeType"></smartFilterBar:ControlConfiguration>
+								</smartFilterBar:controlConfiguration>
+							</smartFilterBar:SmartFilterBar>
+				</f:content>
+			</f:DynamicPageHeader>
+		</f:header>
+		<f:content>
+			<smartTable:SmartTable id="smartTableOrd" smartVariant="__SVM01"
+								persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.view.SOTracking.SmartTable" enableAutoBinding="true" enableCustomFilter="false"
+								entitySet="OrderHeaderDetails" smartFilterId="smartFilterBar" tableType="Table" useExportToExcel="true" useVariantManagement="true"
+								useTablePersonalisation="true" header="{i18n>Orders}" showRowCount="true" initialise="onAfterSmartTableInitialize"
+								beforeRebindTable="onBeforeRebindTable" showFullScreenButton="true" beforeExport="onBeforeDataExport" dataReceived="onDataReceived"
+								ignoreFromPersonalisation="" requestAtLeastFields="ZINTR_ORDNUM,ZSYSTEM" class="stable" initiallyVisibleFields="ZINTR_ORDNUM">
+								<smartTable:customToolbar>
+									<OverflowToolbar design="Transparent">
+										<ToolbarSpacer/>
+									</OverflowToolbar>
+								</smartTable:customToolbar>
+								<table:Table id="atable" rowActionCount="2" selectionMode="None" visibleRowCountMode="Auto">
+									<table:columns>
+										<table:Column  hAlign="Begin" sortProperty="ZINTR_ORDNUM" width="10rem" filterProperty="ZINTR_ORDNUM"
+											showFilterMenuEntry="true" showSortMenuEntry="true">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "ZINTR_ORDNUM", "leadingProperty":"ZINTR_ORDNUM", "sortProperty": "ZINTR_ORDNUM", "filterProperty": "ZINTR_ORDNUM"}'/>
+											</table:customData>
+											<Label text="Internal Order Number"/>
+											<table:template>
+												<Text text="{ZINTR_ORDNUM}"/>
+											</table:template>
+										</table:Column>
+										
+										
+										<table:Column  hAlign="Begin" sortProperty="ZCUSTOMER_NAME" width="8rem" filterProperty="ZCUSTOMER_NAME"
+											showFilterMenuEntry="true" showSortMenuEntry="true">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "ZCUSTOMER_NAME", "leadingProperty":"ZCUSTOMER_NAME", "sortProperty": "ZCUSTOMER_NAME", "filterProperty": "ZCUSTOMER_NAME"}'/>
+											</table:customData>
+											<Label text="Customer Name"/>
+											<table:template>
+												<Text text="{ZCUSTOMER_NAME}"/>
+											</table:template>
+										</table:Column>
+										<table:Column  hAlign="Begin" sortProperty="ZSHIP_TO_PARTY_DESC" width="8rem" filterProperty="ZSHIP_TO_PARTY_DESC"
+											showFilterMenuEntry="true" showSortMenuEntry="true">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "ZSHIP_TO_PARTY_DESC", "leadingProperty":"ZSHIP_TO_PARTY_DESC", "sortProperty": "ZSHIP_TO_PARTY_DESC", "filterProperty": "ZSHIP_TO_PARTY_DESC"}'/>
+											</table:customData>
+											<Label text="Ship-to Name"/>
+											<table:template>
+												<Text text="{ZSHIP_TO_PARTY_DESC}"/>
+											</table:template>
+										</table:Column>
+										<table:Column  hAlign="Begin" sortProperty="ZCUST_PONUM" width="8rem" filterProperty="ZCUST_PONUM"
+											showFilterMenuEntry="true" showSortMenuEntry="true">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "ZCUST_PONUM", "leadingProperty":"ZCUST_PONUM", "sortProperty": "ZCUST_PONUM", "filterProperty": "ZCUST_PONUM"}'/>
+											</table:customData>
+											<Label text="PO Number"/>
+											<table:template>
+												<Text text="{ZCUST_PONUM}"/>
+											</table:template>
+										</table:Column>
+										<table:Column  hAlign="Begin" sortProperty="ZCREATED_BY" width="8rem" filterProperty="ZCREATED_BY"
+											showFilterMenuEntry="true" showSortMenuEntry="true">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "ZCREATED_BY", "leadingProperty":"ZCREATED_BY", "sortProperty": "ZCREATED_BY", "filterProperty": "ZCREATED_BY"}'/>
+											</table:customData>
+											<Label text="Created By"/>
+											<table:template>
+												<Text text="{ZCREATED_BY}"/>
+											</table:template>
+										</table:Column>
+										<!--<table:Column  hAlign="Begin" sortProperty="ZSHIP_PRTY" width="8rem" filterProperty="ZSHIP_PRTY"
+											showFilterMenuEntry="true" showSortMenuEntry="true">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "ZSHIP_PRTY", "leadingProperty":"ZSHIP_PRTY", "sortProperty": "ZSHIP_PRTY", "filterProperty": "ZSHIP_PRTY"}'/>
+											</table:customData>
+											<Label text="Shipto"/>
+											<table:template>
+												<Text text="{ZSHIP_PRTY}"/>
+											</table:template>
+										</table:Column>-->
+										<table:Column  hAlign="Begin" sortProperty="ZTOTAL_AMT" width="10rem" filterProperty="ZTOTAL_AMT"
+											showFilterMenuEntry="true" showSortMenuEntry="true" visible="true">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "ZTOTAL_AMT", "leadingProperty":"ZTOTAL_AMT", "sortProperty": "ZTOTAL_AMT", "filterProperty": "ZTOTAL_AMT"}'/>
+											</table:customData>
+											<Label text="Total Amount"/>
+											<table:template>
+												<Text text="{ZTOTAL_AMT}"/>
+											</table:template>
+										</table:Column>
+										<table:Column  hAlign="Begin" sortProperty="ZCURR" width="10rem" filterProperty="ZCURR" showFilterMenuEntry="true"
+											showSortMenuEntry="true" visible="true">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "ZCURR", "leadingProperty":"ZCURR", "sortProperty": "ZCURR", "filterProperty": "ZCURR"}'/>
+											</table:customData>
+											<Label text="Currency"/>
+											<table:template>
+												<Text text="{ZCURR}"/>
+											</table:template>
+										</table:Column>
+										<!--<table:Column  hAlign="Begin" sortProperty="ZSYSTEM" width="10rem" filterProperty="ZSYSTEM" showFilterMenuEntry="true"
+											showSortMenuEntry="true" visible="true">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "ZSYSTEM", "leadingProperty":"ZSYSTEM", "sortProperty": "ZSYSTEM", "filterProperty": "ZSYSTEM"}'/>
+											</table:customData>
+											<Label text="{i18n>System}"/>
+											<table:template>
+												<Text text="{= (${ZSYSTEM} === 'L') ? 'LEAN' : 'TEMPO'} "/>
+											</table:template>
+										</table:Column>-->
+										<table:Column  hAlign="Begin" sortProperty="ZORD_STATUS" width="10rem" filterProperty="ZORD_STATUS"
+											showFilterMenuEntry="true" showSortMenuEntry="true">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "ZORD_STATUS", "leadingProperty":"ZORD_STATUS", "sortProperty": "ZORD_STATUS", "filterProperty": "ZORD_STATUS"}'/>
+											</table:customData>
+											<Label text="Order Status"/>
+											<table:template>
+												<Text text="{ZORD_STATUS}"/>
+											</table:template>
+										</table:Column>
+										<table:Column  hAlign="Begin" sortProperty="ZDEL_BLOCK_ID" width="10rem" filterProperty="ZDEL_BLOCK_ID"
+											showFilterMenuEntry="true" showSortMenuEntry="true" visible="false">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "ZDEL_BLOCK_ID", "leadingProperty":"ZDEL_BLOCK_ID", "sortProperty": "ZDEL_BLOCK_ID", "filterProperty": "ZDEL_BLOCK_ID"}'/>
+											</table:customData>
+											<Label text="Delivery Block Id"/>
+											<table:template>
+												<Text text="{ZDEL_BLOCK_ID}"/>
+											</table:template>
+										</table:Column>
+										<table:Column  hAlign="Begin" sortProperty="ZDISTR_CHNL" width="10rem" filterProperty="ZDISTR_CHNL"
+											showFilterMenuEntry="true" showSortMenuEntry="true" visible="false">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "ZDISTR_CHNL", "leadingProperty":"ZDISTR_CHNL", "sortProperty": "ZDISTR_CHNL", "filterProperty": "ZDISTR_CHNL"}'/>
+											</table:customData>
+											<Label text="Distribution Channel"/>
+											<table:template>
+												<Text text="{ZDISTR_CHNL}"/>
+											</table:template>
+										</table:Column>
+										<table:Column  hAlign="Begin" sortProperty="ZDIVISION" width="10rem" filterProperty="ZDIVISION"
+											showFilterMenuEntry="true" showSortMenuEntry="true" visible="false">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "ZDIVISION", "leadingProperty":"ZDIVISION", "sortProperty": "ZDIVISION", "filterProperty": "ZDIVISION"}'/>
+											</table:customData>
+											<Label text="Division"/>
+											<table:template>
+												<Text text="{ZDIVISION}"/>
+											</table:template>
+										</table:Column>
+										<table:Column  hAlign="Begin" sortProperty="ZFTRADE" width="10rem" filterProperty="ZFTRADE" showFilterMenuEntry="true"
+											showSortMenuEntry="true" visible="false">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "ZFTRADE", "leadingProperty":"ZFTRADE", "sortProperty": "ZFTRADE", "filterProperty": "ZFTRADE"}'/>
+											</table:customData>
+											<Label text="Foreign Trade"/>
+											<table:template>
+												<Text text="{ZFTRADE}"/>
+											</table:template>
+										</table:Column>
+										<table:Column  hAlign="Begin" sortProperty="ZFTRADE_DESC" width="10rem" filterProperty="ZFTRADE_DESC"
+											showFilterMenuEntry="true" showSortMenuEntry="true" visible="false">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "ZFTRADE_DESC", "leadingProperty":"ZFTRADE_DESC", "sortProperty": "ZFTRADE_DESC", "filterProperty": "ZFTRADE_DESC"}'/>
+											</table:customData>
+											<Label text="Foreign Trade Description"/>
+											<table:template>
+												<Text text="{ZFTRADE_DESC}"/>
+											</table:template>
+										</table:Column>
+										<table:Column  hAlign="Begin" sortProperty="ZREQ_DELV_DAT" width="10rem" filterProperty="ZREQ_DELV_DAT"
+											showFilterMenuEntry="true" showSortMenuEntry="true" visible="false">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "ZREQ_DELV_DAT", "leadingProperty":"ZREQ_DELV_DAT", "sortProperty": "ZREQ_DELV_DAT", "filterProperty": "ZREQ_DELV_DAT","type":"date"\}'/>
+											</table:customData>
+											<Label text="Requested Delivery Date"/>
+											<table:template>
+												<Text text="{path:'ZREQ_DELV_DAT', type:'sap.ui.model.type.Date', formatOptions: { style: 'medium'}}"></Text>
+											</table:template>
+										</table:Column>
+										<table:Column  hAlign="Begin" sortProperty="ZSALES_AREA" width="10rem" filterProperty="ZSALES_AREA"
+											showFilterMenuEntry="true" showSortMenuEntry="true" visible="false">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "ZSALES_AREA", "leadingProperty":"ZSALES_AREA", "sortProperty": "ZSALES_AREA", "filterProperty": "ZSALES_AREA"}'/>
+											</table:customData>
+											<Label text="Sales Area"/>
+											<table:template>
+												<Text text="{ZSALES_AREA}"/>
+											</table:template>
+										</table:Column>
+										<table:Column  hAlign="Begin" sortProperty="ZTEDER_FLAG" width="10rem" filterProperty="ZTEDER_FLAG"
+											showFilterMenuEntry="true" showSortMenuEntry="true" visible="false">
+											<table:customData>
+												<core:CustomData key="p13nData"
+													value='\{"columnKey": "ZTEDER_FLAG", "leadingProperty":"ZTEDER_FLAG", "sortProperty": "ZTEDER_FLAG", "filterProperty": "ZTEDER_FLAG"}'/>
+											</table:customData>
+											<Label text="Tender Flag"/>
+											<table:template>
+												<Text text="{ZTEDER_FLAG}"/>
+											</table:template>
+										</table:Column>
+									</table:columns>
+									<table:rowActionTemplate>
+										<table:RowAction>
+											<table:items >
+												<table:RowActionItem icon="sap-icon://edit" text="Edit" press="onEditPress"></table:RowActionItem>
+												<table:RowActionItem icon="sap-icon://delete" text="Edit" press="onDeletePress"></table:RowActionItem>
+											</table:items>
+										</table:RowAction>
+									</table:rowActionTemplate>
+								</table:Table>
+							</smartTable:SmartTable>
+		</f:content>
+	</f:DynamicPage>
+</mvc:View>

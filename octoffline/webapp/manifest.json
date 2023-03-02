@@ -1,0 +1,226 @@
+{
+    "_version": "1.1.0",
+    "sap.app": {
+        "_version": "1.1.0",
+        "id": "demo.app",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "dataSources": {
+            "mainService": {
+                "uri": "/sap/opu/odata/sap/ZGW100_XX_SO_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "localService/metadata_OctApp.xml"
+                }
+            },
+            "usrMktService": {
+                "uri": "/sap/opu/odata/GLB/PGTPT_USER_MARKET_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "localService/metadata_UsrMkt.xml"
+                }
+            },
+            "chatService": {
+                "uri": "/sap/opu/odata/GLB/1GTPT_CHAT_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "localService/metadata_Chat.xml"
+                }
+            },
+            "batchService": {
+                "uri": "/sap/opu/odata/GLB/RGTPT_BATCH_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "localService/metadata_Batch.xml"
+                }
+            }
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "sourceTemplate": {
+            "id": "ui5template.basicSAPUI5ApplicationProject",
+            "version": "1.32.0",
+            "toolsId": "49d64bb6-b4b4-417a-b5ff-fd683825954a"
+        }
+    },
+    "sap.ui": {
+        "_version": "1.1.0",
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "sap_hcb",
+            "sap_bluecrystal"
+        ]
+    },
+    "sap.ui5": {
+        "_version": "1.1.0",
+        "rootView": {
+            "viewName": "glb.gtmh.oct.view.App",
+            "type": "XML"
+        },
+        "dependencies": {
+            "minUI5Version": "1.30.0",
+            "libs": {
+                "sap.ui.core": {},
+                "sap.m": {},
+                "sap.ui.layout": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "demo.app.i18n.i18n"
+                }
+            },
+            "": {
+                "dataSource": "mainService",
+                "settings": {
+                    "metadataUrlParams": {
+                        "sap-documentation": "heading"
+                    },
+                    "defaultBindingMode": "OneWay"
+                }
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewPath": "demo.app.view",
+                "viewType": "XML",
+                "controlId": "splitAppPOC",
+                "bypassed": {
+                    "target": [
+                        "notFound"
+                    ]
+                }
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "Main",
+                    "controlAggregation": "masterPages",
+                    "target": "main"
+                },
+                {
+                    "pattern": "CreatePO",
+                    "name": "CreatePO",
+                    "controlId": "splitAppPOC",
+                    "controlAggregation": "detailPages",
+                    "target": "createPO"
+                },
+                {
+                    "pattern": "EditPO",
+                    "name": "EditPO",
+                    "controlId": "splitAppPOC",
+                    "controlAggregation": "detailPages",
+                    "target": "editPO"
+                },
+                {
+                    "pattern": "ReviewPO",
+                    "name": "ReviewPO",
+                    "controlId": "splitAppPOC",
+                    "controlAggregation": "detailPages",
+                    "target": "reviewPO"
+                },
+                {
+                    "pattern": "PODetails/{po}",
+                    "name": "PODetails",
+                    "controlId": "splitAppPOC",
+                    "controlAggregation": "detailPages",
+                    "target": "poDetails"
+                },
+                {
+                    "pattern": "NotFound",
+                    "name": "NotFound",
+                    "controlId": "splitAppPOC",
+                    "controlAggregation": "detailPages",
+                    "target": "detailNoObjectsAvailable"
+                }
+            ],
+            "targets": {
+                "notFound": {
+                    "transition": "slide",
+                    "controlAggregation": "pages",
+                    "viewName": "NotFound"
+                },
+                "main": {
+                    "transition": "slide",
+                    "controlId": "splitAppPOC",
+                    "controlAggregation": "masterPages",
+                    "viewName": "Main"
+                },
+                "createPO": {
+                    "transition": "slide",
+                    "controlId": "splitAppPOC",
+                    "controlAggregation": "detailPages",
+                    "viewName": "CreatePO"
+                },
+                "editPO": {
+                    "transition": "slide",
+                    "controlId": "splitAppPOC",
+                    "controlAggregation": "detailPages",
+                    "viewName": "EditPO"
+                },
+                "poDetails": {
+                    "transition": "slide",
+                    "controlId": "splitAppPOC",
+                    "controlAggregation": "detailPages",
+                    "viewName": "PODetails"
+                },
+                "reviewPO": {
+                    "transition": "slide",
+                    "controlId": "splitAppPOC",
+                    "controlAggregation": "detailPages",
+                    "viewName": "ReviewPO"
+                },
+                "detailObjectNotFound": {
+                    "viewName": "DetailObjectNotFound",
+                    "viewId": "detailObjectNotFound",
+                    "controlId": "splitAppPOC",
+                    "controlAggregation": "detailPages"
+                },
+                "detailNoObjectsAvailable": {
+                    "viewName": "DetailNoObjectsAvailable",
+                    "viewId": "detailNoObjectsAvailable",
+                    "controlId": "splitAppPOC",
+                    "controlAggregation": "detailPages"
+                }
+            }
+        }
+    },
+    "sap.platform.abap": {
+        "uri": "/sap/bc/ui5_ui5/glb/rgtmm_poc",
+        "_version": "1.1.0"
+    }
+}

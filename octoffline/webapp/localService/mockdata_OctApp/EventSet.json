@@ -1,0 +1,2080 @@
+{
+  "d": {
+    "results": [
+    		{
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdZGM7kQHxr8PmOWU90')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdZGM7kQHxr8PmOWU90')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdZGM7kQHxr8PmOWU90",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRDPE",
+              "LocDesc": "DIEPPE CEDEX",
+              "EventDate": "\/Date(1468235064000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1468253956000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdZGM7kQHxr8PmOWU90')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdZGM7kQHxr8PmOWU90')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdZGM7kQHxr8PmOWU90",
+              "ShipStatusCode": "AE",
+              "EventID": "LOAD_END",
+              "EventDesc": "On-Board Vessel at Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1468813860000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdZGM7kQHxr8PmOWU90')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdZGM7kQHxr8PmOWU90')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdZGM7kQHxr8PmOWU90",
+              "ShipStatusCode": "VD",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Vessel Departed from Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": "\/Date(1468846800000)\/",
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1468818000000)\/",
+              "TransitLeg": "1"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdZGM7kQHxr8PmOWU90')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdZGM7kQHxr8PmOWU90')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdZGM7kQHxr8PmOWU90",
+              "ShipStatusCode": "VA",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Vessel Arrived at Port of Discharge",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": "\/Date(1469793600000)\/",
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1469754000000)\/",
+              "TransitLeg": "2"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdZGM7kQHxr8PmOWU90')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdZGM7kQHxr8PmOWU90')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdZGM7kQHxr8PmOWU90",
+              "ShipStatusCode": "UV",
+              "EventID": "UNLOAD_END",
+              "EventDesc": "Full Container Discharged at Port of Destination",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1469836740000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdZGM7kQHxr8PmOWU90')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdZGM7kQHxr8PmOWU90')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdZGM7kQHxr8PmOWU90",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "CABRP",
+              "LocDesc": "Brampton",
+              "EventDate": "\/Date(1470632664000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdesa7kQ8oo%7BKvZnfbG')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdesa7kQ8oo%7BKvZnfbG')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdesa7kQ8oo{KvZnfbG",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1464264000000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1464174542000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdesa7kQ8oo%7BKvZnfbG')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdesa7kQ8oo%7BKvZnfbG')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdesa7kQ8oo{KvZnfbG",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1469044800000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdesa7kQDxzwPWslI5G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdesa7kQDxzwPWslI5G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdesa7kQDxzwPWslI5G",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1466683200000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1466499400000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdesa7kQDxzwPWslI5G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdesa7kQDxzwPWslI5G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdesa7kQDxzwPWslI5G",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1471464000000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdesa7kQEgegNPd5QJ0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdesa7kQEgegNPd5QJ0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdesa7kQEgegNPd5QJ0",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1466769600000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1466698600000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdesa7kQEgegNPd5QJ0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdesa7kQEgegNPd5QJ0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdesa7kQEgegNPd5QJ0",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1471550400000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQChGOEzodQw0",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRDPE",
+              "LocDesc": "DIEPPE CEDEX",
+              "EventDate": "\/Date(1465797600000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1465829921000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQChGOEzodQw0",
+              "ShipStatusCode": "VD",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Vessel Departed from Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": "\/Date(1466262000000)\/",
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1466299080000)\/",
+              "TransitLeg": "1"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQChGOEzodQw0",
+              "ShipStatusCode": "VA",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Vessel Arrived at Port of Discharge",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": "\/Date(1467018000000)\/",
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467246960000)\/",
+              "TransitLeg": "2"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQChGOEzodQw0",
+              "ShipStatusCode": "UV",
+              "EventID": "UNLOAD_END",
+              "EventDesc": "Full Container Discharged at Port of Destination",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467281040000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQChGOEzodQw0",
+              "ShipStatusCode": "OA",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Full OutGate from Ocean Terminal (CY or Port)",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467623340000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQChGOEzodQw0",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "CATTC",
+              "LocDesc": "Trenton",
+              "EventDate": "\/Date(1468195200000)\/",
+              "TimeZone": "UTC",
+              "UTCReceiveDate": "\/Date(1467693473000)\/",
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQDW%7DK3%7Dxt%7D7W')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQDW%7DK3%7Dxt%7D7W')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQDW}K3}xt}7W",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRDPE",
+              "LocDesc": "DIEPPE CEDEX",
+              "EventDate": "\/Date(1466154197000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1466075711000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQDW%7DK3%7Dxt%7D7W')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQDW%7DK3%7Dxt%7D7W')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQDW}K3}xt}7W",
+              "ShipStatusCode": "AE",
+              "EventID": "LOAD_END",
+              "EventDesc": "On-Board Vessel at Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1466380500000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQDW%7DK3%7Dxt%7D7W')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQDW%7DK3%7Dxt%7D7W')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQDW}K3}xt}7W",
+              "ShipStatusCode": "VD",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Vessel Departed from Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1466395200000)\/",
+              "TransitLeg": "1"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQDW%7DK3%7Dxt%7D7W')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQDW%7DK3%7Dxt%7D7W')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQDW}K3}xt}7W",
+              "ShipStatusCode": "VA",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Vessel Arrived at Port of Discharge",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467406800000)\/",
+              "TransitLeg": "2"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQDW%7DK3%7Dxt%7D7W')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQDW%7DK3%7Dxt%7D7W')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQDW}K3}xt}7W",
+              "ShipStatusCode": "UV",
+              "EventID": "UNLOAD_END",
+              "EventDesc": "Full Container Discharged at Port of Destination",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467421200000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQDW%7DK3%7Dxt%7D7W')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQDW%7DK3%7Dxt%7D7W')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQDW}K3}xt}7W",
+              "ShipStatusCode": "I",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Full InGate at Ocean Terminal (CY or Port)",
+              "Location": "CATOR",
+              "LocDesc": "TORONTO",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467834120000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQDW%7DK3%7Dxt%7D7W')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQDW%7DK3%7Dxt%7D7W')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQDW}K3}xt}7W",
+              "ShipStatusCode": "OA",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Full OutGate from Ocean Terminal (CY or Port)",
+              "Location": "CATOR",
+              "LocDesc": "TORONTO",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467903360000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQDW%7DK3%7Dxt%7D7W')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQDW%7DK3%7Dxt%7D7W')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQDW}K3}xt}7W",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "CABRP",
+              "LocDesc": "Brampton",
+              "EventDate": "\/Date(1468551797000)\/",
+              "TimeZone": "UTC",
+              "UTCReceiveDate": "\/Date(1467985548000)\/",
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7jQFeVlcuA994m')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7jQFeVlcuA994m')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdk8U7jQFeVlcuA994m",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRDPE",
+              "LocDesc": "DIEPPE CEDEX",
+              "EventDate": "\/Date(1467102558000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1467108453000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7jQFeVlcuA994m')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7jQFeVlcuA994m')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdk8U7jQFeVlcuA994m",
+              "ShipStatusCode": "I",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Full InGate at Ocean Terminal (CY or Port)",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467372960000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7jQFeVlcuA994m')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7jQFeVlcuA994m')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdk8U7jQFeVlcuA994m",
+              "ShipStatusCode": "AE",
+              "EventID": "LOAD_END",
+              "EventDesc": "On-Board Vessel at Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467583380000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7jQFeVlcuA994m')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7jQFeVlcuA994m')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdk8U7jQFeVlcuA994m",
+              "ShipStatusCode": "VD",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Vessel Departed from Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": "\/Date(1467594000000)\/",
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467622800000)\/",
+              "TransitLeg": "1"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7jQFeVlcuA994m')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7jQFeVlcuA994m')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdk8U7jQFeVlcuA994m",
+              "ShipStatusCode": "VA",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Vessel Arrived at Port of Discharge",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": "\/Date(1468540800000)\/",
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1468566000000)\/",
+              "TransitLeg": "2"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7jQFeVlcuA994m')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7jQFeVlcuA994m')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdk8U7jQFeVlcuA994m",
+              "ShipStatusCode": "UV",
+              "EventID": "UNLOAD_END",
+              "EventDesc": "Full Container Discharged at Port of Destination",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1468593840000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7jQFeVlcuA994m')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7jQFeVlcuA994m')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdk8U7jQFeVlcuA994m",
+              "ShipStatusCode": "OA",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Full OutGate from Ocean Terminal (CY or Port)",
+              "Location": "CATOR",
+              "LocDesc": "TORONTO",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1469104920000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7jQFeVlcuA994m')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7jQFeVlcuA994m')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdk8U7jQFeVlcuA994m",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "CABRP",
+              "LocDesc": "Brampton",
+              "EventDate": "\/Date(1469500158000)\/",
+              "TimeZone": "UTC",
+              "UTCReceiveDate": "\/Date(1469195960000)\/",
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7kQDyVRD3e4ZA0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7kQDyVRD3e4ZA0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdk8U7kQDyVRD3e4ZA0",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRDPE",
+              "LocDesc": "DIEPPE CEDEX",
+              "EventDate": "\/Date(1466661600000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1466505066000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7kQDyVRD3e4ZA0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7kQDyVRD3e4ZA0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdk8U7kQDyVRD3e4ZA0",
+              "ShipStatusCode": "AE",
+              "EventID": "LOAD_END",
+              "EventDesc": "On-Board Vessel at Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467043380000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7kQDyVRD3e4ZA0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7kQDyVRD3e4ZA0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdk8U7kQDyVRD3e4ZA0",
+              "ShipStatusCode": "VD",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Vessel Departed from Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467061200000)\/",
+              "TransitLeg": "1"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7kQDyVRD3e4ZA0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7kQDyVRD3e4ZA0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdk8U7kQDyVRD3e4ZA0",
+              "ShipStatusCode": "VA",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Vessel Arrived at Port of Discharge",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467995160000)\/",
+              "TransitLeg": "2"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7kQDyVRD3e4ZA0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7kQDyVRD3e4ZA0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdk8U7kQDyVRD3e4ZA0",
+              "ShipStatusCode": "UV",
+              "EventID": "UNLOAD_END",
+              "EventDesc": "Full Container Discharged at Port of Destination",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1468009560000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7kQDyVRD3e4ZA0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7kQDyVRD3e4ZA0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdk8U7kQDyVRD3e4ZA0",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "CABRP",
+              "LocDesc": "Brampton",
+              "EventDate": "\/Date(1469059200000)\/",
+              "TimeZone": "UTC",
+              "UTCReceiveDate": "\/Date(1468369016000)\/",
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7kQDyVRD3e4ZA0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdk8U7kQDyVRD3e4ZA0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdk8U7kQDyVRD3e4ZA0",
+              "ShipStatusCode": "OA",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Full OutGate from Ocean Terminal (CY or Port)",
+              "Location": "CATOR",
+              "LocDesc": "TORONTO",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1468412100000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvShbeOv%7B3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvShbeOv%7B3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvShbeOv{3G",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRDPE",
+              "LocDesc": "DIEPPE CEDEX",
+              "EventDate": "\/Date(1466596800000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1466427402000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvShbeOv%7B3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvShbeOv%7B3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvShbeOv{3G",
+              "ShipStatusCode": "I",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Full InGate at Ocean Terminal (CY or Port)",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1466431500000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvShbeOv%7B3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvShbeOv%7B3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvShbeOv{3G",
+              "ShipStatusCode": "AE",
+              "EventID": "LOAD_END",
+              "EventDesc": "On-Board Vessel at Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467046560000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvShbeOv%7B3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvShbeOv%7B3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvShbeOv{3G",
+              "ShipStatusCode": "VD",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Vessel Departed from Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467061560000)\/",
+              "TransitLeg": "1"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvShbeOv%7B3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvShbeOv%7B3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvShbeOv{3G",
+              "ShipStatusCode": "VA",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Vessel Arrived at Port of Discharge",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": "\/Date(1468105260000)\/",
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467912600000)\/",
+              "TransitLeg": "2"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvShbeOv%7B3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvShbeOv%7B3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvShbeOv{3G",
+              "ShipStatusCode": "UV",
+              "EventID": "UNLOAD_END",
+              "EventDesc": "Full Container Discharged at Port of Destination",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467976320000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvShbeOv%7B3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvShbeOv%7B3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvShbeOv{3G",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "CATTC",
+              "LocDesc": "Trenton",
+              "EventDate": "\/Date(1468994400000)\/",
+              "TimeZone": "UTC",
+              "UTCReceiveDate": "\/Date(1468287461000)\/",
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvShbeOv%7B3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvShbeOv%7B3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvShbeOv{3G",
+              "ShipStatusCode": "OA",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Full OutGate from Ocean Terminal (CY or Port)",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1468328940000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSjymvQU3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSjymvQU3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvSjymvQU3G",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1466683200000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1466422879000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSjymvQU3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSjymvQU3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvSjymvQU3G",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1471464000000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSjymvUU3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSjymvUU3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvSjymvUU3G",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1466683200000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1466439667000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSjymvUU3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSjymvUU3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvSjymvUU3G",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1471464000000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSl7JC%7D%7B3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSl7JC%7D%7B3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvSl7JC}{3G",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1466769600000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1466425605000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSl7JC%7D%7B3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSl7JC%7D%7B3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvSl7JC}{3G",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1471550400000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSojThuU3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSojThuU3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvSojThuU3G",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRDPE",
+              "LocDesc": "DIEPPE CEDEX",
+              "EventDate": "\/Date(1466596800000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1466418183000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSojThuU3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSojThuU3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvSojThuU3G",
+              "ShipStatusCode": "I",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Full InGate at Ocean Terminal (CY or Port)",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1466430180000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSojThuU3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSojThuU3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvSojThuU3G",
+              "ShipStatusCode": "AE",
+              "EventID": "LOAD_END",
+              "EventDesc": "On-Board Vessel at Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467044820000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSojThuU3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSojThuU3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvSojThuU3G",
+              "ShipStatusCode": "VD",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Vessel Departed from Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467061560000)\/",
+              "TransitLeg": "1"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSojThuU3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSojThuU3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvSojThuU3G",
+              "ShipStatusCode": "VA",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Vessel Arrived at Port of Discharge",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": "\/Date(1468105260000)\/",
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467912600000)\/",
+              "TransitLeg": "2"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSojThuU3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSojThuU3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvSojThuU3G",
+              "ShipStatusCode": "UV",
+              "EventID": "UNLOAD_END",
+              "EventDesc": "Full Container Discharged at Port of Destination",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1468009320000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSojThuU3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSojThuU3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvSojThuU3G",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "CATTC",
+              "LocDesc": "Trenton",
+              "EventDate": "\/Date(1468994400000)\/",
+              "TimeZone": "UTC",
+              "UTCReceiveDate": "\/Date(1468287448000)\/",
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSojThuU3G')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQDvSojThuU3G')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQDvSojThuU3G",
+              "ShipStatusCode": "OA",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Full OutGate from Ocean Terminal (CY or Port)",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1468320420000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQIe7rdTq%7Bxk0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQIe7rdTq%7Bxk0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQIe7rdTq{xk0",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRDPE",
+              "LocDesc": "DIEPPE CEDEX",
+              "EventDate": "\/Date(1468317268000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1468424161000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQIe7rdTq%7Bxk0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQIe7rdTq%7Bxk0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQIe7rdTq{xk0",
+              "ShipStatusCode": "AE",
+              "EventID": "LOAD_END",
+              "EventDesc": "On-Board Vessel at Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1468806960000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQIe7rdTq%7Bxk0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQIe7rdTq%7Bxk0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQIe7rdTq{xk0",
+              "ShipStatusCode": "VD",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Vessel Departed from Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": "\/Date(1468846800000)\/",
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1468818000000)\/",
+              "TransitLeg": "1"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQIe7rdTq%7Bxk0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQIe7rdTq%7Bxk0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQIe7rdTq{xk0",
+              "ShipStatusCode": "VA",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Vessel Arrived at Port of Discharge",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": "\/Date(1469793600000)\/",
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1469754000000)\/",
+              "TransitLeg": "2"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQIe7rdTq%7Bxk0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQIe7rdTq%7Bxk0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQIe7rdTq{xk0",
+              "ShipStatusCode": "UV",
+              "EventID": "UNLOAD_END",
+              "EventDesc": "Full Container Discharged at Port of Destination",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1469799120000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQIe7rdTq%7Bxk0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77jQIe7rdTq%7Bxk0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77jQIe7rdTq{xk0",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "CABRP",
+              "LocDesc": "Brampton",
+              "EventDate": "\/Date(1470714868000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQ8cipQ10dH70')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQ8cipQ10dH70')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77kQ8cipQ10dH70",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1463529600000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1464008149000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQ8cipQ10dH70')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQ8cipQ10dH70')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77kQ8cipQ10dH70",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1468310400000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQ8cipQ10hH70')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQ8cipQ10hH70')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77kQ8cipQ10hH70",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1463529600000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1464008157000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQ8cipQ10hH70')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQ8cipQ10hH70')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77kQ8cipQ10hH70",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1468310400000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQ9oBZHkBog70')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQ9oBZHkBog70')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77kQ9oBZHkBog70",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1464264000000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1464604368000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQ9oBZHkBog70')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQ9oBZHkBog70')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77kQ9oBZHkBog70",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1469044800000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQ9oBZHkBsg70')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQ9oBZHkBsg70')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77kQ9oBZHkBsg70",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1464343800000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1464604376000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQ9oBZHkBsg70')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQ9oBZHkBsg70')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77kQ9oBZHkBsg70",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1469124600000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQDZ5LF%7Dak3TW')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQDZ5LF%7Dak3TW')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77kQDZ5LF}ak3TW",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1466164800000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1466156348000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQDZ5LF%7Dak3TW')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mdlj77kQDZ5LF%7Dak3TW')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mdlj77kQDZ5LF}ak3TW",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1470945600000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeW457kQ7pN9K3y6llW')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeW457kQ7pN9K3y6llW')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MeW457kQ7pN9K3y6llW",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1463659200000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1463742466000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeW457kQ7pN9K3y6llW')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeW457kQ7pN9K3y6llW')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MeW457kQ7pN9K3y6llW",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1468440000000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeW457kQDzpGnEzgPh0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeW457kQDzpGnEzgPh0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MeW457kQDzpGnEzgPh0",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRDPE",
+              "LocDesc": "DIEPPE CEDEX",
+              "EventDate": "\/Date(1466510400000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1466522603000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeW457kQDzpGnEzgPh0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeW457kQDzpGnEzgPh0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MeW457kQDzpGnEzgPh0",
+              "ShipStatusCode": "AE",
+              "EventID": "LOAD_END",
+              "EventDesc": "On-Board Vessel at Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467041640000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeW457kQDzpGnEzgPh0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeW457kQDzpGnEzgPh0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MeW457kQDzpGnEzgPh0",
+              "ShipStatusCode": "VD",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Vessel Departed from Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467061200000)\/",
+              "TransitLeg": "1"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeW457kQDzpGnEzgPh0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeW457kQDzpGnEzgPh0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MeW457kQDzpGnEzgPh0",
+              "ShipStatusCode": "VA",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Vessel Arrived at Port of Discharge",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467983940000)\/",
+              "TransitLeg": "2"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeW457kQDzpGnEzgPh0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeW457kQDzpGnEzgPh0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MeW457kQDzpGnEzgPh0",
+              "ShipStatusCode": "UV",
+              "EventID": "UNLOAD_END",
+              "EventDesc": "Full Container Discharged at Port of Destination",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467998340000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeW457kQDzpGnEzgPh0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeW457kQDzpGnEzgPh0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MeW457kQDzpGnEzgPh0",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "CABRP",
+              "LocDesc": "Brampton",
+              "EventDate": "\/Date(1468908000000)\/",
+              "TimeZone": "UTC",
+              "UTCReceiveDate": "\/Date(1468503878000)\/",
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeW457kQDzpGnEzgPh0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeW457kQDzpGnEzgPh0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MeW457kQDzpGnEzgPh0",
+              "ShipStatusCode": "OA",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Full OutGate from Ocean Terminal (CY or Port)",
+              "Location": "CATOR",
+              "LocDesc": "TORONTO",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1468527840000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeYkx7jQJwRLVvwEYFW')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeYkx7jQJwRLVvwEYFW')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MeYkx7jQJwRLVvwEYFW",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRDPE",
+              "LocDesc": "DIEPPE CEDEX",
+              "EventDate": "\/Date(1469102372000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1469115607000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeYkx7jQJwRLVvwEYFW')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeYkx7jQJwRLVvwEYFW')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MeYkx7jQJwRLVvwEYFW",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "CABRP",
+              "LocDesc": "Brampton",
+              "EventDate": "\/Date(1471499972000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MebMv7jQEmhHNMs7jBW')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MebMv7jQEmhHNMs7jBW')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MebMv7jQEmhHNMs7jBW",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1466683200000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1466783541000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MebMv7jQEmhHNMs7jBW')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MebMv7jQEmhHNMs7jBW')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MebMv7jQEmhHNMs7jBW",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1471464000000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MebMv7kQ4uyWdWtfJdG')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MebMv7kQ4uyWdWtfJdG')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MebMv7kQ4uyWdWtfJdG",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1462579199000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1462298239000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MebMv7kQ4uyWdWtfJdG')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MebMv7kQ4uyWdWtfJdG')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MebMv7kQ4uyWdWtfJdG",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1467403200000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7jQ8vaKzwdzIsm')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7jQ8vaKzwdzIsm')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mecpx7jQ8vaKzwdzIsm",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1464264000000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1464264467000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7jQ8vaKzwdzIsm')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7jQ8vaKzwdzIsm')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mecpx7jQ8vaKzwdzIsm",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1469044800000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQDafpC4jfUUG')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQDafpC4jfUUG')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mecpx7kQDafpC4jfUUG",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1466207999000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1466179332000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQDafpC4jfUUG')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQDafpC4jfUUG')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mecpx7kQDafpC4jfUUG",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1471032000000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQFkg%7DwK45IZm')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQFkg%7DwK45IZm')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mecpx7kQFkg}wK45IZm",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRDPE",
+              "LocDesc": "DIEPPE CEDEX",
+              "EventDate": "\/Date(1467288000000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1467195648000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQFkg%7DwK45IZm')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQFkg%7DwK45IZm')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mecpx7kQFkg}wK45IZm",
+              "ShipStatusCode": "I",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Full InGate at Ocean Terminal (CY or Port)",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467206580000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQFkg%7DwK45IZm')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQFkg%7DwK45IZm')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mecpx7kQFkg}wK45IZm",
+              "ShipStatusCode": "AE",
+              "EventID": "LOAD_END",
+              "EventDesc": "On-Board Vessel at Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467587580000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQFkg%7DwK45IZm')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQFkg%7DwK45IZm')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mecpx7kQFkg}wK45IZm",
+              "ShipStatusCode": "VD",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Vessel Departed from Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": "\/Date(1467594000000)\/",
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467622800000)\/",
+              "TransitLeg": "1"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQFkg%7DwK45IZm')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQFkg%7DwK45IZm')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mecpx7kQFkg}wK45IZm",
+              "ShipStatusCode": "VA",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Vessel Arrived at Port of Discharge",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": "\/Date(1468540800000)\/",
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1468566000000)\/",
+              "TransitLeg": "2"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQFkg%7DwK45IZm')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQFkg%7DwK45IZm')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mecpx7kQFkg}wK45IZm",
+              "ShipStatusCode": "UV",
+              "EventID": "UNLOAD_END",
+              "EventDesc": "Full Container Discharged at Port of Destination",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1468592700000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQFkg%7DwK45IZm')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQFkg%7DwK45IZm')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mecpx7kQFkg}wK45IZm",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "CABRP",
+              "LocDesc": "Brampton",
+              "EventDate": "\/Date(1469685600000)\/",
+              "TimeZone": "UTC",
+              "UTCReceiveDate": "\/Date(1469073147000)\/",
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQFkg%7DwK45IZm')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051Mecpx7kQFkg%7DwK45IZm')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051Mecpx7kQFkg}wK45IZm",
+              "ShipStatusCode": "OA",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Full OutGate from Ocean Terminal (CY or Port)",
+              "Location": "CATOR",
+              "LocDesc": "TORONTO",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1469106660000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeeM47jQ7e73tltnGOm')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeeM47jQ7e73tltnGOm')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MeeM47jQ7e73tltnGOm",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1463136490000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1463587308000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeeM47jQ7e73tltnGOm')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeeM47jQ7e73tltnGOm')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MeeM47jQ7e73tltnGOm",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1467917290000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeeM47jQ7e73tltrGOm')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeeM47jQ7e73tltrGOm')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MeeM47jQ7e73tltrGOm",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1463788799000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1463587271000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeeM47jQ7e73tltrGOm')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeeM47jQ7e73tltrGOm')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MeeM47jQ7e73tltrGOm",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1468612800000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeeM47jQDaOxUexKln0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeeM47jQDaOxUexKln0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MeeM47jQDaOxUexKln0",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1466207999000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1466172912000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeeM47jQDaOxUexKln0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeeM47jQDaOxUexKln0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MeeM47jQDaOxUexKln0",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1471032000000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeeM47jQEfsOIuDuGfG')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeeM47jQEfsOIuDuGfG')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MeeM47jQEfsOIuDuGfG",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1466769600000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1466687294000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeeM47jQEfsOIuDuGfG')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MeeM47jQEfsOIuDuGfG')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MeeM47jQEfsOIuDuGfG",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1471550400000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MejEt7jQBgmYOle%7B8%7DW')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MejEt7jQBgmYOle%7B8%7DW')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MejEt7jQBgmYOle{8}W",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1464780089000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1465382151000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MejEt7jQBgmYOle%7B8%7DW')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MejEt7jQBgmYOle%7B8%7DW')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MejEt7jQBgmYOle{8}W",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1469560889000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MejEt7kQ8pKY4xNB9jm')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MejEt7kQ8pKY4xNB9jm')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MejEt7kQ8pKY4xNB9jm",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRBOP",
+              "LocDesc": "Boue",
+              "EventDate": "\/Date(1464264000000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1464179131000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MejEt7kQ8pKY4xNB9jm')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MejEt7kQ8pKY4xNB9jm')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MejEt7kQ8pKY4xNB9jm",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "AUALT",
+              "LocDesc": "Altona",
+              "EventDate": "\/Date(1469044800000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MejEt7kQJjt9ZQYHIeG')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MejEt7kQJjt9ZQYHIeG')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MejEt7kQJjt9ZQYHIeG",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRDPE",
+              "LocDesc": "DIEPPE CEDEX",
+              "EventDate": "\/Date(1468317470000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1468943039000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MejEt7kQJjt9ZQYHIeG')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MejEt7kQJjt9ZQYHIeG')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MejEt7kQJjt9ZQYHIeG",
+              "ShipStatusCode": "AE",
+              "EventID": "LOAD_END",
+              "EventDesc": "On-Board Vessel at Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1469434440000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MejEt7kQJjt9ZQYHIeG')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MejEt7kQJjt9ZQYHIeG')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MejEt7kQJjt9ZQYHIeG",
+              "ShipStatusCode": "VD",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Vessel Departed from Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1469456040000)\/",
+              "TransitLeg": "1"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MejEt7kQJjt9ZQYHIeG')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MejEt7kQJjt9ZQYHIeG')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MejEt7kQJjt9ZQYHIeG",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "CABRP",
+              "LocDesc": "Brampton",
+              "EventDate": "\/Date(1470715070000)\/",
+              "TimeZone": "",
+              "UTCReceiveDate": null,
+              "TransitLeg": "3"
+            }
+    	]
+  }
+}

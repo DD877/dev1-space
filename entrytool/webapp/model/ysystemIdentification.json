@@ -1,0 +1,22 @@
+{
+    "ysystemIdentification": [
+        {
+            "__metadata": {
+                "id": "https://hectlchttp.merckgroup.com/sap/opu/odata/sap/YSD_MOET_SRV/ysystemIdentificationSet('LEAN')",
+                "uri": "https://hectlchttp.merckgroup.com/sap/opu/odata/sap/YSD_MOET_SRV/ysystemIdentificationSet('LEAN')",
+                "type": "YSD_MOET_SRV.ysystemIdentification"
+            },
+            "Yylow": "TLACLNT300",
+            "Yydesc": "LEAN"
+        },
+        {
+            "__metadata": {
+                "id": "https://hectlchttp.merckgroup.com/sap/opu/odata/sap/YSD_MOET_SRV/ysystemIdentificationSet('TEMPO')",
+                "uri": "https://hectlchttp.merckgroup.com/sap/opu/odata/sap/YSD_MOET_SRV/ysystemIdentificationSet('TEMPO')",
+                "type": "YSD_MOET_SRV.ysystemIdentification"
+            },
+            "Yylow": "C01CLNT100",
+            "Yydesc": "TEMPO"
+        }
+    ]
+}

@@ -1,0 +1,146 @@
+{
+  "d": {
+    "results": [
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/ContainerDetailSet('051MdhHO7jQChGOEzodQw0')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/ContainerDetailSet('051MdhHO7jQChGOEzodQw0')",
+          "type": "1GTPT_OCT_APP_SRV.ContainerDetail"
+        },
+        "GUID": "051MdhHO7jQChGOEzodQw0",
+        "DestinationCompany": "CA10",
+        "OriginCity": "DIEPPE CEDEX",
+        "DestinationCity": "Trenton",
+        "Vessel": "CAP HARRISSON",
+        "Voyage": "01W23",
+        "EquiType": "4500",
+        "ReceivingPlant": "0387",
+        "GrossWeight": "5618.340",
+        "GrossWeightUnit": "KG",
+        "GrossVolume": "35705.124",
+        "GrossVolumeUnit": "DM3",
+        "VUWeight": "6769.660",
+        "VUVolume": "42.460",
+        "MaxVolume": "76.300",
+        "VUPercWeight": "21.14",
+        "VUPercVolume": "47.42",
+        "GrossPercVolume": "0.00",
+        "ContainerDesc": "40' High-Cube Dry",
+        "CarrierID": "",
+        "CarrierName": "",
+        "TransitTime0": 0,
+        "TransitTime1": 0,
+        "TransitTime2": 0,
+        "TransitTime3": 0,
+        "SysAliasDLV": "R3SE1",
+        "SysAliasSTO": "R3PA1",
+        "EventSet": {
+          "results": [
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQChGOEzodQw0",
+              "ShipStatusCode": "",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Container Loading (Goods Issue)",
+              "Location": "FRDPE",
+              "LocDesc": "DIEPPE CEDEX",
+              "EventDate": "\/Date(1465797600000)\/",
+              "TimeZone": "CET",
+              "UTCReceiveDate": "\/Date(1465829921000)\/",
+              "TransitLeg": "0"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQChGOEzodQw0",
+              "ShipStatusCode": "VD",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Vessel Departed from Port of Loading",
+              "Location": "FRLEH",
+              "LocDesc": "LE HAVRE",
+              "EventDate": "\/Date(1466262000000)\/",
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1466299080000)\/",
+              "TransitLeg": "1"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQChGOEzodQw0",
+              "ShipStatusCode": "VA",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Vessel Arrived at Port of Discharge",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": "\/Date(1467018000000)\/",
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467246960000)\/",
+              "TransitLeg": "2"
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQChGOEzodQw0",
+              "ShipStatusCode": "UV",
+              "EventID": "UNLOAD_END",
+              "EventDesc": "Full Container Discharged at Port of Destination",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467281040000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQChGOEzodQw0",
+              "ShipStatusCode": "OA",
+              "EventID": "DEPARTURE",
+              "EventDesc": "Full OutGate from Ocean Terminal (CY or Port)",
+              "Location": "CAMTR",
+              "LocDesc": "MONTREAL",
+              "EventDate": null,
+              "TimeZone": "GMTUK",
+              "UTCReceiveDate": "\/Date(1467623340000)\/",
+              "TransitLeg": ""
+            },
+            {
+              "__metadata": {
+                "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/EventSet('051MdhHO7jQChGOEzodQw0')",
+                "type": "1GTPT_OCT_APP_SRV.Event"
+              },
+              "GUID": "051MdhHO7jQChGOEzodQw0",
+              "ShipStatusCode": "",
+              "EventID": "ARRIV_DEST",
+              "EventDesc": "Arrival at Destination DC (Goods Receipt)",
+              "Location": "CATTC",
+              "LocDesc": "Trenton",
+              "EventDate": "\/Date(1468195200000)\/",
+              "TimeZone": "UTC",
+              "UTCReceiveDate": "\/Date(1467693473000)\/",
+              "TransitLeg": "3"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

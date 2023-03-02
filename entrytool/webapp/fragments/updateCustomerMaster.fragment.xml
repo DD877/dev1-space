@@ -1,0 +1,51 @@
+<core:FragmentDefinition xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:uxap="sap.uxap"
+	xmlns:table="sap.ui.table" xmlns:u="sap.ui.unified" xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Dialog contentHeight="auto" contentWidth="90%" showHeader="false" resizable="false">
+		<uxap:ObjectPageLayout enableLazyLoading="true" headerContentPinnable="false" showTitleInHeaderContent="true" showHeaderContent="false"
+			class="newOrder" height="500px">
+			<uxap:headerTitle>
+				<uxap:ObjectPageHeader objectImageURI="/img/merck-logo.png" objectImageShape="Circle" objectTitle="{i18n>CustomerMaintenance}"
+					objectImageAlt="" isObjectIconAlwaysVisible="true" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true"
+					isActionAreaAlwaysVisible="true" showPlaceholder="true" class="newOrderHP">
+					<HBox justifyContent="End" width="100%" height="100%">
+						<Button text="{i18n>Save}" icon="sap-icon://save" class="sapUiSmallMarginEnd" press="onUpdateMatAssignment" type="Accept"/>
+						<Button tooltip="{i18n>Close}" text="{i18n>Close}" icon="sap-icon://decline" press="_onUpdateMatAssignClose"/>
+					</HBox>
+				</uxap:ObjectPageHeader>
+			</uxap:headerTitle>
+			<uxap:sections>
+				<uxap:ObjectPageSection title="{i18n>MaterialAssignment}" class="tabsc">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection>
+							<f:SimpleForm maxContainerCols="2" editable="true" backgroundDesign="Translucent" layout="ResponsiveGridLayout" labelSpanL="4"
+								labelSpanM="4" labelSpanS="12" emptySpanL="0" emptySpanM="0" columnsL="2" columnsM="2" width="100%">
+								<f:content>
+									<Label text="{i18n>Customer}" required="true" visible="true"/>
+									<Input enabled="false" type="Text" value="{updateMatAssign>/ZCUST_NUM}"/>
+									<Label text="{i18n>SalesOrganization}" required="true"/>
+									<Input enabled="false" value="{updateMatAssign>/ZSALES_ORG}"></Input>
+									<Label text="{i18n>DistributionChannel}" required="true"/>
+									<Input enabled="false" value="{updateMatAssign>/ZDISTR_CHNL}"></Input>
+									<Label text="{i18n>Division}" required="true"/>
+									<Input enabled="false" value="{updateMatAssign>/ZDIVISION}"></Input>
+									<Label text="{i18n>Material}" required="true"/>
+									<Input enabled="false" value="{updateMatAssign>/ZMAT_NUM}"></Input>
+									<Label text="{i18n>System}" required="true"/>
+									<Input enabled="false" value="{= (${updateMatAssign>/ZSYSTEM} === 'L') ? 'LEAN' : 'TEMPO'}"></Input>
+									<Label text="{i18n>Currency}"/>
+									<Select forceSelection="false" id="idESelectCurr" selectedKey="{updateMatAssign>/ZCURR}">
+										<core:Item key="" text=""/>
+										<core:Item key="USD" text="USD"/>
+										<core:Item key="HRK" text="HRK"/>
+									</Select>
+									<Label visible="false"/>
+								
+								</f:content>
+							</f:SimpleForm>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+			</uxap:sections>
+		</uxap:ObjectPageLayout>
+	</Dialog>
+</core:FragmentDefinition>

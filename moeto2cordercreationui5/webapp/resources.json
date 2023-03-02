@@ -1,0 +1,542 @@
+{
+    "resources": [
+        {
+            "name": "fragments/assignCustomer.fragment.xml"
+        },
+        {
+            "name": "i18n/i18n_de.properties",
+            "raw": "i18n/i18n.properties",
+            "locale": "_de"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "services/HTTPService.js"
+        },
+        {
+            "name": "model/sideContent.json"
+        },
+        {
+            "name": "model/questionnaire.json"
+        },
+        {
+            "name": "model/pdata.json"
+        },
+        {
+            "name": "model/item.json"
+        },
+        {
+            "name": "model/idata.json"
+        },
+        {
+            "name": "model/folderId.json"
+        },
+        {
+            "name": "model/data.json"
+        },
+        {
+            "name": "model/customers.json"
+        },
+        {
+            "name": "model/customer.json"
+        },
+        {
+            "name": "resources.json",
+            "merged": true
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "controller/settings/MasterSettings.controller.js"
+        },
+        {
+            "name": "controller/settings/MasterSettings-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "services/RepoService.js"
+        },
+        {
+            "name": "services/RepoService-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "model/users.json"
+        },
+        {
+            "name": "services/HTTPService-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "model/models.js"
+        },
+        {
+            "name": "model/models-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "model/formatterNew.js"
+        },
+        {
+            "name": "model/formatterNew-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "model/formatter.js"
+        },
+        {
+            "name": "model/formatter-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/UserMaintenance.controller.js"
+        },
+        {
+            "name": "controller/UserMaintenance-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/ProcessOrders.controller.js"
+        },
+        {
+            "name": "controller/ProcessOrders-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/Orders.controller.js"
+        },
+        {
+            "name": "controller/Orders-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/OrderReport.controller.js"
+        },
+        {
+            "name": "controller/OrderReport-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/NewOrder.controller.js"
+        },
+        {
+            "name": "controller/NewOrder-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/MaterialMaster.controller.js"
+        },
+        {
+            "name": "controller/MaterialMaster-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/ItemCategory.controller.js"
+        },
+        {
+            "name": "controller/ItemCategory-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/Home.controller.js"
+        },
+        {
+            "name": "controller/Home-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/CustomerMaster.controller.js"
+        },
+        {
+            "name": "controller/CustomerMaster-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/BaseController.js"
+        },
+        {
+            "name": "controller/BaseController-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/AuditTrail.controller.js"
+        },
+        {
+            "name": "controller/AuditTrail-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/ApproveOrders.controller.js"
+        },
+        {
+            "name": "controller/ApproveOrders-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/App.controller.js"
+        },
+        {
+            "name": "controller/App-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "Component-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "manifest-bundle.zip"
+        },
+        {
+            "name": "controller/settings/MasterSettings-dbg-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "services/RepoService-dbg-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "services/HTTPService-dbg-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "model/models-dbg-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "model/formatterNew-dbg-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "model/formatter-dbg-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/UserMaintenance-dbg-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/ProcessOrders-dbg-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/Orders-dbg-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/OrderReport-dbg-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/NewOrder-dbg-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/MaterialMaster-dbg-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/ItemCategory-dbg-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/Home-dbg-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/CustomerMaster-dbg-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/BaseController-dbg-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/AuditTrail-dbg-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/ApproveOrders-dbg-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/App-dbg-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "Component-preload-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "Component-dbg-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../../../sap-ui-version.json"
+        },
+        {
+            "name": "neo-app.json"
+        },
+        {
+            "name": "di.code-validation.core_issues.json"
+        },
+        {
+            "name": "view/settings/MasterSettings.view.xml"
+        },
+        {
+            "name": "view/settings/DetailSettings.view.xml"
+        },
+        {
+            "name": "view/settings/AppSettings.view.xml"
+        },
+        {
+            "name": "view/UserMaintenance.view.xml"
+        },
+        {
+            "name": "view/ProcessOrders.view.xml"
+        },
+        {
+            "name": "view/Orders.view.xml"
+        },
+        {
+            "name": "view/OrderReport.view.xml"
+        },
+        {
+            "name": "view/NewOrder.view.xml"
+        },
+        {
+            "name": "view/MaterialMaster.view.xml"
+        },
+        {
+            "name": "view/ItemCategory.view.xml"
+        },
+        {
+            "name": "view/Home.view.xml"
+        },
+        {
+            "name": "view/CustomerMaster.view.xml"
+        },
+        {
+            "name": "view/AuditTrail.view.xml"
+        },
+        {
+            "name": "view/ApproveOrders.view.xml"
+        },
+        {
+            "name": "view/App.view.xml"
+        },
+        {
+            "name": "img/user.png"
+        },
+        {
+            "name": "img/merck-logo.png"
+        },
+        {
+            "name": "img/merck-logo-b-y.png"
+        },
+        {
+            "name": "img/login_background.jpg"
+        },
+        {
+            "name": "img/icon_chat-moet.png"
+        },
+        {
+            "name": "img/busy2.gif"
+        },
+        {
+            "name": "img/1merck-logo.png"
+        },
+        {
+            "name": "fragments/userMain.fragment.xml"
+        },
+        {
+            "name": "fragments/userInfo.fragment.xml"
+        },
+        {
+            "name": "fragments/updateOrderSimulate.fragment.xml"
+        },
+        {
+            "name": "fragments/updateMaterialAssignment.fragment.xml"
+        },
+        {
+            "name": "fragments/updateCustomerMaster.fragment.xml"
+        },
+        {
+            "name": "fragments/shipto.fragment.xml"
+        },
+        {
+            "name": "fragments/settings.fragment.xml"
+        },
+        {
+            "name": "fragments/orderSimulateSOLine.fragment.xml"
+        },
+        {
+            "name": "fragments/orderSimulateEditSOLine.fragment.xml"
+        },
+        {
+            "name": "fragments/orderSimulateAprSOLine.fragment.xml"
+        },
+        {
+            "name": "fragments/orderSimulate.fragment.xml"
+        },
+        {
+            "name": "fragments/orderApprove.fragment.xml"
+        },
+        {
+            "name": "fragments/materialMaster.fragment.xml"
+        },
+        {
+            "name": "fragments/materialAssignment.fragment.xml"
+        },
+        {
+            "name": "fragments/itemCategory.fragment.xml"
+        },
+        {
+            "name": "fragments/itemCatEdit.fragment.xml"
+        },
+        {
+            "name": "fragments/fTrade.fragment.xml"
+        },
+        {
+            "name": "fragments/editUser.fragment.xml"
+        },
+        {
+            "name": "fragments/editOrder.fragment.xml"
+        },
+        {
+            "name": "fragments/editMaterial.fragment.xml"
+        },
+        {
+            "name": "fragments/editCustAssign.fragment.xml"
+        },
+        {
+            "name": "fragments/editAssignFtrade.fragment.xml"
+        },
+        {
+            "name": "fragments/customerMasterEdit.fragment.xml"
+        },
+        {
+            "name": "fragments/customerMaster.fragment.xml"
+        },
+        {
+            "name": "fragments/customerAssignment.fragment.xml"
+        },
+        {
+            "name": "fragments/custMatItemCategory.fragment.xml"
+        },
+        {
+            "name": "fragments/confirmedOrders.fragment.xml"
+        },
+        {
+            "name": "fragments/chatbot.fragment.xml"
+        },
+        {
+            "name": "fragments/assignShipto.fragment.xml"
+        },
+        {
+            "name": "fragments/assignMaterial.fragment.xml"
+        },
+        {
+            "name": "fragments/assignItemCategory.fragment.xml"
+        },
+        {
+            "name": "fragments/assignFtrade.fragment.xml"
+        },
+        {
+            "name": "i18n/i18n_en.properties",
+            "raw": "i18n/i18n.properties",
+            "locale": "_en"
+        },
+        {
+            "name": "fragments/assignCMItemCategory.fragment.xml"
+        },
+        {
+            "name": "fragments/assignBlock.fragment.xml"
+        },
+        {
+            "name": "fragments/addItemCategory.fragment.xml"
+        },
+        {
+            "name": "fragments/UserShipto.fragment.xml"
+        },
+        {
+            "name": "fragments/UserMaterialAssignment.fragment.xml"
+        },
+        {
+            "name": "fragments/SalesOffcF4HelpMA.fragment.xml"
+        },
+        {
+            "name": "fragments/SalesOffcF4Help.fragment.xml"
+        },
+        {
+            "name": "fragments/OrderSalesOffcF4Help.fragment.xml"
+        },
+        {
+            "name": "fragments/OrderMaterialF4Help.fragment.xml"
+        },
+        {
+            "name": "fragments/OrderF4InternalNumber.fragment.xml"
+        },
+        {
+            "name": "fragments/OrderF4HelpShipToParty.fragment.xml"
+        },
+        {
+            "name": "fragments/OrderF4HelpFtrade.fragment.xml"
+        },
+        {
+            "name": "fragments/OrderArticleNumber.fragment.xml"
+        },
+        {
+            "name": "fragments/NewOrder.fragment.xml"
+        },
+        {
+            "name": "fragments/MaterialNumber.fragment.xml"
+        },
+        {
+            "name": "fragments/MaterialF4Help.fragment.xml"
+        },
+        {
+            "name": "fragments/F4HelpShipToParty.fragment.xml"
+        },
+        {
+            "name": "fragments/ErrorMessage.fragment.xml"
+        },
+        {
+            "name": "fragments/CustomerF4Help.fragment.xml"
+        },
+        {
+            "name": "fragments/CustomerErrorMessage.fragment.xml"
+        },
+        {
+            "name": "fragments/Blocks.fragment.xml"
+        },
+        {
+            "name": "fragments/Attachment.fragment.xml"
+        },
+        {
+            "name": "fragments/ArticleNumber.fragment.xml"
+        },
+        {
+            "name": "css/style.css"
+        },
+        {
+            "name": "css/style-dbg.css",
+            "isDebug": true
+        },
+        {
+            "name": "annotation/annotation.xml"
+        },
+        {
+            "name": "index.html"
+        }
+    ]
+}

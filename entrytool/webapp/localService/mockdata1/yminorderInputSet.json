@@ -1,0 +1,19 @@
+{
+    "d": {
+        "results": [
+            {
+                "__metadata": {
+                    "id": "https://hecdlchttp.merckgroup.com/sap/opu/odata/sap/YSD_MOET_SRV/yminorderInput(IvCustomer='',IvDisbchnl='',IvDivision='',IvMaterial='',IvSalesorg='',IvSyssid='')",
+                    "uri": "https://hecdlchttp.merckgroup.com/sap/opu/odata/sap/YSD_MOET_SRV/yminorderInput(IvCustomer='',IvDisbchnl='',IvDivision='',IvMaterial='',IvSalesorg='',IvSyssid='')",
+                    "type": "YSD_MOET_SRV.yminorderInput"
+                },
+                "IvCustomer":"",
+                "IvDisbchnl":"",
+                "IvDivision":"",
+                "IvMaterial":"",
+                "IvSalesorg":"", 
+                "IvSyssid:":""
+            }
+        ]
+    }
+}

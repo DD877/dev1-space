@@ -1,0 +1,23 @@
+<mvc:View controllerName="glb.gtmh.oct.view.NotFound"
+  xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+  <Page enableScrolling="false" id="notFoundPage" title="{i18n>notFoundTitle}">
+    <customHeader>
+      <Bar>
+        <contentLeft>
+          <Link text="{i18n>backToDashboardPage}" emphasized="true"
+            href="#" />
+        </contentLeft>
+        <contentMiddle>
+          <Label text="{i18n>notFoundTitle}" />
+        </contentMiddle>
+      </Bar>
+    </customHeader>
+    <content>
+      <Text class="spacerTop" id="notFoundText" maxLines="0"
+        text="{i18n>notFoundText}" textAlign="Center" width="100%"></Text>
+    </content>
+    <footer id="notFoundFooter">
+      <Toolbar id="notFoundToolbar"></Toolbar>
+    </footer>
+  </Page>
+</mvc:View>

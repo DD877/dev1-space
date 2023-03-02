@@ -1,0 +1,6 @@
+applications:
+- name: myClearTextApp
+  command: node callTextAPI.js
+  path: myClearTextApp
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  memory: 128M

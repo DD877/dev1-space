@@ -1,0 +1,59 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+  xmlns:l="sap.ui.layout" xmlns="sap.m" xmlns:ux="sap.ui.ux3">
+  <ux:QuickView width="100%" class="quickView"
+    showActionBar="false">
+    <ux:content>
+
+      <HBox width="100%">
+        <items>
+          <VBox class="" width="30%">
+
+            <items>
+              <Label text="{i18n>ingenius}" class="nestleIngeniusSize marginBottom"></Label>
+            <!--  <Label text="{i18n>whatIs}" class="nestleSizeBigNotBold colorGrey marginBottom"></Label>
+              <Label text="{i18n>getMore}" class="nestleSizeBigNotBold colorGrey marginBottom"></Label>
+              <Label text="{i18n>appYouMiss}" class="nestleSizeBigNotBold colorGrey"></Label> -->
+              <Link text="{i18n>whatIs}" class="nestleSizeBigNotBold colorGrey marginBottom" target="_blank" href="http://www.ibm.com/"></Link>
+              <Link text="{i18n>getMore}" class="nestleSizeBigNotBold colorGrey marginBottom" target="_blank" href="http://www.ibm.com/"></Link>
+              <Link text="{i18n>appYouMiss}" class="nestleSizeBigNotBold colorGrey" target="_blank" href="http://www.ibm.com/"></Link>
+            </items>
+          </VBox>
+          <Label text="" class="divider"></Label>
+          <VBox class="toolTipVBox" width="30%">
+
+            <items>
+              <Label text="{i18n>OCT}" class="nestleIngeniusSize marginBottom"></Label>
+              <Link text="{i18n>getSupport}" class="nestleSizeBigNotBold colorGrey marginBottom" target="_blank" href="http://www.ibm.com/"></Link>
+              <Link text="{i18n>takeOnboarding}" class="nestleSizeBigNotBold colorGrey marginBottom" press="showOnboardingTour"></Link>
+              <HBox class="nestleSizeBigNotBold colorGrey">
+                <items>
+                  <core:Icon color="black" src="sap-icon://log" size="1.5rem" press="confirmLogout" class="sapUiTinyMarginEnd topMarginNegHalfRem" />
+                  <Link text="{i18n>logOff}" class="nestleSizeBigNotBold colorGrey" press="confirmLogout"/>
+                </items>
+              </HBox>
+
+            </items>
+
+
+          </VBox>
+          <Label text="" class="divider marginRight1"></Label>
+
+          <VBox class="nestleSizeBigNotBold colorGrey" width="30%">
+
+            <items>
+              <Label text="{i18n>haveYourSay}" class="nestleIngeniusSize marginBottom"></Label>
+              <Label text="{i18n>rateApp}" class="nestleSizeBigNotBold colorGrey"></Label>
+              <RatingIndicator id="idRating" maxValue="5"
+                class="marginBottom" iconSize="0.9rem" value="{ratingModel>/ratingVal}" tooltip="{i18n>rating}"
+                change="selectChange" />
+
+            </items>
+
+            <Link text="{i18n>feedback}" class="nestleSizeBigNotBold colorGrey" press="showFeedbackOverlay"></Link>
+          </VBox>
+
+        </items>
+      </HBox>
+    </ux:content>
+  </ux:QuickView>
+</core:FragmentDefinition>

@@ -1,0 +1,1179 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+        <Schema Namespace="com.merckgroup.moet.services.odata.moet" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="SNOOrdersType">
+                <Key>
+                    <PropertyRef Name="ZINTR_ORDNUM" />
+                    <PropertyRef Name="ZSYSTEM" />
+                    <PropertyRef Name="ZORD_NUM" />
+                </Key>
+                <Property Name="ZINTR_ORDNUM" Type="Edm.Int32" Nullable="false" sap:label="Internal Order Number" />
+                <Property Name="ZSYSTEM" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="System" />
+                <Property Name="ZORD_NUM" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="SAP Order Number" />
+                <Property Name="ZUSR_ID" Type="Edm.String" MaxLength="12" sap:label="User Id" />
+                <Property Name="ZCUST_NUM" Type="Edm.String" MaxLength="10" sap:label="Customer Number" />
+                <Property Name="ZORD_REF" Type="Edm.String" MaxLength="1" sap:label="Order Reference" />
+                <Property Name="ZCUSTOMER_NAME" Type="Edm.String" MaxLength="35" sap:label="Customer Name" />
+                <Property Name="ZSHIP_PRTY" Type="Edm.String" MaxLength="10" sap:label="Ship To Party" />
+                <Property Name="ZSHIP_TO_PARTY_DESC" Type="Edm.String" MaxLength="35" sap:label="Ship To Party Description" />
+                <Property Name="ZPO_TYP" Type="Edm.String" MaxLength="1" sap:label="PO Type" />
+                <Property Name="ZDISCNT" Type="Edm.Decimal" Precision="6" Scale="3" sap:label="Discount" />
+                <Property Name="ZCUST_PONUM" Type="Edm.String" MaxLength="30" sap:label="Customer PO Number" />
+                <Property Name="ZCUST_PODAT" Type="Edm.DateTime" sap:display-format="Date" sap:label="Customer PO Date" />
+                <Property Name="ZDOC_ID" Type="Edm.String" MaxLength="255" sap:label="Document ID" />
+                <Property Name="ZORD_STATUS" Type="Edm.String" MaxLength="4" sap:label="Order Status" />
+                <Property Name="ZORDER_STATUS_TEXT" Type="Edm.String" MaxLength="60" sap:label="Order Status Text" />
+                <Property Name="ZCREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Created By" />
+                <Property Name="ZCREATED_ON" Type="Edm.DateTime" sap:label="Created On" />
+                <Property Name="ZCHANGED_BY" Type="Edm.String" MaxLength="20" sap:label="Changed By " />
+                <Property Name="ZCHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+                <Property Name="ZAPPROVAL_STATUS" Type="Edm.String" MaxLength="20" sap:label="Approval Status" />
+                <Property Name="ZDATE" Type="Edm.DateTime" sap:label="Approval Status Date" />
+                <Property Name="ZCOMMENTS" Type="Edm.String" MaxLength="255" sap:label="Comments" />
+                <Property Name="ZAPPROVAL_STATUS_1" Type="Edm.String" MaxLength="50" sap:label="Approval Status1" />
+                <Property Name="ZLEAD_TIME" Type="Edm.String" MaxLength="1" sap:label="Lead Time Check Box" />
+                <Property Name="ZMIN_ORDER_QUAN" Type="Edm.String" MaxLength="1" sap:label="Min Order Quan Check Box" />
+                <Property Name="ZORDER_FORECAST" Type="Edm.String" MaxLength="1" sap:label="Order Forecast Check Box " />
+                <Property Name="ZFIT_CONTRACT_COND" Type="Edm.String" MaxLength="1" sap:label="Fit To Contract Condition" />
+                <Property Name="ZREQ_DELV_DAT" Type="Edm.DateTime" sap:display-format="Date" sap:label="Requested Delivery Date" />
+                <Property Name="ZTEDER_FLAG" Type="Edm.String" MaxLength="1" sap:label="Tender Flag" />
+                <Property Name="ZSALES_AREA" Type="Edm.String" MaxLength="4" sap:label="Sales Area" />
+                <Property Name="ZTOTAL_AMT" Type="Edm.String" MaxLength="20" sap:label="Total Amount" />
+                <Property Name="ZFTRADE" Type="Edm.String" MaxLength="10" sap:label="Foreign Trade" />
+                <Property Name="ZFTRADE_DESC" Type="Edm.String" MaxLength="35" sap:label="Foreign Trade Description" />
+                <Property Name="ZCURR" Type="Edm.String" MaxLength="5" sap:label="Currency" />
+                <Property Name="ZDISTR_CHNL" Type="Edm.String" MaxLength="2" sap:label="Distribution Channel" />
+                <Property Name="ZDIVISION" Type="Edm.String" MaxLength="2" sap:label="Division" />
+                <Property Name="ZDEL_BLOCK_ID" Type="Edm.String" MaxLength="10" sap:label="Delivery Block ID" />
+                <Property Name="ZHCURR" Type="Edm.String" MaxLength="5" sap:label="Header Currency" />
+            </EntityType>
+            <EntityType Name="UserDetailsF4HelpType" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ZUSR_ID" />
+                </Key>
+                <Property Name="ZUSR_ID" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="User ID" sap:aggregation-role="dimension" sap:text="ZUSR_NAME" />
+                <Property Name="ZUSR_NAME" Type="Edm.String" MaxLength="30" sap:label="User Name" />
+            </EntityType>
+            <EntityType Name="UserRoleF4Type" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" MaxLength="40" sap:filterable="false" />
+                <Property Name="ZUSR_ROLE" Type="Edm.String" MaxLength="40" sap:label="User Role" sap:aggregation-role="dimension" />
+                <Property Name="ZROLE_NAME" Type="Edm.String" MaxLength="40" sap:label="Role Name" sap:aggregation-role="dimension" />
+            </EntityType>
+            <EntityType Name="SessionUserType">
+                <Key>
+                    <PropertyRef Name="ZUSR_ID" />
+                </Key>
+                <Property Name="ZUSR_ID" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="User ID" sap:text="ZUSR_NAME" />
+                <Property Name="ZUSR_NAME" Type="Edm.String" MaxLength="30" sap:label="User Name" />
+                <Property Name="ZUSR_EMAILADD" Type="Edm.String" MaxLength="241" sap:label="Email" />
+                <Property Name="ZUSR_TYP" Type="Edm.String" MaxLength="1" sap:label="User Type" />
+                <Property Name="ZUSR_ROLE" Type="Edm.String" MaxLength="40" sap:label="User Role" sap:text="ZROLE_NAME" />
+                <Property Name="ZROLE_NAME" Type="Edm.String" MaxLength="40" sap:label="Role Name" />
+            </EntityType>
+            <EntityType Name="CustomerAllDetailsType">
+                <Key>
+                    <PropertyRef Name="ZCUSTMR_NUM" />
+                    <PropertyRef Name="ZSYSTEM" />
+                </Key>
+                <Property Name="ZCUSTMR_NUM" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer Number" sap:text="ZNAME_1" />
+                <Property Name="ZSYSTEM" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="System" />
+                <Property Name="ZNAME_1" Type="Edm.String" MaxLength="35" sap:label="Customer Name" />
+                <Property Name="ZCUST_CITY" Type="Edm.String" MaxLength="35" sap:label="Customer City" />
+                <Property Name="ZCUST_REGION" Type="Edm.String" MaxLength="3" sap:label="Customer Region" />
+                <Property Name="ZSTREET" Type="Edm.String" MaxLength="35" sap:label="Customer Street" />
+                <Property Name="ZCUST_POSTAL_CODE" Type="Edm.String" MaxLength="10" sap:label="Customer Postal Code" />
+                <Property Name="ZCENTRL_DEL_FLAG" Type="Edm.String" MaxLength="1" sap:label="Central Delete Flag" />
+                <Property Name="ZDELIVERY_BLOCK_DESC" Type="Edm.String" MaxLength="100" sap:label="Delivery Block Decsription" />
+                <Property Name="ZCUST_FTRADE_CHANGED_ON" Type="Edm.DateTime" sap:label="Customer Foreign Trade Chanegd On" />
+                <Property Name="ZCUST_FTRADE_CHANGED_BY" Type="Edm.String" MaxLength="20" sap:label="Customer Foreign Trade Changed By" />
+                <Property Name="ZCUST_FTRADE_CREATED_ON" Type="Edm.DateTime" sap:label="Customer Foreign Trade Created On" />
+                <Property Name="ZCUST_FTRADE_CREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Customer Foreign Trade Created By" />
+                <Property Name="ZCUST_FTRADE_DEL_FLAG" Type="Edm.String" MaxLength="1" sap:label="Customer Foreign Trade Deletion Flag" />
+                <Property Name="ZCUST_FTRADE_POSTAL_CODE" Type="Edm.String" MaxLength="10" sap:label="Customer Foreign Trade Postal Code" />
+                <Property Name="ZCUST_FTRADE_REGION" Type="Edm.String" MaxLength="3" sap:label="Customer Foreign Trade Region" />
+                <Property Name="ZCUST_FTRADE_CITY" Type="Edm.String" MaxLength="35" sap:label="Customer Foreign Trade City" />
+                <Property Name="ZFTRADE_DESC" Type="Edm.String" MaxLength="35" sap:label="Customer Foreign Trade Description" />
+                <Property Name="ZFTRADE" Type="Edm.String" MaxLength="10" sap:label="Customer Foreign Trade" sap:text="ZFTRADE_DESC" />
+                <Property Name="ZCUST_SHIP_POSTAL_CODE" Type="Edm.String" MaxLength="10" sap:label="Customer Ship To Party Postsl Code" />
+                <Property Name="ZCUST_SHIP_REGION" Type="Edm.String" MaxLength="3" sap:label="Customer Ship To Party Region" />
+                <Property Name="ZCUST_SHIP_CITY" Type="Edm.String" MaxLength="35" sap:label="Customer Ship To Party City" />
+                <Property Name="ZCUST_SHIP_CHANGED_ON" Type="Edm.DateTime" sap:label="Customer Ship To Party Changed On" />
+                <Property Name="ZCUST_SHIP_CHANGED_BY" Type="Edm.String" MaxLength="20" sap:label="Customer Ship To Party Changed By" />
+                <Property Name="ZCUST_SHIP_CREATED_ON" Type="Edm.DateTime" sap:label="Customer Ship To Party Created On" />
+                <Property Name="ZCUST_SHIP_CREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Customer Ship To Party Created By" />
+                <Property Name="ZCUST_SHIP_DEL_FLAG" Type="Edm.String" MaxLength="1" sap:label="Customer Ship To Party Deletion Flag" />
+                <Property Name="ZSHIP_TO_PARTY_DESC" Type="Edm.String" MaxLength="35" sap:label="Customer Ship To Party Description" />
+                <Property Name="ZSHIP_TO_PARTY" Type="Edm.String" MaxLength="10" sap:label="Customer Ship To Party" sap:text="ZSHIP_TO_PARTY_DESC" />
+                <Property Name="ZCUST_MAT_CURR" Type="Edm.String" MaxLength="5" sap:label="Customer Material Currency" />
+                <Property Name="ZCUST_MAT_CHANGED_ON" Type="Edm.DateTime" sap:label="Customer Material Changed On" />
+                <Property Name="ZCUST_MAT_CHANGED_BY" Type="Edm.String" MaxLength="20" sap:label="Customer Material Changed By" />
+                <Property Name="ZCUST_MAT_CREATED_ON" Type="Edm.DateTime" sap:label="Customer Material Created On" />
+                <Property Name="ZCUST_MAT_CREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Customer Material Created By" />
+                <Property Name="ZDEL_FLAG" Type="Edm.String" MaxLength="1" sap:label="Customer Material Deletion Flag" />
+                <Property Name="ZDIVISION" Type="Edm.String" MaxLength="2" sap:label="Division" />
+                <Property Name="ZDISTR_CHNL" Type="Edm.String" MaxLength="2" sap:label="Distribution Channel" />
+                <Property Name="ZSALES_ORG" Type="Edm.String" MaxLength="4" sap:label="Sales Organization" />
+                <Property Name="ZMATRL_DESC" Type="Edm.String" MaxLength="40" sap:label="Material Description" />
+                <Property Name="ZMAT_NUM" Type="Edm.String" MaxLength="40" sap:label="Material Number" />
+                <Property Name="ZCUST_CAHNGED_ON" Type="Edm.String" MaxLength="20" sap:label="Customer Changed On" />
+                <Property Name="ZCUST_CREATED_ON" Type="Edm.DateTime" sap:label="Customer Created On" />
+                <Property Name="ZCUST_CREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Customer Created By" />
+                <Property Name="ZDEL_BLOCK_ID" Type="Edm.String" MaxLength="10" sap:label="Delivery Block ID" sap:text="ZDELIVERY_BLOCK_DESC" />
+                <Property Name="ZITM_CATEGORY" Type="Edm.String" MaxLength="4" sap:label="Item Category" sap:text="ZITM_CATEGORY_DESC" />
+                <Property Name="ZITM_CATEGORY_DESC" Type="Edm.String" MaxLength="30" sap:label="Item Category Description" />
+            </EntityType>
+            <EntityType Name="MaterialAllDetailsType">
+                <Key>
+                    <PropertyRef Name="Z_MATRL_NUM" />
+                    <PropertyRef Name="ZSYSTEM" />
+                </Key>
+                <Property Name="Z_MATRL_NUM" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Material Number " sap:text="ZMATRL_DESC" />
+                <Property Name="ZSYSTEM" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Material System" />
+                <Property Name="ZMATRL_DESC" Type="Edm.String" MaxLength="40" sap:label="Material Description" />
+                <Property Name="ZBASE_UNIT_MEASURE" Type="Edm.String" MaxLength="3" sap:label="Base Unit of Measure" />
+                <Property Name="ZMIN_ORDER_QUAN" Type="Edm.String" MaxLength="13" sap:label="Minimum Order Quantity" />
+                <Property Name="ZGRP_DEVLPR" Type="Edm.String" MaxLength="20" sap:label="Material Group Developer" />
+                <Property Name="ZFROZEN_PERIOD" Type="Edm.String" MaxLength="3" sap:label="Frozen Period" />
+                <Property Name="ZDEL_FLAG" Type="Edm.String" MaxLength="1" sap:label="Material Deletion Flag" />
+                <Property Name="ZCREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Material Created By" />
+                <Property Name="ZCREATED_ON" Type="Edm.DateTime" sap:label="Material Created On" />
+                <Property Name="ZCHANGED_BY" Type="Edm.String" MaxLength="20" sap:label="Material Changed  By" />
+                <Property Name="ZCHANGED_ON" Type="Edm.DateTime" sap:label="Material Changed On" />
+                <Property Name="ZITM_CATEGORY" Type="Edm.String" MaxLength="4" sap:label="Material Item Category" sap:text="ZITM_CATEGORY_DESC" />
+                <Property Name="ZITM_CATEGORY_DESC" Type="Edm.String" MaxLength="30" sap:label="Material Item Category Description" />
+                <Property Name="ZMAT_ITM_CATEG_DEL_FLAG" Type="Edm.String" MaxLength="1" sap:label="Material Item Category Deletion Flag" />
+                <Property Name="ZMAT_ITM_CATEG_CREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Material Item Category Created By" />
+                <Property Name="ZMAT_ITM_CATEG_CREATED_ON" Type="Edm.DateTime" sap:label="Material Item Category Created On" />
+                <Property Name="ZMAT_ITM_CATEG_CHANGED_BY" Type="Edm.String" MaxLength="20" sap:label="Material Item Category Changed By" />
+                <Property Name="ZMAT_ITM_CATEG_CHANGED_ON" Type="Edm.DateTime" sap:label="Material Item Category Changed On" />
+            </EntityType>
+            <EntityType Name="MatItemCategoryAssignType">
+                <Key>
+                    <PropertyRef Name="ZMAT_NUM" />
+                    <PropertyRef Name="ZITM_CATEGORY" />
+                    <PropertyRef Name="ZSYSTEM" />
+                </Key>
+                <Property Name="ZMAT_NUM" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Material Number" sap:text="ZMATRL_DESC" />
+                <Property Name="ZITM_CATEGORY" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Item Category" sap:text="ZITM_CATEGORY_DESC" />
+                <Property Name="ZSYSTEM" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="System" />
+                <Property Name="ZITM_CATEGORY_DESC" Type="Edm.String" MaxLength="30" sap:label="Item Category Description" />
+                <Property Name="ZMATRL_DESC" Type="Edm.String" MaxLength="40" sap:label="Material Description" />
+                <Property Name="ZDEL_FLAG" Type="Edm.String" MaxLength="1" sap:label="Deletion Flag" />
+                <Property Name="ZCREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Created By" />
+                <Property Name="ZCREATED_ON" Type="Edm.DateTime" sap:label="Created On" />
+                <Property Name="ZCHANGED_BY" Type="Edm.String" MaxLength="20" sap:label="Changed By" />
+                <Property Name="ZCHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+            </EntityType>
+            <EntityType Name="CustMatItemCategoryAssignType">
+                <Key>
+                    <PropertyRef Name="ZCUST_NUM" />
+                    <PropertyRef Name="ZMAT_NUM" />
+                    <PropertyRef Name="ZITM_CATEGORY" />
+                </Key>
+                <Property Name="ZCUST_NUM" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer Number" sap:text="ZCUST_NAME" />
+                <Property Name="ZMAT_NUM" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Material Number" sap:text="ZMATRL_DESC" />
+                <Property Name="ZITM_CATEGORY" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Item Category" sap:text="ZITM_CATEGORY_DESC" />
+                <Property Name="ZCUST_NAME" Type="Edm.String" MaxLength="35" sap:label="Customer Name" />
+                <Property Name="ZMATRL_DESC" Type="Edm.String" MaxLength="40" sap:label="Material Description" />
+                <Property Name="ZITM_CATEGORY_DESC" Type="Edm.String" MaxLength="30" sap:label="Item Category Description" />
+                <Property Name="ZSYSTEM" Type="Edm.String" MaxLength="1" sap:label="System" />
+                <Property Name="ZDEL_FLAG" Type="Edm.String" MaxLength="1" sap:label="Deletion Flag" />
+                <Property Name="ZCREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Created By" />
+                <Property Name="ZCREATED_ON" Type="Edm.DateTime" sap:label="Craeted On" />
+                <Property Name="ZCHANGED_BY" Type="Edm.String" MaxLength="20" sap:label="Changed By" />
+                <Property Name="ZCHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+            </EntityType>
+            <EntityType Name="GroupDeveloperType">
+                <Key>
+                    <PropertyRef Name="ZGRP_DEVLPR" />
+                </Key>
+                <Property Name="ZGRP_DEVLPR" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Group Developer" />
+            </EntityType>
+            <EntityType Name="CurrencyType">
+                <Key>
+                    <PropertyRef Name="P_CUST_NUM" />
+                    <PropertyRef Name="ZCURR" />
+                </Key>
+                <Property Name="P_CUST_NUM" Type="Edm.String" Nullable="false" MaxLength="10" />
+                <Property Name="ZCURR" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" />
+            </EntityType>
+            <EntityType Name="CurrencyParamType" sap:semantics="parameters">
+                <Key>
+                    <PropertyRef Name="P_CUST_NUM" />
+                </Key>
+                <Property Name="P_CUST_NUM" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer Number" sap:parameter="mandatory" />
+                <NavigationProperty Name="Results" Relationship="com.merckgroup.moet.services.odata.moet.CurrencyParam_CurrencyType" FromRole="CurrencyParamPrincipal" ToRole="CurrencyDependent" />
+            </EntityType>
+            <EntityType Name="CurrencyPickerType">
+                <Key>
+                    <PropertyRef Name="ZCURR" />
+                </Key>
+                <Property Name="ZCURR" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" />
+            </EntityType>
+            <EntityType Name="OTCHealthCareReportType">
+                <Key>
+                    <PropertyRef Name="ZCLIENT" />
+                    <PropertyRef Name="ZSO_NO" />
+                    <PropertyRef Name="ZSO_ITM_NO" />
+                    <PropertyRef Name="ZDELIVERY_NO" />
+                    <PropertyRef Name="ZDEL_ITM_NO" />
+                </Key>
+                <Property Name="ZCLIENT" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Client" />
+                <Property Name="ZSO_NO" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Sales Document" />
+                <Property Name="ZSO_ITM_NO" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Item Number Of The SD Document" />
+                <Property Name="ZDELIVERY_NO" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Delivery Number" />
+                <Property Name="ZDEL_ITM_NO" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Delivery Item Number" />
+                <Property Name="ZDELV_QTY" Type="Edm.String" MaxLength="15" sap:label="Delivery Quantity" />
+                <Property Name="ZCREATED_BY" Type="Edm.String" MaxLength="12" sap:label="Created By" />
+                <Property Name="ZSO_CREATED_DATE" Type="Edm.String" MaxLength="8" sap:label="Sales Order Created Date" />
+                <Property Name="ZDELV_DATE" Type="Edm.String" MaxLength="8" sap:label="Confirmation Delivery Date" />
+                <Property Name="ZREQEST_DELV_DATE" Type="Edm.String" MaxLength="8" sap:label="Requested Delivery Date" />
+                <Property Name="ZSOLD_TO_PARTY" Type="Edm.String" MaxLength="10" sap:label="Sold-To Party" sap:text="Z_SOLD_TO_DESC" />
+                <Property Name="Z_SOLD_TO_DESC" Type="Edm.String" MaxLength="60" sap:label="Sold To Party Description" />
+                <Property Name="ZSHIP_TO_PARTY" Type="Edm.String" MaxLength="10" sap:label="Ship to Party" sap:text="Z_SHIP_TO_DESC" />
+                <Property Name="Z_SHIP_TO_DESC" Type="Edm.String" MaxLength="60" sap:label="Ship To Party Description" />
+                <Property Name="Z_SO_SORG" Type="Edm.String" MaxLength="4" sap:label="Sales Organization" />
+                <Property Name="ZHDR_STATUS" Type="Edm.String" MaxLength="20" sap:label="Header Status" />
+                <Property Name="Z_MATERIAL_NO" Type="Edm.String" MaxLength="18" sap:label="Material Number" sap:text="Z_MATERIAL_DESC" />
+                <Property Name="Z_ITEM_QTY" Type="Edm.String" MaxLength="15" sap:label="Item Quantity" />
+                <Property Name="Z_SALES_UNIT" Type="Edm.String" MaxLength="3" sap:label="Sales Unit" />
+                <Property Name="Z_PLANT" Type="Edm.String" MaxLength="4" sap:label="Plant" />
+                <Property Name="Z_CUST_PO_NO" Type="Edm.String" MaxLength="35" sap:label="Customer Purchase Order Number" />
+                <Property Name="Z_ITEM_STATUS" Type="Edm.String" MaxLength="20" sap:label="Item Status" />
+                <Property Name="Z_SHIP_PGI_DATE" Type="Edm.String" MaxLength="8" sap:label="PGI Date" />
+                <Property Name="Z_PGI_QTY" Type="Edm.String" MaxLength="15" sap:label="PGI Quantity" />
+                <Property Name="Z_AO_SYSTEM" Type="Edm.String" MaxLength="10" sap:label="Application System Name" />
+                <Property Name="Z_MATERIAL_DESC" Type="Edm.String" MaxLength="40" sap:label="Material Description" />
+                <Property Name="CA_ZREQEST_DELV_DATE" Type="Edm.DateTime" sap:display-format="Date" sap:label="Requested Delivery Date" />
+                <Property Name="CA_ZDELV_DATE" Type="Edm.DateTime" sap:display-format="Date" sap:label="Confirmation Delivery Date" />
+                <Property Name="CA_ZSO_CREATED_DATE" Type="Edm.DateTime" sap:display-format="Date" sap:label="Sales Order Created Date" />
+                <Property Name="CA_Z_SHIP_PGI_DATE" Type="Edm.DateTime" sap:display-format="Date" sap:label="PGI Date" />
+            </EntityType>
+            <EntityType Name="OrderTrackingType">
+                <Key>
+                    <PropertyRef Name="P_USERID" />
+                    <PropertyRef Name="ZCLIENT" />
+                    <PropertyRef Name="ZSO_NO" />
+                    <PropertyRef Name="ZSO_ITM_NO" />
+                    <PropertyRef Name="ZDELIVERY_NO" />
+                    <PropertyRef Name="ZDEL_ITM_NO" />
+                </Key>
+                <Property Name="P_USERID" Type="Edm.String" Nullable="false" MaxLength="50" />
+                <Property Name="ZCLIENT" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="ZCLIENT" />
+                <Property Name="ZSO_NO" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="ZSO_NO" />
+                <Property Name="ZSO_ITM_NO" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="ZSO_ITM_NO" />
+                <Property Name="ZDELIVERY_NO" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="ZDELIVERY_NO" />
+                <Property Name="ZDEL_ITM_NO" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="ZDEL_ITM_NO" />
+                <Property Name="ZDELV_QTY" Type="Edm.String" MaxLength="15" sap:label="ZDELV_QTY" />
+                <Property Name="ZCREATED_BY" Type="Edm.String" MaxLength="12" sap:label="ZCREATED_BY" />
+                <Property Name="ZORD_NUM" Type="Edm.String" MaxLength="10" sap:label="ZORD_NUM" />
+                <Property Name="ZSO_CREATED_DATE" Type="Edm.String" MaxLength="8" sap:label="ZSO_CREATED_DATE" />
+                <Property Name="ZDELV_DATE" Type="Edm.String" MaxLength="8" sap:label="ZDELV_DATE" />
+                <Property Name="ZREQEST_DELV_DATE" Type="Edm.String" MaxLength="8" sap:label="ZREQEST_DELV_DATE" />
+                <Property Name="ZSOLD_TO_PARTY" Type="Edm.String" MaxLength="10" sap:label="ZSOLD_TO_PARTY" sap:text="Z_SOLD_TO_DESC" />
+                <Property Name="Z_SOLD_TO_DESC" Type="Edm.String" MaxLength="60" sap:label="Z_SOLD_TO_DESC" />
+                <Property Name="ZSHIP_TO_PARTY" Type="Edm.String" MaxLength="10" sap:label="ZSHIP_TO_PARTY" sap:text="Z_SHIP_TO_DESC" />
+                <Property Name="Z_SHIP_TO_DESC" Type="Edm.String" MaxLength="60" sap:label="Z_SHIP_TO_DESC" />
+                <Property Name="Z_SO_SORG" Type="Edm.String" MaxLength="4" sap:label="Z_SO_SORG" />
+                <Property Name="ZHDR_STATUS" Type="Edm.String" MaxLength="20" sap:label="ZHDR_STATUS" />
+                <Property Name="Z_MATERIAL_NO" Type="Edm.String" MaxLength="18" sap:label="Z_MATERIAL_NO" sap:text="Z_MATERIAL_DESC" />
+                <Property Name="Z_ITEM_QTY" Type="Edm.String" MaxLength="15" sap:label="Z_ITEM_QTY" />
+                <Property Name="Z_SALES_UNIT" Type="Edm.String" MaxLength="3" sap:label="Z_SALES_UNIT" />
+                <Property Name="Z_PLANT" Type="Edm.String" MaxLength="4" sap:label="Z_PLANT" />
+                <Property Name="Z_CUST_PO_NO" Type="Edm.String" MaxLength="35" sap:label="Z_CUST_PO_NO" />
+                <Property Name="Z_ITEM_STATUS" Type="Edm.String" MaxLength="20" sap:label="Z_ITEM_STATUS" />
+                <Property Name="Z_SHIP_PGI_DATE" Type="Edm.String" MaxLength="8" sap:label="Z_SHIP_PGI_DATE" />
+                <Property Name="Z_PGI_QTY" Type="Edm.String" MaxLength="15" sap:label="Z_PGI_QTY" />
+                <Property Name="Z_AO_SYSTEM" Type="Edm.String" MaxLength="10" sap:label="Z_AO_SYSTEM" />
+                <Property Name="Z_MATERIAL_DESC" Type="Edm.String" MaxLength="40" sap:label="Z_MATERIAL_DESC" />
+                <Property Name="CA_Z_SHIP_PGI_DATE" Type="Edm.DateTime" sap:display-format="Date" sap:label="PGI Date" />
+                <Property Name="CA_ZSO_CREATED_DATE" Type="Edm.DateTime" sap:display-format="Date" sap:label="Sales Order Created Date" />
+                <Property Name="CA_ZREQEST_DELV_DATE" Type="Edm.DateTime" sap:display-format="Date" sap:label="Requested Delivery Date" />
+                <Property Name="CA_ZDELV_DATE" Type="Edm.DateTime" sap:display-format="Date" sap:label="Confirmation Delivery Date" />
+            </EntityType>
+            <EntityType Name="OrderTrackingParamType" sap:semantics="parameters">
+                <Key>
+                    <PropertyRef Name="P_USERID" />
+                </Key>
+                <Property Name="P_USERID" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="User ID" sap:parameter="mandatory" />
+                <NavigationProperty Name="Results" Relationship="com.merckgroup.moet.services.odata.moet.OrderTrackingParam_OrderTrackingType" FromRole="OrderTrackingParamPrincipal" ToRole="OrderTrackingDependent" />
+            </EntityType>
+            <EntityType Name="OTCHealthCareReportSNOType">
+                <Key>
+                    <PropertyRef Name="P_USERID" />
+                    <PropertyRef Name="ZINTR_ORDNUM" />
+                    <PropertyRef Name="ZSYSTEM" />
+                    <PropertyRef Name="ZCLIENT" />
+                    <PropertyRef Name="ZORD_NUM" />
+                    <PropertyRef Name="ZSO_ITM_NO" />
+                    <PropertyRef Name="ZDELIVERY_NO" />
+                    <PropertyRef Name="ZDEL_ITM_NO" />
+                </Key>
+                <Property Name="P_USERID" Type="Edm.String" Nullable="false" MaxLength="50" />
+                <Property Name="ZINTR_ORDNUM" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Internal Order Number" />
+                <Property Name="ZSYSTEM" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="System" />
+                <Property Name="ZCLIENT" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Client" />
+                <Property Name="ZORD_NUM" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Sales Document" />
+                <Property Name="ZSO_NO" Type="Edm.String" MaxLength="10" sap:label="Sales Document" />
+                <Property Name="ZSO_ITM_NO" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Item number of the SD document" />
+                <Property Name="ZDELIVERY_NO" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Delivery Number" />
+                <Property Name="ZDEL_ITM_NO" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Delivery Item Number" />
+                <Property Name="ZDELV_QTY" Type="Edm.String" MaxLength="15" sap:label="Delivery Quantity" />
+                <Property Name="ZCREATED_BY_1" Type="Edm.String" MaxLength="12" sap:label="Created By" />
+                <Property Name="ZSO_CREATED_DATE" Type="Edm.String" MaxLength="8" sap:label="Sales Order Created date" />
+                <Property Name="ZDELV_DATE" Type="Edm.String" MaxLength="8" sap:label="Confirmation Delivery Date" />
+                <Property Name="ZREQEST_DELV_DATE" Type="Edm.String" MaxLength="8" sap:label="Requested delivery date" />
+                <Property Name="ZSOLD_TO_PARTY" Type="Edm.String" MaxLength="10" sap:label="Sold-To Party" sap:text="Z_SOLD_TO_DESC" />
+                <Property Name="Z_SOLD_TO_DESC" Type="Edm.String" MaxLength="60" sap:label="Sold To Party Description" />
+                <Property Name="ZSHIP_TO_PARTY" Type="Edm.String" MaxLength="10" sap:label="Ship to Party" sap:text="Z_SHIP_TO_DESC" />
+                <Property Name="Z_SHIP_TO_DESC" Type="Edm.String" MaxLength="60" sap:label="Ship To Party Description" />
+                <Property Name="Z_SO_SORG" Type="Edm.String" MaxLength="4" sap:label="Sales Organization" />
+                <Property Name="ZHDR_STATUS" Type="Edm.String" MaxLength="20" sap:label="Header Status" />
+                <Property Name="Z_MATERIAL_NO" Type="Edm.String" MaxLength="18" sap:label="Material Number" sap:text="Z_MATERIAL_DESC" />
+                <Property Name="Z_MATERIAL_DESC" Type="Edm.String" MaxLength="40" sap:label="Material Description" />
+                <Property Name="Z_ITEM_QTY" Type="Edm.String" MaxLength="15" sap:label="Item Quantity" />
+                <Property Name="Z_SALES_UNIT" Type="Edm.String" MaxLength="3" sap:label="Sales Unit" />
+                <Property Name="Z_PLANT" Type="Edm.String" MaxLength="4" sap:label="Plant" />
+                <Property Name="Z_CUST_PO_NO" Type="Edm.String" MaxLength="35" sap:label="Customer Purchase Order Number" />
+                <Property Name="Z_ITEM_STATUS" Type="Edm.String" MaxLength="20" sap:label="Item Status" />
+                <Property Name="Z_SHIP_PGI_DATE" Type="Edm.String" MaxLength="8" sap:label="PGI Date" />
+                <Property Name="Z_PGI_QTY" Type="Edm.String" MaxLength="15" sap:label="PGI Quantity" />
+                <Property Name="Z_AO_SYSTEM" Type="Edm.String" MaxLength="10" sap:label="Application System Name" />
+                <Property Name="ZORD_STATUS" Type="Edm.String" MaxLength="4" sap:label="Order Status" />
+                <Property Name="CA_ZSO_CREATED_DATE" Type="Edm.DateTime" sap:display-format="Date" sap:label="Sales Order Created Date" />
+                <Property Name="CA_ZREQEST_DELV_DATE" Type="Edm.DateTime" sap:display-format="Date" sap:label="Requested Delivery Date" />
+                <Property Name="CA_ZDELV_DATE" Type="Edm.DateTime" sap:display-format="Date" sap:label="Confirmation Delivery Date" />
+                <Property Name="CA_Z_SHIP_PGI_DATE" Type="Edm.DateTime" sap:display-format="Date" sap:label="PGI Date" />
+            </EntityType>
+            <EntityType Name="OTCHealthCareReportSNOParamType" sap:semantics="parameters">
+                <Key>
+                    <PropertyRef Name="P_USERID" />
+                </Key>
+                <Property Name="P_USERID" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="User ID" sap:parameter="mandatory" />
+                <NavigationProperty Name="Results" Relationship="com.merckgroup.moet.services.odata.moet.OTCHealthCareReportSNOParam_OTCHealthCareReportSNOType" FromRole="OTCHealthCareReportSNOParamPrincipal" ToRole="OTCHealthCareReportSNODependent" />
+            </EntityType>
+            <EntityType Name="DeliveryBlockDetailsType">
+                <Key>
+                    <PropertyRef Name="ZDELIVERY_BLOCK_ID" />
+                    <PropertyRef Name="ZLANGUAGE" />
+                </Key>
+                <Property Name="ZDELIVERY_BLOCK_ID" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Delivery Block ID" sap:text="ZDELIVERY_BLOCK_DESC" />
+                <Property Name="ZLANGUAGE" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Language" />
+                <Property Name="ZDELIVERY_BLOCK_DESC" Type="Edm.String" MaxLength="100" sap:label="Delivery Block Description" />
+                <Property Name="ZSYSTEM" Type="Edm.String" MaxLength="1" sap:label="System" />
+            </EntityType>
+            <EntityType Name="CustomerDeliveryBlockType">
+                <Key>
+                    <PropertyRef Name="ZCUST_NUM" />
+                    <PropertyRef Name="ZDEL_BLOCK_ID" />
+                </Key>
+                <Property Name="ZCUST_NUM" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer Number" sap:text="ZCUST_NAME" />
+                <Property Name="ZDEL_BLOCK_ID" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Delivery Block ID" sap:text="ZDEL_BLOCK_DESC" />
+                <Property Name="ZCUST_NAME" Type="Edm.String" MaxLength="35" sap:label="Customer Name" />
+                <Property Name="ZLANGUAGE" Type="Edm.String" MaxLength="2" sap:label="Language" />
+                <Property Name="ZDEL_BLOCK_DESC" Type="Edm.String" MaxLength="100" sap:label="Delivery Block Descriptio" />
+                <Property Name="ZDEL_FLAG" Type="Edm.String" MaxLength="1" sap:label="Deletion Flag" />
+                <Property Name="ZCREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Created By" />
+                <Property Name="ZCREATED_ON" Type="Edm.DateTime" sap:label="Created On " />
+                <Property Name="ZCHANGED_BY" Type="Edm.String" MaxLength="20" sap:label="Changed By" />
+                <Property Name="ZCHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+            </EntityType>
+            <EntityType Name="ItemCategoryType">
+                <Key>
+                    <PropertyRef Name="ZITM_CATEGORY" />
+                    <PropertyRef Name="ZSYSTEM" />
+                </Key>
+                <Property Name="ZITM_CATEGORY" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Item Category" sap:text="ZITM_CATEGORY_DESC" />
+                <Property Name="ZSYSTEM" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="System" />
+                <Property Name="ZITM_CATEGORY_DESC" Type="Edm.String" MaxLength="30" sap:label="Item Category Description" />
+                <Property Name="ZDEL_FLAG" Type="Edm.String" MaxLength="1" sap:label="Deletion Flag" />
+            </EntityType>
+            <EntityType Name="OrderHeaderDetailsType">
+                <Key>
+                    <PropertyRef Name="ZINTR_ORDNUM" />
+                    <PropertyRef Name="ZSYSTEM" />
+                    <PropertyRef Name="ZORD_NUM" />
+                </Key>
+                <Property Name="ZINTR_ORDNUM" Type="Edm.Int32" Nullable="false" sap:label="Internal Order Number" />
+                <Property Name="ZSYSTEM" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="System" />
+                <Property Name="ZORD_NUM" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="SAP Order Number" />
+                <Property Name="ZORD_REF" Type="Edm.String" MaxLength="1" sap:label="Order Reference" />
+                <Property Name="ZCUST_NUM" Type="Edm.String" MaxLength="10" sap:label="Customer Number" sap:text="ZCUSTOMER_NAME" />
+                <Property Name="ZCUSTOMER_NAME" Type="Edm.String" MaxLength="35" sap:label="Customer Name" />
+                <Property Name="ZSHIP_PRTY" Type="Edm.String" MaxLength="10" sap:label="Ship To Party" sap:text="ZSHIP_TO_PARTY_DESC" />
+                <Property Name="ZSHIP_TO_PARTY_DESC" Type="Edm.String" MaxLength="35" sap:label="Ship To Party Description" />
+                <Property Name="ZPO_TYP" Type="Edm.String" MaxLength="1" sap:label="PO Type" />
+                <Property Name="ZDISCNT" Type="Edm.Decimal" Precision="6" Scale="3" sap:label="Discount" />
+                <Property Name="ZCUST_PONUM" Type="Edm.String" MaxLength="30" sap:label="Customer PO Number" />
+                <Property Name="ZCUST_PODAT" Type="Edm.DateTime" sap:display-format="Date" sap:label="Customer PO Date" />
+                <Property Name="ZDOC_ID" Type="Edm.String" MaxLength="255" sap:label="Document ID" />
+                <Property Name="ZORD_STATUS" Type="Edm.String" MaxLength="4" sap:label="Order Status" sap:text="ZORDER_STATUS_TEXT" />
+                <Property Name="ZORDER_STATUS_TEXT" Type="Edm.String" MaxLength="60" sap:label="Order Status Text" />
+                <Property Name="ZCREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Created By" />
+                <Property Name="ZCREATED_ON" Type="Edm.DateTime" sap:label="Created On" />
+                <Property Name="ZCHANGED_BY" Type="Edm.String" MaxLength="20" sap:label="Changed By " />
+                <Property Name="ZCHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+                <Property Name="ZAPPROVAL_STATUS" Type="Edm.String" MaxLength="20" sap:label="Approval Status" />
+                <Property Name="ZDATE" Type="Edm.DateTime" sap:label="Approval Status Date" />
+                <Property Name="ZCOMMENTS" Type="Edm.String" MaxLength="255" sap:label="Comments" />
+                <Property Name="ZAPPROVAL_STATUS_1" Type="Edm.String" MaxLength="50" sap:label="Approval Status1" />
+                <Property Name="ZLEAD_TIME" Type="Edm.String" MaxLength="1" sap:label="Lead Time Check Box" />
+                <Property Name="ZMIN_ORDER_QUAN" Type="Edm.String" MaxLength="1" sap:label="Min Order Quan Check Box" />
+                <Property Name="ZORDER_FORECAST" Type="Edm.String" MaxLength="1" sap:label="Order Forecast Check Box " />
+                <Property Name="ZFIT_CONTRACT_COND" Type="Edm.String" MaxLength="1" sap:label="Fit To Contract Condition" />
+                <Property Name="ZREQ_DELV_DAT" Type="Edm.DateTime" sap:display-format="Date" sap:label="Requested Delivery Date" />
+                <Property Name="ZTEDER_FLAG" Type="Edm.String" MaxLength="1" sap:label="Tender Flag" />
+                <Property Name="ZSALES_AREA" Type="Edm.String" MaxLength="4" sap:label="Sales Area" />
+                <Property Name="ZTOTAL_AMT" Type="Edm.String" MaxLength="20" sap:label="Total Amount" />
+                <Property Name="ZFTRADE" Type="Edm.String" MaxLength="10" sap:label="Foreign Trade" />
+                <Property Name="ZFTRADE_DESC" Type="Edm.String" MaxLength="35" sap:label="Foreign Trade Description" />
+                <Property Name="ZCURR" Type="Edm.String" MaxLength="5" sap:label="Currency" />
+                <Property Name="ZDISTR_CHNL" Type="Edm.String" MaxLength="2" sap:label="Distribution Channel" />
+                <Property Name="ZDIVISION" Type="Edm.String" MaxLength="2" sap:label="Division" />
+                <Property Name="ZDEL_BLOCK_ID" Type="Edm.String" MaxLength="10" sap:label="Delivery Block ID" />
+                <Property Name="ZHCURR" Type="Edm.String" MaxLength="5" sap:label="Header Currency" />
+                <NavigationProperty Name="OrderDetails" Relationship="com.merckgroup.moet.services.odata.moet.ToOrderItemDetailsType" FromRole="OrderHeaderDetailsPrincipal" ToRole="OrderItemDetailsDependent" />
+            </EntityType>
+            <EntityType Name="OrderItemDetailsType">
+                <Key>
+                    <PropertyRef Name="ZINTR_ORDNUM" />
+                    <PropertyRef Name="ZSYSTEM" />
+                    <PropertyRef Name="ZINTR_ITEMNUM" />
+                </Key>
+                <Property Name="ZINTR_ORDNUM" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Internal Order Number" />
+                <Property Name="ZSYSTEM" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="System" />
+                <Property Name="ZINTR_ITEMNUM" Type="Edm.Int32" Nullable="false" sap:label="Internal Item Numbe" />
+                <Property Name="ZMAT_NUM" Type="Edm.String" MaxLength="40" sap:label="Material Number" sap:text="ZMATRL_DESC" />
+                <Property Name="ZMATRL_DESC" Type="Edm.String" MaxLength="40" sap:label="Material Description" />
+                <Property Name="ZTRGT_QTYUOM" Type="Edm.String" MaxLength="3" sap:label="Target Quantity UOM" />
+                <Property Name="ZALT_UOM" Type="Edm.String" MaxLength="3" sap:label="Alternatie UOM" />
+                <Property Name="ZREQ_DLVRYDAT" Type="Edm.DateTime" sap:display-format="Date" sap:label="Requested Delivery Date" />
+                <Property Name="ZFOC_SMPL" Type="Edm.String" MaxLength="10" sap:label="FOC Sample" sap:text="ZITM_CATEGORY_DESC" />
+                <Property Name="ZGRP_DEVLPR" Type="Edm.String" MaxLength="20" sap:label="Group Developer" />
+                <Property Name="ZORD_NUM" Type="Edm.String" MaxLength="10" sap:label="SAP Order Number" />
+                <Property Name="ZITEM_NUM" Type="Edm.String" MaxLength="6" sap:label="Item Nuumber" />
+                <Property Name="ZITM_CATEGORY_DESC" Type="Edm.String" MaxLength="30" sap:label="Item Category Description" />
+                <Property Name="ZFOC_ITMC_FLAG" Type="Edm.String" MaxLength="1" sap:label=" FOC Flag" />
+                <Property Name="ZFROZEN_PERIOD" Type="Edm.String" MaxLength="3" sap:label="Frozen Period" />
+                <Property Name="ZSCHD_TYPE" Type="Edm.String" MaxLength="2" sap:label="Schedule Type" />
+                <Property Name="ZCOST" Type="Edm.String" MaxLength="20" sap:label="Cost" />
+                <Property Name="ZTRGT_QTY" Type="Edm.Decimal" Precision="13" Scale="3" sap:label="Target Quantity" />
+                <Property Name="ZDISCNT" Type="Edm.Decimal" Precision="6" Scale="3" sap:label="Discount" />
+                <Property Name="ZMIN_QTY" Type="Edm.Decimal" Precision="13" Scale="3" sap:label="Minimum Quantityt" />
+                <Property Name="ZPAL_QUAN" Type="Edm.String" MaxLength="20" sap:label="Palete Quantity" />
+            </EntityType>
+            <EntityType Name="EmployeeDetailsType">
+                <Key>
+                    <PropertyRef Name="UID" />
+                </Key>
+                <Property Name="UID" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Uid" sap:text="FULL_NAME" />
+                <Property Name="USERID" Type="Edm.String" MaxLength="20" sap:label="User Id" />
+                <Property Name="FULL_NAME" Type="Edm.String" MaxLength="100" sap:label="FullName" />
+                <Property Name="MAIL" Type="Edm.String" MaxLength="100" sap:label="Mail" />
+            </EntityType>
+            <EntityType Name="UserDetailsType">
+                <Key>
+                    <PropertyRef Name="ZUSR_ID" />
+                </Key>
+                <Property Name="ZUSR_ID" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="User ID" sap:text="ZUSR_NAME" />
+                <Property Name="ZUSR_NAME" Type="Edm.String" MaxLength="30" sap:label="User Name" />
+                <Property Name="ZUSR_TYP" Type="Edm.String" MaxLength="1" sap:label="User Type" />
+                <Property Name="ZUSR_ROLE" Type="Edm.String" MaxLength="40" sap:label="User Role" />
+                <Property Name="ZUSR_EMAILADD" Type="Edm.String" MaxLength="241" sap:label="Email" />
+                <Property Name="ZUSR_STATUS" Type="Edm.String" MaxLength="4" sap:label="User Status" sap:text="ZUSR_STATUS_TXT" />
+                <Property Name="ZUSR_STATUS_TXT" Type="Edm.String" MaxLength="30" sap:label="User Status Text" />
+                <Property Name="ZCREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Created By" />
+                <Property Name="ZCREATED_ON" Type="Edm.DateTime" sap:label="Created On" />
+                <Property Name="ZCHANGED_BY" Type="Edm.String" MaxLength="20" sap:label="Changed By" />
+                <Property Name="ZCHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+                <Property Name="ZROLE_NAME" Type="Edm.String" MaxLength="40" sap:label="Role Name" />
+                <Property Name="CA_ZUSR_NAME" Type="Edm.String" MaxLength="30" sap:label="User Name" />
+                <Property Name="CA_ZROLE_NAME" Type="Edm.String" MaxLength="40" sap:label="Role Name" />
+                <Property Name="CA_ZUSR_EMAILADD" Type="Edm.String" MaxLength="241" sap:label="Email" />
+                <Property Name="CA_ZUSR_STATUS_TXT" Type="Edm.String" MaxLength="30" sap:label="User Status Text" />
+                <NavigationProperty Name="UserCustDetails" Relationship="com.merckgroup.moet.services.odata.moet.ToUserCustDetailsType" FromRole="UserDetailsPrincipal" ToRole="UserCustAssignDetailsDependent" />
+            </EntityType>
+            <EntityType Name="UserCustAssignDetailsType">
+                <Key>
+                    <PropertyRef Name="ZUSR_ID" />
+                    <PropertyRef Name="ZCUST_NUM" />
+                    <PropertyRef Name="ZSYSTEM" />
+                </Key>
+                <Property Name="ZUSR_ID" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="User ID" />
+                <Property Name="ZCUST_NUM" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer Number" sap:text="ZCUSTOMER_NAME" />
+                <Property Name="ZCUSTOMER_NAME" Type="Edm.String" MaxLength="35" sap:label="Customer Name" />
+                <Property Name="ZSYSTEM" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="System" />
+                <Property Name="ZCOMMENTS" Type="Edm.String" MaxLength="255" sap:label="Comments" />
+                <Property Name="ZCREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Created By" />
+                <Property Name="ZCREATED_ON" Type="Edm.DateTime" sap:label="Created On" />
+                <Property Name="ZCHANGED_BY" Type="Edm.String" MaxLength="20" sap:label="Changed By" />
+                <Property Name="ZCHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+                <Property Name="ZCUST_STATUS" Type="Edm.String" MaxLength="4" sap:label="Customer Status" sap:text="ZUSR_STATUS_TXT" />
+                <Property Name="ZUSR_STATUS_TXT" Type="Edm.String" MaxLength="30" sap:label="Customer Status Text" />
+                <Property Name="ZCENTRL_DEL_FLAG" Type="Edm.String" MaxLength="1" sap:label="Customer Central Deletion Flag" />
+            </EntityType>
+            <EntityType Name="CustomerDetailsType">
+                <Key>
+                    <PropertyRef Name="ZCUSTMR_NUM" />
+                    <PropertyRef Name="ZSYSTEM" />
+                </Key>
+                <Property Name="ZCUSTMR_NUM" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer Number" sap:text="ZNAME_1" />
+                <Property Name="ZNAME_1" Type="Edm.String" MaxLength="35" sap:label="Customer Name" />
+                <Property Name="ZSYSTEM" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="System" sap:text="CA_SYSTEM" />
+                <Property Name="ZCITY" Type="Edm.String" MaxLength="35" sap:label="City" />
+                <Property Name="ZREGION" Type="Edm.String" MaxLength="3" sap:label="Region" />
+                <Property Name="ZSTREET" Type="Edm.String" MaxLength="35" sap:label="Street" />
+                <Property Name="ZPOSTAL_CODE" Type="Edm.String" MaxLength="10" sap:label="Postal Code" />
+                <Property Name="ZCENTRL_DEL_FLAG" Type="Edm.String" MaxLength="1" sap:label="Central Deletion Flag" />
+                <Property Name="ZDEL_BLOCK_ID" Type="Edm.String" MaxLength="10" sap:label="Deletion Block ID" />
+                <Property Name="ZDELIVERY_BLOCK_DESC" Type="Edm.String" MaxLength="100" sap:label="Delivery Block ID Description" />
+                <Property Name="ZCREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Created By" />
+                <Property Name="ZCREATED_ON" Type="Edm.DateTime" sap:label="Created On " />
+                <Property Name="ZCHANGED_BY" Type="Edm.String" MaxLength="20" sap:label="Changed By" />
+                <Property Name="ZCHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+                <Property Name="ZCUSTOMER_NAME" Type="Edm.String" MaxLength="35" sap:label="Customer Name" />
+                <Property Name="ZCUST_NUM" Type="Edm.String" MaxLength="10" sap:label="Customer Number" />
+                <Property Name="CA_SYSTEM" Type="Edm.String" MaxLength="30" sap:label="System Name" />
+            </EntityType>
+            <EntityType Name="CustomerMatAssignDetailsType">
+                <Key>
+                    <PropertyRef Name="ZCUST_NUM" />
+                    <PropertyRef Name="ZMAT_NUM" />
+                    <PropertyRef Name="ZSYSTEM" />
+                </Key>
+                <Property Name="ZCUST_NUM" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer Number" sap:text="ZCUSTOMER_NAME" />
+                <Property Name="ZMAT_NUM" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Material Number" sap:text="ZMATRL_DESC" />
+                <Property Name="ZCUSTOMER_NAME" Type="Edm.String" MaxLength="35" sap:label="Customer Name" />
+                <Property Name="ZMATRL_DESC" Type="Edm.String" MaxLength="40" sap:label="Material Description" />
+                <Property Name="ZSYSTEM" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="System" />
+                <Property Name="ZDEL_FLAG" Type="Edm.String" MaxLength="1" sap:label="Deletion Flag" />
+                <Property Name="ZCREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Created By" />
+                <Property Name="ZCREATED_ON" Type="Edm.DateTime" sap:label="Created On" />
+                <Property Name="ZCHANGED_BY" Type="Edm.String" MaxLength="20" sap:label="Changed By" />
+                <Property Name="ZCHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+                <Property Name="ZSALES_ORG" Type="Edm.String" MaxLength="4" sap:label="Sales Organization" />
+                <Property Name="ZDISTR_CHNL" Type="Edm.String" MaxLength="2" sap:label="Distribution Channel" />
+                <Property Name="ZDIVISION" Type="Edm.String" MaxLength="2" sap:label="Division" />
+                <Property Name="ZCURR" Type="Edm.String" MaxLength="5" sap:label="Currency" />
+                <Property Name="ZMAT_DEL_FLAG" Type="Edm.String" MaxLength="1" sap:label="Material Deletion Flag" />
+            </EntityType>
+            <EntityType Name="MaterialDetailsType">
+                <Key>
+                    <PropertyRef Name="Z_MATRL_NUM" />
+                    <PropertyRef Name="ZSYSTEM" />
+                </Key>
+                <Property Name="Z_MATRL_NUM" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Material Number" sap:text="ZMATRL_DESC" />
+                <Property Name="ZSYSTEM" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="System" />
+                <Property Name="ZMATRL_DESC" Type="Edm.String" MaxLength="40" sap:label="Material Description" />
+                <Property Name="ZDEL_FLAG" Type="Edm.String" MaxLength="1" sap:label="Deletion Flag" />
+                <Property Name="ZCREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Created By" />
+                <Property Name="ZCREATED_ON" Type="Edm.DateTime" sap:label="Created On" />
+                <Property Name="ZCHANGED_BY" Type="Edm.String" MaxLength="20" sap:label="Changed By" />
+                <Property Name="ZCHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+                <Property Name="ZBASE_UNIT_MEASURE" Type="Edm.String" MaxLength="3" sap:label="Base Unit Of Measure" />
+                <Property Name="ZMIN_ORDER_QUAN" Type="Edm.String" MaxLength="13" sap:label="Minimum Order Quantity" />
+                <Property Name="ZGRP_DEVLPR" Type="Edm.String" MaxLength="20" sap:label="Group Developer" />
+                <Property Name="ZFROZEN_PERIOD" Type="Edm.String" MaxLength="3" sap:label="Frozen Period" />
+            </EntityType>
+            <EntityType Name="CustomerShipToPartyAssignDetailsType">
+                <Key>
+                    <PropertyRef Name="ZCUSTMR_NUM" />
+                    <PropertyRef Name="ZSHIP_TO_PARTY" />
+                    <PropertyRef Name="ZSYSTEM" />
+                </Key>
+                <Property Name="ZCUSTMR_NUM" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer Number" sap:text="ZNAME_1" />
+                <Property Name="ZSHIP_TO_PARTY" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Ship to Party" sap:text="ZSHIP_TO_PARTY_DESC" />
+                <Property Name="ZSYSTEM" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="System" />
+                <Property Name="ZNAME_1" Type="Edm.String" MaxLength="35" sap:label="Customer Name" />
+                <Property Name="ZSHIP_TO_PARTY_DESC" Type="Edm.String" MaxLength="35" sap:label="Ship to Party Description" />
+                <Property Name="ZDEL_FLAG" Type="Edm.String" MaxLength="1" sap:label="Deletion Flag" />
+                <Property Name="ZCREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Created By" />
+                <Property Name="ZCREATED_ON" Type="Edm.DateTime" sap:label="Created On" />
+                <Property Name="ZCHANGED_BY" Type="Edm.String" MaxLength="20" sap:label="Changed By" />
+                <Property Name="ZCHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+                <Property Name="ZCITY" Type="Edm.String" MaxLength="35" sap:label=" City" />
+                <Property Name="ZREGION" Type="Edm.String" MaxLength="3" sap:label="Region" />
+                <Property Name="ZPOSTAL_CODE" Type="Edm.String" MaxLength="10" sap:label="Postal Code" />
+            </EntityType>
+            <EntityType Name="CustomerFTradeAssignDetailsType">
+                <Key>
+                    <PropertyRef Name="ZCUST_NUM" />
+                    <PropertyRef Name="ZFTRADE" />
+                    <PropertyRef Name="ZSYSTEM" />
+                </Key>
+                <Property Name="ZCUST_NUM" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer Number" sap:text="ZCUST_NAME" />
+                <Property Name="ZFTRADE" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Foreign Trade" sap:text="ZFTRADE_DESC" />
+                <Property Name="ZCUST_NAME" Type="Edm.String" MaxLength="35" sap:label="Customer Name" />
+                <Property Name="ZFTRADE_DESC" Type="Edm.String" MaxLength="35" sap:label="Foreign Trade Description" />
+                <Property Name="ZCITY" Type="Edm.String" MaxLength="35" sap:label="City" />
+                <Property Name="ZREGION" Type="Edm.String" MaxLength="3" sap:label="Region" />
+                <Property Name="ZPOSTAL_CODE" Type="Edm.String" MaxLength="10" sap:label="Postal Code" />
+                <Property Name="ZDEL_FLAG" Type="Edm.String" MaxLength="1" sap:label="Deletion Flag" />
+                <Property Name="ZCREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Created By" />
+                <Property Name="ZCREATED_ON" Type="Edm.DateTime" sap:label="Created On" />
+                <Property Name="ZCHANGED_BY" Type="Edm.String" MaxLength="20" sap:label="Changed By" />
+                <Property Name="ZCHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+                <Property Name="ZSYSTEM" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="System" />
+            </EntityType>
+            <EntityType Name="UserRoleType">
+                <Key>
+                    <PropertyRef Name="ZROLE_ID" />
+                </Key>
+                <Property Name="ZROLE_ID" Type="Edm.String" Nullable="false" MaxLength="6" />
+                <Property Name="ZROLE_NAME" Type="Edm.String" MaxLength="40" />
+                <Property Name="ZHANA_PATH" Type="Edm.String" MaxLength="60" />
+                <Property Name="ZUSR_TYP" Type="Edm.String" MaxLength="1" />
+            </EntityType>
+            <EntityType Name="UserRolesType">
+                <Key>
+                    <PropertyRef Name="P_USR_TYP" />
+                    <PropertyRef Name="ZROLE_ID" />
+                </Key>
+                <Property Name="P_USR_TYP" Type="Edm.String" Nullable="false" MaxLength="1" />
+                <Property Name="ZROLE_ID" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Role ID" sap:text="ZROLE_NAME" />
+                <Property Name="ZROLE_NAME" Type="Edm.String" MaxLength="40" sap:label="Role Name" />
+                <Property Name="ZHANA_PATH" Type="Edm.String" MaxLength="60" sap:label="Hana Path" />
+                <Property Name="ZUSR_TYP" Type="Edm.String" MaxLength="1" sap:label="User Type" />
+            </EntityType>
+            <EntityType Name="UserRolesParamType" sap:semantics="parameters">
+                <Key>
+                    <PropertyRef Name="P_USR_TYP" />
+                </Key>
+                <Property Name="P_USR_TYP" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="User Type" sap:parameter="mandatory" />
+                <NavigationProperty Name="Results" Relationship="com.merckgroup.moet.services.odata.moet.UserRolesParam_UserRolesType" FromRole="UserRolesParamPrincipal" ToRole="UserRolesDependent" />
+            </EntityType>
+            <EntityType Name="KPIOrdersType">
+                <Key>
+                    <PropertyRef Name="ZUSR_ID" />
+                    <PropertyRef Name="ZINTR_ORDNUM" />
+                </Key>
+                <Property Name="ZUSR_ID" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="User ID" />
+                <Property Name="ZCUST_NUM" Type="Edm.String" MaxLength="10" sap:label="Customer Number" sap:text="ZCUSTOMER_NAME" />
+                <Property Name="ZINTR_ORDNUM" Type="Edm.Int32" Nullable="false" sap:label="Internal Order Number" />
+                <Property Name="ZSYSTEM" Type="Edm.String" MaxLength="1" sap:label="System" />
+                <Property Name="ZORD_REF" Type="Edm.String" MaxLength="1" sap:label="Order Reference" />
+                <Property Name="ZCUSTOMER_NAME" Type="Edm.String" MaxLength="35" sap:label="Customer Name" />
+                <Property Name="ZSHIP_PRTY" Type="Edm.String" MaxLength="10" sap:label="Ship To Party" sap:text="ZSHIP_TO_PARTY_DESC" />
+                <Property Name="ZSHIP_TO_PARTY_DESC" Type="Edm.String" MaxLength="35" sap:label="Ship To Party Description" />
+                <Property Name="ZPO_TYP" Type="Edm.String" MaxLength="1" sap:label="PO Type" />
+                <Property Name="ZDISCNT" Type="Edm.Decimal" Precision="6" Scale="3" sap:label="Discount" />
+                <Property Name="ZCUST_PONUM" Type="Edm.String" MaxLength="30" sap:label="Customer PO Number" />
+                <Property Name="ZCUST_PODAT" Type="Edm.DateTime" sap:display-format="Date" sap:label="Customer PO Date" />
+                <Property Name="ZDOC_ID" Type="Edm.String" MaxLength="255" sap:label="Document ID" />
+                <Property Name="ZORD_STATUS" Type="Edm.String" MaxLength="4" sap:label="Order Status" sap:text="ZORDER_STATUS_TEXT" />
+                <Property Name="ZORDER_STATUS_TEXT" Type="Edm.String" MaxLength="60" sap:label="Order Status Text" />
+                <Property Name="ZORD_NUM" Type="Edm.String" MaxLength="10" sap:label="SAP Order Number" />
+                <Property Name="ZCREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Created By" />
+                <Property Name="ZCREATED_ON" Type="Edm.DateTime" sap:label="Created On" />
+                <Property Name="ZCHANGED_BY" Type="Edm.String" MaxLength="20" sap:label="Changed By " />
+                <Property Name="ZCHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+                <Property Name="ZAPPROVAL_STATUS" Type="Edm.String" MaxLength="20" sap:label="Approval Status" />
+                <Property Name="ZDATE" Type="Edm.DateTime" sap:label="Approval Status Date" />
+                <Property Name="ZCOMMENTS" Type="Edm.String" MaxLength="255" sap:label="Comments" />
+                <Property Name="ZAPPROVAL_STATUS_1" Type="Edm.String" MaxLength="50" sap:label="Approval Status1" />
+                <Property Name="ZLEAD_TIME" Type="Edm.String" MaxLength="1" sap:label="Lead Time Check Box" />
+                <Property Name="ZMIN_ORDER_QUAN" Type="Edm.String" MaxLength="1" sap:label="Min Order Quan Check Box" />
+                <Property Name="ZORDER_FORECAST" Type="Edm.String" MaxLength="1" sap:label="Order Forecast Check Box " />
+                <Property Name="ZFIT_CONTRACT_COND" Type="Edm.String" MaxLength="1" sap:label=" Fit to Contract Condition" />
+                <Property Name="ZREQ_DELV_DAT" Type="Edm.DateTime" sap:display-format="Date" sap:label="Requested Delivery Date" />
+                <Property Name="ZTEDER_FLAG" Type="Edm.String" MaxLength="1" sap:label="Tender Flag" />
+                <Property Name="ZSALES_AREA" Type="Edm.String" MaxLength="4" sap:label=" Sales Area" />
+                <Property Name="ZTOTAL_AMT" Type="Edm.String" MaxLength="20" sap:label="Total Amount" />
+                <Property Name="ZFTRADE" Type="Edm.String" MaxLength="10" sap:label="Foreign Trade" sap:text="ZFTRADE_DESC" />
+                <Property Name="ZFTRADE_DESC" Type="Edm.String" MaxLength="35" sap:label="Foreign Trade Description" />
+                <Property Name="ZCURR" Type="Edm.String" MaxLength="5" sap:label=" Currency" />
+                <Property Name="ZDISTR_CHNL" Type="Edm.String" MaxLength="2" sap:label="Distribution Channel" />
+                <Property Name="ZDIVISION" Type="Edm.String" MaxLength="2" sap:label="Division" />
+                <Property Name="ZDEL_BLOCK_ID" Type="Edm.String" MaxLength="10" sap:label="Delivery Block ID" />
+            </EntityType>
+            <EntityType Name="OrderStatusCountType">
+                <Key>
+                    <PropertyRef Name="P_USR_ID" />
+                    <PropertyRef Name="P_USER_ROLE" />
+                    <PropertyRef Name="ZUSR_ID" />
+                </Key>
+                <Property Name="P_USR_ID" Type="Edm.String" Nullable="false" MaxLength="12" />
+                <Property Name="P_USER_ROLE" Type="Edm.String" Nullable="false" MaxLength="40" />
+                <Property Name="ZUSR_ID" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="User ID" />
+                <Property Name="DRFT" Type="Edm.Int32" sap:label="Draft" />
+                <Property Name="SNOA" Type="Edm.Int32" sap:label="SNO Approval" />
+                <Property Name="ORCR" Type="Edm.Int32" sap:label="Order Created" />
+                <Property Name="SNOR" Type="Edm.Int32" sap:label="SNO Reviewed" />
+            </EntityType>
+            <EntityType Name="OrderStatusCountParamType" sap:semantics="parameters">
+                <Key>
+                    <PropertyRef Name="P_USR_ID" />
+                    <PropertyRef Name="P_USER_ROLE" />
+                </Key>
+                <Property Name="P_USR_ID" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="User ID" sap:parameter="mandatory" />
+                <Property Name="P_USER_ROLE" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="User Role" sap:parameter="mandatory" />
+                <NavigationProperty Name="Results" Relationship="com.merckgroup.moet.services.odata.moet.OrderStatusCountParam_OrderStatusCountType" FromRole="OrderStatusCountParamPrincipal" ToRole="OrderStatusCountDependent" />
+            </EntityType>
+            <EntityType Name="SNOAOrdersType">
+                <Key>
+                    <PropertyRef Name="P_USER_ID" />
+                    <PropertyRef Name="ZINTR_ORDNUM" />
+                </Key>
+                <Property Name="P_USER_ID" Type="Edm.String" Nullable="false" MaxLength="12" />
+                <Property Name="ZINTR_ORDNUM" Type="Edm.Int32" Nullable="false" sap:label="Internal Order Number" />
+                <Property Name="ZCUST_NUM" Type="Edm.String" MaxLength="10" sap:label="Customer Number" sap:text="ZCUSTOMER_NAME" />
+                <Property Name="ZSYSTEM" Type="Edm.String" MaxLength="1" sap:label="System" />
+                <Property Name="ZORD_REF" Type="Edm.String" MaxLength="1" sap:label="Order Reference" />
+                <Property Name="ZCUSTOMER_NAME" Type="Edm.String" MaxLength="35" sap:label="Customer Name" />
+                <Property Name="ZSHIP_PRTY" Type="Edm.String" MaxLength="10" sap:label="Ship To Party" sap:text="ZSHIP_TO_PARTY_DESC" />
+                <Property Name="ZSHIP_TO_PARTY_DESC" Type="Edm.String" MaxLength="35" sap:label="Ship To Party Description" />
+                <Property Name="ZPO_TYP" Type="Edm.String" MaxLength="1" sap:label="PO Type" />
+                <Property Name="ZDISCNT" Type="Edm.Decimal" Precision="6" Scale="3" sap:label="Discount" />
+                <Property Name="ZCUST_PONUM" Type="Edm.String" MaxLength="30" sap:label="Customer PO Number" />
+                <Property Name="ZCUST_PODAT" Type="Edm.DateTime" sap:display-format="Date" sap:label="Customer PO Date" />
+                <Property Name="ZDOC_ID" Type="Edm.String" MaxLength="255" sap:label="Doc ID" />
+                <Property Name="ZORD_STATUS" Type="Edm.String" MaxLength="4" sap:label="Order Status" sap:text="ZORDER_STATUS_TEXT" />
+                <Property Name="ZORDER_STATUS_TEXT" Type="Edm.String" MaxLength="60" sap:label="Order Status Text" />
+                <Property Name="ZORD_NUM" Type="Edm.String" MaxLength="10" sap:label="SAP Order Number" />
+                <Property Name="ZCREATED_BY" Type="Edm.String" MaxLength="20" sap:label="Created By" />
+                <Property Name="ZCREATED_ON" Type="Edm.DateTime" sap:label="Created On" />
+                <Property Name="ZCHANGED_BY" Type="Edm.String" MaxLength="20" sap:label="Changed By" />
+                <Property Name="ZCHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+                <Property Name="ZAPPROVAL_STATUS" Type="Edm.String" MaxLength="20" sap:label="Approval Status" />
+                <Property Name="ZDATE" Type="Edm.DateTime" sap:label="Date" />
+                <Property Name="ZCOMMENTS" Type="Edm.String" MaxLength="255" sap:label="Comments" />
+                <Property Name="ZAPPROVAL_STATUS_1" Type="Edm.String" MaxLength="50" sap:label="Approval Status 1" />
+                <Property Name="ZLEAD_TIME" Type="Edm.String" MaxLength="1" sap:label="Lead Time" />
+                <Property Name="ZMIN_ORDER_QUAN" Type="Edm.String" MaxLength="1" sap:label="Minimum Order Quantity" />
+                <Property Name="ZORDER_FORECAST" Type="Edm.String" MaxLength="1" sap:label="Order Forecast" />
+                <Property Name="ZFIT_CONTRACT_COND" Type="Edm.String" MaxLength="1" sap:label="Fit to Contract Condition" />
+                <Property Name="ZREQ_DELV_DAT" Type="Edm.DateTime" sap:display-format="Date" sap:label="Request Delivery Date" />
+                <Property Name="ZTEDER_FLAG" Type="Edm.String" MaxLength="1" sap:label="Tender Flag" />
+                <Property Name="ZSALES_AREA" Type="Edm.String" MaxLength="4" sap:label="Sales Area" />
+                <Property Name="ZTOTAL_AMT" Type="Edm.String" MaxLength="20" sap:label="Total Amount" />
+                <Property Name="ZFTRADE" Type="Edm.String" MaxLength="10" sap:label="Foreign Trade" sap:text="ZFTRADE_DESC" />
+                <Property Name="ZFTRADE_DESC" Type="Edm.String" MaxLength="35" sap:label="Foreign Trade Description" />
+                <Property Name="ZCURR" Type="Edm.String" MaxLength="5" sap:label="Currency" />
+                <Property Name="ZDISTR_CHNL" Type="Edm.String" MaxLength="2" sap:label="Distribution Channel" />
+                <Property Name="ZDIVISION" Type="Edm.String" MaxLength="2" sap:label="Division" />
+                <Property Name="ZDEL_BLOCK_ID" Type="Edm.String" MaxLength="10" sap:label="Delivery Block ID" />
+                <Property Name="ZUSR_ID" Type="Edm.String" MaxLength="12" sap:label="User ID" />
+            </EntityType>
+            <EntityType Name="SNOAOrdersParamType" sap:semantics="parameters">
+                <Key>
+                    <PropertyRef Name="P_USER_ID" />
+                </Key>
+                <Property Name="P_USER_ID" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="User ID" sap:parameter="mandatory" />
+                <NavigationProperty Name="Results" Relationship="com.merckgroup.moet.services.odata.moet.SNOAOrdersParam_SNOAOrdersType" FromRole="SNOAOrdersParamPrincipal" ToRole="SNOAOrdersDependent" />
+            </EntityType>
+            <EntityType Name="UserMaitainLogType">
+                <Key>
+                    <PropertyRef Name="LOG_TIME" />
+                    <PropertyRef Name="FIELD_NAME" />
+                </Key>
+                <Property Name="LOG_TIME" Type="Edm.DateTime" Nullable="false" sap:label="Log Time" />
+                <Property Name="FIELD_NAME" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Field Name" />
+                <Property Name="ZUSR_ID" Type="Edm.String" MaxLength="12" sap:label="User ID" sap:text="ZUSR_NAME" />
+                <Property Name="ZUSR_NAME" Type="Edm.String" MaxLength="30" sap:label="User Name" />
+                <Property Name="OLD_VALUE" Type="Edm.String" MaxLength="100" sap:label="Old Value" />
+                <Property Name="NEW_VALUE" Type="Edm.String" MaxLength="100" sap:label="New Value" />
+                <Property Name="CREATED_BY" Type="Edm.String" MaxLength="25" sap:label="Created By" />
+                <Property Name="CREATED_ON" Type="Edm.DateTime" sap:label="Created On" />
+            </EntityType>
+            <EntityType Name="CustMaitainLogType">
+                <Key>
+                    <PropertyRef Name="LOG_TIME" />
+                    <PropertyRef Name="FIELD_NAME" />
+                </Key>
+                <Property Name="LOG_TIME" Type="Edm.DateTime" Nullable="false" sap:label="Log Time" />
+                <Property Name="FIELD_NAME" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Field Name" />
+                <Property Name="ZCUSTMR_NUM" Type="Edm.String" MaxLength="10" sap:label="Customer Number" />
+                <Property Name="OLD_VALUE" Type="Edm.String" MaxLength="100" sap:label="Old Value" />
+                <Property Name="NEW_VALUE" Type="Edm.String" MaxLength="100" sap:label="New Value" />
+                <Property Name="CHANGED_BY" Type="Edm.String" MaxLength="25" sap:label="Changed By" />
+                <Property Name="CHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+            </EntityType>
+            <EntityType Name="MatMaitainLogType">
+                <Key>
+                    <PropertyRef Name="LOG_TIME" />
+                    <PropertyRef Name="FIELD_NAME" />
+                </Key>
+                <Property Name="LOG_TIME" Type="Edm.DateTime" Nullable="false" sap:label="Log Time" />
+                <Property Name="FIELD_NAME" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Filed Name" />
+                <Property Name="Z_MATRL_NUM" Type="Edm.String" MaxLength="40" sap:label="Material Number" sap:text="ZMATRL_DESC" />
+                <Property Name="ZSYSTEM" Type="Edm.String" MaxLength="1" sap:label="System " />
+                <Property Name="ZMATRL_DESC" Type="Edm.String" MaxLength="40" sap:label="Material Description " />
+                <Property Name="OLD_VALUE" Type="Edm.String" MaxLength="100" sap:label="Old Value" />
+                <Property Name="NEW_VALUE" Type="Edm.String" MaxLength="100" sap:label="New Value" />
+                <Property Name="CHANGED_BY" Type="Edm.String" MaxLength="25" sap:label="Changed By" />
+                <Property Name="CHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+            </EntityType>
+            <EntityType Name="UserCustMaitainLogType">
+                <Key>
+                    <PropertyRef Name="LOG_TIME" />
+                    <PropertyRef Name="FIELD_NAME" />
+                </Key>
+                <Property Name="LOG_TIME" Type="Edm.DateTime" Nullable="false" sap:label="Log Time" />
+                <Property Name="FIELD_NAME" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Filed Name" />
+                <Property Name="ZUSR_ID" Type="Edm.String" MaxLength="12" sap:label="User ID" sap:text="ZUSR_NAME" />
+                <Property Name="ZCUST_NUM" Type="Edm.String" MaxLength="10" sap:label="Customer Number" sap:text="ZNAME_1" />
+                <Property Name="ZNAME_1" Type="Edm.String" MaxLength="35" sap:label="Customer Name" />
+                <Property Name="ZUSR_NAME" Type="Edm.String" MaxLength="30" sap:label="User Name" />
+                <Property Name="OLD_VALUE" Type="Edm.String" MaxLength="100" sap:label="Old Value" />
+                <Property Name="NEW_VALUE" Type="Edm.String" MaxLength="100" sap:label="New Value" />
+                <Property Name="CHANGED_BY" Type="Edm.String" MaxLength="25" sap:label="Changed By" />
+                <Property Name="CHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+            </EntityType>
+            <EntityType Name="CustMatMaitainLogType">
+                <Key>
+                    <PropertyRef Name="LOG_TIME" />
+                    <PropertyRef Name="FIELD_NAME" />
+                </Key>
+                <Property Name="LOG_TIME" Type="Edm.DateTime" Nullable="false" sap:label="Log Time" />
+                <Property Name="FIELD_NAME" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Field Name" />
+                <Property Name="ZCUST_NUM" Type="Edm.String" MaxLength="10" sap:label="Customer Number" sap:text="ZCUST_NAME" />
+                <Property Name="ZMAT_NUM" Type="Edm.String" MaxLength="40" sap:label="Material Number" sap:text="ZMATRL_DESC" />
+                <Property Name="ZCUST_NAME" Type="Edm.String" MaxLength="35" sap:label="Customer Name" />
+                <Property Name="ZMATRL_DESC" Type="Edm.String" MaxLength="40" sap:label="Material Description" />
+                <Property Name="OLD_VALUE" Type="Edm.String" MaxLength="100" sap:label="Old Value" />
+                <Property Name="NEW_VALUE" Type="Edm.String" MaxLength="100" sap:label="New Value" />
+                <Property Name="CHANGED_BY" Type="Edm.String" MaxLength="25" sap:label="Changed By" />
+                <Property Name="CHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+            </EntityType>
+            <EntityType Name="CustShipToMaitainLogType">
+                <Key>
+                    <PropertyRef Name="LOG_TIME" />
+                    <PropertyRef Name="FIELD_NAME" />
+                </Key>
+                <Property Name="LOG_TIME" Type="Edm.DateTime" Nullable="false" sap:label="Log Time" />
+                <Property Name="FIELD_NAME" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Field Name" />
+                <Property Name="ZCUSTMR_NUM" Type="Edm.String" MaxLength="10" sap:label="Customer Number" sap:text="ZNAME_1" />
+                <Property Name="ZNAME_1" Type="Edm.String" MaxLength="35" sap:label="Customer Name" />
+                <Property Name="ZSHIP_TO_PARTY" Type="Edm.String" MaxLength="10" sap:label="Ship To Party" sap:text="ZSHIP_TO_PARTY_DESC" />
+                <Property Name="ZSHIP_TO_PARTY_DESC" Type="Edm.String" MaxLength="35" sap:label="Ship To Party Description" />
+                <Property Name="OLD_VALUE" Type="Edm.String" MaxLength="100" sap:label="Old Value" />
+                <Property Name="NEW_VALUE" Type="Edm.String" MaxLength="100" sap:label="New Value" />
+                <Property Name="CHANGED_BY" Type="Edm.String" MaxLength="25" sap:label="Changed By" />
+                <Property Name="CHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+            </EntityType>
+            <EntityType Name="CustFTradeMaitainLogType">
+                <Key>
+                    <PropertyRef Name="LOG_TIME" />
+                    <PropertyRef Name="FIELD_NAME" />
+                </Key>
+                <Property Name="LOG_TIME" Type="Edm.DateTime" Nullable="false" sap:label="Log Time" />
+                <Property Name="FIELD_NAME" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Field Name" />
+                <Property Name="ZCUST_NUM" Type="Edm.String" MaxLength="10" sap:label="Customer Number" sap:text="ZNAME_1" />
+                <Property Name="ZNAME_1" Type="Edm.String" MaxLength="35" sap:label="Customer Name" />
+                <Property Name="ZFTRADE" Type="Edm.String" MaxLength="10" sap:label="Foreign Trade" sap:text="ZFTRADE_DESC" />
+                <Property Name="ZFTRADE_DESC" Type="Edm.String" MaxLength="35" sap:label="Foreign Trade Description" />
+                <Property Name="OLD_VALUE" Type="Edm.String" MaxLength="100" sap:label="Old Value" />
+                <Property Name="NEW_VALUE" Type="Edm.String" MaxLength="100" sap:label="New Value" />
+                <Property Name="CHANGED_BY" Type="Edm.String" MaxLength="25" sap:label="Changed By" />
+                <Property Name="CHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+            </EntityType>
+            <EntityType Name="MatItemCategoryMaitainLogType">
+                <Key>
+                    <PropertyRef Name="LOG_TIME" />
+                    <PropertyRef Name="FIELD_NAME" />
+                </Key>
+                <Property Name="LOG_TIME" Type="Edm.DateTime" Nullable="false" sap:label="Log Time" />
+                <Property Name="FIELD_NAME" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Field Name" />
+                <Property Name="ZMAT_NUM" Type="Edm.String" MaxLength="40" sap:label="Material Number" sap:text="ZMATRL_DESC" />
+                <Property Name="ZMATRL_DESC" Type="Edm.String" MaxLength="40" sap:label="Material Description" />
+                <Property Name="ZITM_CATEGORY" Type="Edm.String" MaxLength="10" sap:label="Item Category" />
+                <Property Name="ZSYSTEM" Type="Edm.String" MaxLength="1" sap:label="System" />
+                <Property Name="OLD_VALUE" Type="Edm.String" MaxLength="100" sap:label="Old Value" />
+                <Property Name="NEW_VALUE" Type="Edm.String" MaxLength="100" sap:label="New Value" />
+                <Property Name="CHANGED_BY" Type="Edm.String" MaxLength="25" sap:label="Changed By" />
+                <Property Name="CHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+            </EntityType>
+            <EntityType Name="OrderHeaderMaitainLogType">
+                <Key>
+                    <PropertyRef Name="LOG_TIME" />
+                    <PropertyRef Name="FIELD_NAME" />
+                </Key>
+                <Property Name="LOG_TIME" Type="Edm.DateTime" Nullable="false" sap:label="Log Time" />
+                <Property Name="FIELD_NAME" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Field Name" />
+                <Property Name="ZINTR_ORDNUM" Type="Edm.String" MaxLength="10" sap:label="Internal Order Number" />
+                <Property Name="ZSYSTEM" Type="Edm.String" MaxLength="1" sap:label="System" />
+                <Property Name="OLD_VALUE" Type="Edm.String" MaxLength="255" sap:label="Old Value" />
+                <Property Name="NEW_VALUE" Type="Edm.String" MaxLength="255" sap:label="New Value" />
+                <Property Name="CHANGED_BY" Type="Edm.String" MaxLength="25" sap:label="Changed By" />
+                <Property Name="CHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+            </EntityType>
+            <EntityType Name="OrderItemMaitainLogType">
+                <Key>
+                    <PropertyRef Name="LOG_TIME" />
+                    <PropertyRef Name="FIELD_NAME" />
+                </Key>
+                <Property Name="LOG_TIME" Type="Edm.DateTime" Nullable="false" sap:label="Log Time" />
+                <Property Name="FIELD_NAME" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Field Name" />
+                <Property Name="ZINTR_ORDNUM" Type="Edm.String" MaxLength="10" sap:label="Internal Order Number" />
+                <Property Name="ZSYSTEM" Type="Edm.String" MaxLength="1" sap:label="System" />
+                <Property Name="ZINTR_ITEMNUM" Type="Edm.String" MaxLength="6" sap:label="Internal Item Number" />
+                <Property Name="OLD_VALUE" Type="Edm.String" MaxLength="100" sap:label="Old Value" />
+                <Property Name="NEW_VALUE" Type="Edm.String" MaxLength="100" sap:label="New Value" />
+                <Property Name="CHANGED_BY" Type="Edm.String" MaxLength="25" sap:label="Changed By" />
+                <Property Name="CHANGED_ON" Type="Edm.DateTime" sap:label="Changed On" />
+            </EntityType>
+            <EntityType Name="UserRoleF4HelpType">
+                <Key>
+                    <PropertyRef Name="ZROLE_ID" />
+                </Key>
+                <Property Name="ZROLE_ID" Type="Edm.String" Nullable="false" MaxLength="6" />
+                <Property Name="ZROLE_NAME" Type="Edm.String" MaxLength="40" />
+                <Property Name="ZHANA_PATH" Type="Edm.String" MaxLength="60" />
+                <Property Name="ZUSR_TYP" Type="Edm.String" MaxLength="1" />
+            </EntityType>
+            <EntityType Name="UserEmailF4Type" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ZUSR_ID" />
+                </Key>
+                <Property Name="ZUSR_ID" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="User ID" sap:aggregation-role="dimension" sap:text="ZUSR_NAME" />
+                <Property Name="ZUSR_EMAILADD" Type="Edm.String" MaxLength="241" sap:label="Email" sap:aggregation-role="dimension" />
+            </EntityType>
+            <EntityType Name="UserStatusF4Type">
+                <Key>
+                    <PropertyRef Name="ZUSR_STATUS" />
+                </Key>
+                <Property Name="ZUSR_STATUS" Type="Edm.String" Nullable="false" MaxLength="4" />
+                <Property Name="ZUSR_STATUS_TXT" Type="Edm.String" MaxLength="30" />
+            </EntityType>
+            <EntityType Name="CustomerNameF4HelpType" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ZCUSTMR_NUM" />
+                </Key>
+                <Property Name="ZCUSTMR_NUM" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer Number" sap:aggregation-role="dimension" sap:text="ZNAME_1" />
+                <Property Name="ZNAME_1" Type="Edm.String" MaxLength="35" sap:label="Customer Name" />
+            </EntityType>
+            <EntityType Name="SystemF4HelpType" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" MaxLength="40" sap:filterable="false" />
+                <Property Name="ZSYSTEM" Type="Edm.String" MaxLength="1" sap:label="System" sap:aggregation-role="dimension" sap:text="CA_SYSTEM" />
+                <Property Name="CA_SYSTEM" Type="Edm.String" MaxLength="30" sap:label="System Name" />
+            </EntityType>
+            <EntityType Name="CustomerCityF4HelpType" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" MaxLength="40" sap:filterable="false" />
+                <Property Name="ZCITY" Type="Edm.String" MaxLength="35" sap:label="City" sap:aggregation-role="dimension" />
+            </EntityType>
+            <EntityType Name="CustomerRegionF4HelpType" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ZCUSTMR_NUM" />
+                </Key>
+                <Property Name="ZCUSTMR_NUM" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer Number" sap:aggregation-role="dimension" sap:text="ZNAME_1" />
+                <Property Name="ZREGION" Type="Edm.String" MaxLength="3" sap:label="Region" sap:aggregation-role="dimension" />
+            </EntityType>
+            <EntityType Name="MaterialDescF4HelpType" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="Z_MATRL_NUM" />
+                </Key>
+                <Property Name="Z_MATRL_NUM" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Material Number" sap:aggregation-role="dimension" sap:text="ZMATRL_DESC" />
+                <Property Name="ZMATRL_DESC" Type="Edm.String" MaxLength="40" sap:label="Material Description" />
+            </EntityType>
+            <EntityType Name="MatBaseUnitMeasureF4HelpType" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" MaxLength="40" sap:filterable="false" />
+                <Property Name="ZBASE_UNIT_MEASURE" Type="Edm.String" MaxLength="3" sap:label="Base Unit Of Measure" sap:aggregation-role="dimension" />
+            </EntityType>
+            <EntityType Name="CustMatSORGF4HelpType" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ZCUST_NUM" />
+                    <PropertyRef Name="ZMAT_NUM" />
+                </Key>
+                <Property Name="ZCUST_NUM" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer Number" sap:aggregation-role="dimension" sap:text="ZCUSTOMER_NAME" />
+                <Property Name="ZMAT_NUM" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Material Number" sap:aggregation-role="dimension" sap:text="ZMATRL_DESC" />
+                <Property Name="ZSALES_ORG" Type="Edm.String" MaxLength="4" sap:label="Sales Organization" sap:aggregation-role="dimension" />
+            </EntityType>
+            <EntityType Name="CustShipToF4HelpType" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ZCUSTMR_NUM" />
+                    <PropertyRef Name="ZSHIP_TO_PARTY" />
+                </Key>
+                <Property Name="ZCUSTMR_NUM" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer Number" sap:aggregation-role="dimension" sap:text="ZNAME_1" />
+                <Property Name="ZSHIP_TO_PARTY" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Ship to Party" sap:aggregation-role="dimension" sap:text="ZSHIP_TO_PARTY_DESC" />
+                <Property Name="ZSHIP_TO_PARTY_DESC" Type="Edm.String" MaxLength="35" sap:label="Ship to Party Description" />
+            </EntityType>
+            <EntityType Name="CustFTradeF4HelpType" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ZCUST_NUM" />
+                    <PropertyRef Name="ZFTRADE" />
+                </Key>
+                <Property Name="ZCUST_NUM" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer Number" sap:aggregation-role="dimension" sap:text="ZCUST_NAME" />
+                <Property Name="ZFTRADE" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Foreign Trade" sap:aggregation-role="dimension" sap:text="ZFTRADE_DESC" />
+                <Property Name="ZFTRADE_DESC" Type="Edm.String" MaxLength="35" sap:label="Foreign Trade Description" />
+            </EntityType>
+            <EntityType Name="ItemCategoryF4HelpType" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ZITM_CATEGORY" />
+                    <PropertyRef Name="ZSYSTEM" />
+                </Key>
+                <Property Name="ZITM_CATEGORY" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Item Category" sap:aggregation-role="dimension" sap:text="ZITM_CATEGORY_DESC" />
+                <Property Name="ZSYSTEM" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="System" sap:aggregation-role="dimension" />
+                <Property Name="ZITM_CATEGORY_DESC" Type="Edm.String" MaxLength="30" sap:label="Item Category Description" />
+                <Property Name="ZDEL_FLAG" Type="Edm.String" MaxLength="1" sap:label="Deletion Flag" sap:aggregation-role="dimension" />
+            </EntityType>
+            <EntityType Name="CustPONumF4HelpType" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ZINTR_ORDNUM" />
+                    <PropertyRef Name="ZSYSTEM" />
+                </Key>
+                <Property Name="ZINTR_ORDNUM" Type="Edm.Int32" Nullable="false" sap:label="Internal Order Number" sap:aggregation-role="dimension" />
+                <Property Name="ZSYSTEM" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="System" sap:aggregation-role="dimension" />
+                <Property Name="ZCUST_PONUM" Type="Edm.String" MaxLength="30" sap:label="Customer PO Number" sap:aggregation-role="dimension" />
+            </EntityType>
+            <EntityType Name="OrderStatusF4HelpType" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ZSTATUS" />
+                </Key>
+                <Property Name="ZSTATUS" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Status" sap:aggregation-role="dimension" sap:text="ZSTATUS_TEXT" />
+                <Property Name="ZSTATUS_TEXT" Type="Edm.String" MaxLength="60" sap:label="Staus Text" />
+            </EntityType>
+            <EntityType Name="CustSalesAreaF4HelpType" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="ZINTR_ORDNUM" />
+                    <PropertyRef Name="ZSYSTEM" />
+                </Key>
+                <Property Name="ZINTR_ORDNUM" Type="Edm.Int32" Nullable="false" sap:label="Internal Order Number" sap:aggregation-role="dimension" />
+                <Property Name="ZSYSTEM" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="System" sap:aggregation-role="dimension" />
+                <Property Name="ZSALES_AREA" Type="Edm.String" MaxLength="4" sap:label="Sales Area" sap:aggregation-role="dimension" />
+            </EntityType>
+            <Association Name="CurrencyParam_CurrencyType">
+                <End Type="com.merckgroup.moet.services.odata.moet.CurrencyParamType" Role="CurrencyParamPrincipal" Multiplicity="*" />
+                <End Type="com.merckgroup.moet.services.odata.moet.CurrencyType" Role="CurrencyDependent" Multiplicity="*" />
+            </Association>
+            <Association Name="OrderTrackingParam_OrderTrackingType">
+                <End Type="com.merckgroup.moet.services.odata.moet.OrderTrackingParamType" Role="OrderTrackingParamPrincipal" Multiplicity="*" />
+                <End Type="com.merckgroup.moet.services.odata.moet.OrderTrackingType" Role="OrderTrackingDependent" Multiplicity="*" />
+            </Association>
+            <Association Name="OTCHealthCareReportSNOParam_OTCHealthCareReportSNOType">
+                <End Type="com.merckgroup.moet.services.odata.moet.OTCHealthCareReportSNOParamType" Role="OTCHealthCareReportSNOParamPrincipal" Multiplicity="*" />
+                <End Type="com.merckgroup.moet.services.odata.moet.OTCHealthCareReportSNOType" Role="OTCHealthCareReportSNODependent" Multiplicity="*" />
+            </Association>
+            <Association Name="ToOrderItemDetailsType">
+                <End Type="com.merckgroup.moet.services.odata.moet.OrderHeaderDetailsType" Role="OrderHeaderDetailsPrincipal" Multiplicity="1" />
+                <End Type="com.merckgroup.moet.services.odata.moet.OrderItemDetailsType" Role="OrderItemDetailsDependent" Multiplicity="*" />
+            </Association>
+            <Association Name="ToUserCustDetailsType">
+                <End Type="com.merckgroup.moet.services.odata.moet.UserDetailsType" Role="UserDetailsPrincipal" Multiplicity="1" />
+                <End Type="com.merckgroup.moet.services.odata.moet.UserCustAssignDetailsType" Role="UserCustAssignDetailsDependent" Multiplicity="*" />
+            </Association>
+            <Association Name="UserRolesParam_UserRolesType">
+                <End Type="com.merckgroup.moet.services.odata.moet.UserRolesParamType" Role="UserRolesParamPrincipal" Multiplicity="*" />
+                <End Type="com.merckgroup.moet.services.odata.moet.UserRolesType" Role="UserRolesDependent" Multiplicity="*" />
+            </Association>
+            <Association Name="OrderStatusCountParam_OrderStatusCountType">
+                <End Type="com.merckgroup.moet.services.odata.moet.OrderStatusCountParamType" Role="OrderStatusCountParamPrincipal" Multiplicity="*" />
+                <End Type="com.merckgroup.moet.services.odata.moet.OrderStatusCountType" Role="OrderStatusCountDependent" Multiplicity="*" />
+            </Association>
+            <Association Name="SNOAOrdersParam_SNOAOrdersType">
+                <End Type="com.merckgroup.moet.services.odata.moet.SNOAOrdersParamType" Role="SNOAOrdersParamPrincipal" Multiplicity="*" />
+                <End Type="com.merckgroup.moet.services.odata.moet.SNOAOrdersType" Role="SNOAOrdersDependent" Multiplicity="*" />
+            </Association>
+            <EntityContainer Name="moet" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="SNOOrders" EntityType="com.merckgroup.moet.services.odata.moet.SNOOrdersType" />
+                <EntitySet Name="UserDetailsF4Help" EntityType="com.merckgroup.moet.services.odata.moet.UserDetailsF4HelpType" />
+                <EntitySet Name="UserRoleF4" EntityType="com.merckgroup.moet.services.odata.moet.UserRoleF4Type" />
+                <EntitySet Name="SessionUser" EntityType="com.merckgroup.moet.services.odata.moet.SessionUserType" />
+                <EntitySet Name="CustomerAllDetails" EntityType="com.merckgroup.moet.services.odata.moet.CustomerAllDetailsType" />
+                <EntitySet Name="MaterialAllDetails" EntityType="com.merckgroup.moet.services.odata.moet.MaterialAllDetailsType" />
+                <EntitySet Name="MatItemCategoryAssign" EntityType="com.merckgroup.moet.services.odata.moet.MatItemCategoryAssignType" />
+                <EntitySet Name="CustMatItemCategoryAssign" EntityType="com.merckgroup.moet.services.odata.moet.CustMatItemCategoryAssignType" />
+                <EntitySet Name="GroupDeveloper" EntityType="com.merckgroup.moet.services.odata.moet.GroupDeveloperType" />
+                <EntitySet Name="Currency" EntityType="com.merckgroup.moet.services.odata.moet.CurrencyType" sap:addressable="false" />
+                <EntitySet Name="CurrencyParam" EntityType="com.merckgroup.moet.services.odata.moet.CurrencyParamType" sap:addressable="false" />
+                <EntitySet Name="CurrencyPicker" EntityType="com.merckgroup.moet.services.odata.moet.CurrencyPickerType" />
+                <EntitySet Name="OTCHealthCareReport" EntityType="com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType" />
+                <EntitySet Name="OrderTracking" EntityType="com.merckgroup.moet.services.odata.moet.OrderTrackingType" sap:addressable="false" />
+                <EntitySet Name="OrderTrackingParam" EntityType="com.merckgroup.moet.services.odata.moet.OrderTrackingParamType" sap:addressable="false" />
+                <EntitySet Name="OTCHealthCareReportSNO" EntityType="com.merckgroup.moet.services.odata.moet.OTCHealthCareReportSNOType" sap:addressable="false" />
+                <EntitySet Name="OTCHealthCareReportSNOParam" EntityType="com.merckgroup.moet.services.odata.moet.OTCHealthCareReportSNOParamType" sap:addressable="false" />
+                <EntitySet Name="DeliveryBlockDetails" EntityType="com.merckgroup.moet.services.odata.moet.DeliveryBlockDetailsType" />
+                <EntitySet Name="CustomerDeliveryBlock" EntityType="com.merckgroup.moet.services.odata.moet.CustomerDeliveryBlockType" />
+                <EntitySet Name="ItemCategory" EntityType="com.merckgroup.moet.services.odata.moet.ItemCategoryType" />
+                <EntitySet Name="OrderHeaderDetails" EntityType="com.merckgroup.moet.services.odata.moet.OrderHeaderDetailsType" />
+                <EntitySet Name="OrderItemDetails" EntityType="com.merckgroup.moet.services.odata.moet.OrderItemDetailsType" />
+                <EntitySet Name="EmployeeDetails" EntityType="com.merckgroup.moet.services.odata.moet.EmployeeDetailsType" />
+                <EntitySet Name="UserDetails" EntityType="com.merckgroup.moet.services.odata.moet.UserDetailsType" />
+                <EntitySet Name="UserCustAssignDetails" EntityType="com.merckgroup.moet.services.odata.moet.UserCustAssignDetailsType" />
+                <EntitySet Name="CustomerDetails" EntityType="com.merckgroup.moet.services.odata.moet.CustomerDetailsType" />
+                <EntitySet Name="CustomerMatAssignDetails" EntityType="com.merckgroup.moet.services.odata.moet.CustomerMatAssignDetailsType" />
+                <EntitySet Name="MaterialDetails" EntityType="com.merckgroup.moet.services.odata.moet.MaterialDetailsType" />
+                <EntitySet Name="CustomerShipToPartyAssignDetails" EntityType="com.merckgroup.moet.services.odata.moet.CustomerShipToPartyAssignDetailsType" />
+                <EntitySet Name="CustomerFTradeAssignDetails" EntityType="com.merckgroup.moet.services.odata.moet.CustomerFTradeAssignDetailsType" />
+                <EntitySet Name="UserRole" EntityType="com.merckgroup.moet.services.odata.moet.UserRoleType" />
+                <EntitySet Name="UserRoles" EntityType="com.merckgroup.moet.services.odata.moet.UserRolesType" sap:addressable="false" />
+                <EntitySet Name="UserRolesParam" EntityType="com.merckgroup.moet.services.odata.moet.UserRolesParamType" sap:addressable="false" />
+                <EntitySet Name="KPIOrders" EntityType="com.merckgroup.moet.services.odata.moet.KPIOrdersType" />
+                <EntitySet Name="OrderStatusCount" EntityType="com.merckgroup.moet.services.odata.moet.OrderStatusCountType" sap:addressable="false" />
+                <EntitySet Name="OrderStatusCountParam" EntityType="com.merckgroup.moet.services.odata.moet.OrderStatusCountParamType" sap:addressable="false" />
+                <EntitySet Name="SNOAOrders" EntityType="com.merckgroup.moet.services.odata.moet.SNOAOrdersType" sap:addressable="false" />
+                <EntitySet Name="SNOAOrdersParam" EntityType="com.merckgroup.moet.services.odata.moet.SNOAOrdersParamType" sap:addressable="false" />
+                <EntitySet Name="UserMaitainLog" EntityType="com.merckgroup.moet.services.odata.moet.UserMaitainLogType" />
+                <EntitySet Name="CustMaitainLog" EntityType="com.merckgroup.moet.services.odata.moet.CustMaitainLogType" />
+                <EntitySet Name="MatMaitainLog" EntityType="com.merckgroup.moet.services.odata.moet.MatMaitainLogType" />
+                <EntitySet Name="UserCustMaitainLog" EntityType="com.merckgroup.moet.services.odata.moet.UserCustMaitainLogType" />
+                <EntitySet Name="CustMatMaitainLog" EntityType="com.merckgroup.moet.services.odata.moet.CustMatMaitainLogType" />
+                <EntitySet Name="CustShipToMaitainLog" EntityType="com.merckgroup.moet.services.odata.moet.CustShipToMaitainLogType" />
+                <EntitySet Name="CustFTradeMaitainLog" EntityType="com.merckgroup.moet.services.odata.moet.CustFTradeMaitainLogType" />
+                <EntitySet Name="MatItemCategoryMaitainLog" EntityType="com.merckgroup.moet.services.odata.moet.MatItemCategoryMaitainLogType" />
+                <EntitySet Name="OrderHeaderMaitainLog" EntityType="com.merckgroup.moet.services.odata.moet.OrderHeaderMaitainLogType" />
+                <EntitySet Name="OrderItemMaitainLog" EntityType="com.merckgroup.moet.services.odata.moet.OrderItemMaitainLogType" />
+                <EntitySet Name="UserRoleF4Help" EntityType="com.merckgroup.moet.services.odata.moet.UserRoleF4HelpType" />
+                <EntitySet Name="UserEmailF4" EntityType="com.merckgroup.moet.services.odata.moet.UserEmailF4Type" />
+                <EntitySet Name="UserStatusF4" EntityType="com.merckgroup.moet.services.odata.moet.UserStatusF4Type" />
+                <EntitySet Name="CustomerNameF4Help" EntityType="com.merckgroup.moet.services.odata.moet.CustomerNameF4HelpType" />
+                <EntitySet Name="SystemF4Help" EntityType="com.merckgroup.moet.services.odata.moet.SystemF4HelpType" />
+                <EntitySet Name="CustomerCityF4Help" EntityType="com.merckgroup.moet.services.odata.moet.CustomerCityF4HelpType" />
+                <EntitySet Name="CustomerRegionF4Help" EntityType="com.merckgroup.moet.services.odata.moet.CustomerRegionF4HelpType" />
+                <EntitySet Name="MaterialDescF4Help" EntityType="com.merckgroup.moet.services.odata.moet.MaterialDescF4HelpType" />
+                <EntitySet Name="MatBaseUnitMeasureF4Help" EntityType="com.merckgroup.moet.services.odata.moet.MatBaseUnitMeasureF4HelpType" />
+                <EntitySet Name="CustMatSORGF4Help" EntityType="com.merckgroup.moet.services.odata.moet.CustMatSORGF4HelpType" />
+                <EntitySet Name="CustShipToF4Help" EntityType="com.merckgroup.moet.services.odata.moet.CustShipToF4HelpType" />
+                <EntitySet Name="CustFTradeF4Help" EntityType="com.merckgroup.moet.services.odata.moet.CustFTradeF4HelpType" />
+                <EntitySet Name="ItemCategoryF4Help" EntityType="com.merckgroup.moet.services.odata.moet.ItemCategoryF4HelpType" />
+                <EntitySet Name="CustPONumF4Help" EntityType="com.merckgroup.moet.services.odata.moet.CustPONumF4HelpType" />
+                <EntitySet Name="OrderStatusF4Help" EntityType="com.merckgroup.moet.services.odata.moet.OrderStatusF4HelpType" />
+                <EntitySet Name="CustSalesAreaF4Help" EntityType="com.merckgroup.moet.services.odata.moet.CustSalesAreaF4HelpType" />
+                <AssociationSet Name="CurrencyParam_Currency" Association="com.merckgroup.moet.services.odata.moet.CurrencyParam_CurrencyType">
+                    <End Role="CurrencyParamPrincipal" EntitySet="CurrencyParam" />
+                    <End Role="CurrencyDependent" EntitySet="Currency" />
+                </AssociationSet>
+                <AssociationSet Name="OrderTrackingParam_OrderTracking" Association="com.merckgroup.moet.services.odata.moet.OrderTrackingParam_OrderTrackingType">
+                    <End Role="OrderTrackingParamPrincipal" EntitySet="OrderTrackingParam" />
+                    <End Role="OrderTrackingDependent" EntitySet="OrderTracking" />
+                </AssociationSet>
+                <AssociationSet Name="OTCHealthCareReportSNOParam_OTCHealthCareReportSNO" Association="com.merckgroup.moet.services.odata.moet.OTCHealthCareReportSNOParam_OTCHealthCareReportSNOType">
+                    <End Role="OTCHealthCareReportSNOParamPrincipal" EntitySet="OTCHealthCareReportSNOParam" />
+                    <End Role="OTCHealthCareReportSNODependent" EntitySet="OTCHealthCareReportSNO" />
+                </AssociationSet>
+                <AssociationSet Name="ToOrderItemDetails" Association="com.merckgroup.moet.services.odata.moet.ToOrderItemDetailsType">
+                    <End Role="OrderHeaderDetailsPrincipal" EntitySet="OrderHeaderDetails" />
+                    <End Role="OrderItemDetailsDependent" EntitySet="OrderItemDetails" />
+                </AssociationSet>
+                <AssociationSet Name="ToUserCustDetails" Association="com.merckgroup.moet.services.odata.moet.ToUserCustDetailsType">
+                    <End Role="UserDetailsPrincipal" EntitySet="UserDetails" />
+                    <End Role="UserCustAssignDetailsDependent" EntitySet="UserCustAssignDetails" />
+                </AssociationSet>
+                <AssociationSet Name="UserRolesParam_UserRoles" Association="com.merckgroup.moet.services.odata.moet.UserRolesParam_UserRolesType">
+                    <End Role="UserRolesParamPrincipal" EntitySet="UserRolesParam" />
+                    <End Role="UserRolesDependent" EntitySet="UserRoles" />
+                </AssociationSet>
+                <AssociationSet Name="OrderStatusCountParam_OrderStatusCount" Association="com.merckgroup.moet.services.odata.moet.OrderStatusCountParam_OrderStatusCountType">
+                    <End Role="OrderStatusCountParamPrincipal" EntitySet="OrderStatusCountParam" />
+                    <End Role="OrderStatusCountDependent" EntitySet="OrderStatusCount" />
+                </AssociationSet>
+                <AssociationSet Name="SNOAOrdersParam_SNOAOrders" Association="com.merckgroup.moet.services.odata.moet.SNOAOrdersParam_SNOAOrdersType">
+                    <End Role="SNOAOrdersParamPrincipal" EntitySet="SNOAOrdersParam" />
+                    <End Role="SNOAOrdersDependent" EntitySet="SNOAOrders" />
+                </AssociationSet>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

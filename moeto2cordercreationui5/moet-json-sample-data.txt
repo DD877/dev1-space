@@ -1,0 +1,160 @@
+User Details
+
+"results": [
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.UserDetailsType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/UserDetails('')"
+        },
+        "ZUSR_ID": "",
+        "ZUSR_NAME": "Siva Gosu",
+        "ZUSR_TYP": "I",
+        "ZUSR_ROLE": "ADMIN",
+        "ZUSR_EMAILADD": "siva.gosu@external.merckgroup.com",
+        "ZUSR_STATUS_TXT": "Active",
+        "ZROLE_NAME": "Merck Admin"
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.UserDetailsType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/UserDetails('ACHINCHO')"
+        },
+        "ZUSR_ID": "ACHINCHO",
+        "ZUSR_NAME": "Anand Chincholi",
+        "ZUSR_TYP": "I",
+        "ZUSR_ROLE": "ADMIN",
+        "ZUSR_EMAILADD": "anand.chincholi@external.merckgroup.com",
+        "ZUSR_STATUS_TXT": "Active",
+        "ZROLE_NAME": "Merck Admin"
+      }
+	  ]
+	  
+	  
+Customer Details
+
+"results": [
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.CustomerDetailsType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/CustomerDetails(ZCUSTMR_NUM='0210100076',ZSYSTEM='L')"
+        },
+        "ZCUSTMR_NUM": "0210100076",
+        "ZNAME_1": "CAM-0000204949",
+        "ZSYSTEM": "L",
+        "ZCITY": "WILLEBROEK",
+        "ZREGION": "",
+        "ZSTREET": "TIS-0000204949",
+        "ZPOSTAL_CODE": "2830",
+        "ZCENTRL_DEL_FLAG": "",
+        "ZDEL_BLOCK_ID": "",
+        "ZDELIVERY_BLOCK_DESC": null,
+        "ZCREATED_ON": "\/Date(1642410423320)\/",
+        "ZCHANGED_BY": "VKALLURU",
+        "ZCHANGED_ON": "\/Date(1642410423320)\/"
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.CustomerDetailsType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/CustomerDetails(ZCUSTMR_NUM='10000006',ZSYSTEM='T')"
+        },
+        "ZCUSTMR_NUM": "10000006",
+        "ZNAME_1": "BIM SIFRAM GROUP",
+        "ZSYSTEM": "T",
+        "ZCITY": "PARIS",
+        "ZREGION": "75",
+        "ZSTREET": null,
+        "ZPOSTAL_CODE": "75010",
+        "ZCENTRL_DEL_FLAG": "",
+        "ZDEL_BLOCK_ID": "",
+        "ZDELIVERY_BLOCK_DESC": null,
+        "ZCREATED_ON": "\/Date(1614967330518)\/",
+        "ZCHANGED_BY": "MKIRAN",
+        "ZCHANGED_ON": "\/Date(1614967330518)\/"
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.CustomerDetailsType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/CustomerDetails(ZCUSTMR_NUM='10000008',ZSYSTEM='T')"
+        },
+        "ZCUSTMR_NUM": "10000008",
+        "ZNAME_1": "Asbat",
+        "ZSYSTEM": "T",
+        "ZCITY": "frankfurt",
+        "ZREGION": "",
+        "ZSTREET": null,
+        "ZPOSTAL_CODE": "12345",
+        "ZCENTRL_DEL_FLAG": "",
+        "ZDEL_BLOCK_ID": "04",
+        "ZDELIVERY_BLOCK_DESC": "Export papers missng",
+        "ZCREATED_ON": "\/Date(1609949894987)\/",
+        "ZCHANGED_BY": "X179083",
+        "ZCHANGED_ON": "\/Date(1614933484225)\/"
+      }
+	  ]
+	  
+	  
+Material Details
+
+"results": [
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.MaterialDetailsType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/MaterialDetails(Z_MATRL_NUM='1083820100',ZSYSTEM='T')"
+        },
+        "Z_MATRL_NUM": "1083820100",
+        "ZSYSTEM": "T",
+        "ZMATRL_DESC": "TRIS(HYDROXYMETHYL)AMINOMETHANE GR FOR A",
+        "ZDEL_FLAG": "X",
+        "ZCHANGED_BY": "X213135",
+        "ZBASE_UNIT_MEASURE": "PC",
+        "ZGRP_DEVLPR": "KGaA Onco",
+        "ZFROZEN_PERIOD": ""
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.MaterialDetailsType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/MaterialDetails(Z_MATRL_NUM='1221',ZSYSTEM='L')"
+        },
+        "Z_MATRL_NUM": "1221",
+        "ZSYSTEM": "L",
+        "ZMATRL_DESC": "HCL solution",
+        "ZDEL_FLAG": "",
+        "ZCHANGED_BY": "KKARANI",
+        "ZBASE_UNIT_MEASURE": "G",
+        "ZGRP_DEVLPR": "Merck",
+        "ZFROZEN_PERIOD": "6"
+      }
+]
+
+
+Order Header Details
+ "results": [
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.OrderHeaderDetailsType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OrderHeaderDetails(ZINTR_ORDNUM=457,ZSYSTEM='L',ZORD_NUM=null)"
+        },
+        "ZINTR_ORDNUM": 457,
+        "ZCUSTOMER_NAME": "Mer-0000244151",
+        "ZSHIP_TO_PARTY_DESC": "Mer-0000244151",
+        "ZCUST_PONUM": "Mer-0000244151",
+        "ZORD_STATUS": "SNOA",
+        "ZCREATED_BY": "X204681",
+        "ZTOTAL_AMT": "15.00",
+        "ZCURR": "EUR"
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.OrderHeaderDetailsType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OrderHeaderDetails(ZINTR_ORDNUM=456,ZSYSTEM='L',ZORD_NUM=null)"
+        },
+        "ZINTR_ORDNUM": 456,
+        "ZCUSTOMER_NAME": "Mer-0000244151",
+        "ZSHIP_TO_PARTY_DESC": "Mer-0000244151",
+        "ZCUST_PONUM": "Test for MOET TLA",
+        "ZORD_STATUS": "SNOA",
+        "ZCREATED_BY": "X204681",
+        "ZTOTAL_AMT": "10.00",
+        "ZCURR": "EUR"
+      }
+	]

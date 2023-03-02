@@ -1,0 +1,275 @@
+{
+    "_version": "1.9.0",
+    "sap.app": {
+        "id": "com.merckgroup.Moet_O2C_OrderCreation_UI5",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "dataSources": {
+            "mainService": {
+                "uri": "/HANAXS/com/merckgroup/moet/services/odata/moet.xsodata/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "localService/metadata.xml",
+                    "annotations": []
+                }
+            },
+            "MOETSRV": {
+                "uri": "/sap/opu/odata/sap/YSD_MOET_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "localService/YSD_MOET_SRV/metadata.xml"
+                }
+            }
+        },
+        "sourceTemplate": {
+            "id": "@sap/ux-app-migrator:freestyle",
+            "version": "1.8.5",
+            "toolsId": "885b307e-d98f-4043-a63e-92095f7c7df3"
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "sap_hcb",
+            "sap_bluecrystal",
+            "sap_fiori_3"
+        ]
+    },
+    "sap.ui5": {
+        "rootView": {
+            "viewName": "com.merckgroup.Moet_O2C_OrderCreation_UI5.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "app"
+        },
+        "dependencies": {
+            "minUI5Version": "1.65.6",
+            "libs": {
+                "sap.ui.core": {},
+                "sap.m": {},
+                "sap.tnt": {},
+                "sap.ui.layout": {},
+                "sap.uxap": {},
+                "sap.suite.ui.microchart": {
+                    "lazy": true
+                },
+                "sap.ui.unified": {
+                    "lazy": true
+                },
+                "sap.ui.comp.smarttable": {
+                    "lazy": true
+                }
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleUrl": "i18n/i18n.properties",
+                    "async": true,
+                    "fallbackLocale": "en"
+                }
+            },
+            "side": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "model/sideContent.json"
+            },
+            "": {
+                "dataSource": "mainService",
+                "preload": true
+            },
+            "MOETSRV": {
+                "dataSource": "MOETSRV",
+                "preload": true,
+                "settings": {
+                    "defaultCountMode": "Inline",
+                    "defaultBindingMode": "TwoWay"
+                }
+            },
+            "@i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "controlId": "mainContents",
+                "viewType": "XML",
+                "controlAggregation": "pages",
+                "viewPath": "com.merckgroup.Moet_O2C_OrderCreation_UI5.view",
+                "async": true
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "home",
+                    "target": "home"
+                },
+                {
+                    "pattern": "ApproveOrders",
+                    "name": "ApproveOrders",
+                    "target": [
+                        "ApproveOrders"
+                    ]
+                },
+                {
+                    "pattern": "OrderReport",
+                    "name": "OrderReport",
+                    "target": [
+                        "OrderReport"
+                    ]
+                },
+                {
+                    "pattern": "ProcessOrders",
+                    "name": "ProcessOrders",
+                    "target": [
+                        "ProcessOrders"
+                    ]
+                },
+                {
+                    "pattern": "Orders",
+                    "name": "Orders",
+                    "target": [
+                        "Orders"
+                    ]
+                },
+                {
+                    "pattern": "CustomerMaster",
+                    "name": "CustomerMaster",
+                    "target": [
+                        "CustomerMaster"
+                    ]
+                },
+                {
+                    "pattern": "MaterialMaster",
+                    "name": "MaterialMaster",
+                    "target": [
+                        "MaterialMaster"
+                    ]
+                },
+                {
+                    "pattern": "ItemCategory",
+                    "name": "ItemCategory",
+                    "target": [
+                        "ItemCategory"
+                    ]
+                },
+                {
+                    "pattern": "UserMaintenance",
+                    "name": "UserMaintenance",
+                    "target": [
+                        "UserMaintenance"
+                    ]
+                },
+                {
+                    "pattern": "AuditTrail",
+                    "name": "AuditTrail",
+                    "target": [
+                        "AuditTrail"
+                    ]
+                },
+                {
+                    "pattern": "NewOrder",
+                    "name": "NewOrder",
+                    "target": [
+                        "NewOrder"
+                    ]
+                }
+            ],
+            "targets": {
+                "home": {
+                    "viewId": "home",
+                    "viewName": "Home"
+                },
+                "ApproveOrders": {
+                    "viewName": "ApproveOrders",
+                    "viewId": "ApproveOrders",
+                    "transition": "show",
+                    "viewLevel": 2
+                },
+                "OrderReport": {
+                    "viewName": "OrderReport",
+                    "viewId": "OrderReport",
+                    "transition": "show",
+                    "viewLevel": 2
+                },
+                "ProcessOrders": {
+                    "viewName": "ProcessOrders",
+                    "viewId": "ProcessOrders",
+                    "transition": "show",
+                    "viewLevel": 2
+                },
+                "Orders": {
+                    "viewName": "Orders",
+                    "viewId": "Orders",
+                    "transition": "show",
+                    "viewLevel": 2
+                },
+                "AuditTrail": {
+                    "viewName": "AuditTrail",
+                    "viewId": "AuditTrail",
+                    "transition": "show",
+                    "viewLevel": 2
+                },
+                "CustomerMaster": {
+                    "viewName": "CustomerMaster",
+                    "viewId": "CustomerMaster",
+                    "transition": "show",
+                    "viewLevel": 2
+                },
+                "MaterialMaster": {
+                    "viewName": "MaterialMaster",
+                    "viewId": "MaterialMaster",
+                    "transition": "show",
+                    "viewLevel": 2
+                },
+                "ItemCategory": {
+                    "viewName": "ItemCategory",
+                    "viewId": "ItemCategory",
+                    "transition": "show",
+                    "viewLevel": 2
+                },
+                "UserMaintenance": {
+                    "viewName": "UserMaintenance",
+                    "viewId": "UserMaintenance",
+                    "transition": "show",
+                    "viewLevel": 2
+                },
+                "NewOrder": {
+                    "viewName": "NewOrder",
+                    "viewId": "NewOrder",
+                    "transition": "show",
+                    "viewLevel": 2
+                }
+            }
+        }
+    },
+    "sap.platform.hcp": {
+        "uri": "",
+        "_version": "1.1.0"
+    }
+}

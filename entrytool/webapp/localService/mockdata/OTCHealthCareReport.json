@@ -1,0 +1,1266 @@
+{
+    "d": {
+        "results": [
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005067',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005067",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210312",
+                "ZSOLD_TO_PARTY": "0210108009",
+                "Z_SOLD_TO_DESC": "ISE-0000589010",
+                "ZSHIP_TO_PARTY": "0210108009",
+                "Z_SHIP_TO_DESC": "ISE-0000589010",
+                "Z_SO_SORG": "ES50",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616544000000)/",
+                "CA_ZDELV_DATE": "/Date(1616544000000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005068',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005068",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210312",
+                "ZSOLD_TO_PARTY": "0210108009",
+                "Z_SOLD_TO_DESC": "ISE-0000589010",
+                "ZSHIP_TO_PARTY": "0210108009",
+                "Z_SHIP_TO_DESC": "ISE-0000589010",
+                "Z_SO_SORG": "ES50",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616457600000)/",
+                "CA_ZDELV_DATE": "/Date(1616457600000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005069',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005069",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210322",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616630400000)/",
+                "CA_ZDELV_DATE": "/Date(1616630400000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005069',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005069",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210322",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616630400000)/",
+                "CA_ZDELV_DATE": "/Date(1616630400000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005069',ZSO_ITM_NO='000030',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005069",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210322",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616630400000)/",
+                "CA_ZDELV_DATE": "/Date(1616716800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005069',ZSO_ITM_NO='000040',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005069",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210322",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616630400000)/",
+                "CA_ZDELV_DATE": "/Date(1617062400000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005070',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005070",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210322",
+                "ZSOLD_TO_PARTY": "0210143226",
+                "Z_SOLD_TO_DESC": "Mer-0000244151",
+                "ZSHIP_TO_PARTY": "0210143226",
+                "Z_SHIP_TO_DESC": "Tak-0000030471",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1617235200000)/",
+                "CA_ZDELV_DATE": "/Date(1617235200000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005071',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005071",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210322",
+                "ZSOLD_TO_PARTY": "0210143226",
+                "Z_SOLD_TO_DESC": "Mer-0000244151",
+                "ZSHIP_TO_PARTY": "0210143226",
+                "Z_SHIP_TO_DESC": "Mer-0000244151",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1617148800000)/",
+                "CA_ZDELV_DATE": "/Date(1617148800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005072',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005072",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210322",
+                "ZSOLD_TO_PARTY": "0210142853",
+                "Z_SOLD_TO_DESC": "ZAO-0000192362",
+                "ZSHIP_TO_PARTY": "0210142853",
+                "Z_SHIP_TO_DESC": "ZAO-0000192362",
+                "Z_SO_SORG": "DE50",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616630400000)/",
+                "CA_ZDELV_DATE": "/Date(1616630400000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005073',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005073",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210322",
+                "ZSOLD_TO_PARTY": "0210142853",
+                "Z_SOLD_TO_DESC": "ZAO-0000192362",
+                "ZSHIP_TO_PARTY": "0210142853",
+                "Z_SHIP_TO_DESC": "ZAO-0000192362",
+                "Z_SO_SORG": "DE50",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616544000000)/",
+                "CA_ZDELV_DATE": "/Date(1616630400000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005074',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005074",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210322",
+                "ZSOLD_TO_PARTY": "0210142853",
+                "Z_SOLD_TO_DESC": "ZAO-0000192362",
+                "ZSHIP_TO_PARTY": "0210142853",
+                "Z_SHIP_TO_DESC": "ZAO-0000192362",
+                "Z_SO_SORG": "DE50",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616544000000)/",
+                "CA_ZDELV_DATE": "/Date(1616544000000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005074',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005074",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210322",
+                "ZSOLD_TO_PARTY": "0210142853",
+                "Z_SOLD_TO_DESC": "ZAO-0000192362",
+                "ZSHIP_TO_PARTY": "0210142853",
+                "Z_SHIP_TO_DESC": "ZAO-0000192362",
+                "Z_SO_SORG": "DE50",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616544000000)/",
+                "CA_ZDELV_DATE": "/Date(1616889600000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005075',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005075",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210323",
+                "ZSOLD_TO_PARTY": "0210142853",
+                "Z_SOLD_TO_DESC": "ZAO-0000192362",
+                "ZSHIP_TO_PARTY": "0210142853",
+                "Z_SHIP_TO_DESC": "ZAO-0000192362",
+                "Z_SO_SORG": "DE50",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616630400000)/",
+                "CA_ZDELV_DATE": "/Date(1617062400000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005076',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005076",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210323",
+                "ZSOLD_TO_PARTY": "0210142853",
+                "Z_SOLD_TO_DESC": "ZAO-0000192362",
+                "ZSHIP_TO_PARTY": "0210142853",
+                "Z_SHIP_TO_DESC": "ZAO-0000192362",
+                "Z_SO_SORG": "DE50",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616630400000)/",
+                "CA_ZDELV_DATE": "/Date(1616630400000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005076',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005076",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210323",
+                "ZSOLD_TO_PARTY": "0210142853",
+                "Z_SOLD_TO_DESC": "ZAO-0000192362",
+                "ZSHIP_TO_PARTY": "0210142853",
+                "Z_SHIP_TO_DESC": "ZAO-0000192362",
+                "Z_SO_SORG": "DE50",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616630400000)/",
+                "CA_ZDELV_DATE": "/Date(1617148800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005077',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005077",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210323",
+                "ZSOLD_TO_PARTY": "0210142853",
+                "Z_SOLD_TO_DESC": "ZAO-0000192362",
+                "ZSHIP_TO_PARTY": "0210142853",
+                "Z_SHIP_TO_DESC": "ZAO-0000192362",
+                "Z_SO_SORG": "DE50",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1620000000000)/",
+                "CA_ZDELV_DATE": "/Date(1620000000000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005078',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005078",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210323",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616630400000)/",
+                "CA_ZDELV_DATE": "/Date(1616630400000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005078',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005078",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210323",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616630400000)/",
+                "CA_ZDELV_DATE": "/Date(1618358400000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005079',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005079",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210323",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616630400000)/",
+                "CA_ZDELV_DATE": "/Date(1616630400000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005079',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005079",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210323",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616630400000)/",
+                "CA_ZDELV_DATE": "/Date(1616630400000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005080',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005080",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210324",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1617148800000)/",
+                "CA_ZDELV_DATE": "/Date(1617148800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005080',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005080",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210324",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1617148800000)/",
+                "CA_ZDELV_DATE": "/Date(1618444800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005081',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005081",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210324",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1617148800000)/",
+                "CA_ZDELV_DATE": "/Date(1617148800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005081',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005081",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210324",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1617148800000)/",
+                "CA_ZDELV_DATE": "/Date(1617148800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005082',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005082",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210324",
+                "ZSOLD_TO_PARTY": "0210143907",
+                "Z_SOLD_TO_DESC": "Tridem",
+                "ZSHIP_TO_PARTY": "0210143907",
+                "Z_SHIP_TO_DESC": "Tridem",
+                "Z_SO_SORG": "DE50",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1623369600000)/",
+                "CA_ZDELV_DATE": "/Date(1623369600000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005083',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005083",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210324",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1617148800000)/",
+                "CA_ZDELV_DATE": "/Date(1617148800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005083',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005083",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210324",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1617148800000)/",
+                "CA_ZDELV_DATE": "/Date(1618444800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005084',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005084",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210324",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1617148800000)/",
+                "CA_ZDELV_DATE": "/Date(1617148800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005084',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005084",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210324",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1617148800000)/",
+                "CA_ZDELV_DATE": "/Date(1617148800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005085',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005085",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210325",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1616716800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005085',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005085",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210325",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1617148800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005085',ZSO_ITM_NO='000030',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005085",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210325",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1618531200000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005085',ZSO_ITM_NO='000040',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005085",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210325",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1617235200000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005086',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005086",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210325",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1616716800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005086',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005086",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210325",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1617148800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005086',ZSO_ITM_NO='000030',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005086",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210325",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1618531200000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005088',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005088",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210325",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1616716800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005088',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005088",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210325",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1617148800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005088',ZSO_ITM_NO='000030',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005088",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210325",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1618531200000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005088',ZSO_ITM_NO='000040',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005088",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210325",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1617235200000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005089',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005089",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210325",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1616716800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005089',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005089",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210325",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1616976000000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005089',ZSO_ITM_NO='000030',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005089",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210325",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1618531200000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005089',ZSO_ITM_NO='000040',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005089",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210325",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1617148800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005092',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005092",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210326",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1617148800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005092',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005092",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210326",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1618790400000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005092',ZSO_ITM_NO='000030',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005092",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210326",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1617235200000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005093',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005093",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210326",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1616716800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005093',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005093",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210326",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616716800000)/",
+                "CA_ZDELV_DATE": "/Date(1616976000000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005094',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005094",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210326",
+                "ZSOLD_TO_PARTY": "0210142853",
+                "Z_SOLD_TO_DESC": "ZAO-0000192362",
+                "ZSHIP_TO_PARTY": "0210142853",
+                "Z_SHIP_TO_DESC": "ZAO-0000192362",
+                "Z_SO_SORG": "DE50",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616976000000)/",
+                "CA_ZDELV_DATE": "/Date(1616976000000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005095',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005095",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210330",
+                "ZSOLD_TO_PARTY": "0210143907",
+                "Z_SOLD_TO_DESC": "Tridem",
+                "ZSHIP_TO_PARTY": "0210143907",
+                "Z_SHIP_TO_DESC": "Tridem",
+                "Z_SO_SORG": "DE50",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1617148800000)/",
+                "CA_ZDELV_DATE": "/Date(1617148800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005099',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005099",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210331",
+                "ZSOLD_TO_PARTY": "0210142853",
+                "Z_SOLD_TO_DESC": "ZAO-0000192362",
+                "ZSHIP_TO_PARTY": "0210142853",
+                "Z_SHIP_TO_DESC": "ZAO-0000192362",
+                "Z_SO_SORG": "DE50",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1626307200000)/",
+                "CA_ZDELV_DATE": "/Date(1626307200000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005099',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005099",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210331",
+                "ZSOLD_TO_PARTY": "0210142853",
+                "Z_SOLD_TO_DESC": "ZAO-0000192362",
+                "ZSHIP_TO_PARTY": "0210142853",
+                "Z_SHIP_TO_DESC": "ZAO-0000192362",
+                "Z_SO_SORG": "DE50",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1626307200000)/",
+                "CA_ZDELV_DATE": "/Date(1626307200000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005100',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005100",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210331",
+                "ZSOLD_TO_PARTY": "0210142853",
+                "Z_SOLD_TO_DESC": "ZAO-0000192362",
+                "ZSHIP_TO_PARTY": "0210142853",
+                "Z_SHIP_TO_DESC": "ZAO-0000192362",
+                "Z_SO_SORG": "DE50",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1617235200000)/",
+                "CA_ZDELV_DATE": "/Date(1617235200000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005101',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005101",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210331",
+                "ZSOLD_TO_PARTY": "0210142853",
+                "Z_SOLD_TO_DESC": "ZAO-0000192362",
+                "ZSHIP_TO_PARTY": "0210142853",
+                "Z_SHIP_TO_DESC": "ZAO-0000192362",
+                "Z_SO_SORG": "DE50",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1617235200000)/",
+                "CA_ZDELV_DATE": "/Date(1617235200000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005101',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005101",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210331",
+                "ZSOLD_TO_PARTY": "0210142853",
+                "Z_SOLD_TO_DESC": "ZAO-0000192362",
+                "ZSHIP_TO_PARTY": "0210142853",
+                "Z_SHIP_TO_DESC": "ZAO-0000192362",
+                "Z_SO_SORG": "DE50",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1617235200000)/",
+                "CA_ZDELV_DATE": "/Date(1617235200000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005101',ZSO_ITM_NO='000030',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005101",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210331",
+                "ZSOLD_TO_PARTY": "0210142853",
+                "Z_SOLD_TO_DESC": "ZAO-0000192362",
+                "ZSHIP_TO_PARTY": "0210142853",
+                "Z_SHIP_TO_DESC": "ZAO-0000192362",
+                "Z_SO_SORG": "DE50",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1617235200000)/",
+                "CA_ZDELV_DATE": "/Date(1617235200000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005106',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005106",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210331",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616630400000)/",
+                "CA_ZDELV_DATE": "/Date(1616630400000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005106',ZSO_ITM_NO='000020',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005106",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210331",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616630400000)/",
+                "CA_ZDELV_DATE": "/Date(1616630400000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005106',ZSO_ITM_NO='000030',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005106",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210331",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616630400000)/",
+                "CA_ZDELV_DATE": "/Date(1616630400000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005106',ZSO_ITM_NO='000040',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005106",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210331",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1616630400000)/",
+                "CA_ZDELV_DATE": "/Date(1616630400000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005110',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005110",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210405",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1619654400000)/",
+                "CA_ZDELV_DATE": "/Date(1619654400000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005134',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005134",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210406",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1633046400000)/",
+                "CA_ZDELV_DATE": "/Date(1633046400000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005255',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005255",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210506",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1622073600000)/",
+                "CA_ZDELV_DATE": "/Date(1622160000000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005256',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005256",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210506",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1621987200000)/",
+                "CA_ZDELV_DATE": "/Date(1622160000000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005257',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005257",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210506",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1621987200000)/",
+                "CA_ZDELV_DATE": "/Date(1622160000000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005261',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005261",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210507",
+                "ZSOLD_TO_PARTY": "0210143068",
+                "Z_SOLD_TO_DESC": "COO-0000198131",
+                "ZSHIP_TO_PARTY": "0210143068",
+                "Z_SHIP_TO_DESC": "COO-0000198131",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1621296000000)/",
+                "CA_ZDELV_DATE": "/Date(1622419200000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005269',ZSO_ITM_NO='000010',ZDELIVERY_NO='',ZDEL_ITM_NO='000000')"
+                },
+                "ZSO_NO": "1200005269",
+                "ZDELIVERY_NO": "",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210511",
+                "ZSOLD_TO_PARTY": "0210143226",
+                "Z_SOLD_TO_DESC": "Mer-0000244151",
+                "ZSHIP_TO_PARTY": "0210143226",
+                "Z_SHIP_TO_DESC": "Mer-0000244151",
+                "Z_SO_SORG": "DE62",
+                "ZHDR_STATUS": "OPENSO",
+                "CA_ZREQEST_DELV_DATE": "/Date(1621900800000)/",
+                "CA_ZDELV_DATE": "/Date(1621900800000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005270',ZSO_ITM_NO='000010',ZDELIVERY_NO='1300003318',ZDEL_ITM_NO='900001')"
+                },
+                "ZSO_NO": "1200005270",
+                "ZDELIVERY_NO": "1300003318",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210511",
+                "ZSOLD_TO_PARTY": "0002400173",
+                "Z_SOLD_TO_DESC": "Merck Serono Australia Pty. Ltd.",
+                "ZSHIP_TO_PARTY": "0002400173",
+                "Z_SHIP_TO_DESC": "DHL-0000047082",
+                "Z_SO_SORG": "DE50",
+                "ZHDR_STATUS": "OPENPOD",
+                "CA_ZREQEST_DELV_DATE": "/Date(1621987200000)/",
+                "CA_ZDELV_DATE": "/Date(1621987200000)/"
+            },
+            {
+                "__metadata": {
+                    "type": "com.merckgroup.moet.services.odata.moet.OTCHealthCareReportType",
+                    "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/OTCHealthCareReport(ZCLIENT='100',ZSO_NO='1200005271',ZSO_ITM_NO='000010',ZDELIVERY_NO='1300003319',ZDEL_ITM_NO='900001')"
+                },
+                "ZSO_NO": "1200005271",
+                "ZDELIVERY_NO": "1300003319",
+                "ZCREATED_BY": "CPIC_MOET",
+                "ZSO_CREATED_DATE": "20210512",
+                "ZSOLD_TO_PARTY": "0002400173",
+                "Z_SOLD_TO_DESC": "Merck Serono Australia Pty. Ltd.",
+                "ZSHIP_TO_PARTY": "0002400173",
+                "Z_SHIP_TO_DESC": "DHL-0000047082",
+                "Z_SO_SORG": "DE50",
+                "ZHDR_STATUS": "OPENPOD",
+                "CA_ZREQEST_DELV_DATE": "/Date(1621987200000)/",
+                "CA_ZDELV_DATE": "/Date(1621987200000)/"
+            }
+        ]
+    }
+}

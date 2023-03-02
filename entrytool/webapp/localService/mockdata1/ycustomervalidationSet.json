@@ -1,0 +1,31 @@
+{
+    "d": {
+        "results": [
+            {
+                "__metadata": {
+                    "id": "https://hecdlchttp.merckgroup.com/sap/opu/odata/sap/YSD_MOET_SRV/ycustomervalidationSet(IvCustomer='',IvShipParty='',IvSyssid='')",
+                    "uri": "https://hecdlchttp.merckgroup.com/sap/opu/odata/sap/YSD_MOET_SRV/ycustomervalidationSet(IvCustomer='',IvShipParty='',IvSyssid='')",
+                    "type": "YSD_MOET_SRV.ycustomervalidation"
+                },
+                "IvCustomer": "",
+                "CustmStreet": "",
+                "IvShipParty": "",
+                "ShipToStreet": "",
+                "IvSyssid": "",
+                "ApplSystem": "",
+                "CustomerNum": "",
+                "CustmName": "",
+                "CustmCity": "",
+                "CustmRegion": "",
+                "DeletionFlag": false,
+                "PostalCode": "",
+                "ShipToParty": "",
+                "ShipToPartyDesc": "",
+                "ShipToCity": "",
+                "ShipToRegion": "",
+                "ShipToPostcode": "",
+                "Retmsg": "Customer 0210100077 does not exist"
+            }
+        ]
+    }
+}

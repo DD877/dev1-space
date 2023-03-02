@@ -1,0 +1,69 @@
+{
+    "UserDetails": [
+        {
+            "__metadata": {
+                "type": "com.Capgeminigroup.moet.services.odata.moet.UserDetailsType",
+                "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/Capgeminigroup/moet/services/odata/moet.xsodata/UserDetails('ACHINCHO')"
+            },
+            "ZUSR_ID": "ACHINCHO",
+            "ZUSR_NAME": "Anand Chincholi",
+            "ZUSR_TYP": "I",
+            "ZUSR_ROLE": "ADMIN",
+            "ZUSR_EMAILADD": "anand.chincholi@external.Capgeminigroup.com",
+            "ZUSR_STATUS_TXT": "Active",
+            "ZROLE_NAME": "Capgemini Admin"
+        },
+        {
+            "__metadata": {
+                "type": "com.Capgeminigroup.moet.services.odata.moet.UserDetailsType",
+                "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/Capgeminigroup/moet/services/odata/moet.xsodata/UserDetails('AGAURAV')"
+            },
+            "ZUSR_ID": "AGAURAV",
+            "ZUSR_NAME": "Avinash Gaurav",
+            "ZUSR_TYP": "I",
+            "ZUSR_ROLE": "ADMIN",
+            "ZUSR_EMAILADD": "avinash.gaurav@external.Capgeminigroup.com",
+            "ZUSR_STATUS_TXT": "Active",
+            "ZROLE_NAME": "Capgemini Admin"
+        },
+        {
+            "__metadata": {
+                "type": "com.Capgeminigroup.moet.services.odata.moet.UserDetailsType",
+                "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/Capgeminigroup/moet/services/odata/moet.xsodata/UserDetails('ARANJAN')"
+            },
+            "ZUSR_ID": "ARANJAN",
+            "ZUSR_NAME": "Alok Ranjan",
+            "ZUSR_TYP": "I",
+            "ZUSR_ROLE": "ADMIN",
+            "ZUSR_EMAILADD": "alok.ranjan@Capgeminigroup.com",
+            "ZUSR_STATUS_TXT": "Active",
+            "ZROLE_NAME": "Capgemini Admin"
+        },
+        {
+            "__metadata": {
+                "type": "com.Capgeminigroup.moet.services.odata.moet.UserDetailsType",
+                "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/Capgeminigroup/moet/services/odata/moet.xsodata/UserDetails('FHAQ')"
+            },
+            "ZUSR_ID": "FHAQ",
+            "ZUSR_NAME": "Test",
+            "ZUSR_TYP": "I",
+            "ZUSR_ROLE": "ADMIN",
+            "ZUSR_EMAILADD": "test@CapgeminiGROUP.COM",
+            "ZUSR_STATUS_TXT": "Active",
+            "ZROLE_NAME": "Capgemini Admin"
+        },
+        {
+            "__metadata": {
+                "type": "com.Capgeminigroup.moet.services.odata.moet.UserDetailsType",
+                "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/Capgeminigroup/moet/services/odata/moet.xsodata/UserDetails('KKARANI')"
+            },
+            "ZUSR_ID": "KKARANI",
+            "ZUSR_NAME": "Kevin Karani",
+            "ZUSR_TYP": "I",
+            "ZUSR_ROLE": "ADMIN",
+            "ZUSR_EMAILADD": "kevin.karani@Capgeminigroup.com",
+            "ZUSR_STATUS_TXT": "Active",
+            "ZROLE_NAME": "Capgemini Admin"
+        }
+    ]
+}

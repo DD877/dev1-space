@@ -1,0 +1,328 @@
+<core:View controllerName="glb.gtmh.oct.controller.DistCenterLoad"
+  xmlns:c="sap.ui.commons" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:t="sap.ui.table"
+  xmlns="sap.m" busy="{appProperties>/isDCLBusy}" busyIndicatorDelay="0">
+  <Page class="pageMargin pageGreyBG" height="auto" showHeader="true">
+    <customHeader>
+      <Bar class="customhdr highBar">
+        <contentLeft>
+          <IconTabBar class="tabBar" expandable="false" id="idIconTabBar"
+            select="handleIconTabBarSelect">
+            <items>
+              <IconTabFilter class="tab1" icon="sap-icon://locate-me"
+                iconColor="Positive" key="OT" text="{i18n>operationalTracker}">
+                <Bar class="bar1 sapMInputBaseInner">
+                  <contentLeft>
+                    <Select autoAdjustWidth="true" change="onChangeMarket"
+                      class="panelnoborder height2Rem tabBarCombo downIcon" enabled="true"
+                      id="marketList" items="{path:'/CountryCollection'}">
+                      <core:Item key="{key}" text="{name}" />
+                    </Select>
+                    <!-- <ComboBox id="country_combo1" class="tabBarCombo" -->
+                    <!-- items="{ --> <!-- path: '/CountryCollection1', --> <!-- sorter: { path: 'name' } --> <!-- }"> -->
+                    <!-- <core:Item key="{code}" text="{name}"/> -->
+                    <!-- </ComboBox> -->
+                    <core:Icon src="sap-icon://appointment"
+                        color="#ffffff" size="1rem" class="calIcon" press="openCalender">
+                      </core:Icon>
+                   <!-- <Image class="side" press="openCalender" src="img/calender.PNG"></Image>-->
+                    <Text class="whitecolortext dateLabelAlign" id="filterType" visible="false"/>
+                    <Text class="whitecolortext dateLabelAlign" id="dateRangeText" visible="false" />
+                    <Text class="whitecolortext dateLabelAlign" text="{appProperties>/dateRangeText}" />
+                    <core:Icon id="refreshIcon" size="1rem" tooltip="{i18n>refreshTooltip}" class="refreshIcon" src="sap-icon://refresh" color="#ffffff" press="onRefresh"></core:Icon>
+                    <!-- <Text -->
+                    <!-- id="dateRangeText" class="whitecolortext dateLabelAlign"/> -->
+                  </contentLeft>
+                  <contentMiddle></contentMiddle>
+                </Bar>
+              </IconTabFilter>
+              <IconTabFilter icon="sap-icon://performance"
+                iconColor="Positive" key="KPI" text="{i18n>kpiDashboard}" />
+              <IconTabFilter icon="sap-icon://action-settings"
+                iconColor="Positive" key="Set" text="{i18n>settings}" />
+            </items>
+          </IconTabBar>
+           <Image class="userPic" src="{parts:[{path:'userMarketModel>/PortalURL'},{path:'userMarketModel>/UserId'}],
+          formatter:'glb.gtmh.oct.util.Formatter.getImgURL'}"></Image>
+          <Text class="welcomeText" text="{parts:[{path:'userModel>/FirstName'},{path:'userModel>/LastName'}],
+          formatter:'glb.gtmh.oct.util.Formatter.getWelcomeText'}" maxLines="2"/>
+          <Image class="logo" src="./img/img_in.png">
+            <tooltip>
+              <core:Fragment
+                fragmentName="glb.gtmh.oct.view.fragments.menuIngenius"
+                type="XML" />
+            </tooltip>
+          </Image>
+          <Bar class="subBar" id="routePageBar">
+            <contentLeft>
+              <Button class="navBarButton" id="dashboardBtn" press="toDashboard"
+                text="{i18n>myDashboard}"></Button>
+              <Image height="25px" src="./img/line.png" width="1px" />
+              <Button class="navBarButton" id="planAdvBtn" press="toPlanAdvisor"
+                text="{i18n>planningAdvisor}"></Button>
+              <Image height="25px" src="./img/line.png" width="1px" />
+              <Button class="navBarButton navBarBtnBold" id="distCentLoadBtn"
+                text="{i18n>distributionCenterLoad}"></Button>
+            </contentLeft>
+            <contentRight>
+              <FlexBox alignItems="End" class="marginRight7Percent">
+                <items>
+                  <Input class="searchBoxHP" id="search" maxLength="15"
+                    placeholder="{i18n>placeholderContainer}" tooltip="{i18n>placeholderContainer}" showSuggestion="true"
+                    suggestionItems="{/ProductCollection}" type="Text" width="100%">
+                    <suggestionItems>
+                      <core:Item text="{item}" />
+                    </suggestionItems>
+                  </Input>
+                  <Button class="navButton marginLeft2HalfRem" icon="sap-icon://sys-cancel"
+                    id="refreshBtn" press="search" tooltip="{i18n>resetFilters}"></Button>
+                  <Button class="navButton" icon="sap-icon://search" id="searchBtn"
+                    press="search" tooltip="{i18n>clickToSearch}"></Button>
+                </items>
+              </FlexBox>
+            </contentRight>
+          </Bar>
+        </contentLeft>
+      </Bar>
+      <!-- <Button text="" icon="sap-icon://nav-back" press="navBack"> -->
+      <!-- </Button> -->
+    </customHeader>
+    <FlexBox alignItems="Start" class="dclPgMainFB" direction="Row"
+      id="fBox" justifyContent="SpaceBetween">
+      <items>
+        <Panel
+          class="noOverflow fixedPanel panelwidthDCL noPaddingPanel noHeaderHdr">
+          <content>
+            <Panel
+              class="white_color borderLightGrey paddingHalfRem fixedPanelPos noHeaderHdr"
+              height="auto" id="filterPanel" width="100%">
+              <content>
+                <!-- <VBox width="100%" height="100%" class="whiteBG filterVBoxHeight"> -->
+                <!-- <items> -->
+                <VBox height="auto" id="filterBox">
+                  <items>
+                    <l:HorizontalLayout class="filterHdr totalWidth">
+                      <Label class="marginBottom10 marginLeft15" design="Bold"
+                        text="{i18n>destinationDC}"></Label>
+                      <!-- <Button id="_dest_SeeAllBtn" text="{i18n>seeAll}" press="handleSeeAllPress"
+                        class="navButton filterBtn seeAllBtn marginTop30"></Button> -->
+                    </l:HorizontalLayout>
+                    <List class="noBorderListItems" id="destDCList"></List>
+                    <l:HorizontalLayout class="filterHdr totalWidth">
+                      <Label class="marginBottom10 marginLeft15 marginTop30"
+                        design="Bold" text="{i18n>planningAlignment}"></Label>
+                      <Button class="navButton filterBtn seeAllBtn marginTop30"
+                        id="_pa_SeeAllBtn" press="handleSeeAllPress" text="{i18n>seeAll}"
+                        visible="false"></Button>
+                    </l:HorizontalLayout>
+                    <List class="noBorderListItems" id="paList"></List>
+                    <l:HorizontalLayout class="filterHdr totalWidth">
+                      <Label class="marginBottom10 marginLeft15 marginTop30"
+                        design="Bold" text="{i18n>priorityFlag}"></Label>
+                      <Button class="navButton filterBtn seeAllBtn marginTop30"
+                        id="_pf_SeeAllBtn" press="handleSeeAllPress" text="{i18n>seeAll}"></Button>
+                    </l:HorizontalLayout>
+                    <List class="noBorderListItems" id="pfList"></List>
+
+                 <l:HorizontalLayout class="filterHdr totalWidth">
+                      <Label class="marginBottom10 marginLeft15 marginTop30"
+                        design="Bold" text="{i18n>originCountry}"></Label>
+                      <Button class="navButton filterBtn seeAllBtn marginTop30"
+                        id="_oc_SeeAllBtn" press="handleSeeAllPress" text="{i18n>seeAll}"></Button>
+                    </l:HorizontalLayout>
+                    <l:VerticalLayout id="originCountryLayout" class="totalWidth topPadPoint2Rem">
+                        <List class="noBorderListItems" id="originCountryList"></List>
+
+                        </l:VerticalLayout>
+                        <Link id="idLinkMoreOC" text="{i18n>more}" press="handleMoreLinkPress"
+                  class="outerBox moreLink"></Link>
+                    <l:HorizontalLayout class="filterHdr totalWidth" visible="false">
+                      <Label class="marginBottom10 marginLeft15 marginTop30"
+                        design="Bold" text="{i18n>product}"></Label>
+                      <Button class="navButton filterBtn seeAllBtn marginTop30"
+                        id="_prod_SeeAllBtn" press="handleSeeAllPress" text="{i18n>seeAll}"></Button>
+                    </l:HorizontalLayout>
+                    <l:VerticalLayout id="prodLayout" class="totalWidth topPadPoint2Rem" visible="false">
+                        <List class="noBorderListItems" id="productList"></List>
+
+                        </l:VerticalLayout>
+                        <Link id="idLinkMorePD" text="{i18n>more}" press="handleMoreLinkPress" visible="false"
+                  class="outerBox moreLink"></Link>
+                    <l:HorizontalLayout class="filterHdr totalWidth">
+                      <Label class="marginBottom10 marginLeft15 marginTop30"
+                        design="Bold" text="{i18n>category}"></Label>
+                      <Button class="navButton filterBtn seeAllBtn marginTop30"
+                        id="_cat_SeeAllBtn" press="handleSeeAllPress" text="{i18n>seeAll}"></Button>
+                    </l:HorizontalLayout>
+                    <l:VerticalLayout id="categoryLayout" class="totalWidth topPadPoint2Rem">
+                        <List class="noBorderListItems" id="categoryList"></List>
+
+                        </l:VerticalLayout>
+                        <Link id="idLinkMoreCL" text="{i18n>more}" press="handleMoreLinkPress"
+                  class="outerBox moreLink"></Link>
+
+                    <l:HorizontalLayout class="filterHdr totalWidth">
+                      <Label class="marginBottom10 marginLeft15 marginTop30"
+                        design="Bold" text="{i18n>pol}"></Label>
+                      <Button class="navButton filterBtn seeAllBtn marginTop30"
+                        id="_pol_SeeAllBtn" press="handleSeeAllPress" text="{i18n>seeAll}"></Button>
+                    </l:HorizontalLayout>
+                    <l:VerticalLayout id="polLayout" class="totalWidth topPadPoint2Rem">
+                        <List class="noBorderListItems" id="polList"></List>
+
+                        </l:VerticalLayout>
+                        <Link id="idLinkMorePOL" text="{i18n>more}" press="handleMoreLinkPress"
+                  class="outerBox moreLink"></Link>
+
+                    <l:HorizontalLayout class="filterHdr totalWidth">
+                      <Label class="marginBottom10 marginLeft15 marginTop30"
+                        design="Bold" text="{i18n>poa}"></Label>
+                      <Button class="navButton filterBtn seeAllBtn marginTop30"
+                        id="_poa_SeeAllBtn" press="handleSeeAllPress" text="{i18n>seeAll}"></Button>
+                    </l:HorizontalLayout>
+
+                    <l:VerticalLayout id="poaLayout" class="totalWidth topPadPoint2Rem">
+                        <List class="noBorderListItems" id="poaList"></List>
+
+                        </l:VerticalLayout>
+                        <Link id="idLinkMorePOA" text="{i18n>more}" press="handleMoreLinkPress"
+                  class="outerBox moreLink"></Link>
+                    <!--<l:HorizontalLayout class="filterHdr totalWidth">
+                      <Label class="marginBottom10 marginLeft15 marginTop30"
+                        design="Bold" text="{i18n>apptType}"></Label>
+                      <Button class="navButton filterBtn seeAllBtn marginTop30"
+                        id="_at_SeeAllBtn" press="handleSeeAllPress" text="{i18n>seeAll}"></Button>
+                    </l:HorizontalLayout>
+                    <List class="noBorderListItems" id="atList"></List> -->
+                  </items>
+                </VBox>
+                <!-- </items> -->
+                <!-- </VBox> -->
+              </content>
+            </Panel>
+          </content>
+        </Panel>
+        <Button class="smallIconBtn smallIconBtnLeft ovalEdgeBtn"
+          icon="sap-icon://media-reverse" id="right" press="_clicktoExpand" tooltip="{i18n>collapseFilter}"></Button>
+        <FlexBox alignItems="Start" class="totalWidthFIDCL leftPad2"
+          direction="Column" id="upperArea" justifyContent="SpaceBetween"
+          width="81.1%">
+          <items>
+            <l:HorizontalLayout class="">
+              <FlexBox alignItems="Start">
+                <Label class="lblNumOfCont" design="Bold" id="numOfContainers"
+                  text=""></Label>
+                <Label class="contFilterText" text="{i18n>contIncoming}"></Label>
+              </FlexBox>
+            </l:HorizontalLayout>
+            <Panel class="legendPanel noPaddingPanel" ></Panel>
+            <!-- <l:HorizontalLayout class="topMargin90 leftMargin20 childWidth"> -->
+            <!-- <FlexBox alignItems="Start"> -->
+            <!-- <Label id="containerText" design="Bold" class="labelFont1rem"></Label> -->
+            <!-- <Label text="{i18n>containers}" class="labelPadTopLeft"></Label> -->
+            <!-- </FlexBox> -->
+            <!-- </l:HorizontalLayout> -->
+            <l:HorizontalLayout>
+              <Button class="prevBtnDcl iconSize btnNavIconSize"
+                enabled="false" icon="sap-icon://navigation-left-arrow" id="btn_prev"
+                press="previous" text="" tooltip="{i18n>previousWeek}"></Button>
+              <Panel
+                class="chartPanelDC panelnoborder topMargin90 bgInherit noHeaderHdr noPaddingPanel"
+                height="400px" id="dcLoadChart" width="1045px"></Panel>
+              <Button class="nextBtnCentered iconSize btnNavIconSize"
+                enabled="true" icon="sap-icon://navigation-right-arrow" id="btn_next"
+                press="next" text="" tooltip="{i18n>nextWeek}"></Button>
+            </l:HorizontalLayout>
+            <Panel class="panelnoborder topMargin90 bgInherit noHeaderHdr noPaddingPanel"
+              height="auto" id="dcLoadDetails" width="1060px">
+              <l:VerticalLayout class="botMargin2Rem totalWidth">
+                <Table class="tblRowHeight dclTable" growing="true"
+                  growingScrollToLoad="true" id="idProductsTableDcl" inset="false"
+                  items="{ path: '/ProductCollection', sorter: { path: 'InitDelDate', descending: true } }"
+                  listSeparator="All" rowHeight="1rem" width="100%">
+                  <!-- <headerToolbar> -->
+                  <!-- <Toolbar> -->
+                  <!-- <Title text="{path:'POETA',formatter:'glb.gtmh.oct.util.Formatter.dateConvert'}"
+                    level="H3"/> -->
+                  <!-- </Toolbar> -->
+                  <!-- </headerToolbar> -->
+                  <columns>
+                    <Column width="8.5rem">
+                      <Text id="fullDateText" class="colorGrey" text="" />
+                    </Column>
+                    <Column demandPopin="true">
+                      <!-- <Text class="bold" text="{i18n>appointmentatDC}" /> -->
+                    </Column>
+                    <Column demandPopin="true" hAlign="Left"
+                      minScreenWidth="Tablet">
+                      <!-- <Text class="bold" text="{i18n>Container}" /> -->
+                    </Column>
+                    <Column demandPopin="true" hAlign="Left"
+                      minScreenWidth="Tablet">
+                      <!-- <Text class="bold" text="{i18n>PO}" /> -->
+                    </Column>
+                    <Column hAlign="Left">
+                      <!-- <Text class="bold" text="{i18n>asnnumber}" /> -->
+                    </Column>
+
+                  </columns>
+                  <items>
+                    <ColumnListItem press="dclTableItemPress" type="Active">
+                      <cells>
+                        <l:HorizontalLayout>
+                          <l:content>
+                            <core:Icon class="rotate270 rightPaddingHalfRem"
+                              color="black" size="1rem" src="sap-icon://history">
+                              <core:tooltip>
+                                <core:Fragment
+                                  fragmentName="glb.gtmh.oct.view.fragments.distCenterLoadDockNYardTooltip"
+                                  type="XML" />
+                              </core:tooltip>
+                            </core:Icon>
+                            <Text
+                              text="{path:'EventSet/results/2/subEvents',formatter:'glb.gtmh.oct.util.Formatter.setAppointmentTime'}"
+                              class="padTop3Left5"></Text>
+                          </l:content>
+                        </l:HorizontalLayout>
+                        <l:HorizontalLayout>
+                          <l:content>
+                            <core:Icon class="table-button rightPaddingHalfRem"
+                              color="{path:'Priority',formatter:'glb.gtmh.oct.util.Formatter.setFlagColorDCL'}"
+                              size="1.2rem" src="sap-icon://flag"></core:Icon>
+
+                            <ObjectIdentifier
+                              title="{path:'Container',formatter:'glb.gtmh.oct.util.Formatter.setContainer'}"
+                              text="{path:'Pallet',formatter:'glb.gtmh.oct.util.Formatter.getPalletsWithSuffix'}" class="colorGrey dclTableCNumText" />
+                          </l:content>
+                        </l:HorizontalLayout>
+                        <ObjectIdentifier title="{PO}"
+                          text="{parts:[{path:'ItemSet/results'},{path:'OriginDCDesc'}],formatter:'glb.gtmh.oct.util.Formatter.setDCLTableCat'}"
+                          class="colorGrey dclTableNormalFW" />
+                        <Text text="{ASN}" />
+                        <Text text="{STO}" />
+                      </cells>
+                    </ColumnListItem>
+                  </items>
+                  <!-- <ColumnListItem type="Active"> -->
+                  <!-- <cells> -->
+                  <!-- <Text -->
+                  <!-- text="{path:'time',formatter:'glb.gtmh.oct.util.Formatter.dateConvert'}"/> -->
+                  <!-- <ObjectIdentifier title="{Container}" -->
+                  <!-- class="sapMTableContentMargin"/> -->
+                  <!-- <Text text="{PO}"/> -->
+                  <!-- <Text -->
+                  <!-- text="{path:'LastETA',formatter:'glb.gtmh.oct.util.Formatter.dateConvert'}"/> -->
+                  <!-- <Text -->
+                  <!-- text="{ --> <!-- parts:[{path:'POETA'},{path:'LastETA'}], --> <!-- formatter: 'glb.gtmh.oct.util.Formatter.alignmentFormat' --> <!-- }"/> -->
+                  <!-- </cells> -->
+                  <!-- </ColumnListItem> -->
+                  <!-- </items> -->
+                </Table>
+              </l:VerticalLayout>
+            </Panel>
+          </items>
+        </FlexBox>
+      </items>
+    </FlexBox>
+  </Page>
+</core:View>

@@ -1,0 +1,124 @@
+{
+	"customers": [
+		{
+			"name": "Marry",
+			"productId": 38761,
+			"lastPurchase": "11.5.2016",
+			"payment": "Created",
+			"state": "Success",
+			"amount": 234,
+			"material": "material1",
+			"currencyCode": "EUR"
+		},
+		{
+			"name": "Roney",
+			"productId": 88921,
+			"lastPurchase": "29.4.2016",
+			"payment": "Closed",
+			"state": "Error",
+			"amount": 111,
+			"material": "material2",
+			"currencyCode": "EUR"
+		},
+		{
+			"name": "Jack",
+			"productId": 38791,
+			"lastPurchase": "7.7.2016",
+			"payment": "Open",
+			"state": "Warning",
+			"amount": 19,
+			"material": "material3",
+			"currencyCode": "EUR"
+		},
+		{
+			"name": "John",
+			"productId": 19783,
+			"lastPurchase": "14.10.2016",
+			"payment": "Created",
+			"state": "Success",
+			"amount": 89,
+			"material": "material4",
+			"currencyCode": "EUR"
+		},
+		{
+			"name": "Goerge",
+			"productId": 33453,
+			"lastPurchase": "15.8.2016",
+			"payment": "Open",
+			"state": "Warning",
+			"amount": 32,
+			"material": "material5",
+			"currencyCode": "EUR"
+		},
+		{
+			"name": "Reham",
+			"productId": 99123,
+			"lastPurchase": "19.3.2016",
+			"payment": "Created",
+			"state": "Success",
+			"amount": 22,
+			"material": "material6",
+			"currencyCode": "EUR"
+		},
+		{
+			"name": "Marry",
+			"productId": 38761,
+			"lastPurchase": "11.5.2016",
+			"payment": "Created",
+			"state": "Success",
+			"amount": 234,
+			"material": "material1",
+			"currencyCode": "EUR"
+		},
+		{
+			"name": "Roney",
+			"productId": 88921,
+			"lastPurchase": "29.4.2016",
+			"payment": "Closed",
+			"state": "Error",
+			"amount": 111,
+			"material": "material2",
+			"currencyCode": "EUR"
+		},
+		{
+			"name": "Jack",
+			"productId": 38791,
+			"lastPurchase": "7.7.2016",
+			"payment": "Open",
+			"state": "Warning",
+			"amount": 19,
+			"material": "material3",
+			"currencyCode": "EUR"
+		},
+		{
+			"name": "John",
+			"productId": 19783,
+			"lastPurchase": "14.10.2016",
+			"payment": "Created",
+			"state": "Success",
+			"amount": 89,
+			"material": "material4",
+			"currencyCode": "EUR"
+		},
+		{
+			"name": "Goerge",
+			"productId": 33453,
+			"lastPurchase": "15.8.2016",
+			"payment": "Open",
+			"state": "Warning",
+			"amount": 32,
+			"material": "material5",
+			"currencyCode": "EUR"
+		},
+		{
+			"name": "Reham",
+			"productId": 99123,
+			"lastPurchase": "19.3.2016",
+			"payment": "Created",
+			"state": "Success",
+			"amount": 22,
+			"material": "material6",
+			"currencyCode": "EUR"
+		}
+	]
+}

@@ -1,0 +1,1 @@
+sap.ui.core.mvc.Controller.extend("glb.gtmh.oct.controller.NotFound", {});

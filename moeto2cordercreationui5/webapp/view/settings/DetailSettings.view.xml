@@ -1,0 +1,110 @@
+<mvc:View controllerName="com.merckgroup.Moet_O2C_OrderCreation_UI5.controller.settings.MasterSettings" xmlns="sap.uxap" xmlns:f="sap.ui.layout.form"
+	xmlns:m="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
+	<m:Page showHeader="{device>/system/phone}" showNavButton="{device>/system/phone}" navButtonPress=".onNavButtonPress">
+		<m:landmarkInfo>
+			<m:PageAccessibleLandmarkInfo rootRole="Region" rootLabel="{i18n>SystemSettings_rootLabel}" contentRole="Main"
+				contentLabel="{i18n>SystemSettings_contentLabel}"/>
+		</m:landmarkInfo>
+		<ObjectPageLayout id="objectPageLayout">
+			<headerTitle>
+				<ObjectPageHeader objectTitle="{i18n>systemSettingsTitle}" objectSubtitle="{i18n>systemSettingsDescriptionTitle}">
+					<actions>
+						<ObjectPageHeaderActionButton id="save" text="{i18n>save}" hideText="false" press=".onSavePressed" type="Emphasized"/>
+						<ObjectPageHeaderActionButton id="cancel" text="{i18n>cancel}" press=".onCancelPressed" hideText="false"/>
+					</actions>
+				</ObjectPageHeader>
+			</headerTitle>
+			<headerContent>
+				<m:MessageStrip
+					text="{ parts: [ 'i18n>systemSettingsLastLoginTitle', 'view>/currentUser', 'view>/lastLogin' ], formatter: '.formatter.formatMessage' }"
+					type="Information" showIcon="true"></m:MessageStrip>
+			</headerContent>
+			<sections>
+				<ObjectPageSection>
+					<subSections>
+						<ObjectPageSubSection id="shopOwnerId" title="{i18n>shopOwnerTitle}">
+							<blocks>
+								<ObjectPageLazyLoader id="shopOwnerLazyLoader">
+									<f:SimpleForm maxContainerCols="2" editable="true" backgroundDesign="Translucent" layout="ResponsiveGridLayout" labelSpanL="4"
+						labelSpanM="4" labelSpanS="12" emptySpanL="0" emptySpanM="0" columnsL="2" columnsM="2" width="100%">
+						<f:toolbar>
+							<m:Toolbar id="TB1">
+								<m:Title id="Title1" text="Create an User" level="H2" class="bold" titleStyle="H2"/>
+							</m:Toolbar>
+						</f:toolbar>
+						<f:content>
+							<m:Label id="idMaterial" text="User ID" required="true"/>
+							<m:Input change="handleChange" enabled="true" id="idMaterialinput"></m:Input>
+							<m:Label id="idQuantity" text="Name" required="true"/>
+							<m:Input change="handleChange" enabled="true" id="idQuantityinput"></m:Input>
+							<m:Label id="idQuantityE" text="Email Adress" required="true"/>
+							<m:Input change="handleChange" enabled="true" id="idQuantityinputE"></m:Input>
+							<m:Label id="idUom" text="User Type" required="true" visible="true"/>
+							<m:Select forceSelection="false" id="idUominput" selectedKey="sys" valueStateText="Select a User Type" visible="true">
+								<core:Item key="sys" text="Select a User Type"/>
+								<core:Item key="ST" text="User Type1"/>
+								<core:Item key="KG" text="User Type2"/>
+								<core:Item key="L" text="User Type3"/>
+								<core:Item key="TO" text="User Type4"/>
+								<core:Item key="PC" text="User Type5"/>
+								<core:Item key="EA" text="User Type6"/>
+							</m:Select>
+							<!--<Label id="idDate" text="Date" required="true"/>
+						<DatePicker id="DP2" onAfterRendering="disableText" width="40%" valueFormat="yyyy-MM-dd" displayFormat="short" change="handleChange"
+							class="sapUiSmallMarginBottom"/>-->
+							<m:Label visible="false"/>
+							<m:Button text="{i18n>Save}" press="_onSaveCommentsLabel" type="Accept"/>
+							<m:Button text="Clear" type="Emphasized" press="_onCancelCommentsLabel"/>
+						</f:content>
+					</f:SimpleForm>
+								</ObjectPageLazyLoader>
+							</blocks>
+						</ObjectPageSubSection>
+					</subSections>
+				</ObjectPageSection>
+				<ObjectPageSection>
+					<subSections>
+						<ObjectPageSubSection id="shopConfigurationId" title="{i18n>shopConfigurationTitle}">
+							<blocks>
+								<ObjectPageLazyLoader id="shopConfigurationLazyLoader">
+									<m:Table items="{path:'customer>/customers', templateShareable: false}" fixedLayout="false">
+										<m:headerToolbar>
+											<m:Toolbar design="Transparent">
+												<m:Title text="User Informations" level="H3"/>
+											</m:Toolbar>
+										</m:headerToolbar>
+										<m:columns>
+											<m:Column>
+												<m:Text text="User Name"/>
+											</m:Column>
+											<m:Column minScreenWidth="Tablet">
+												<m:Text text="Id"/>
+											</m:Column>
+											<m:Column minScreenWidth="Desktop" hAlign="End">
+												<m:Text text="Date"/>
+											</m:Column>
+											<m:Column hAlign="Center">
+												<m:Text text="Amount"/>
+											</m:Column>
+										</m:columns>
+										<m:items>
+											<m:ColumnListItem>
+												<m:cells>
+													<m:Text text="{customer>name}"/>
+													<m:Text text="{customer>productId}"/>
+													<m:Text text="{customer>lastPurchase}"/>
+													<m:Text text="{customer>amount}"/>
+													<!-- <m:ObjectNumber number="{customer>payment}" state="{customer>state}"/> -->
+												</m:cells>
+											</m:ColumnListItem>
+										</m:items>
+									</m:Table>
+								</ObjectPageLazyLoader>
+							</blocks>
+						</ObjectPageSubSection>
+					</subSections>
+				</ObjectPageSection>
+			</sections>
+		</ObjectPageLayout>
+	</m:Page>
+</mvc:View>

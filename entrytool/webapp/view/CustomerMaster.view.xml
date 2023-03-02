@@ -1,0 +1,296 @@
+<mvc:View
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    xmlns:f="sap.f"
+    xmlns:sv="sap.ui.comp.smartvariants"
+    xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:table="sap.ui.table"
+    controllerName="entrytool.controller.CustomerMaster"
+>
+    <f:DynamicPage class="custSOHTDynamicPage newOrder">
+        <f:title>
+            <f:DynamicPageTitle class="custDynPageTitle">
+                <f:heading>
+                    <Title text="{i18n>CustomerMaster}" />
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:header>
+            <f:DynamicPageHeader pinnable="false" class="custDynPageHeader">
+                <f:content>
+                    <VBox>
+                        <VBox visible="false">
+                            <smartFilterBar:SmartFilterBar
+                                id="sfbCustomerDetails"
+                                smartVariant="__SVM02"
+                                useToolbar="false"
+                                entitySet="CustomerDetails"
+                                persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.FilterBar"
+                                class="smfil"
+                                assignedFiltersChanged="onAssignedFiltersChanged"
+                                initialise="onAfterSmartFilterInitialize"
+                                liveMode="true"
+                            >
+                                <smartFilterBar:controlConfiguration>
+                                    <smartFilterBar:ControlConfiguration key="ZCUSTMR_NUM" label="{i18n>CustomerNumber}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="ZNAME_1" label="{i18n>CustomerName}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="ZCITY" label="{i18n>City}" visibleInAdvancedArea="true" />
+                                    <smartFilterBar:ControlConfiguration key="ZCENTRL_DEL_FLAG" label="{i18n>FlagforDeletion}" visibleInAdvancedArea="false" />
+                                    <smartFilterBar:ControlConfiguration key="ZCHANGED_BY" label="{i18n>ChangedBy}" visibleInAdvancedArea="false" />
+                                    <smartFilterBar:ControlConfiguration key="ZCHANGED_ON" label="{i18n>ChangedOn}" visibleInAdvancedArea="false" />
+                                    <smartFilterBar:ControlConfiguration key="ZCREATED_BY" label="{i18n>Createdby}" visibleInAdvancedArea="false" />
+                                    <smartFilterBar:ControlConfiguration key="ZCREATED_ON" label="{i18n>CreatedOn}" visibleInAdvancedArea="false" />
+                                    <smartFilterBar:ControlConfiguration key="ZDEL_BLOCK_ID" label="{i18n>DeliveryBlockId}" visibleInAdvancedArea="false" />
+                                    <smartFilterBar:ControlConfiguration key="ZDELIVERY_BLOCK_DESC" label="{i18n>DeliveryBlock}" visibleInAdvancedArea="false" />
+                                    <smartFilterBar:ControlConfiguration key="ZPOSTAL_CODE" label="{i18n>PostalCode}" visibleInAdvancedArea="false" />
+                                    <!--<smartFilterBar:ControlConfiguration key="ZREGION" label="{i18n>Street}" visibleInAdvancedArea="false"></smartFilterBar:ControlConfiguration>-->
+                                    <smartFilterBar:ControlConfiguration key="ZSYSTEM" label="{i18n>System}" visibleInAdvancedArea="false" />
+                                    <smartFilterBar:ControlConfiguration key="ZCUSTOMER_NAME" visible="false" />
+                                    <smartFilterBar:ControlConfiguration key="ZCUST_NUM" visible="false" />
+                                </smartFilterBar:controlConfiguration>
+                            </smartFilterBar:SmartFilterBar>
+                        </VBox>
+                    </VBox>
+                </f:content>
+            </f:DynamicPageHeader>
+        </f:header>
+        <f:content>
+            <VBox>
+                <VBox visible="false">
+                    <smartTable:SmartTable
+                        id="smartTable"
+                        smartVariant="__SVM02"
+                        persistencyKey="com.merckgroup.Moet_O2C_OrderCreation_UI5.SmartTable"
+                        enableAutoBinding="true"
+                        enableCustomFilter="false"
+                        entitySet="CustomerDetails"
+                        smartFilterId="sfbCustomerDetails"
+                        tableType="Table"
+                        useExportToExcel="true"
+                        useVariantManagement="true"
+                        useTablePersonalisation="true"
+                        header="{i18n>Customers}"
+                        showRowCount="true"
+                        exportType="UI5Client"
+                        initialise="onAfterSmartTableInitialize"
+                        beforeRebindTable="onBeforeRebindTable"
+                        showFullScreenButton="true"
+                        beforeExport="onBeforeDataExport"
+                        dataReceived="onDataReceived"
+                        ignoreFromPersonalisation="ZCUSTOMER_NAME,ZCUST_NUM"
+                        requestAtLeastFields="ZCUSTMR_NUM,ZDEL_BLOCK_ID"
+                        class="stable"
+                        initiallyVisibleFields=""
+                    >
+                        <smartTable:customToolbar>
+                            <OverflowToolbar design="Transparent">
+                                <ToolbarSpacer />
+                                <Button text="Download" icon="sap-icon://download" press="onExportAllData" class="ordbtn" />
+                                <Button icon="sap-icon://add" text="{i18n>AddCustomer}" class="ordbtn" press="onAddCMPress" />
+                            </OverflowToolbar>
+                        </smartTable:customToolbar>
+                        <table:Table id="atable" rowActionCount="2" fixedColumnCount="1" selectionMode="None">
+                            <table:columns>
+                                <table:Column hAlign="Begin" sortProperty="ZCUSTMR_NUM" width="9rem" filterProperty="ZCUSTMR_NUM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZCUSTMR_NUM", "leadingProperty":"ZCUSTMR_NUM", "sortProperty": "ZCUSTMR_NUM", "filterProperty": "ZCUSTMR_NUM"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>CustomerNumber}" />
+                                    <table:template>
+                                        <Text text="{ZCUSTMR_NUM}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column hAlign="Begin" sortProperty="ZSYSTEM" width="6rem" filterProperty="ZSYSTEM" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZSYSTEM", "leadingProperty":"ZSYSTEM", "sortProperty": "ZSYSTEM", "filterProperty": "ZSYSTEM"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>System}" />
+                                    <table:template>
+                                        <Text text="{= (${ZSYSTEM} === 'L') ? 'LEAN' : 'TEMPO'}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column filterProperty="ZNAME_1" width="9rem" sortProperty="ZNAME_1">
+                                    <Label text="{i18n>CustomerName}" />
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZNAME_1", "leadingProperty": "ZNAME_1"}' />
+                                    </table:customData>
+                                    <table:template>
+                                        <Text text="{ZNAME_1}" wrapping="true" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column hAlign="Begin" sortProperty="ZSTREET" width="6rem" filterProperty="ZSTREET" showFilterMenuEntry="true" showSortMenuEntry="true" visible="true">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZSTREET", "leadingProperty":"ZSTREET", "sortProperty": "ZSTREET", "filterProperty": "ZSTREET"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>Street}" />
+                                    <table:template>
+                                        <Text text="{ZSTREET}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column hAlign="Begin" sortProperty="ZREGION" width="5rem" filterProperty="ZREGION" showFilterMenuEntry="true" showSortMenuEntry="true" visible="true">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZREGION", "leadingProperty":"ZREGION", "sortProperty": "ZREGION", "filterProperty": "ZREGION"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>Region}" />
+                                    <table:template>
+                                        <Text text="{ZREGION}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column hAlign="Begin" sortProperty="ZCITY" width="6rem" filterProperty="ZCITY" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZCITY", "leadingProperty":"ZCITY", "sortProperty": "ZCITY", "filterProperty": "ZCITY"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>City}" />
+                                    <table:template>
+                                        <Text text="{ZCITY}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column hAlign="Begin" sortProperty="ZPOSTAL_CODE" width="7rem" filterProperty="ZPOSTAL_CODE" showFilterMenuEntry="true" showSortMenuEntry="true" visible="true">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZPOSTAL_CODE", "leadingProperty":"ZPOSTAL_CODE", "sortProperty": "ZPOSTAL_CODE", "filterProperty": "ZPOSTAL_CODE"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>PostalCode}" />
+                                    <table:template>
+                                        <Text text="{ZPOSTAL_CODE}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column hAlign="Begin" sortProperty="ZDELIVERY_BLOCK_DESC" width="7rem" filterProperty="ZDELIVERY_BLOCK_DESC" showFilterMenuEntry="true" showSortMenuEntry="true">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZDELIVERY_BLOCK_DESC", "leadingProperty":"ZDELIVERY_BLOCK_DESC", "sortProperty": "ZDELIVERY_BLOCK_DESC", "filterProperty": "ZDELIVERY_BLOCK_DESC"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>DeliveryBlock}" />
+                                    <table:template>
+                                        <Text text="{ZDELIVERY_BLOCK_DESC}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column hAlign="Begin" sortProperty="ZCREATED_BY" filterProperty="ZCREATED_BY" showFilterMenuEntry="true" showSortMenuEntry="true" visible="false">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZCREATED_BY", "leadingProperty":"ZCREATED_BY", "sortProperty": "ZCREATED_BY", "filterProperty": "ZCREATED_BY"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>Createdby}" />
+                                    <table:template>
+                                        <Text text="{ZCREATED_BY}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column hAlign="Begin" sortProperty="ZCENTRL_DEL_FLAG" filterProperty="ZCENTRL_DEL_FLAG" showFilterMenuEntry="true" showSortMenuEntry="true" visible="true">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZCENTRL_DEL_FLAG", "leadingProperty":"ZCENTRL_DEL_FLAG", "sortProperty": "ZCENTRL_DEL_FLAG", "filterProperty": "ZCENTRL_DEL_FLAG"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>FlagforDeletion}" />
+                                    <table:template>
+                                        <!--	<Text text="{ZCENTRL_DEL_FLAG}"/>-->
+                                        <Switch change="onUpdateCustomer" enabled="{= (${ZCENTRL_DEL_FLAG} === 'X') ? true : false }" type="AcceptReject" state="{= (${ZCENTRL_DEL_FLAG} === 'X') ? true : false }" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column hAlign="Begin" sortProperty="ZDEL_BLOCK_ID" filterProperty="ZDEL_BLOCK_ID" showFilterMenuEntry="true" showSortMenuEntry="true" visible="false">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZDEL_BLOCK_ID", "leadingProperty":"ZDEL_BLOCK_ID", "sortProperty": "ZDEL_BLOCK_ID", "filterProperty": "ZDEL_BLOCK_ID"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>DeliveryBlockId}" />
+                                    <table:template>
+                                        <Text text="{ZDEL_BLOCK_ID}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column hAlign="Center" sortProperty="ZCREATED_ON" width="8rem" showSortMenuEntry="true">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZCREATED_ON", "leadingProperty":"ZCREATED_ON", "sortProperty": "ZCREATED_ON"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>AssignMaterial}" />
+                                    <table:template class="addect">
+                                        <Button icon="sap-icon://add-employee" tooltip="{i18n>AssignMaterial}" press="onAssignMaterial" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column hAlign="Center" sortProperty="ZCHANGED_BY" width="8rem" showSortMenuEntry="true">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZCHANGED_BY", "leadingProperty":"ZCHANGED_BY", "sortProperty": "ZCHANGED_BY"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>AssignShipto}" />
+                                    <table:template class="addect">
+                                        <Button icon="sap-icon://shipping-status" tooltip="Assign Shipto" press="onShipPress" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column hAlign="Center" sortProperty="ZCHANGED_ON" width="8rem" showSortMenuEntry="true">
+                                    <table:customData>
+                                        <core:CustomData key="p13nData" value='\{"columnKey": "ZCHANGED_ON", "leadingProperty":"ZCHANGED_ON", "sortProperty": "ZCHANGED_ON"}' />
+                                    </table:customData>
+                                    <Label text="{i18n>AssignFTrade}" />
+                                    <table:template class="addect">
+                                        <Button icon="sap-icon://opportunity" tooltip="Assign FTrade" press="onFtradePress" />
+                                    </table:template>
+                                </table:Column>
+                            </table:columns>
+                            <table:rowActionTemplate>
+                                <table:RowAction>
+                                    <table:items>
+                                        <table:RowActionItem icon="sap-icon://edit" text="{i18n>Edit}" press="onCEditPress" />
+                                        <table:RowActionItem icon="sap-icon://delete" text="{i18n>Delete}" press="onDeleteCustPress" />
+                                    </table:items>
+                                </table:RowAction>
+                            </table:rowActionTemplate>
+                        </table:Table>
+                    </smartTable:SmartTable>
+                </VBox>
+                <VBox>
+                    <Table id="table" sticky="HeaderToolbar,ColumnHeaders" growing="true" growingThreshold="30" inset="false" items="{path: 'CDs>/CustomerDetails'}" class="sapFDynamicPageAlignContent stable" width="auto" visible="true">
+                        <headerToolbar>
+                            <Toolbar id="_IDGenToolbar1" design="Transparent">
+                                <Title id="_IDGenTitle3" text="Orders" level="H2" />
+                                <ToolbarSpacer id="_IDGenToolabarSpacer1" />
+                                <Button id="downloadButton" icon="sap-icon://excel-attachment" class="ordbtn" text="Export" press="employeeLeaveExport" tooltip="Download" ariaHasPopup="Dialog" />
+                                <Button text="Download" icon="sap-icon://download" press="onExportAllData" class="ordbtn" />
+                                <Button icon="sap-icon://add" text="{i18n>AddCustomer}" class="ordbtn" press="onAddCMPress" />
+                            </Toolbar>
+                        </headerToolbar>
+                        <columns>
+                            <Column id="_IDGenColuamn1">
+                                <Text id="_IDGenTexat1" text="Customer Number" />
+                            </Column>
+                            <Column id="_IDGenColaumn2">
+                                <Text id="_IDGenTeaxt2" text="System" />
+                            </Column>
+                            <Column id="_IDGenCoalumn3">
+                                <Text id="_IDGenTaext3" text="Customer name" />
+                            </Column>
+                            <Column id="_IDGenColaumn4">
+                                <Text id="_IDGenaText4" text="Street" />
+                            </Column>
+                            <Column id="_IDGenColaumn5">
+                                <Text id="_IDGenTaext5" text="Region" />
+                            </Column>
+                            <Column id="_IDGenColaumn6">
+                                <Text id="_IDGenaText6" text="City" />
+                            </Column>
+                            <Column id="_IDGenCoalumn7">
+                                <Text id="_IDGenasText7" text="Postal Code" />
+                            </Column>
+                            <Column id="_sIDGenCoalumn7">
+                                <Text id="_IsDGenaText7" text="Delivery Block" />
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem id="_IDGenColumnListItem1">
+                                <cells>
+                                    <Text id="_IDGenText11" text="{CDs>ZCUSTMR_NUM}" />
+                                    <Text id="_IDGenText12" text="{CDs>CA_SYSTEM}" />
+                                    <Text id="_IDGenText13" text="{CDs>ZNAME_1}" />
+                                    <Text id="_IDGenText14" text="{CDs>ZSTREET}" />
+                                    <Text id="_IDGenText15" text="{CDs>ZREGION}" />
+                                    <Text id="_IDGenText16" text="{CDs>ZCITY}" />
+                                    <Text id="_IDGenText17" text="{CDs>ZPOSTAL_CODE}" />
+                                    <Text id="_IDGenTgrfrext17" text="{CDs>ZDELIVERY_BLOCK_DESC}" />
+                                    <HBox>
+                                        <Button icon="sap-icon://edit" text="{i18n>Edit}" press="onCEditPress" />
+                                        <Button icon="sap-icon://delete" text="{i18n>Delete}" press="onDeleteCustPress" />
+                                    </HBox>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </VBox>
+            </VBox>
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>

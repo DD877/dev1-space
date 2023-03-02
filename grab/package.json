@@ -1,0 +1,12 @@
+{
+  "name": "grab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "grab.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node grab"
+  },
+  "author": "",
+  "license": "ISC"
+}

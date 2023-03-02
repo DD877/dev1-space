@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="YSD_MOET_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ItSocreate" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ItmNumber" />
+                    <PropertyRef Name="Matnr" />
+                </Key>
+                <Property Name="ItmNumber" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Item" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Field length 18" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="TargQty" Type="Edm.Decimal" Precision="13" Scale="3" sap:unicode="false" sap:label="Quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ItmCateg" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Item category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="GroupDev" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="FreeCharge" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Single-Character Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ysalesordercreatecondition" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ItmNumber" />
+                </Key>
+                <Property Name="ItmNumber" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Item" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="CondType" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Condition type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="CondValue" Type="Edm.Decimal" Precision="28" Scale="9" sap:unicode="false" sap:label="Currency amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code" />
+                <Property Name="Calctypcon" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Single-Character Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="GroupDev" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="FreeCharge" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Single-Character Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ysocreateGroupOut" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ItemNumber" />
+                </Key>
+                <Property Name="ItemNumber" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Item" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SoNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Sales document" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="GroupDev" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ysalesordersimulationResult" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SimulateDone" />
+                </Key>
+                <Property Name="SimulateDone" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Single-Character Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SoNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Sales document" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ysosimulateschdlineout" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ItemNo" />
+                </Key>
+                <Property Name="ItemNo" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Item" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SchedType" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Version Number Component" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SchedLine" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Schedule line" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ReqQty" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Net weight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ConfQty" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Net weight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ReqDate" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="QtyUnit" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Base Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure" />
+                <Property Name="ItemCat" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Item category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="FreeCharge" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Single-Character Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ycustomervalidation" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="IvCustomer" />
+                    <PropertyRef Name="IvShipParty" />
+                    <PropertyRef Name="IvSyssid" />
+                </Key>
+                <Property Name="IvCustomer" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="CustmStreet" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Street" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvShipParty" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ShipToStreet" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Street" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvSyssid" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="System ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ApplSystem" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Character Field Length = 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="CustomerNum" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="CustmName" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Name 1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="CustmCity" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="City" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="CustmRegion" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Region" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="DeletionFlag" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Deletion flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="PostalCode" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Postal Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ShipToParty" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ShipToPartyDesc" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ShipToCity" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="City" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ShipToRegion" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Region" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ShipToPostcode" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Postal Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Retmsg" Type="Edm.String" Nullable="false" MaxLength="225" sap:unicode="false" sap:label="Return Message" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ymaterialvalidation" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="IvMaterial" />
+                    <PropertyRef Name="IvSyssid" />
+                </Key>
+                <Property Name="IvMaterial" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Field length 18" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Message type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvPlant" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Code" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Message code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvSyssid" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="System ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Message" Type="Edm.String" Nullable="false" MaxLength="220" sap:unicode="false" sap:label="Message text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <NavigationProperty Name="Navmaterialvalidation" Relationship="YSD_MOET_SRV.ymaterialvalAssociation" FromRole="FromRole_ymaterialvalAssociation" ToRole="ToRole_ymaterialvalAssociation" />
+            </EntityType>
+            <EntityType Name="ymaterialvalidationResult" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Material" />
+                </Key>
+                <Property Name="Material" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Field length 18" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="MatnrDesc" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="BaseUnitMeas" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Base Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure" />
+                <Property Name="MatnrExist" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Single-Character Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ysaleAreaInput" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="IvCustomer" />
+                    <PropertyRef Name="IvSyssid" />
+                </Key>
+                <Property Name="IvCustomer" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvSyssid" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="System ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <NavigationProperty Name="NavsalesArea" Relationship="YSD_MOET_SRV.ysalesAreaAssociation" FromRole="FromRole_ysalesAreaAssociation" ToRole="ToRole_ysalesAreaAssociation" />
+            </EntityType>
+            <EntityType Name="ysalesAreaOut" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Customer" />
+                </Key>
+                <Property Name="Customer" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Salesorg" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Sales Org." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Distrchn" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Distr. Channel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Division" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Division" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ysalesAreaRetMsg" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Message" />
+                    <PropertyRef Name="LogMsgNo" />
+                </Key>
+                <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Message type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Code" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Message code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Message" Type="Edm.String" Nullable="false" MaxLength="220" sap:unicode="false" sap:label="Message text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="LogNo" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Log number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="LogMsgNo" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Message no." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="MessageV1" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="MessageV2" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="MessageV3" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="MessageV4" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="yminorderInput" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="IvCustomer" />
+                    <PropertyRef Name="IvDisbchnl" />
+                    <PropertyRef Name="IvDivision" />
+                    <PropertyRef Name="IvMaterial" />
+                    <PropertyRef Name="IvSalesorg" />
+                    <PropertyRef Name="IvSyssid" />
+                </Key>
+                <Property Name="IvCustomer" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvDisbchnl" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Distr. Channel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvDivision" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Division" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvMaterial" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Field length 18" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvSalesorg" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Sales Org." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvSyssid" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="System ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Message Class" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Message" Type="Edm.String" Nullable="false" MaxLength="220" sap:unicode="false" sap:label="Message text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="EvMinOrder" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="EvPalletQty" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ItSosimulate" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Matnr" />
+                    <PropertyRef Name="ItmNumber" />
+                </Key>
+                <Property Name="ZFROZEN_PERIOD" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Two-digit no." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ZTRGT_QTYUOM" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Base Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure" />
+                <Property Name="ZREQ_DLVRYDAT" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ZPAL_QUAN" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ZMIN_ORD_QTY" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ZGRP_DEVLPR" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ZFOC_SMPL" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Item category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ZDISCNT" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="R/2 table" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ZALT_UOM" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Base Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure" />
+                <Property Name="UNITPC" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Base Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure" />
+                <Property Name="TargQty" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="NetQty" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Field length 18" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="MATIND" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Single-Character Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ItmNumber" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Item" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ItemCateg" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Item category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="DocType" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="3-Byte field" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="CondValue" Type="Edm.Decimal" Nullable="false" Precision="28" Scale="9" sap:unicode="false" sap:label="Currency amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <NavigationProperty Name="NavsosimulateResult" Relationship="YSD_MOET_SRV.ysosimulateResultAssociation" FromRole="FromRole_ysosimulateResultAssociation" ToRole="ToRole_ysosimulateResultAssociation" />
+            </EntityType>
+            <EntityType Name="ysalesordersimulateNetVal" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ItmNumber" />
+                </Key>
+                <Property Name="ItmNumber" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Item" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SchedType" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Version Number Component" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ZFROZEN_PERIOD" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Two-digit no." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Field length 18" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ZMATRL_DESC" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ItemNetval" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Field length 18" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="NetQty" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="3" sap:unicode="false" sap:label="Order quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ZTRGT_QTY" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ZTRGT_QTYUOM" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Base Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure" />
+                <Property Name="ZALT_UOM" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Base Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure" />
+                <Property Name="ZREQ_DLVRYDAT" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ZFOC_SMPL" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Item category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="UNITPC" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Base Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure" />
+                <Property Name="ZDISCNT" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="R/2 table" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ZGRP_DEVLPR" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Doc. currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code" />
+                <Property Name="ItemCat" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Item category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="FreeCharge_Ind" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Single-Character Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ZPAL_QUAN" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ZMIN_ORD_QTY" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ysosimulatescheduline" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ItmNumber" />
+                    <PropertyRef Name="ReqQty" />
+                </Key>
+                <Property Name="ItmNumber" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Item" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SchedLine" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Schedule line" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ReqQty" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Net weight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SchedType" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Version Number Component" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ysalesordersimulateRet" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id" />
+                    <PropertyRef Name="Number" />
+                </Key>
+                <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Message type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Message Class" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Number" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Message number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Message" Type="Edm.String" Nullable="false" MaxLength="220" sap:unicode="false" sap:label="Message text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="LogNo" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Log number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="LogMsgNo" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Message no." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="MessageV1" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="MessageV2" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="MessageV3" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="MessageV4" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Parameter" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="Parameter Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Row" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Parameter line" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Field" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Field name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="System" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Logical system" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ysalesordersimulationInput" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="IvDistchanl" />
+                    <PropertyRef Name="IvDivision" />
+                    <PropertyRef Name="IvSalesorg" />
+                    <PropertyRef Name="IvShipParty" />
+                    <PropertyRef Name="IvSyssid" />
+                </Key>
+                <Property Name="IvCurrency" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Doc. currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code" />
+                <Property Name="IvCustomer" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvHdrCondVal" Type="Edm.Decimal" Nullable="false" Precision="28" Scale="9" sap:unicode="false" sap:label="Currency amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvDistchanl" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Distr. Channel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvDivision" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Division" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvReqDateH" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvSalesorg" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Sales Org." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvShipParty" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvSyssid" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="System ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IVHDRNETVAL" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Header Net Value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <NavigationProperty Name="NavsosimulateNetval" Relationship="YSD_MOET_SRV.ysosimulateNetAssociation" FromRole="FromRole_ysosimulateNetAssociation" ToRole="ToRole_ysosimulateNetAssociation" />
+                <NavigationProperty Name="Navsosimulate" Relationship="YSD_MOET_SRV.ysosimulateAssociation" FromRole="FromRole_ysosimulateAssociation" ToRole="ToRole_ysosimulateAssociation" />
+                <NavigationProperty Name="Navsosimulateschedlout" Relationship="YSD_MOET_SRV.ysosimulateSchdloutAssocaition" FromRole="FromRole_ysosimulateSchdloutAssocaition" ToRole="ToRole_ysosimulateSchdloutAssocaition" />
+                <NavigationProperty Name="Navsosimulatescheduline" Relationship="YSD_MOET_SRV.ysosimulatescheduleAssociation" FromRole="FromRole_ysosimulatescheduleAssociation" ToRole="ToRole_ysosimulatescheduleAssociation" />
+                <NavigationProperty Name="NavsosimulateReturn" Relationship="YSD_MOET_SRV.ysosimulateRetAssociation" FromRole="FromRole_ysosimulateRetAssociation" ToRole="ToRole_ysosimulateRetAssociation" />
+            </EntityType>
+            <EntityType Name="YSOCREATEinput" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="IvSyssid" />
+                    <PropertyRef Name="IvSoldParty" />
+                    <PropertyRef Name="IvSalesorg" />
+                    <PropertyRef Name="IvDivision" />
+                    <PropertyRef Name="IvDistchanl" />
+                </Key>
+                <Property Name="IvCurrency" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code" />
+                <Property Name="IvTextLine" Type="Edm.String" Nullable="false" MaxLength="132" sap:unicode="false" sap:label="Text Line" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvTendFlag" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Single-Character Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvSyssid" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="System ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvSoldParty" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvShipParty" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvSalesorg" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Sales Org." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvReqdt" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="IvPurchdt" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="PO Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="IvPomethod" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Not More Closely Defined Area, Possibly Used for Patchlevels" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvOrdReason" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="3-Byte field" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Ivdoctype" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Sales doc. type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvDlvBlock" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Version Number Component" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvDivision" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Division" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvDistchanl" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Distr. Channel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvCustRef" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Character Field of Length 12" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IvCondValue" Type="Edm.Decimal" Precision="28" Scale="9" sap:unicode="false" sap:label="Currency amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="FtradeDesc" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Ftrade" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="EvSono" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Sales Order number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <NavigationProperty Name="navSoinputreturn" Relationship="YSD_MOET_SRV.ysocreatereturnassociation" FromRole="FromRole_ysocreatereturnassociation" ToRole="ToRole_ysocreatereturnassociation" />
+                <NavigationProperty Name="Navsocrtescheduleline" Relationship="YSD_MOET_SRV.ysocrtschedulelineAssociation" FromRole="FromRole_ysocrtschedulelineAssociation" ToRole="ToRole_ysocrtschedulelineAssociation" />
+                <NavigationProperty Name="ysocrtgroupoutNav" Relationship="YSD_MOET_SRV.ysocreateGroupOutput" FromRole="FromRole_ysocreateGroupOutput" ToRole="ToRole_ysocreateGroupOutput" />
+                <NavigationProperty Name="NavSocrtCondition" Relationship="YSD_MOET_SRV.ysocreateCondition" FromRole="FromRole_ysocreateCondition" ToRole="ToRole_ysocreateCondition" />
+                <NavigationProperty Name="NavSoheaditem" Relationship="YSD_MOET_SRV.ysocreateasociation" FromRole="FromRole_ysocreateasociation" ToRole="ToRole_ysocreateasociation" />
+            </EntityType>
+            <EntityType Name="YSOCREATEoutput" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SoNumber" />
+                </Key>
+                <Property Name="SimulateDone" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Single-Character Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SoNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Sales document" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="HdrNetvalue" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 Characters" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ysocreatescheduleline" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ItmNumber" />
+                </Key>
+                <Property Name="ItmNumber" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Item" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ItemCateg" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Item category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SchedLine" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Schedule line" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ReqQty" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Net weight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SchedType" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Version Number Component" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="FirstDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="GroupDev" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="FreeCharge" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Single-Character Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ysalesordersimulate" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="IV_CUST" />
+                </Key>
+                <Property Name="IV_CUST" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ysoschedulelines" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Unit" />
+                    <PropertyRef Name="Sysid" />
+                    <PropertyRef Name="salesorg" />
+                    <PropertyRef Name="ReqQty" />
+                    <PropertyRef Name="ReqDate" />
+                    <PropertyRef Name="Material" />
+                    <PropertyRef Name="division" />
+                    <PropertyRef Name="distchnl" />
+                    <PropertyRef Name="customer" />
+                </Key>
+                <Property Name="Unit" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Unit of Measure" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure" />
+                <Property Name="Sysid" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 Characters" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="salesorg" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Sales Org." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Retmsg" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Char255" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ReqQty" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Requirement qty" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ReqDate" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="Reqmts date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Material" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Material" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="division" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Division" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="distchnl" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Distr. Channel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="customer" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Customer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ComQty" Type="Edm.Decimal" Precision="13" Scale="3" sap:unicode="false" sap:label="Committed Qty" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ComDate" Type="Edm.DateTime" Precision="0" sap:unicode="false" sap:label="Committed date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ysystemIdentification" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Yydesc" />
+                </Key>
+                <Property Name="Yylow" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Low Level" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Yydesc" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <Association Name="ysosimulateResultAssociation" sap:content-version="1">
+                <End Type="YSD_MOET_SRV.ItSosimulate" Multiplicity="1" Role="FromRole_ysosimulateResultAssociation" />
+                <End Type="YSD_MOET_SRV.ysalesordersimulationResult" Multiplicity="1" Role="ToRole_ysosimulateResultAssociation" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ysosimulateResultAssociation">
+                        <PropertyRef Name="Matnr" />
+                    </Principal>
+                    <Dependent Role="ToRole_ysosimulateResultAssociation">
+                        <PropertyRef Name="SimulateDone" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ysosimulateRetAssociation" sap:content-version="1">
+                <End Type="YSD_MOET_SRV.ysalesordersimulationInput" Multiplicity="1" Role="FromRole_ysosimulateRetAssociation" />
+                <End Type="YSD_MOET_SRV.ysalesordersimulateRet" Multiplicity="*" Role="ToRole_ysosimulateRetAssociation" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ysosimulateRetAssociation">
+                        <PropertyRef Name="IvDistchanl" />
+                        <PropertyRef Name="IvDivision" />
+                        <PropertyRef Name="IvSalesorg" />
+                        <PropertyRef Name="IvShipParty" />
+                        <PropertyRef Name="IvSyssid" />
+                    </Principal>
+                    <Dependent Role="ToRole_ysosimulateRetAssociation">
+                        <PropertyRef Name="Message" />
+                        <PropertyRef Name="Type" />
+                        <PropertyRef Name="Id" />
+                        <PropertyRef Name="Number" />
+                        <PropertyRef Name="Message" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ysosimulatescheduleAssociation" sap:content-version="1">
+                <End Type="YSD_MOET_SRV.ysalesordersimulationInput" Multiplicity="1" Role="FromRole_ysosimulatescheduleAssociation" />
+                <End Type="YSD_MOET_SRV.ysosimulatescheduline" Multiplicity="*" Role="ToRole_ysosimulatescheduleAssociation" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ysosimulatescheduleAssociation">
+                        <PropertyRef Name="IvDistchanl" />
+                        <PropertyRef Name="IvDivision" />
+                        <PropertyRef Name="IvSalesorg" />
+                        <PropertyRef Name="IvShipParty" />
+                        <PropertyRef Name="IvSyssid" />
+                    </Principal>
+                    <Dependent Role="ToRole_ysosimulatescheduleAssociation">
+                        <PropertyRef Name="ItmNumber" />
+                        <PropertyRef Name="SchedLine" />
+                        <PropertyRef Name="ItmNumber" />
+                        <PropertyRef Name="SchedLine" />
+                        <PropertyRef Name="ItmNumber" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ysosimulateSchdloutAssocaition" sap:content-version="1">
+                <End Type="YSD_MOET_SRV.ysalesordersimulationInput" Multiplicity="1" Role="FromRole_ysosimulateSchdloutAssocaition" />
+                <End Type="YSD_MOET_SRV.ysosimulateschdlineout" Multiplicity="*" Role="ToRole_ysosimulateSchdloutAssocaition" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ysosimulateSchdloutAssocaition">
+                        <PropertyRef Name="IvShipParty" />
+                        <PropertyRef Name="IvSalesorg" />
+                        <PropertyRef Name="IvDivision" />
+                        <PropertyRef Name="IvDistchanl" />
+                        <PropertyRef Name="IvSyssid" />
+                    </Principal>
+                    <Dependent Role="ToRole_ysosimulateSchdloutAssocaition">
+                        <PropertyRef Name="ItemCat" />
+                        <PropertyRef Name="SchedLine" />
+                        <PropertyRef Name="ItemNo" />
+                        <PropertyRef Name="ItemCat" />
+                        <PropertyRef Name="ItemNo" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ysosimulateAssociation" sap:content-version="1">
+                <End Type="YSD_MOET_SRV.ysalesordersimulationInput" Multiplicity="1" Role="FromRole_ysosimulateAssociation" />
+                <End Type="YSD_MOET_SRV.ItSosimulate" Multiplicity="*" Role="ToRole_ysosimulateAssociation" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ysosimulateAssociation">
+                        <PropertyRef Name="IvSyssid" />
+                        <PropertyRef Name="IvShipParty" />
+                        <PropertyRef Name="IvSalesorg" />
+                        <PropertyRef Name="IvDivision" />
+                        <PropertyRef Name="IvDistchanl" />
+                    </Principal>
+                    <Dependent Role="ToRole_ysosimulateAssociation">
+                        <PropertyRef Name="ItemCateg" />
+                        <PropertyRef Name="ItmNumber" />
+                        <PropertyRef Name="Matnr" />
+                        <PropertyRef Name="ItmNumber" />
+                        <PropertyRef Name="ItemCateg" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ysosimulateNetAssociation" sap:content-version="1">
+                <End Type="YSD_MOET_SRV.ysalesordersimulationInput" Multiplicity="1" Role="FromRole_ysosimulateNetAssociation" />
+                <End Type="YSD_MOET_SRV.ysalesordersimulateNetVal" Multiplicity="*" Role="ToRole_ysosimulateNetAssociation" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ysosimulateNetAssociation">
+                        <PropertyRef Name="IvSyssid" />
+                        <PropertyRef Name="IvShipParty" />
+                        <PropertyRef Name="IvSalesorg" />
+                        <PropertyRef Name="IvDivision" />
+                        <PropertyRef Name="IvDistchanl" />
+                    </Principal>
+                    <Dependent Role="ToRole_ysosimulateNetAssociation">
+                        <PropertyRef Name="ItemCat" />
+                        <PropertyRef Name="Matnr" />
+                        <PropertyRef Name="ItmNumber" />
+                        <PropertyRef Name="Matnr" />
+                        <PropertyRef Name="ItmNumber" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ysocreateCondition" sap:content-version="1">
+                <End Type="YSD_MOET_SRV.YSOCREATEinput" Multiplicity="1" Role="FromRole_ysocreateCondition" />
+                <End Type="YSD_MOET_SRV.ysalesordercreatecondition" Multiplicity="*" Role="ToRole_ysocreateCondition" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ysocreateCondition">
+                        <PropertyRef Name="IvSalesorg" />
+                        <PropertyRef Name="IvDistchanl" />
+                        <PropertyRef Name="IvDivision" />
+                        <PropertyRef Name="IvSoldParty" />
+                        <PropertyRef Name="IvSyssid" />
+                    </Principal>
+                    <Dependent Role="ToRole_ysocreateCondition">
+                        <PropertyRef Name="ItmNumber" />
+                        <PropertyRef Name="ItmNumber" />
+                        <PropertyRef Name="ItmNumber" />
+                        <PropertyRef Name="CondType" />
+                        <PropertyRef Name="ItmNumber" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ysocreateGroupOutput" sap:content-version="1">
+                <End Type="YSD_MOET_SRV.YSOCREATEinput" Multiplicity="1" Role="FromRole_ysocreateGroupOutput" />
+                <End Type="YSD_MOET_SRV.ysocreateGroupOut" Multiplicity="*" Role="ToRole_ysocreateGroupOutput" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ysocreateGroupOutput">
+                        <PropertyRef Name="IvDistchanl" />
+                        <PropertyRef Name="IvDivision" />
+                        <PropertyRef Name="IvSoldParty" />
+                        <PropertyRef Name="IvSyssid" />
+                        <PropertyRef Name="IvSalesorg" />
+                    </Principal>
+                    <Dependent Role="ToRole_ysocreateGroupOutput">
+                        <PropertyRef Name="ItemNumber" />
+                        <PropertyRef Name="GroupDev" />
+                        <PropertyRef Name="SoNumber" />
+                        <PropertyRef Name="ItemNumber" />
+                        <PropertyRef Name="SoNumber" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ysocrtschedulelineAssociation" sap:content-version="1">
+                <End Type="YSD_MOET_SRV.YSOCREATEinput" Multiplicity="1" Role="FromRole_ysocrtschedulelineAssociation" />
+                <End Type="YSD_MOET_SRV.ysocreatescheduleline" Multiplicity="*" Role="ToRole_ysocrtschedulelineAssociation" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ysocrtschedulelineAssociation">
+                        <PropertyRef Name="IvSyssid" />
+                        <PropertyRef Name="IvSoldParty" />
+                        <PropertyRef Name="IvDivision" />
+                        <PropertyRef Name="IvDistchanl" />
+                        <PropertyRef Name="IvSalesorg" />
+                    </Principal>
+                    <Dependent Role="ToRole_ysocrtschedulelineAssociation">
+                        <PropertyRef Name="ItmNumber" />
+                        <PropertyRef Name="SchedLine" />
+                        <PropertyRef Name="SchedLine" />
+                        <PropertyRef Name="ItmNumber" />
+                        <PropertyRef Name="SchedLine" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ysocreatereturnassociation" sap:content-version="1">
+                <End Type="YSD_MOET_SRV.YSOCREATEinput" Multiplicity="1" Role="FromRole_ysocreatereturnassociation" />
+                <End Type="YSD_MOET_SRV.ysalesordersimulateRet" Multiplicity="*" Role="ToRole_ysocreatereturnassociation" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ysocreatereturnassociation">
+                        <PropertyRef Name="IvSyssid" />
+                        <PropertyRef Name="IvSoldParty" />
+                        <PropertyRef Name="IvDivision" />
+                        <PropertyRef Name="IvDistchanl" />
+                        <PropertyRef Name="IvSalesorg" />
+                    </Principal>
+                    <Dependent Role="ToRole_ysocreatereturnassociation">
+                        <PropertyRef Name="Message" />
+                        <PropertyRef Name="Number" />
+                        <PropertyRef Name="MessageV1" />
+                        <PropertyRef Name="LogMsgNo" />
+                        <PropertyRef Name="Field" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ysocreateasociation" sap:content-version="1">
+                <End Type="YSD_MOET_SRV.YSOCREATEinput" Multiplicity="1" Role="FromRole_ysocreateasociation" />
+                <End Type="YSD_MOET_SRV.ItSocreate" Multiplicity="*" Role="ToRole_ysocreateasociation" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ysocreateasociation">
+                        <PropertyRef Name="IvSyssid" />
+                        <PropertyRef Name="IvSoldParty" />
+                        <PropertyRef Name="IvDivision" />
+                        <PropertyRef Name="IvDistchanl" />
+                        <PropertyRef Name="IvSalesorg" />
+                    </Principal>
+                    <Dependent Role="ToRole_ysocreateasociation">
+                        <PropertyRef Name="ItmNumber" />
+                        <PropertyRef Name="Matnr" />
+                        <PropertyRef Name="ItmNumber" />
+                        <PropertyRef Name="Matnr" />
+                        <PropertyRef Name="ItmNumber" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ysalesAreaAssociation" sap:content-version="1">
+                <End Type="YSD_MOET_SRV.ysaleAreaInput" Multiplicity="1" Role="FromRole_ysalesAreaAssociation" />
+                <End Type="YSD_MOET_SRV.ysalesAreaOut" Multiplicity="*" Role="ToRole_ysalesAreaAssociation" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ysalesAreaAssociation">
+                        <PropertyRef Name="IvCustomer" />
+                        <PropertyRef Name="IvSyssid" />
+                    </Principal>
+                    <Dependent Role="ToRole_ysalesAreaAssociation">
+                        <PropertyRef Name="Customer" />
+                        <PropertyRef Name="Salesorg" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ymaterialvalAssociation" sap:content-version="1">
+                <End Type="YSD_MOET_SRV.ymaterialvalidation" Multiplicity="1" Role="FromRole_ymaterialvalAssociation" />
+                <End Type="YSD_MOET_SRV.ymaterialvalidationResult" Multiplicity="1" Role="ToRole_ymaterialvalAssociation" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ymaterialvalAssociation">
+                        <PropertyRef Name="IvSyssid" />
+                        <PropertyRef Name="IvMaterial" />
+                    </Principal>
+                    <Dependent Role="ToRole_ymaterialvalAssociation">
+                        <PropertyRef Name="MatnrDesc" />
+                        <PropertyRef Name="Material" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="YSD_MOET_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ItSocreateSet" EntityType="YSD_MOET_SRV.ItSocreate" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ysalesordercreateconditionSet" EntityType="YSD_MOET_SRV.ysalesordercreatecondition" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ysocreateGroupOutSet" EntityType="YSD_MOET_SRV.ysocreateGroupOut" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ysalesordersimulationResultSet" EntityType="YSD_MOET_SRV.ysalesordersimulationResult" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ysosimulateschdlineoutSet" EntityType="YSD_MOET_SRV.ysosimulateschdlineout" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ycustomervalidationSet" EntityType="YSD_MOET_SRV.ycustomervalidation" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ymaterialvalidationSet" EntityType="YSD_MOET_SRV.ymaterialvalidation" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ymaterialvalidationResultSet" EntityType="YSD_MOET_SRV.ymaterialvalidationResult" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ysaleAreaInputSet" EntityType="YSD_MOET_SRV.ysaleAreaInput" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ysalesAreaOutSet" EntityType="YSD_MOET_SRV.ysalesAreaOut" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ysalesAreaRetMsgSet" EntityType="YSD_MOET_SRV.ysalesAreaRetMsg" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="yminorderInputSet" EntityType="YSD_MOET_SRV.yminorderInput" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ItSosimulateSet" EntityType="YSD_MOET_SRV.ItSosimulate" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ysalesordersimulateNetValSet" EntityType="YSD_MOET_SRV.ysalesordersimulateNetVal" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ysosimulateschedulineSet" EntityType="YSD_MOET_SRV.ysosimulatescheduline" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ysalesordersimulateRetSet" EntityType="YSD_MOET_SRV.ysalesordersimulateRet" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ysalesordersimulationInputSet" EntityType="YSD_MOET_SRV.ysalesordersimulationInput" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="YSOCREATEinputSet" EntityType="YSD_MOET_SRV.YSOCREATEinput" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="YSOCREATEoutputSet" EntityType="YSD_MOET_SRV.YSOCREATEoutput" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ysocreateschedulelineSet" EntityType="YSD_MOET_SRV.ysocreatescheduleline" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ysalesordersimulateCollection" EntityType="YSD_MOET_SRV.ysalesordersimulate" sap:content-version="1" />
+                <EntitySet Name="ysoschedulelinesSet" EntityType="YSD_MOET_SRV.ysoschedulelines" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ysystemIdentificationSet" EntityType="YSD_MOET_SRV.ysystemIdentification" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <AssociationSet Name="ysocreateConditionSet" Association="YSD_MOET_SRV.ysocreateCondition" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="YSOCREATEinputSet" Role="FromRole_ysocreateCondition" />
+                    <End EntitySet="ysalesordercreateconditionSet" Role="ToRole_ysocreateCondition" />
+                </AssociationSet>
+                <AssociationSet Name="ysocrtschedulelineAssociationSet" Association="YSD_MOET_SRV.ysocrtschedulelineAssociation" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="YSOCREATEinputSet" Role="FromRole_ysocrtschedulelineAssociation" />
+                    <End EntitySet="ysocreateschedulelineSet" Role="ToRole_ysocrtschedulelineAssociation" />
+                </AssociationSet>
+                <AssociationSet Name="ysocreateasociationSet" Association="YSD_MOET_SRV.ysocreateasociation" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="YSOCREATEinputSet" Role="FromRole_ysocreateasociation" />
+                    <End EntitySet="ItSocreateSet" Role="ToRole_ysocreateasociation" />
+                </AssociationSet>
+                <AssociationSet Name="ysosimulateNetAssociationSet" Association="YSD_MOET_SRV.ysosimulateNetAssociation" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ysalesordersimulationInputSet" Role="FromRole_ysosimulateNetAssociation" />
+                    <End EntitySet="ysalesordersimulateNetValSet" Role="ToRole_ysosimulateNetAssociation" />
+                </AssociationSet>
+                <AssociationSet Name="ysosimulateSchdloutAssocaitionSet" Association="YSD_MOET_SRV.ysosimulateSchdloutAssocaition" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ysalesordersimulationInputSet" Role="FromRole_ysosimulateSchdloutAssocaition" />
+                    <End EntitySet="ysosimulateschdlineoutSet" Role="ToRole_ysosimulateSchdloutAssocaition" />
+                </AssociationSet>
+                <AssociationSet Name="ysosimulateResultAssociationSet" Association="YSD_MOET_SRV.ysosimulateResultAssociation" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ItSosimulateSet" Role="FromRole_ysosimulateResultAssociation" />
+                    <End EntitySet="ysalesordersimulationResultSet" Role="ToRole_ysosimulateResultAssociation" />
+                </AssociationSet>
+                <AssociationSet Name="ymaterialvalAssociationSet" Association="YSD_MOET_SRV.ymaterialvalAssociation" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ymaterialvalidationSet" Role="FromRole_ymaterialvalAssociation" />
+                    <End EntitySet="ymaterialvalidationResultSet" Role="ToRole_ymaterialvalAssociation" />
+                </AssociationSet>
+                <AssociationSet Name="ysocreateGroupOutputSet" Association="YSD_MOET_SRV.ysocreateGroupOutput" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="YSOCREATEinputSet" Role="FromRole_ysocreateGroupOutput" />
+                    <End EntitySet="ysocreateGroupOutSet" Role="ToRole_ysocreateGroupOutput" />
+                </AssociationSet>
+                <AssociationSet Name="ysocreatereturnassociationSet" Association="YSD_MOET_SRV.ysocreatereturnassociation" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="YSOCREATEinputSet" Role="FromRole_ysocreatereturnassociation" />
+                    <End EntitySet="ysalesordersimulateRetSet" Role="ToRole_ysocreatereturnassociation" />
+                </AssociationSet>
+                <AssociationSet Name="ysosimulatescheduleAssociationSet" Association="YSD_MOET_SRV.ysosimulatescheduleAssociation" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ysalesordersimulationInputSet" Role="FromRole_ysosimulatescheduleAssociation" />
+                    <End EntitySet="ysosimulateschedulineSet" Role="ToRole_ysosimulatescheduleAssociation" />
+                </AssociationSet>
+                <AssociationSet Name="ysosimulateAssociationSet" Association="YSD_MOET_SRV.ysosimulateAssociation" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ysalesordersimulationInputSet" Role="FromRole_ysosimulateAssociation" />
+                    <End EntitySet="ItSosimulateSet" Role="ToRole_ysosimulateAssociation" />
+                </AssociationSet>
+                <AssociationSet Name="ysalesAreaAssociationSet" Association="YSD_MOET_SRV.ysalesAreaAssociation" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ysaleAreaInputSet" Role="FromRole_ysalesAreaAssociation" />
+                    <End EntitySet="ysalesAreaOutSet" Role="ToRole_ysalesAreaAssociation" />
+                </AssociationSet>
+                <AssociationSet Name="ysosimulateRetAssociationSet" Association="YSD_MOET_SRV.ysosimulateRetAssociation" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ysalesordersimulationInputSet" Role="FromRole_ysosimulateRetAssociation" />
+                    <End EntitySet="ysalesordersimulateRetSet" Role="ToRole_ysosimulateRetAssociation" />
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link rel="self" href="https://moeto2cordercreationui5-aa4d355e1.dispatcher.hana.ondemand.com/sap/opu/odata/sap/YSD_MOET_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom" />
+            <atom:link rel="latest-version" href="https://moeto2cordercreationui5-aa4d355e1.dispatcher.hana.ondemand.com/sap/opu/odata/sap/YSD_MOET_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom" />
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

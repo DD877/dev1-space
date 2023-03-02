@@ -1,0 +1,31 @@
+{
+    "usermaint":[
+        {
+            "id": "ASD12",
+            "name":"Test",
+            "Feildname":"User email",
+            "oldvalue": "ADMIN",
+            "newvale":"CUST",
+            "CHANGED_BY": 50001210202,
+            "LogTime":1652112432071
+        },
+        {
+            "id": "GFKJF9J",
+            "name":"Test",
+            "Feildname":"User Id",
+            "oldvalue": "CUST",
+            "newvale":"CUST",
+            "CHANGED_BY": 50001210202,
+            "LogTime":1652112432071
+        },
+        {
+            "id": "ASD12",
+            "name":"Test",
+            "Feildname":"User emai",
+            "oldvalue": "ACTV",
+            "newvale":"CUST",
+            "CHANGED_BY": 50001210202,
+            "LogTime":1652112432071
+        }
+    ]
+}

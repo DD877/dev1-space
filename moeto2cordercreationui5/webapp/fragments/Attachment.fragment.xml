@@ -1,0 +1,37 @@
+<core:FragmentDefinition xmlns:mvc="sap.ui.core.mvc" xmlns:forms="sap.ui.layout.form" xmlns:smartForm="sap.ui.comp.smartform"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.m" xmlns:core="sap.ui.core">
+	<!--  Dialog to Upload Specification Documents -->
+	<Dialog title="{RFileModel>/SpecTitle}" afterClose="fCloseCreateScreen" contentHeight="320px" contentWidth="480px">
+		<content>
+			<UploadCollection multiple="false" change="onAttachmentChange"
+				fileDeleted="onFileDeleted" filenameLengthExceed="onFilenameLengthExceed" fileRenamed="onFileRenamed" fileSizeExceed="onFileSizeExceed"
+				selectionChange="onSelectionChange" typeMissmatch="onTypeMissmatch" uploadComplete="onUploadComplete" fileType="pdf"
+				beforeUploadStarts="onBeforeUploadStarts" uploadTerminated="onUploadTerminated" uploadEnabled="{= ${RFileModel>/Local/showUpload} &amp;&amp; ${RFileModel>/Local/EditMode}}"
+				items="{ path: 'RFileModel>/attachments', templateShareable: false }" >
+				<toolbar>
+					<OverflowToolbar>
+						<Title text="{RFileModel>/AttachmentTitle}"/>
+						<ToolbarSpacer/>
+						<UploadCollectionToolbarPlaceholder/>
+					</OverflowToolbar>
+				</toolbar>
+				<items>
+					<UploadCollectionItem documentId="{RFileModel>documentId}" fileName="{RFileModel>fileName}" mimeType="{RFileModel>mimeType}"
+						thumbnailUrl="{RFileModel>thumbnailUrl}" url="{RFileModel>url}" enableEdit="false" enableDelete="true" visibleDelete="{=${RFileModel>/Local/EditMode}}"
+						visibleEdit="false" attributes="{path : 'RFileModel>attributes', templateShareable : false}">
+						<attributes>
+							<ObjectAttribute title="{RFileModel>title}" text="{ parts: [ 'RFileModel>text'], formatter : '.formatter.formatAttribute' }"
+								active="false"/>
+						</attributes>
+					</UploadCollectionItem>
+				</items>
+			</UploadCollection>
+
+		</content>
+		<buttons>
+		
+			<Button text="{i18n>TEXT_OK_BTN}" press="onPressAttachmentOkButton" type="Default"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

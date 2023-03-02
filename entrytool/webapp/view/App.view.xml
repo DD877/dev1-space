@@ -1,0 +1,51 @@
+<mvc:View height="100%" controllerName="entrytool.controller.App" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt">
+    <tnt:ToolPage id="App" class="sapUiDemoToolPage sapUiSizeCompact">
+        <tnt:header>
+            <tnt:ToolHeader>
+                <Button id="sideNavigationToggleButton" icon="sap-icon://menu2" class="tog" type="Transparent" press=".onSideNavButtonPress" tooltip="{i18n>collpaseMenuButtonText}">
+                    <layoutData>
+                        <OverflowToolbarLayoutData priority="NeverOverflow" />
+                    </layoutData>
+                </Button>
+                <Image src="/img/cg.png" backgroundSize="cover" densityAware="false" width="4%" class="imgpadd" />
+                <ToolbarSpacer />
+                <Title class="mtitle" text="{i18n>appTitle}" level="H2" />
+                <ToolbarSpacer />
+                <Button tooltip="Place an Order" visible="{VisiableJson>/placeVis}" id="plord" icon="sap-icon://create" type="Emphasized" class="sapUiSmallMarginEnd ordbtn" text="Place an Order" press="handlePressOpenNewOrderPage" />
+                <Button id="userButton" text="{path:'i18n>userName',formatter:'.getUserInfo'}" type="Transparent" class="txtBtn" press="onUserInfoPress">
+                    <layoutData>
+                        <OverflowToolbarLayoutData closeOverflowOnInteraction="false" />
+                    </layoutData>
+                </Button>
+            </tnt:ToolHeader>
+        </tnt:header>
+        <tnt:sideContent>
+            <tnt:SideNavigation expanded="true" selectedKey="{side>/selectedKey}">
+                <tnt:NavigationList id="navListId" items="{
+						path: 'side>/navigation',
+						templateShareable: false
+					}">
+                    <tnt:NavigationListItem text="{path: 'side>titleI18nKey', formatter: '.getBundleText'}" icon="{side>icon}" expanded="{side>expanded}" items="{
+							path: 'side>items',
+							templateShareable: false
+						}" key="{side>key}" href="#/{side>key}">
+                        <tnt:NavigationListItem text="{path: 'side>titleI18nKey', formatter: '.getBundleText'}" key="{side>key}" href="#/{side>key}" />
+                    </tnt:NavigationListItem>
+                </tnt:NavigationList>
+                <tnt:fixedItem>
+                    <tnt:NavigationList items="{
+							path: 'side>/fixedNavigation',
+							templateShareable: false
+						}">
+                        <tnt:NavigationListItem text="{path: 'side>titleI18nKey', formatter: '.getBundleText'}" icon="{side>icon}" key="{side>key}" href="#/{side>key}" />
+                    </tnt:NavigationList>
+                </tnt:fixedItem>
+            </tnt:SideNavigation>
+        </tnt:sideContent>
+        <tnt:mainContents>
+            <App id="mainContents" />
+        </tnt:mainContents>
+    </tnt:ToolPage>
+    <core:Icon class="chatbot_Footer_btn" id="idChatwithme" src="sap-icon://discussion" tooltip="{i18n>chatBotChatwithMe}" press="onOpenChatbot" size="2rem" color="#0a6ed1" backgroundColor="#d1e8ff" hoverColor="#107e3e" />
+    <!--<Image src="./img/icon_chat-moet.png" densityAware="false" width="10%" class="chatbot_Footer_btn" press="onOpenChatbot" id="idChatwithme"  />       -->
+</mvc:View>

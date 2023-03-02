@@ -1,0 +1,14 @@
+{
+  "d": {
+    "results": [
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_CHAT_SRV/ChatHeaderSet('051MdhHO7jQChGOEzodQw0')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/1GTPT_CHAT_SRV/ChatHeaderSet('051MdhHO7jQChGOEzodQw0')",
+          "type": "1GTPT_CHAT_SRV.ChatHeader"
+        },
+        "ObjectKey": "051MdhHO7jQChGOEzodQw0"
+      }
+    ]
+  }
+}

@@ -1,0 +1,906 @@
+{
+  "d": {
+    "results": [
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8072692731')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8072692731')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8072692731",
+        "ASNItem": "000010",
+        "Batch": "6074080621",
+        "OrderQty": "160.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1457913600000)\/",
+        "SLED": "\/Date(1505347200000)\/",
+        "SLEDPerc": "90.89"
+      },
+       {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073065523')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073065523')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073065523",
+        "ASNItem": "000010",
+        "Batch": "6095080623",
+        "OrderQty": "1200.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1459728000000)\/",
+        "SLED": "\/Date(1507075200000)\/",
+        "SLEDPerc": "91.97"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074039305')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074039305')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074039305",
+        "ASNItem": "000010",
+        "Batch": "61510814G1",
+        "OrderQty": "1472.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1464566400000)\/",
+        "SLED": "\/Date(1512000000000)\/",
+        "SLEDPerc": "97.45"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074039305')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074039305')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074039305",
+        "ASNItem": "000010",
+        "Batch": "61520814G1",
+        "OrderQty": "439.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1464652800000)\/",
+        "SLED": "\/Date(1512000000000)\/",
+        "SLEDPerc": "97.63"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073028752')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073028752')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073028752",
+        "ASNItem": "000010",
+        "Batch": "6119080623",
+        "OrderQty": "3136.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1461801600000)\/",
+        "SLED": "\/Date(1509148800000)\/",
+        "SLEDPerc": "95.44"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073028753')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073028753')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073028753",
+        "ASNItem": "000010",
+        "Batch": "6119080623",
+        "OrderQty": "3136.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1461801600000)\/",
+        "SLED": "\/Date(1509148800000)\/",
+        "SLEDPerc": "95.44"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073257730')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073257730')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073257730",
+        "ASNItem": "000010",
+        "Batch": "6115080622",
+        "OrderQty": "1422.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1461456000000)\/",
+        "SLED": "\/Date(1508803200000)\/",
+        "SLEDPerc": "95.26"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074290671')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074290671')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074290671",
+        "ASNItem": "000010",
+        "Batch": "61670814C2",
+        "OrderQty": "8624.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1465948800000)\/",
+        "SLED": "\/Date(1530316800000)\/",
+        "SLEDPerc": "99.19"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073065524')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073065524')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073065524",
+        "ASNItem": "000010",
+        "Batch": "6095080623",
+        "OrderQty": "1030.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1459728000000)\/",
+        "SLED": "\/Date(1507075200000)\/",
+        "SLEDPerc": "91.97"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073065524')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073065524')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073065524",
+        "ASNItem": "000010",
+        "Batch": "6115080622",
+        "OrderQty": "77.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1461456000000)\/",
+        "SLED": "\/Date(1508803200000)\/",
+        "SLEDPerc": "95.62"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074184459')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074184459')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074184459",
+        "ASNItem": "000010",
+        "Batch": "61660814B1",
+        "OrderQty": "1456.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1465862400000)\/",
+        "SLED": "\/Date(1546214400000)\/",
+        "SLEDPerc": "99.78"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074184459')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074184459')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074184459",
+        "ASNItem": "000020",
+        "Batch": "61300814C1",
+        "OrderQty": "43.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1462752000000)\/",
+        "SLED": "\/Date(1527724800000)\/",
+        "SLEDPerc": "94.95"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074184459')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074184459')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074184459",
+        "ASNItem": "000020",
+        "Batch": "61310814C1",
+        "OrderQty": "32.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1462838400000)\/",
+        "SLED": "\/Date(1527724800000)\/",
+        "SLEDPerc": "95.07"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074184459')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074184459')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074184459",
+        "ASNItem": "000020",
+        "Batch": "61670814C1",
+        "OrderQty": "5613.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1465948800000)\/",
+        "SLED": "\/Date(1530316800000)\/",
+        "SLEDPerc": "99.87"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074331850')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074331850')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074331850",
+        "ASNItem": "000010",
+        "Batch": "61690814B1",
+        "OrderQty": "4928.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1466121600000)\/",
+        "SLED": "\/Date(1546214400000)\/",
+        "SLEDPerc": "99.57"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074274856')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074274856')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074274856",
+        "ASNItem": "000010",
+        "Batch": "61650814G1",
+        "OrderQty": "816.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1465776000000)\/",
+        "SLED": "\/Date(1514678400000)\/",
+        "SLEDPerc": "98.76"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074274856')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074274856')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074274856",
+        "ASNItem": "000010",
+        "Batch": "61660814G1",
+        "OrderQty": "1488.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1465862400000)\/",
+        "SLED": "\/Date(1514678400000)\/",
+        "SLEDPerc": "98.94"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074068036')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074068036')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074068036",
+        "ASNItem": "000010",
+        "Batch": "61660814G1",
+        "OrderQty": "2304.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1465862400000)\/",
+        "SLED": "\/Date(1514678400000)\/",
+        "SLEDPerc": "98.94"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073209233')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073209233')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073209233",
+        "ASNItem": "000010",
+        "Batch": "6106080621",
+        "OrderQty": "97.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1460678400000)\/",
+        "SLED": "\/Date(1508025600000)\/",
+        "SLEDPerc": "92.52"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073209233')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073209233')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073209233",
+        "ASNItem": "000010",
+        "Batch": "6106080622",
+        "OrderQty": "3031.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1460678400000)\/",
+        "SLED": "\/Date(1508025600000)\/",
+        "SLEDPerc": "92.52"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073211425')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073211425')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073211425",
+        "ASNItem": "000010",
+        "Batch": "6089080622",
+        "OrderQty": "304.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1459209600000)\/",
+        "SLED": "\/Date(1506643200000)\/",
+        "SLEDPerc": "88.71"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073211425')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073211425')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073211425",
+        "ASNItem": "000010",
+        "Batch": "6104080622",
+        "OrderQty": "2832.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1460505600000)\/",
+        "SLED": "\/Date(1507852800000)\/",
+        "SLEDPerc": "91.42"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073209231')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073209231')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073209231",
+        "ASNItem": "000010",
+        "Batch": "6115080622",
+        "OrderQty": "178.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1461456000000)\/",
+        "SLED": "\/Date(1508803200000)\/",
+        "SLEDPerc": "94.34"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073209231')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073209231')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073209231",
+        "ASNItem": "000020",
+        "Batch": "6106080621",
+        "OrderQty": "2852.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1460678400000)\/",
+        "SLED": "\/Date(1508025600000)\/",
+        "SLEDPerc": "92.70"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073209232')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073209232')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073209232",
+        "ASNItem": "000010",
+        "Batch": "6106080621",
+        "OrderQty": "3136.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1460678400000)\/",
+        "SLED": "\/Date(1508025600000)\/",
+        "SLEDPerc": "92.70"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073486882')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073486882')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073486882",
+        "ASNItem": "000010",
+        "Batch": "6115080622",
+        "OrderQty": "1536.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1461456000000)\/",
+        "SLED": "\/Date(1508803200000)\/",
+        "SLEDPerc": "93.43"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074557171')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074557171')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074557171",
+        "ASNItem": "000010",
+        "Batch": "61690814B1",
+        "OrderQty": "4816.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1466121600000)\/",
+        "SLED": "\/Date(1546214400000)\/",
+        "SLEDPerc": "98.81"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074527288')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074527288')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074527288",
+        "ASNItem": "000010",
+        "Batch": "61670814C2",
+        "OrderQty": "195.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1465948800000)\/",
+        "SLED": "\/Date(1530316800000)\/",
+        "SLEDPerc": "98.12"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074527288')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074527288')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074527288",
+        "ASNItem": "000010",
+        "Batch": "61750814C1",
+        "OrderQty": "5488.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1466640000000)\/",
+        "SLED": "\/Date(1530316800000)\/",
+        "SLEDPerc": "99.19"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074527288')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074527288')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074527288",
+        "ASNItem": "000010",
+        "Batch": "61760814C1",
+        "OrderQty": "2940.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1466726400000)\/",
+        "SLED": "\/Date(1530316800000)\/",
+        "SLEDPerc": "99.32"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073571036')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073571036')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073571036",
+        "ASNItem": "000010",
+        "Batch": "6118080651",
+        "OrderQty": "58.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1461801600000)\/",
+        "SLED": "\/Date(1493337600000)\/",
+        "SLEDPerc": "88.77"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073571036')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073571036')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073571036",
+        "ASNItem": "000020",
+        "Batch": "6112080623",
+        "OrderQty": "2547.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1461196800000)\/",
+        "SLED": "\/Date(1508544000000)\/",
+        "SLEDPerc": "91.24"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073571036')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073571036')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073571036",
+        "ASNItem": "000030",
+        "Batch": "6119080623",
+        "OrderQty": "170.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1461801600000)\/",
+        "SLED": "\/Date(1509148800000)\/",
+        "SLEDPerc": "92.52"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074927189')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074927189')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074927189",
+        "ASNItem": "000010",
+        "Batch": "61830814B1",
+        "OrderQty": "4928.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1467331200000)\/",
+        "SLED": "\/Date(1532995200000)\/",
+        "SLEDPerc": "98.68"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074993817')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074993817')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074993817",
+        "ASNItem": "000010",
+        "Batch": "61660814B1",
+        "OrderQty": "155.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1465862400000)\/",
+        "SLED": "\/Date(1546214400000)\/",
+        "SLEDPerc": "96.88"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074993817')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074993817')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074993817",
+        "ASNItem": "000010",
+        "Batch": "61690814B1",
+        "OrderQty": "516.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1466121600000)\/",
+        "SLED": "\/Date(1546214400000)\/",
+        "SLEDPerc": "97.20"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074993817')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074993817')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074993817",
+        "ASNItem": "000010",
+        "Batch": "61860814B1",
+        "OrderQty": "112.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1467590400000)\/",
+        "SLED": "\/Date(1548892800000)\/",
+        "SLEDPerc": "99.04"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074993817')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074993817')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074993817",
+        "ASNItem": "000010",
+        "Batch": "61870814B1",
+        "OrderQty": "4032.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1467676800000)\/",
+        "SLED": "\/Date(1548892800000)\/",
+        "SLEDPerc": "99.15"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8075033810')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8075033810')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8075033810",
+        "ASNItem": "000010",
+        "Batch": "61750814C1",
+        "OrderQty": "107.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1466640000000)\/",
+        "SLED": "\/Date(1530316800000)\/",
+        "SLEDPerc": "96.47"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8075033810')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8075033810')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8075033810",
+        "ASNItem": "000010",
+        "Batch": "61760814C1",
+        "OrderQty": "219.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1466726400000)\/",
+        "SLED": "\/Date(1530316800000)\/",
+        "SLEDPerc": "96.60"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8075033810')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8075033810')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8075033810",
+        "ASNItem": "000020",
+        "Batch": "61870814B1",
+        "OrderQty": "560.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1467676800000)\/",
+        "SLED": "\/Date(1548892800000)\/",
+        "SLEDPerc": "98.51"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8075033810')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8075033810')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8075033810",
+        "ASNItem": "000030",
+        "Batch": "61830814B1",
+        "OrderQty": "3995.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1467331200000)\/",
+        "SLED": "\/Date(1532995200000)\/",
+        "SLEDPerc": "97.63"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073828742')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073828742')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073828742",
+        "ASNItem": "000010",
+        "Batch": "6143080622",
+        "OrderQty": "1422.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1463875200000)\/",
+        "SLED": "\/Date(1511308800000)\/",
+        "SLEDPerc": "95.26"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073962348')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073962348')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073962348",
+        "ASNItem": "000010",
+        "Batch": "6127080621",
+        "OrderQty": "3136.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1462492800000)\/",
+        "SLED": "\/Date(1509926400000)\/",
+        "SLEDPerc": "92.35"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073962347')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073962347')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073962347",
+        "ASNItem": "000010",
+        "Batch": "6104080622",
+        "OrderQty": "477.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1460505600000)\/",
+        "SLED": "\/Date(1507852800000)\/",
+        "SLEDPerc": "88.14"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073962347')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073962347')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073962347",
+        "ASNItem": "000010",
+        "Batch": "6126080622",
+        "OrderQty": "1162.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1462406400000)\/",
+        "SLED": "\/Date(1509840000000)\/",
+        "SLEDPerc": "92.17"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073962347')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8073962347')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8073962347",
+        "ASNItem": "000010",
+        "Batch": "6127080621",
+        "OrderQty": "1497.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1462492800000)\/",
+        "SLED": "\/Date(1509926400000)\/",
+        "SLEDPerc": "92.35"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074190765')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074190765')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074190765",
+        "ASNItem": "000010",
+        "Batch": "6130080623",
+        "OrderQty": "3136.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1462752000000)\/",
+        "SLED": "\/Date(1510185600000)\/",
+        "SLEDPerc": "92.17"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074190767')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074190767')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074190767",
+        "ASNItem": "000010",
+        "Batch": "6131080621",
+        "OrderQty": "1370.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1462838400000)\/",
+        "SLED": "\/Date(1510272000000)\/",
+        "SLEDPerc": "92.53"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074190767')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074190767')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074190767",
+        "ASNItem": "000010",
+        "Batch": "6140080621",
+        "OrderQty": "1766.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1463616000000)\/",
+        "SLED": "\/Date(1511049600000)\/",
+        "SLEDPerc": "94.17"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074426238')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074426238')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074426238",
+        "ASNItem": "000010",
+        "Batch": "6140080621",
+        "OrderQty": "1015.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1463616000000)\/",
+        "SLED": "\/Date(1511049600000)\/",
+        "SLEDPerc": "93.44"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074190766')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074190766')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074190766",
+        "ASNItem": "000010",
+        "Batch": "6130080623",
+        "OrderQty": "1110.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1462752000000)\/",
+        "SLED": "\/Date(1510185600000)\/",
+        "SLEDPerc": "92.35"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074190766')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074190766')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074190766",
+        "ASNItem": "000010",
+        "Batch": "6131080621",
+        "OrderQty": "2026.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1462838400000)\/",
+        "SLED": "\/Date(1510272000000)\/",
+        "SLEDPerc": "92.53"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8075311757')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8075311757')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8075311757",
+        "ASNItem": "000010",
+        "Batch": "61760814C1",
+        "OrderQty": "392.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1466726400000)\/",
+        "SLED": "\/Date(1530316800000)\/",
+        "SLEDPerc": "96.33"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8075311757')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8075311757')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8075311757",
+        "ASNItem": "000010",
+        "Batch": "61890814C1",
+        "OrderQty": "8232.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1467849600000)\/",
+        "SLED": "\/Date(1532995200000)\/",
+        "SLEDPerc": "98.14"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074094202')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074094202')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074094202",
+        "ASNItem": "000010",
+        "Batch": "6135080621",
+        "OrderQty": "3136.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1463184000000)\/",
+        "SLED": "\/Date(1510617600000)\/",
+        "SLEDPerc": "92.71"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074094203')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074094203')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074094203",
+        "ASNItem": "000010",
+        "Batch": "6135080621",
+        "OrderQty": "2310.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1463184000000)\/",
+        "SLED": "\/Date(1510617600000)\/",
+        "SLEDPerc": "92.71"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074094203')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074094203')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074094203",
+        "ASNItem": "000010",
+        "Batch": "6136080621",
+        "OrderQty": "825.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1463270400000)\/",
+        "SLED": "\/Date(1510704000000)\/",
+        "SLEDPerc": "92.90"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074226725')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074226725')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074226725",
+        "ASNItem": "000010",
+        "Batch": "6136080621",
+        "OrderQty": "699.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1463270400000)\/",
+        "SLED": "\/Date(1510704000000)\/",
+        "SLEDPerc": "93.44"
+      },
+      {
+        "__metadata": {
+          "id": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074226725')",
+          "uri": "https://gateway.nestle.com:64801/sap/opu/odata/GLB/RGTPT_BATCH_SRV/DeliveryBatchSet('8074226725')",
+          "type": "RGTPT_BATCH_SRV.DeliveryBatch"
+        },
+        "ASN": "8074226725",
+        "ASNItem": "000020",
+        "Batch": "6130080623",
+        "OrderQty": "191.000",
+        "OrderUnit": "CS",
+        "ProdDate": "\/Date(1462752000000)\/",
+        "SLED": "\/Date(1510185600000)\/",
+        "SLEDPerc": "92.35"
+      }
+    ]
+  }
+}

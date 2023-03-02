@@ -1,0 +1,26 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m" controllerName="glb.gtmh.oct.view.Error"
+  xmlns:html="http://www.w3.org/1999/xhtml">
+  <Page enableScrolling="false" id="errorPage" title="{i18n>errorPageTitle}">
+    <customHeader>
+      <Bar>
+        <contentLeft>
+          <Link text="{i18n>backToDashboardPage}" emphasized="true"
+            href="#" />
+        </contentLeft>
+        <contentMiddle>
+          <Label text="{i18n>errorPageTitle}" />
+        </contentMiddle>
+      </Bar>
+    </customHeader>
+    <content>
+      <MessagePage showHeader="false" description="{i18n>errorPageDesc}"
+        text="{i18n>errorPageText}" title="{i18n>errorPageTitle}" class="octMsgPg">
+      </MessagePage>
+
+    </content>
+    <footer id="errorFooter">
+      <Toolbar id="errorToolbar"></Toolbar>
+    </footer>
+  </Page>
+</mvc:View>

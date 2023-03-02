@@ -1,0 +1,68 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <ResponsivePopover
+        id="idResponsivePopover"
+        class="sapUiSizeCompact sapMPopoverBLayer respTitle respTitleChat sapUiContentPadding cl_ResPopHead cl_ResPopFoot"
+        placement="Auto"
+        title="Chat Bot"
+        verticalScrolling="false"
+        contentHeight="80%"
+        contentWidth="38%"
+        modal="true"
+        afterOpen="onOpenChatWindow"
+    >
+        <customHeader>
+            <Bar class="custHeader">
+                <contentLeft>
+                    <Button tooltip="Delete chat history" icon="sap-icon://delete" press="deleteChatHistory" type="Transparent" />
+                </contentLeft>
+                <contentLeft>
+                    <Button id="idSoundloud" tooltip="Start Recording" icon="sap-icon://microphone" press="onStartRecording" />
+                </contentLeft>
+                <contentRight>
+                    <Button text="" icon="sap-icon://decline" press="onChatbotClose" tooltip="close" />
+                </contentRight>
+            </Bar>
+        </customHeader>
+        <content>
+            <VBox height="100%" width="100%">
+                <VBox width="100%" height="80%">
+                    <ScrollContainer id="idScroll" height="100%" width="100%" horizontal="false" vertical="true" focusable="true">
+                        <FlexBox id="idButtonFlexBox" class="sapUiTinyMargin clsFlexactionbtn" alignItems="Start" alignContent="Center" justifyContent="Start">
+                            <items>
+                                <Button text="Place an Order" press="_getUserDetails" class="cl_Action_Button" />
+                                <Button text="Open Orders" press="_getUserDetails" class="cl_Action_Button" />
+                                <Button text="Order Status" press="_getUserDetails" class="cl_Action_Button" />
+                                <Button text="Order Report" press="_getUserDetails" class="cl_Action_Button" />
+                                <Button text="Confirmed Orders" press="_getUserDetails" class="cl_Action_Button" />
+                                <Button text="Ask A Question" press="_getUserDetails" enabled="false" class="cl_Action_Button" />
+                            </items>
+                        </FlexBox>
+                        <List id="idChatList" noDataText="Please enter your query to start chat with Bot" showSeparators="Inner" items="{chatModel>/}">
+                            <FeedListItem
+                                showIcon="false"
+                                icon="{path:'chatModel>Author',formatter:'.custFormatter.getChatBotIcon'}"
+                                iconDensityAware="false"
+                                timestamp="{path:'chatModel>Date', type : 'sap.ui.model.type.DateTime',formatOptions: { style : 'medium', UTC: false }}"
+                                text="{chatModel>Text}"
+                                class="cls_feedlInputList_Position sapUiTinyMarginTopBottom"
+                            >
+                                <customData>
+                                    <core:CustomData key="myChat" value="{chatModel>Author}" writeToDom="true" />
+                                </customData>
+                            </FeedListItem>
+                        </List>
+                        <FlexBox id="idFlexbox" alignItems="Center" justifyContent="Start" class="sapUiTinyMargin">
+                            <Button id="idbtnyes" text="Yes" visible="{oViewProperties>/oYesButton}" enabled="{oViewProperties>/oYesEnabled}" class="sapUiTinyMarginEnd cl_Button" press="_getUserDetails" />
+                            <Button id="idbtnno" text="No" visible="{oViewProperties>/oNoButton}" enabled="{oViewProperties>/oNoEnabled}" class="cl_Button sapUiTinyMarginBegin" press="_getUserDetails" />
+                        </FlexBox>
+                    </ScrollContainer>
+                </VBox>
+                <VBox id="idInputfeed" width="100%" height="20%" visible="false" justifyContent="End">
+                    <items>
+                        <FeedInput class="cls_feedInput" visible="true" id="idFeedInput" post="onPostMessage" buttonTooltip="Send" placeholder="Type here" />
+                    </items>
+                </VBox>
+            </VBox>
+        </content>
+    </ResponsivePopover>
+</core:FragmentDefinition>

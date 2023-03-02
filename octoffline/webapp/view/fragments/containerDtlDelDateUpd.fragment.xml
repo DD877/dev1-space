@@ -1,0 +1,91 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns="sap.m">
+  <Dialog class="dDateUpdDialog1 popUPPad" modal="true" showHeader="false" title="">
+    <content>
+      <FlexBox alignItems="Start" class="popUPColorTop" justifyContent="SpaceBetween">
+        <items>
+          <Label class="blackHdrLbl colorBlack" text="{/Container}"/>
+          <FlexBox alignItems="Start" class="" justifyContent="SpaceBetween" width="50%">
+            <items>
+              <l:VerticalLayout class="">
+                <Label class="nestleSize" text="{i18n>poNumber}" visible="{path:'/PO',formatter:'glb.gtmh.oct.util.Formatter.showIfExists'}"></Label>
+                <Label class="font1rem colorBlack" design="Bold" id="poUpd" text="{/PO}"/>
+              </l:VerticalLayout>
+              <l:VerticalLayout class="">
+                <Label class="nestleSize" text="{i18n>onlyASN}" visible="{path:'/ASN',formatter:'glb.gtmh.oct.util.Formatter.showIfExists'}"></Label>
+                <Label class="font1rem colorBlack" design="Bold" text="{/ASN}"/>
+              </l:VerticalLayout>
+              <l:VerticalLayout class="">
+                <Label class="nestleSize" text="{i18n>sto}" visible="{path:'/STO',formatter:'glb.gtmh.oct.util.Formatter.showIfExists'}"></Label>
+                <Label class="font1rem colorBlack" design="Bold" text="{/STO}"/>
+              </l:VerticalLayout>
+              <core:Icon class="btnClose" color="#736F6E" press="closeDialog" src="sap-icon://decline"></core:Icon>
+            </items>
+          </FlexBox>
+        </items>
+      </FlexBox>
+      <FlexBox alignItems="Start" class="fboxContentUdate updDDateSize" height="5.5rem" id="fbuDdateBefore" justifyContent="SpaceBetween"
+        width="85%">
+        <items>
+          <l:VerticalLayout width="100%">
+            <l:HorizontalLayout class="updDDateSize1" width="100%">
+              <Label class="udatePad2rem colorBlack" text="{i18n>currPODelDate}"></Label>
+              <Label class="colorBlack" text="{path:'/InitDelDate',formatter:'glb.gtmh.oct.util.Formatter.dateConvert'}"></Label>
+            </l:HorizontalLayout>
+            <l:HorizontalLayout class="lblPadUdate updDDateSize1 updDDateErrTxtSize" width="100%">
+              <Label class="lblPadUdatenewDate topPadHalfRem colorBlack" id="newdate" text="{i18n>newDate}"></Label>
+              <Input class="udateDPicker zIndex2" id="dateValue" liveChange="onDateLiveChange" maxLength="12" placeholder="dd MMM, yyyy"
+                value="{updDateModel>/dateValue}" width="8rem"/>
+              <DatePicker change="onDDateChange" class="udateDPicker udateDPickerCalender marginLeftNeg8Rem dPickerTxtHide dPickerBtnZIdx3"
+                displayFormat="dd MMM, yyyy" id="DP5" value="{updDateModel>/dpValue}" valueFormat="yyyyMMdd" width="8rem"/>
+              <Text class="errorTextlblUdate" id="errorlblUdate" maxLines="5" text="{updDateModel>/errorUpdDate}"></Text>
+            </l:HorizontalLayout>
+          </l:VerticalLayout>
+        </items>
+      </FlexBox>
+      <FlexBox alignItems="Center" class="fbafterUIC" height="6.5rem" id="fbuDdateProcess" justifyContent="Center" width="100%">
+        <items>
+          <HBox class="marginTop10" justifyContent="Center" width="100%">
+            <Image id="idImgLogouDdateProcess" src="./img/updating.gif"></Image>
+            <Label class="processLbl colorBlack" text="{i18n>processingUpdate}"/>
+          </HBox>
+        </items>
+      </FlexBox>
+      <FlexBox alignItems="Center" class="fbafterUIC" height="7.5rem" id="fbafterProcessDdateSuccess" justifyContent="Center">
+        <items>
+          <HBox class="marginTop10">
+            <Image class="crossImg" id="idImgLogoProcessRight" press="" src="./img/Right.PNG"></Image>
+            <Label class="padTopPoint8Rem colorBlack"
+              text="{parts:[{path:'/PO'},{path:'/UDelDate'}],formatter:'glb.gtmh.oct.util.Formatter.setPODdateTextInPopupSuccess'}"/>
+          </HBox>
+        </items>
+      </FlexBox>
+      <FlexBox alignItems="Center" class="fbafterUIC" height="6.5rem" id="fbuDdateafter" justifyContent="Center">
+        <items>
+          <HBox class="marginTop10">
+            <Image class="crossImg" id="idImgLogoProcessCross" press="" src="./img/crossuic.png"></Image>
+            <Label class="uDateSpacePad colorBlack"
+              text="{path:'/PO',formatter:'glb.gtmh.oct.util.Formatter.setPOTextInPopuptryAgainUdate'}"/>
+            <VBox></VBox>
+          </HBox>
+        </items>
+      </FlexBox>
+      <FlexBox alignItems="Start" class="popUPColorBottom btnPaddingUicFont ratingAppBtnPad" justifyContent="End">
+        <items>
+          <Button class="visHidden" id="dummyuDdate"/>
+          <l:VerticalLayout class="">
+            <Button class="gapbtn1 ovalEdgeBtn btnPaddingUic" emphasized="true" id="btnCanceluDdate" press="closeDialog" text="{i18n>btnCancel}"/>
+          </l:VerticalLayout>
+          <l:VerticalLayout class="">
+            <Button class="gapbtn2 ovalEdgeBtn" emphasized="true" id="btnAsnuDdate" press="UpdateDdatePopup" text="{i18n>updateDeliveryDate}"/>
+          </l:VerticalLayout>
+          <l:VerticalLayout class="">
+            <Button class="gapbtn ovalEdgeBtn btnPaddingUicno" emphasized="true" id="thankyoudate" press="onThankYouUdate" text="{i18n>thankyou}"/>
+          </l:VerticalLayout>
+          <l:VerticalLayout class="">
+            <Button class="gapbtn ovalEdgeBtn btnPaddingUicno" emphasized="true" id="tryAgainuDdate" press="tryAgainUdate" text="{i18n>tryAgain}"/>
+          </l:VerticalLayout>
+        </items>
+      </FlexBox>
+    </content>
+  </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,26 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns="sap.m">
+	<Dialog class="dialogBlock" title="{i18n>dateRangeTitle}" type="Message">
+		<content>
+			<l:VerticalLayout>
+				<Label labelFor="DP1" text="{i18n>from}"/>
+				<DatePicker id="frm1" placeholder="{i18n>placeholderFromDate}" valueFormat="yyyyMMdd" width="350px" value="{/fD}"/>
+			</l:VerticalLayout>
+			<l:VerticalLayout>
+				<Label labelFor="DP2" text="{i18n>to}"/>
+				<DatePicker id="frm2" placeholder="{i18n>placeholderToDate}" valueFormat="yyyyMMdd" width="350px" value="{/tD}"/>
+			</l:VerticalLayout>
+			<l:HorizontalLayout>
+				<l:HorizontalLayout>
+					<RadioButton class="nestleDatFieldBase" select="typeSelect" groupName="GroupA" id="radio1" selected="{/isRA}" text="{i18n>radioArrival}"/>
+					<RadioButton class="nestleDatFieldBase" groupName="GroupA" id="radio2" selected="{/isRD}" text="{i18n>radioDeparture}"/>
+				</l:HorizontalLayout>
+			</l:HorizontalLayout>
+		</content>
+		<beginButton>
+			<Button press="handleDateRangePress" text="{i18n>btnOK}"/>
+		</beginButton>
+		<endButton>
+			<Button press="onCloseDialog" text="{i18n>Cancel}"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

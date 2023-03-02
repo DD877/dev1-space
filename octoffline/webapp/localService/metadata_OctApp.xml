@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="1GTPT_OCT_APP_SRV" xml:lang="en" sap:schema-version="0" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Product" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="GUID" />
+                </Key>
+                <Property Name="GUID" Type="Edm.String" Nullable="false" MaxLength="22" sap:label="Event Handler GUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="FromDate" Type="Edm.DateTime" Precision="7" sap:label="Date from" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="ToDate" Type="Edm.DateTime" Precision="7" sap:label="Date to" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="DateInd" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Arrival/Departure Date Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="ExcelDownload" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Excel Download Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="Container" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Container Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="PO" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Purchase Order" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="STO" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Stock Transport Order" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ASN" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Delivery Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="CustPOID" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="Customer purchase order number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="OriginCompany" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Origin Company Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="OriginCountry" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Country of Origin" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="OriginDCDesc" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Description of Country of Origin" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="DestinationCompany" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Destination Company Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="DestinationCountry" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Country of Destination" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="DestinationDCDesc" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="Description of Destination Country" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SendingPlant" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Priority" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Priority" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="PortOfLoading" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Port of Loading" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="POLDesc" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Port of Loading UNLOCODE Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="PortOfDischarge" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Port of Discharge" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="PODDesc" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Port of Departure UNLOCODE Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="PortOfReceive" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Port of Receive" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="PORDesc" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Port of Receiving UNLOCODE Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="PortOfEntry" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Port of Entry" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="POEDesc" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Port of Entry UNLOCODE Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="InitDelDate" Type="Edm.DateTime" Precision="7" sap:label="Requested Delivery Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="UDelDate" Type="Edm.DateTime" Precision="7" sap:label="PO Delivery Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Pallet" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Pallet" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="AlignStatus" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Alignment Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="GRInd" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="&quot;Delivery Completed&quot; Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="AppointDate" Type="Edm.DateTime" Precision="7" sap:label="Appointment Date &amp; Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="MsgCreateDate" Type="Edm.DateTime" Precision="0" sap:label="Event Message Creation Date/Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="LatestMsgDate" Type="Edm.DateTime" Precision="0" sap:label="Event Message Received Date/Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="LastEventDesc" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Event ID Descricption" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="LastEventDate" Type="Edm.DateTime" Precision="0" sap:label="Date/Time the Event is expected to occur" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <NavigationProperty Name="ContainerDetailSet" Relationship="1GTPT_OCT_APP_SRV.ProductToContainerDetail" FromRole="FromRole_ProductToContainerDetail" ToRole="ToRole_ProductToContainerDetail" />
+                <NavigationProperty Name="EventSet" Relationship="1GTPT_OCT_APP_SRV.ProductToEvent" FromRole="FromRole_ProductToEvent" ToRole="ToRole_ProductToEvent" />
+                <NavigationProperty Name="ItemSet" Relationship="1GTPT_OCT_APP_SRV.ProductToItem" FromRole="FromRole_ProductToItem" ToRole="ToRole_ProductToItem" />
+            </EntityType>
+            <EntityType Name="Item" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="GUID" />
+                    <PropertyRef Name="ASNItem" />
+                </Key>
+                <Property Name="GUID" Type="Edm.String" Nullable="false" MaxLength="22" sap:label="Event Handler GUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ASNItem" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Delivery Item" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SKU" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="Product Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Product Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Catagory" Type="Edm.String" Nullable="false" MaxLength="9" sap:label="Product catagory" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="CategoryDesc" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Product Catagory Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="OrderQty" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:label="Order Quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="OrderUnit" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Order Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure" />
+            </EntityType>
+            <EntityType Name="Event" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="GUID" />
+                </Key>
+                <Property Name="GUID" Type="Edm.String" Nullable="false" MaxLength="22" sap:label="Event Handler GUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ShipStatusCode" Type="Edm.String" Nullable="false" MaxLength="200" sap:label="Shipment Status Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="EventID" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Event ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="EventDesc" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Event ID Descricption" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Location" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Location ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="LocDesc" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Location Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="EventDate" Type="Edm.DateTime" Precision="0" sap:label="Date/Time the Event is expected to occur" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="TimeZone" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Time Zone for Event Time Stamp" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="UTCReceiveDate" Type="Edm.DateTime" Precision="0" sap:label="Date/Time the Event message is received" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="TransitLeg" Type="Edm.String" MaxLength="1" sap:label="OCT Event Transit Leg" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ContainerDetail" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="GUID" />
+                </Key>
+                <Property Name="GUID" Type="Edm.String" Nullable="false" MaxLength="22" sap:label="Event Handler GUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="DestinationCompany" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Destination Company Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="OriginCity" Type="Edm.String" Nullable="false" MaxLength="25" sap:label="City of Origin" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="DestinationCity" Type="Edm.String" Nullable="false" MaxLength="25" sap:label="City of Destination" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Vessel" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="Vessel" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Voyage" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Voyage" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="EquiType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Equipment Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ReceivingPlant" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Receiving/Consignee Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="GrossWeight" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="3" sap:label="Gross Weight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="GrossWeightUnit" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Gross Weight unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure" />
+                <Property Name="GrossVolume" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="3" sap:label="Gross Volume" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="GrossVolumeUnit" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Gross Volume unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure" />
+                <Property Name="VUWeight" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:label="Calculated Weight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="VUVolume" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:label="Calculated Volume" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="MaxVolume" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="3" sap:label="Maximum Volume of a shipment" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="VUPercWeight" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="2" sap:label="Vehicle Weight Utilization" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="VUPercVolume" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="2" sap:label="Vehicle Volume Utilization" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="GrossPercVolume" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2" sap:label="Gross Percentage Volume" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ContainerDesc" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Container Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="CarrierID" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Carrier ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="CarrierName" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="CarrierName" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="TransitTime0" Type="Edm.Int32" Nullable="false" sap:label="Transit time from POI/POR to POE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="TransitTime1" Type="Edm.Int32" Nullable="false" sap:label="Transit time from POI/POR to POL" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="TransitTime2" Type="Edm.Int32" Nullable="false" sap:label="Transit time from POL to POD" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="TransitTime3" Type="Edm.Int32" Nullable="false" sap:label="Transit time from POD to POE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SysAliasDLV" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="SAP System Alias for Delivery or Sender system" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SysAliasSTO" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="SAP System Alias for PO/STO" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <NavigationProperty Name="EventSet" Relationship="1GTPT_OCT_APP_SRV.ContainerDetailToEvent" FromRole="FromRole_ContainerDetailToEvent" ToRole="ToRole_ContainerDetailToEvent" />
+            </EntityType>
+            <EntityType Name="UserCompany" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="UserId" />
+                </Key>
+                <Property Name="UserId" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="User ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="CompanyCode" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Authorized Company Code List" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <Association Name="ContainerDetailToEvent" sap:content-version="1">
+                <End Type="1GTPT_OCT_APP_SRV.ContainerDetail" Multiplicity="1" Role="FromRole_ContainerDetailToEvent" />
+                <End Type="1GTPT_OCT_APP_SRV.Event" Multiplicity="*" Role="ToRole_ContainerDetailToEvent" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ContainerDetailToEvent">
+                        <PropertyRef Name="GUID" />
+                    </Principal>
+                    <Dependent Role="ToRole_ContainerDetailToEvent">
+                        <PropertyRef Name="GUID" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ProductToEvent" sap:content-version="1">
+                <End Type="1GTPT_OCT_APP_SRV.Product" Multiplicity="1" Role="FromRole_ProductToEvent" />
+                <End Type="1GTPT_OCT_APP_SRV.Event" Multiplicity="*" Role="ToRole_ProductToEvent" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ProductToEvent">
+                        <PropertyRef Name="GUID" />
+                    </Principal>
+                    <Dependent Role="ToRole_ProductToEvent">
+                        <PropertyRef Name="GUID" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ProductToContainerDetail" sap:content-version="1">
+                <End Type="1GTPT_OCT_APP_SRV.Product" Multiplicity="1" Role="FromRole_ProductToContainerDetail" />
+                <End Type="1GTPT_OCT_APP_SRV.ContainerDetail" Multiplicity="*" Role="ToRole_ProductToContainerDetail" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ProductToContainerDetail">
+                        <PropertyRef Name="GUID" />
+                    </Principal>
+                    <Dependent Role="ToRole_ProductToContainerDetail">
+                        <PropertyRef Name="GUID" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ProductToItem" sap:content-version="1">
+                <End Type="1GTPT_OCT_APP_SRV.Product" Multiplicity="1" Role="FromRole_ProductToItem" />
+                <End Type="1GTPT_OCT_APP_SRV.Item" Multiplicity="*" Role="ToRole_ProductToItem" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ProductToItem">
+                        <PropertyRef Name="GUID" />
+                    </Principal>
+                    <Dependent Role="ToRole_ProductToItem">
+                        <PropertyRef Name="GUID" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="1GTPT_OCT_APP_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ProductSet" EntityType="1GTPT_OCT_APP_SRV.Product" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ItemSet" EntityType="1GTPT_OCT_APP_SRV.Item" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="EventSet" EntityType="1GTPT_OCT_APP_SRV.Event" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ContainerDetailSet" EntityType="1GTPT_OCT_APP_SRV.ContainerDetail" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="UserCompanySet" EntityType="1GTPT_OCT_APP_SRV.UserCompany" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1" />
+                <AssociationSet Name="ProductToContainerDetailSet" Association="1GTPT_OCT_APP_SRV.ProductToContainerDetail" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ProductSet" Role="FromRole_ProductToContainerDetail" />
+                    <End EntitySet="ContainerDetailSet" Role="ToRole_ProductToContainerDetail" />
+                </AssociationSet>
+                <AssociationSet Name="ProductToItemSet" Association="1GTPT_OCT_APP_SRV.ProductToItem" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ProductSet" Role="FromRole_ProductToItem" />
+                    <End EntitySet="ItemSet" Role="ToRole_ProductToItem" />
+                </AssociationSet>
+                <AssociationSet Name="ProductToEventSet" Association="1GTPT_OCT_APP_SRV.ProductToEvent" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ProductSet" Role="FromRole_ProductToEvent" />
+                    <End EntitySet="EventSet" Role="ToRole_ProductToEvent" />
+                </AssociationSet>
+                <AssociationSet Name="ContainerDetailToEventSet" Association="1GTPT_OCT_APP_SRV.ContainerDetailToEvent" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ContainerDetailSet" Role="FromRole_ContainerDetailToEvent" />
+                    <End EntitySet="EventSet" Role="ToRole_ContainerDetailToEvent" />
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link rel="self" href="https://P5JWEBDISP.NESTLE.COM:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom" />
+            <atom:link rel="latest-version" href="https://P5JWEBDISP.NESTLE.COM:64801/sap/opu/odata/GLB/1GTPT_OCT_APP_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom" />
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog noDataText="{i18n>NoData}" title="{i18n>SelectMaterial}" search="handleMaterialSearch" confirm="onPressMaterialValueListClose" cancel="onPressMaterialValueListClose"
+		items="{MaterialJson>/}">
+		<StandardListItem title="{MaterialJson>ZMAT_NUM}" description="{MaterialJson>ZMATRL_DESC}" iconDensityAware="false" iconInset="false" type="Active"/>
+	</SelectDialog>
+</core:FragmentDefinition>

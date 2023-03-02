@@ -1,0 +1,79 @@
+<core:FragmentDefinition
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:uxap="sap.uxap"
+    xmlns:table="sap.ui.table"
+    xmlns:sl="sap.ui.comp.navpopover"
+    xmlns:micro="sap.suite.ui.microchart"
+    xmlns:u="sap.ui.unified"
+    xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+>
+    <Dialog contentHeight="auto" contentWidth="90%" showHeader="false" resizable="false">
+        <uxap:ObjectPageLayout enableLazyLoading="true" headerContentPinnable="false" showTitleInHeaderContent="true" showHeaderContent="false" class="newOrder" height="400px">
+            <uxap:headerTitle>
+                <uxap:ObjectPageHeader
+                    objectImageURI="/img/merck-logo.png"
+                    objectImageShape="Circle"
+                    objectTitle="{i18n>UserMaintenance}"
+                    objectImageAlt=""
+                    isObjectIconAlwaysVisible="true"
+                    isObjectTitleAlwaysVisible="true"
+                    isObjectSubtitleAlwaysVisible="true"
+                    isActionAreaAlwaysVisible="true"
+                    showPlaceholder="true"
+                    class="newOrderHP"
+                >
+                    <HBox justifyContent="End" width="100%" height="100%">
+                        <Button class="whiteButton sapUiSmallMarginEnd" id="idassignSave" icon="sap-icon://save" text="{i18n>Save}" press="onSaveAssignCustomer" />
+                        <Button tooltip="{i18n>Close}" text="{i18n>Close}" icon="sap-icon://decline" press="onAssignCustClose" />
+                    </HBox>
+                </uxap:ObjectPageHeader>
+            </uxap:headerTitle>
+            <uxap:sections>
+                <uxap:ObjectPageSection title="{i18n>CustomerAssignment}" class="tabsc">
+                    <uxap:subSections>
+                        <uxap:ObjectPageSubSection>
+                            <f:SimpleForm maxContainerCols="1" editable="true" backgroundDesign="Translucent" layout="ResponsiveGridLayout" labelSpanL="4" labelSpanM="4" labelSpanS="12" emptySpanL="0" emptySpanM="0" columnsL="1" columnsM="1" width="80%">
+                                <f:content>
+                                    <Label text="{i18n>User}" required="true" visible="true" />
+                                    <Input id="idUominput11" enabled="false" type="Text" value="{viewProperties>/userid}" />
+                                    <Label id="idQuantity1uas" text="{i18n>SelectSystem}" required="true" />
+                                    <SegmentedButton id="uSystem" select="onSelectSystem" selectedKey="L">
+                                        <items>
+                                            <SegmentedButtonItem text="{i18n>LEAN}" key="L" />
+                                            <SegmentedButtonItem text="{i18n>TEMPO}" />
+                                        </items>
+                                    </SegmentedButton>
+                                    <Label id="idQuantity" text="{i18n>CustomerNumber}" required="true" />
+                                    <Input
+                                        id="idUominput1234"
+                                        enabled="false"
+                                        textFormatMode="ValueKey"
+                                        placeholder="{i18n>EnterCustomerNo..}"
+                                        showValueHelp="true"
+                                        valueHelpRequest="onArticleValueHelpRequest"
+                                        value="{viewProperties>/cusId}"
+                                        showSuggestion="true"
+                                        suggestionItems="{CustomerDetails1>/}"
+                                        valueHelpOnly="true"
+                                    >
+                                        <suggestionItems>
+                                            <core:ListItem text="{CustomerDetails1>ZCUSTMR_NUM}" additionalText="{CustomerDetails1>ZCUSTOMER_NAME}" />
+                                        </suggestionItems>
+                                    </Input>
+                                    <Label id="idQuantitrycom" text="{i18n>Comment}" required="true" />
+                                    <TextArea id="idQuantit3rycom" value="" growing="true" width="100%" />
+                                    <Label visible="false" />
+                                    <Label id="ID_COMMENTS_CONT" class="commentsCount sapUiLargeMarginTop" text="255" />
+                                    <Label visible="false" />
+                                </f:content>
+                            </f:SimpleForm>
+                        </uxap:ObjectPageSubSection>
+                    </uxap:subSections>
+                </uxap:ObjectPageSection>
+            </uxap:sections>
+        </uxap:ObjectPageLayout>
+    </Dialog>
+</core:FragmentDefinition>

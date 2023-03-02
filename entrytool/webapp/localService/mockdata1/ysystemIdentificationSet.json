@@ -1,0 +1,14 @@
+{
+    "d": {
+        "results": [
+            {
+                "__metadata": {
+                    "id": "https://hecdlchttp.merckgroup.com/sap/opu/odata/sap/YSD_MOET_SRV/ysystemIdentificationSet(Yydesc='')",
+                    "uri": "https://hecdlchttp.merckgroup.com/sap/opu/odata/sap/YSD_MOET_SRV/ysystemIdentificationSet(Yydesc='')",
+                    "type": "YSD_MOET_SRV.ysystemIdentification"
+                },
+                "Yydesc":""
+            }
+        ]
+    }
+}

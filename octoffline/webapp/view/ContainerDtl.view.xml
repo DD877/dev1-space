@@ -1,0 +1,506 @@
+<core:View controllerName="glb.gtmh.oct.controller.ContainerDtl"
+  xmlns:c="sap.ui.commons" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:custom="glb.gtmh.oct.controls">
+  <!-- <App id="MainApp" enableScrolling="false" height="100%" width="100%"> -->
+  <Page class="pageMargin pageGreyBG" height="auto" showHeader="true">
+    <customHeader>
+      <Bar class="customhdr highBar">
+        <contentLeft>
+          <IconTabBar class="tabBar" expandable="false" id="idIconTabBar"
+            select="handleIconTabBarSelect">
+            <items>
+              <IconTabFilter class="tab1" icon="sap-icon://locate-me"
+                iconColor="Positive" key="OT" text="{i18n>operationalTracker}">
+                <Bar class="bar1 sapMInputBaseInner">
+                  <contentLeft>
+                    <Select autoAdjustWidth="true" change="onChangeMarket"
+                      class="panelnoborder height2Rem tabBarCombo downIcon" enabled="true"
+                      id="marketList" items="{path:'/CountryCollection'}">
+                      <core:Item key="{key}" text="{name}" />
+                    </Select>
+                    <!-- <ComboBox id="country_combo1" class="tabBarCombo" -->
+                    <!-- items="{ --> <!-- path: '/CountryCollection1', --> <!-- sorter: { path: 'name' } --> <!-- }"> -->
+                    <!-- <core:Item key="{code}" text="{name}"/> -->
+                    <!-- </ComboBox> -->
+                   <core:Icon src="sap-icon://appointment"
+                        color="#d3d3d3" size="1rem" class="calIcon pointer">
+                       <core:tooltip>
+                          <core:Fragment
+                            fragmentName="glb.gtmh.oct.view.fragments.containerDtlDatePopover"
+                            type="XML" />
+                        </core:tooltip>
+                      </core:Icon>
+                   <!-- <Image class="side" press="openCalender" src="img/calender.PNG"></Image>-->
+                    <!-- <Text class="whitecolortext dateLabelAlign" id="filterType1"/> -->
+                    <!-- <Text class="whitecolortext dateLabelAlign" id="filterType"/> -->
+                    <Text class="whitecolortext dateLabelAlign" id="filterType" visible="false"/>
+                    <Text class="whitecolortext dateLabelAlign" id="dateRangeText" visible="false"/>
+                    <Text class="whitecolortext dateLabelAlign" text="{appProperties>/dateRangeText}" />
+                    <!-- <Text -->
+                    <!-- id="dateRangeText" class="whitecolortext dateLabelAlign"/> -->
+                  </contentLeft>
+                  <contentMiddle></contentMiddle>
+                </Bar>
+              </IconTabFilter>
+              <IconTabFilter icon="sap-icon://performance"
+                iconColor="Positive" key="KPI" text="{i18n>kpiDashboard}" />
+              <IconTabFilter icon="sap-icon://action-settings"
+                iconColor="Positive" key="Set" text="{i18n>settings}" />
+            </items>
+          </IconTabBar>
+          <Image class="userPic" src="{parts:[{path:'userMarketModel>/PortalURL'},{path:'userMarketModel>/UserId'}],
+          formatter:'glb.gtmh.oct.util.Formatter.getImgURL'}"></Image>
+          <Text class="welcomeText" text="{parts:[{path:'userModel>/FirstName'},{path:'userModel>/LastName'}],
+          formatter:'glb.gtmh.oct.util.Formatter.getWelcomeText'}" maxLines="2"/>
+          <Image class="logo" src="./img/img_in.png">
+            <tooltip>
+              <core:Fragment
+                fragmentName="glb.gtmh.oct.view.fragments.menuIngenius"
+                type="XML" />
+            </tooltip>
+          </Image>
+          <Bar class="subBar" id="routePageBar">
+            <contentLeft>
+              <Button class="navBarButton" id="dashboardBtn" press="navBack"
+                text="{i18n>myDashboard}"></Button>
+              <Image height="25px" src="./img/line.png" width="1px" />
+              <Button class="navBarButton navBarBtnBold" id="planAdvBtn"
+                text="{i18n>planningAdvisor}"></Button>
+              <Image height="25px" src="./img/line.png" width="1px" />
+              <Button class="navBarButton" id="distCentLoadBtn" press="toDCLoad"
+                text="{i18n>distributionCenterLoad}"></Button>
+            </contentLeft>
+          </Bar>
+        </contentLeft>
+      </Bar>
+    </customHeader>
+    <Panel class="pageBackColor BotPadPanel noHeaderHdr" width="100%">
+      <VBox id="bigbox">
+        <HBox class="h_left panel_header" width="100%">
+          <VBox class="panel_header" id="upperArea" width="75%">
+            <Panel class="topPanel noHeaderHdr" height="100px" width="100%">
+              <!-- <HBox> -->
+              <Button class="ovalEdgeBtn boldBtn" icon="sap-icon://response"
+                id="backBtn" press="navBack" text="{i18n>backToResultView}"></Button>
+              <!-- <Image src="img/leftArrow.jpg" class="img4"></Image> -->
+              <Button class="backButton_padding navButton" icon="sap-icon://nav-back"
+                id="prev" press="prevContainer" text=""></Button>
+              <l:VerticalLayout class="vHeader">
+                <Label class="sapMH6FontSize textCenter" id="lbl_totcont"
+                  text="" width="15rem" />
+                <Label class="lbl4 textCenter" id="lbl_current" text=""
+                  width="15rem" />
+              </l:VerticalLayout>
+              <!-- <Button id="right" icon="sap-icon://media-play"></Button> -->
+              <Button class="navButton" icon="sap-icon://feeder-arrow"
+                id="next" press="nextContainer" text=""></Button>
+              <Button class="ovalEdgeBtn floatRight" icon="sap-icon://email"
+                press="MailClicked" text=""></Button>
+              <!-- </HBox> -->
+            </Panel>
+            <Panel class="panelborder noPaddingPanel overflowHide noHeaderHdr"
+              height="auto" id="map_panel" width="100%">
+              <HBox height="20%">
+                <VBox width="55%">
+                  <!-- <VBox> -->
+                  <HBox class="zIndex2"
+                    displayInline="{parts:[{path :'/InitDelDate'},{path:'/UDelDate'},{path:'/Container'},{path:'/GRInd'}], formatter:'glb.gtmh.oct.util.Formatter.containerDetailColor'}">
+                    <VBox width="70%" class="carrierBox">
+                      <!--Label class="lbl1" id="lbl_cnum"
+                        text="{path:'/Container',formatter:'glb.gtmh.oct.util.Formatter.setContainerText' }" /-->
+                      <Link id="cnumLink" class="lbl1 cLink" subtle="true"
+                      href="{parts:[{path:'userMarketModel>/PortalURL'},{path:'/ASN'},{path:'userMarketModel>/SupportMktInd'}],
+                      formatter:'glb.gtmh.oct.util.Formatter.getContainerUrl'}"
+                        text="{path:'/Container',formatter:'glb.gtmh.oct.util.Formatter.setContainerText'}" target="_blank" />
+
+
+                        <Label class="carrierLbl" id="lbl_carrier"
+                        text="{containerDetail>/CarrierName}" />
+                      <Label class="etaUpdLbl" id="lbl_time"
+                        text="{path:'/LatestMsgDate', formatter:'glb.gtmh.oct.util.Formatter.getLastETADateOnly'}" />
+                        <!--{path:'/time', formatter:'glb.gtmh.oct.util.Formatter.formatDate'}" />-->
+                    </VBox>
+                    <VBox>
+                      <Text class="red_panel_lbl3" id="txt_status" maxLines="2"
+                        text="{parts:[{path :'/InitDelDate'},{path:'/UDelDate'},{path:'/Container'},{path:'/GRInd'}], formatter:'glb.gtmh.oct.util.Formatter.alignmentText'}" />
+                      <Text class="red_panel_lbl3"
+                        text="{parts:[{path :'/InitDelDate'},{path:'/UDelDate'},{path:'/Container'},{path:'/GRInd'}], formatter:'glb.gtmh.oct.util.Formatter.alignmentStatus'}" />
+                    </VBox>
+                  </HBox>
+                  <HBox class="panel_mid">
+                    <VBox width="35%">
+                      <Text class="vboxpad1 bold" id="lbl_origin" maxLines="3"
+                        text="{containerDetail>/OriginCity}, {/OriginCountry}" />
+                      <Label class="vboxpad2" id="lbl_startdt"
+                        text="{path:'containerDetail>/EventSet/results/0/UTCReceiveDate', formatter:'glb.gtmh.oct.util.Formatter.dateConvert' }" />
+                    </VBox>
+                    <VBox class="navArrowBox" width="15%">
+                      <core:Icon class="navarrowbig" color="#ffffff"
+                        src="sap-icon://navigation-right-arrow"></core:Icon>
+                      <!-- <Image src="img/Arrow.jpg" class="img2"></Image> -->
+                    </VBox>
+                    <VBox width="35%">
+                      <Text class="vboxpad1 bold" maxLines="3" id="lbl_dest"
+                        text="{/DestinationDCDesc}" />
+                      <VBox>
+                        <l:HorizontalLayout>
+                          <Label class="vboxpad2" text="{i18n>revDelv}" />
+                          <Label class="font12" id="lbl_actdtt"
+                            text="{path:'/UDelDate', formatter:'glb.gtmh.oct.util.Formatter.dateConvert' }" />
+                        </l:HorizontalLayout>
+                        <l:HorizontalLayout>
+                          <Label class="vboxpad2" text="{i18n>orgDelv}" />
+                          <Label class="font12" id="lbl_plandt"
+                            text="{path:'/InitDelDate', formatter:'glb.gtmh.oct.util.Formatter.dateConvert' }" />
+                        </l:HorizontalLayout>
+                      </VBox>
+                    </VBox>
+                    <VBox width="15%">
+                      <Label class="roundLblDtl" id="lbl_align"
+                        text="{ parts:[{path :'/InitDelDate'},{path:'/UDelDate'},{path:'/Container'},{path:'/GRInd'}], formatter:'glb.gtmh.oct.util.Formatter.containerStatusInfo' }"></Label>
+                    </VBox>
+                  </HBox>
+                  <HBox class="h3" justifyContent="SpaceBetween">
+                    <VBox class="v1 height1Dot35Rem">
+                      <Label class="nestleSize" text="{i18n>purchaseOrder}"></Label>
+                      <Link id="poLink" class="gap font1rem fontLink" emphasized="true"
+                      href="{parts:[{path:'userMarketModel>/PortalURL'},{path:'/PO'},{path:'containerDetail>/SysAliasSTO'}],formatter:'glb.gtmh.oct.util.Formatter.getPOUrl'}"
+                        text="{/PO}" target="_blank" press="onPoStoClick" />
+                      <Button class="gapbtn ovalEdgeBtn compressedBtn"
+                        emphasized="true" id="POBtn" press="updateClicked" text="{i18n>updateDDate}" />
+                    </VBox>
+                    <!-- <VBox class="v1"> -->
+                    <!-- <Label class="nestleSize" text="{i18n>asnNumber}"></Label> -->
+                    <!-- <Link class="gap font1rem" emphasized="true" href="#" text="{/ASN}"/> -->
+                    <!-- </VBox> -->
+                    <VBox class="v1 height1Dot35Rem">
+                      <Label class="nestleSize" text="{i18n>asnNumber}"></Label>
+                      <Link class="gap font1rem fontLink" emphasized="true"
+                      href="{parts:[{path:'userMarketModel>/PortalURL'},{path:'/ASN'},{path:'containerDetail>/SysAliasDLV'}],formatter:'glb.gtmh.oct.util.Formatter.getDeliveryUrl'}"
+                        text="{/ASN}" target="_blank" press="onASNClick" />
+                      <Button class="gapbtn ovalEdgeBtn compressedBtn"
+                        emphasized="true" id="ASNBtn" press="setContainerUIC" text="{i18n>setContainer}" />
+                    </VBox>
+                    <VBox class="v1 height1Dot35Rem">
+                      <Label class="nestleSize" text="{i18n>sto}"></Label>
+                      <Link id="stoLink" class="gap font1rem fontLink" emphasized="true"
+                      href="{parts:[{path:'userMarketModel>/PortalURL'},{path:'/STO'},{path:'containerDetail>/SysAliasSTO'}],formatter:'glb.gtmh.oct.util.Formatter.getPOUrl'}"
+                        text="{/STO}" target="_blank" press="onPoStoClick" />
+                      <Button class="gapbtn ovalEdgeBtn compressedBtn"
+                        emphasized="true" id="STOBtn" press="updateClicked" text="{i18n>updateDDate}" />
+                      <!-- <Button text="Update D.Date" class="gapbtn"/> -->
+                    </VBox>
+                  </HBox>
+                </VBox>
+                <!-- </VBox> -->
+                <VBox width="45%">
+                  <!-- <l:VerticalLayout> -->
+                  <!-- <Image src="./img/map.png" height="270px" width="100%"></Image> -->
+                  <Panel class="noHeaderHdr" height="260px" width="99.5%">
+                    <!-- <Label text="Products" class="sapMH4FontSize" -->
+                    <!-- design="Bold"/> -->
+                    <!-- <HBox class="hboxpad"> -->
+                    <!-- <l:VerticalLayout class="rightFloatHLItems"> -->
+                    <l:HorizontalLayout class="rightFloatHLItems">
+                      <l:VerticalLayout>
+                        <Select autoAdjustWidth="true" change="onChangePriority"
+                          class="panelnoborder height2Rem" enabled="true" id="sel_priority"
+                          selectedKey="1">
+                          <core:Item key="1" text="{i18n>key1}" />
+                          <core:Item key="2" text="{i18n>key2}" />
+                          <core:Item key="3" text="{i18n>key3}" />
+                        </Select>
+                        <Label class="priorityLabel" id="flagText" text=""></Label>
+                      </l:VerticalLayout>
+                      <core:Icon class="sizeIcon paddingRight30 priorityFlag"
+                        color="{path:'/Priority',formatter:'glb.gtmh.oct.util.Formatter.setFlagColor'}"
+                        id="flag" src="sap-icon://flag"></core:Icon>
+                    </l:HorizontalLayout>
+                    <!-- <Label id="flagText" text="" class="priorityLabel"></Label> -->
+                    <!-- </l:VerticalLayout> -->
+                    <!-- </HBox> -->
+                    <!-- <Label text="Products" class="sapMH4FontSize" -->
+                    <!-- design="Bold"/> -->
+                    <Panel class="noPaddingPanel overflowShow noHeaderHdr contentAutoHeight">
+                      <Table class="item-table" id="idContainerTable1" inset="false"
+                        items="{ path: '/ItemSet/results' }">
+                        <columns>
+                          <Column class="sku" width="20%">
+                            <Text text="{i18n>sku}" />
+                          </Column>
+                          <Column hAlign="Begin" width="">
+                            <Text class="desc" text="{i18n>description}" />
+                          </Column>
+                          <Column hAlign="Right" width="25%">
+                            <Text class="quant" text="{i18n>qty}" />
+                          </Column>
+
+                        </columns>
+                        <items>
+                          <ColumnListItem type="Active">
+                            <cells>
+                              <Link class="gap" emphasized="true"
+                                href="{parts:[{path:'userMarketModel>/PortalURL'},{path:'userMarketModel>/SysAliasAPO'},{path:'SKU'},{path:'containerDetail>/ReceivingPlant'},{path:'/UDelDate'}],formatter:'glb.gtmh.oct.util.Formatter.getURL'}"
+                                press="onSKUClick" target=" _blank" text="{SKU}" />
+                              <!-- <Text text="{SKU}"/> -->
+                              <Text text="{parts:[{path:'ASNItem'},{path:'batchModel>/BatchDetails'},{path:'Description'}],
+                              formatter:'glb.gtmh.oct.util.Formatter.setBatchDetails'}">
+                              <!--Text text="{parts:[{path:'ASNItem'},{path:'Description'}],formatter:'glb.gtmh.oct.util.Formatter.setBatchDetails'}"-->
+                              <tooltip>
+                               <core:Fragment
+                                 fragmentName="glb.gtmh.oct.view.fragments.containerDtlBatchDetails"
+                                 type="XML" />
+                             </tooltip>
+                          </Text>
+                              <Text text="{parts:[{path:'OrderQty'},{path:'OrderUnit'}],formatter:'glb.gtmh.oct.util.Formatter.getOrderAndUnit'}" />
+                              <!--Text text="{OrderQty}" />
+                               <Text text="{OrderUnit}"/-->
+
+                            </cells>
+                          </ColumnListItem>
+                        </items>
+                      </Table>
+                    </Panel>
+                  </Panel>
+                </VBox>
+              </HBox>
+              <HBox class="h4">
+                <Text class="nestleSize ashColor" text="{i18n>via}" />
+                <core:Icon class="navarrowsmall" color="#ffffff"
+                  height="5%" src="sap-icon://slim-arrow-right"></core:Icon>
+                <!-- <Image src="img/small_arrow.jpg" class="img3"></Image> -->
+                <Text class="nestleSize bold ashColor"
+                  text="{/PORDesc}"/>
+                <core:Icon class="navarrowsmall" color="#ffffff"
+                  height="5%" src="sap-icon://slim-arrow-right"></core:Icon>
+                <Text class="nestleSize bold ashColor" id="lbl_sailport"
+                  text="{/POLDesc}"/>
+                  <!--{parts:[{path:'/PortOfLoading'},{path:'/POLDesc'}],formatter:'glb.gtmh.oct.util.Formatter.setDesc'}" /-->
+                <core:Icon class="navarrowsmall" color="#ffffff"
+                  height="5%" src="sap-icon://slim-arrow-right"></core:Icon>
+                <!-- <Image src="img/small_arrow.jpg" class="img3"></Image> -->
+                <Text class="nestleSize bold ashColor" id="lbl_arrivalport"
+                  text="{/PODDesc}"/>
+                  <!--{parts:[{path:'/PortOfDischarge'},{path:'/PODDesc'}],formatter:'glb.gtmh.oct.util.Formatter.setDesc'}" /-->
+                <core:Icon class="navarrowsmall" color="#ffffff"
+                  height="5%" src="sap-icon://slim-arrow-right"></core:Icon>
+                  <Text class="nestleSize bold ashColor"
+                  text="{/POEDesc}"/>
+                <core:Icon class="navarrowsmall" color="#ffffff"
+                  height="5%" src="sap-icon://slim-arrow-right"></core:Icon>
+                <!-- <core:Icon src="sap-icon://navigation-right-arrow" color="#ffffff" -->
+                <!-- height="10px" class="navarrowsmall"> -->
+                <!-- </core:Icon> -->
+                <!-- <Image src="img/small_arrow.jpg" class="img3"></Image> -->
+              </HBox>
+            </Panel>
+            <Panel class="panelborder noHeaderHdr" width="auto">
+              <l:HorizontalLayout id="tpHdrLayout" class="floatSecondChild transitProgHdr">
+                <VBox class="Transit">
+                  <Label class="nestleSizetransit" design="Bold"
+                    text="{i18n>transitProgression}" />
+                  <HBox>
+                    <!--<Label class="lebelsummary" text="{i18n>summary}"/> <Label
+                      text="{i18n>allEvents}"/> -->
+                    <Link class="allEventsDT lebelsummary bold" id="summaryId"
+                      press="allEvents" text="{i18n>summary}" />
+                    <!-- <Label text="{i18n>allEvents}"/> -->
+                    <Link class="allEventsDT" id="linkid" press="allEvents"
+                      text="{i18n>allEvents}" />
+                  </HBox>
+                </VBox>
+                <Button class="ovalEdgeBtn compressedBtn" emphasized="true"
+                  press="openGTNexus" text="{i18n>openGTNexus}" visible="{path:'/Container',formatter:'glb.gtmh.oct.util.Formatter.setGTNexusBtnVisibility'}" />
+              </l:HorizontalLayout>
+              <l:VerticalLayout height="200px" id="vlayout1"
+                width="auto" class="topPad2Rem">
+                <l:VerticalLayout height="180px" id="TransRt"
+                  width="auto" />
+              </l:VerticalLayout>
+              <Panel class=" panelmargin noHeaderHdr" id="pidallEvents" backgroundDesign="Transparent"
+                width="100%">
+                <l:VerticalLayout class="botMargin2Rem">
+                  <!-- <Label class="nestleSizeBig" text="{i18n>mostRecentETAUpdate}"></Label> -->
+                  <Table
+                    class="tblRowHeight firstColBorderallEvents productsTableallEvents allEventsfont allEventsfontcellText"
+                    growing="false" growingScrollToLoad="false" id="idProductsTableallEvents"
+                    inset="false" items="{ path: '/Events' , sorter: {path:'UTCReceiveDate', descending: true}}" listSeparator="All">
+                    <columns>
+                      <Column demandPopin="true">
+                        <Text text="" />
+                      </Column>
+                      <Column demandPopin="true">
+                        <Text class="allEventsfont" text="{i18n>event}" />
+                      </Column>
+                      <Column demandPopin="true" hAlign="Left">
+                        <Text class="allEventsfont" text="{i18n>timeofevent}" />
+                      </Column>
+                      <Column demandPopin="true" hAlign="Left">
+                        <Text class="allEventsfont" text="{i18n>location}" />
+                      </Column>
+                      <Column hAlign="Left">
+                        <Text class="allEventsfont" text="{i18n>vesselandvoyage}" />
+                      </Column>
+                    </columns>
+                    <items>
+                      <ColumnListItem>
+                        <cells>
+                          <Text
+                            text="{path:'UTCReceiveDate',formatter:'glb.gtmh.oct.util.Formatter.dateTimeConvert2'}" />
+                          <Text text="{EventDesc}" />
+                          <Text
+                            text="{path:'EventDate',formatter:'glb.gtmh.oct.util.Formatter.dateTimeConvert2'}" />
+                          <Text text="{parts:[{path:'Location'},{path:'LocDesc'}],formatter:'glb.gtmh.oct.util.Formatter.getEventLocation'}" />
+                          <Text text="{containerDetail>/Vessel} {containerDetail>/Voyage}" />
+                          <!-- {Voyage}" />-->
+                        </cells>
+                      </ColumnListItem>
+                    </items>
+                  </Table>
+                </l:VerticalLayout>
+              </Panel>
+            </Panel>
+            <!-- <HBox> -->
+            <Panel
+              class="panelnoborder bgGrey pospanel noPadAndBorderPanel noHeaderHdr"
+              id="bottom_panel" width="100%">
+              <HBox height="25%" width="100%">
+                <VBox width="99.8%">
+                  <Panel class="panelborder noHeaderHdr" height="auto"
+                    width="100%">
+                    <content>
+                    <Label class="nestleSizetransit totalWidth" design="Bold"
+                      text="{i18n>utilization}" />
+                    <HBox>
+                      <VBox class="v2 vboxpadding" width="50%">
+
+                        <Label class="sapMH9FontSize" text="{i18n>containerSize}" />
+                        <Text class="paddinglebel sapMH9FontSize" maxLines="3" id="lbl_contsize" text="{containerDetail>/ContainerDesc}" tooltip="{containerDetail>/ContainerDesc}" />
+                      </VBox>
+                      <VBox class="vboxpadding" width="50%">
+                        <Label class="" text="{i18n>palletDtl}" />
+                        <Label class=" paddinglebel "
+                          design="Bold" id="lbl_pallet" text="{path:'/Pallet',formatter:'glb.gtmh.oct.util.Formatter.getPallets'}"  />
+                      </VBox>
+                      <VBox class="vboxpadding" width="120%">
+                        <Label class="" text="{i18n>grossWeight}" />
+                        <Label class=" paddinglebel  "
+                          design="Bold" id="lbl_contsize2" text="{containerDetail>/GrossWeight} {containerDetail>/GrossWeightUnit}" />
+                          <ProgressIndicator
+                              class="progress  progressbarUtl grayBar" width="70%"
+                              displayValue="{path:'containerDetail>/VUPercWeight',formatter:'glb.gtmh.oct.util.Formatter.setPercentText'}" id="pi_fillvol"
+                              percentValue="{path:'containerDetail>/VUPercWeight',formatter:'glb.gtmh.oct.util.Formatter.setPercentValue'}" showValue="true" state="None"
+                               />
+                        <!-- <ProgressIndicator class="progress" -->
+                        <!-- width="100%" percentValue="{/VUVolume}" displayValue="{/VUVolume}%" -->
+                        <!-- barColor="grey" showValue="true" state="None"/> -->
+                      </VBox>
+                      <VBox class="vboxpadding" width="120%">
+                        <Label class="" text="{i18n>vuVolumedtl}" />
+                        <Label class=" paddinglebel  "
+                          design="Bold"  text="{containerDetail>/GrossVolume} {containerDetail>/GrossVolumeUnit}" />
+                        <!--l:HorizontalLayout class="totalWidth volChilds"-->
+                          <ProgressIndicator
+                            class="progress  progressbarUtl grayBar" width="70%"
+                            displayValue="{path:'containerDetail>/VUPercVolume',formatter:'glb.gtmh.oct.util.Formatter.setPercentText'}"
+                            percentValue="{path:'containerDetail>/VUPercVolume',formatter:'glb.gtmh.oct.util.Formatter.setPercentValue'}"
+                            showValue="true" state="None"
+                             />
+                          <!--Label class="paddinglebel  paddingLblVal"
+                            design="Bold" id="lbl_contsize1" text="{containerDetail>/GrossVolume} m3" />
+                        </l:HorizontalLayout-->
+
+                      </VBox>
+                    </HBox>
+                    <!--c:HorizontalDivider class="thickSeparator"
+                      width="100%"></c:HorizontalDivider>
+                    <Panel class="moreDetailsPanel noPaddingPanel nolineHdr"
+                      expand="setHeaderText" expandable="true" expanded="false"
+                      headerText="{i18n>moreDetailsExpanded}" width="100%">
+                      <HBox>
+                        <VBox class="v2 vboxpaddingMoreDtl" width="60%">
+                        </VBox>
+                        <VBox class="vboxpaddingMoreDtl" width="60%">
+                        </VBox>
+                        <VBox class="vboxpaddingMoreDtl" width="150%">
+                          <Label class="" text="{i18n>uvweight}" />
+
+                          <l:HorizontalLayout class="totalWidth volChilds">
+                            <ProgressIndicator
+                              class="progress  progressbarUtl grayBar topMargin5Percent"
+                              displayValue="{path:'containerDetail>/VUPercWeight',formatter:'glb.gtmh.oct.util.Formatter.setPercentText'}" id="pi_fillvol"
+                              percentValue="{path:'containerDetail>/VUPercWeight',formatter:'glb.gtmh.oct.util.Formatter.setPercentValue'}" showValue="true" state="None"
+                              width="100%" />
+                            <Label class="paddinglebel  paddingLblVal"
+                              design="Bold" id="lbl_contsize5" text="{containerDetail>/VUWeight} kg" />
+
+                          </l:HorizontalLayout>
+
+
+                        </VBox>
+
+                        <VBox class="vboxpaddingMoreDtl" width="150%">
+                          <Label class="" text="{i18n>vuVolume}" />
+                          <l:HorizontalLayout class="totalWidth volChilds">
+                            <ProgressIndicator
+                              class="progress  progressbarUtl grayBar topMargin5Percent"
+                              displayValue="{path:'containerDetail>/VUPercVolume',formatter:'glb.gtmh.oct.util.Formatter.setPercentText'}" id="pi_fillvol1"
+                              percentValue="{path:'containerDetail>/VUPercVolume',formatter:'glb.gtmh.oct.util.Formatter.setPercentValue'}" showValue="true" state="None"
+                              width="100%" />
+
+                            <Label class=" paddinglebel paddingLblVal"
+                              design="Bold" id="lbl_contsize8" text="{containerDetail>/VUVolume} m3" />
+
+                          </l:HorizontalLayout>
+                        </VBox>
+                      </HBox>
+
+
+                    </Panel-->
+                    </content>
+                  </Panel>
+                </VBox>
+              </HBox>
+            </Panel>
+          </VBox>
+          <Button class="smallIconBtn smallIconBtnRight ovalEdgeBtn"
+            icon="sap-icon://media-play" id="right" press="clicktoExpand"></Button>
+          <VBox class="panel_right feederwhiteBG bgWhite" id="commentsid"
+            width="25%">
+            <!-- <Panel> -->
+            <!-- <Image src="img/Arrow.jpg" class="img2"></Image> -->
+            <!-- <content> -->
+            <!-- <Button text="Comments"> -->
+            <!-- <Label text="Actions for {/Container}" class="sapMH5FontSize" -->
+            <!-- design="Bold"/> -->
+            <!-- </content> -->
+            <!-- </Panel> -->
+            <!-- <Panel headerText="Feeds" width="500px"> -->
+            <!-- <content> -->
+           <!--  <FeedInput post="onPost" icon="img/pic2.png"
+             class="noFeedBtn feedColor feedPost"/>-->
+            <FeedInput id="feedInput" class="noFeedBtn feedColor feedPost"
+              icon="{parts:[{path:'userMarketModel>/PortalURL'},{path:'/UserId'}],formatter:'glb.gtmh.oct.util.Formatter.getImgURL'}"
+              post="onPost" />
+            <!-- <HBox> -->
+            <Button id="commentBtn" ariaDescribedBy="defaultButtonDescription genericButtonDescription"
+              class="btnpadding commentBtn ovalEdgeBtn compressedBtn grayBtn" press="postComment"
+              text="{i18n>comments}"></Button>
+            <!-- </HBox> -->
+
+            <List id="feedLst" items="{/EntryCollection}" showSeparators="Inner" class="feedList">
+              <custom:FeedListItemCust class="roundFLImg"
+                icon="{parts:[{path:'userMarketModel>/PortalURL'},{path:'UserId'}], formatter:'glb.gtmh.oct.util.Formatter.getImgURL' }"
+                iconDensityAware="false" info="{Type}" sender="{FirstName} {LastName}" text="{ChatText}"
+                timestamp="{path:'UDate',formatter:'glb.gtmh.oct.util.Formatter.tsToDate'}" />
+            </List>
+
+            <!-- </content> -->
+            <!-- </Panel> -->
+          </VBox>
+        </HBox>
+      </VBox>
+    </Panel>
+  </Page>
+  <!-- </App> -->
+</core:View>

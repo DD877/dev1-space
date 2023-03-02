@@ -1,0 +1,22 @@
+{
+    "d": {
+        "results": [
+            {
+                "__metadata": {
+                    "id": "https://hecdlchttp.merckgroup.com/sap/opu/odata/sap/YSD_MOET_SRV/ysoschedulelinesSet(Unit='',Sysid='',salesorg='',ReqQty='',ReqDate='',Material='',division='',distchnl='',customer='')",
+                    "uri": "https://hecdlchttp.merckgroup.com/sap/opu/odata/sap/YSD_MOET_SRV/ysoschedulelinesSet(Unit='',Sysid='',salesorg='',ReqQty='',ReqDate='',Material='',division='',distchnl='',customer='')",
+                    "type": "YSD_MOET_SRV.ysoschedulelines"
+                },
+                "Unit":"",
+                "Sysid":"",
+                "salesorg":"",
+                "ReqQty":"", 
+                "ReqDate":"",
+                "Material":"",
+                "division":"",
+                "distchnl":"",
+                "customer":""
+            }
+        ]
+    }
+}

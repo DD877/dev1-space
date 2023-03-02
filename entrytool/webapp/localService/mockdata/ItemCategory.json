@@ -1,0 +1,216 @@
+{
+  "d": {
+    "results": [
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='TEST%201',ZSYSTEM='T')"
+        },
+        "ZITM_CATEGORY": "TEST 1",
+        "ZSYSTEM": "T",
+        "ZITM_CATEGORY_DESC": "Test Item",
+        "ZDEL_FLAG": ""
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='TEST2345',ZSYSTEM='T')"
+        },
+        "ZITM_CATEGORY": "TEST2345",
+        "ZSYSTEM": "T",
+        "ZITM_CATEGORY_DESC": "TEST2345",
+        "ZDEL_FLAG": ""
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='YCH3',ZSYSTEM='T')"
+        },
+        "ZITM_CATEGORY": "YCH3",
+        "ZSYSTEM": "T",
+        "ZITM_CATEGORY_DESC": "3rd Party w/ GR FOC",
+        "ZDEL_FLAG": ""
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='YCHS',ZSYSTEM='T')"
+        },
+        "ZITM_CATEGORY": "YCHS",
+        "ZSYSTEM": "T",
+        "ZITM_CATEGORY_DESC": "3rd Party Item w/ GR",
+        "ZDEL_FLAG": ""
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='YDEL',ZSYSTEM='L')"
+        },
+        "ZITM_CATEGORY": "YDEL",
+        "ZSYSTEM": "L",
+        "ZITM_CATEGORY_DESC": "dEL TEST 2",
+        "ZDEL_FLAG": ""
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='YTA1',ZSYSTEM='L')"
+        },
+        "ZITM_CATEGORY": "YTA1",
+        "ZSYSTEM": "L",
+        "ZITM_CATEGORY_DESC": "Free of Charge Item",
+        "ZDEL_FLAG": ""
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='YTA1',ZSYSTEM='T')"
+        },
+        "ZITM_CATEGORY": "YTA1",
+        "ZSYSTEM": "T",
+        "ZITM_CATEGORY_DESC": "Free of Charge Item",
+        "ZDEL_FLAG": null
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='YTA2',ZSYSTEM='L')"
+        },
+        "ZITM_CATEGORY": "YTA2",
+        "ZSYSTEM": "L",
+        "ZITM_CATEGORY_DESC": "3rd party FOC",
+        "ZDEL_FLAG": ""
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='YTA2',ZSYSTEM='T')"
+        },
+        "ZITM_CATEGORY": "YTA2",
+        "ZSYSTEM": "T",
+        "ZITM_CATEGORY_DESC": "3rd party FOC",
+        "ZDEL_FLAG": ""
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='YTAN',ZSYSTEM='L')"
+        },
+        "ZITM_CATEGORY": "YTAN",
+        "ZSYSTEM": "L",
+        "ZITM_CATEGORY_DESC": "Standard Item",
+        "ZDEL_FLAG": ""
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='YTAN',ZSYSTEM='T')"
+        },
+        "ZITM_CATEGORY": "YTAN",
+        "ZSYSTEM": "T",
+        "ZITM_CATEGORY_DESC": "Standard Item",
+        "ZDEL_FLAG": ""
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='YTAS',ZSYSTEM='L')"
+        },
+        "ZITM_CATEGORY": "YTAS",
+        "ZSYSTEM": "L",
+        "ZITM_CATEGORY_DESC": "Third Party Item",
+        "ZDEL_FLAG": ""
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='YTAS',ZSYSTEM='T')"
+        },
+        "ZITM_CATEGORY": "YTAS",
+        "ZSYSTEM": "T",
+        "ZITM_CATEGORY_DESC": "Third Party Item",
+        "ZDEL_FLAG": ""
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='YTG1',ZSYSTEM='L')"
+        },
+        "ZITM_CATEGORY": "YTG1",
+        "ZSYSTEM": "L",
+        "ZITM_CATEGORY_DESC": "3prty Inv aft GR FOC",
+        "ZDEL_FLAG": ""
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='YTG1',ZSYSTEM='T')"
+        },
+        "ZITM_CATEGORY": "YTG1",
+        "ZSYSTEM": "T",
+        "ZITM_CATEGORY_DESC": "3prty Inv aft GR FOC",
+        "ZDEL_FLAG": ""
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='YTGR',ZSYSTEM='L')"
+        },
+        "ZITM_CATEGORY": "YTGR",
+        "ZSYSTEM": "L",
+        "ZITM_CATEGORY_DESC": "3rd-party Inv aft GR",
+        "ZDEL_FLAG": ""
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='YTGR',ZSYSTEM='T')"
+        },
+        "ZITM_CATEGORY": "YTGR",
+        "ZSYSTEM": "T",
+        "ZITM_CATEGORY_DESC": "3rd-party Inv aft GR",
+        "ZDEL_FLAG": ""
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='YTS1',ZSYSTEM='L')"
+        },
+        "ZITM_CATEGORY": "YTS1",
+        "ZSYSTEM": "L",
+        "ZITM_CATEGORY_DESC": "Sample FOC Item",
+        "ZDEL_FLAG": ""
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='YTS1',ZSYSTEM='T')"
+        },
+        "ZITM_CATEGORY": "YTS1",
+        "ZSYSTEM": "T",
+        "ZITM_CATEGORY_DESC": "Sample FOC Item",
+        "ZDEL_FLAG": null
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='YYA1',ZSYSTEM='L')"
+        },
+        "ZITM_CATEGORY": "YYA1",
+        "ZSYSTEM": "L",
+        "ZITM_CATEGORY_DESC": "FOC item",
+        "ZDEL_FLAG": ""
+      },
+      {
+        "__metadata": {
+          "type": "com.merckgroup.moet.services.odata.moet.ItemCategoryType",
+          "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/ItemCategory(ZITM_CATEGORY='YYAN',ZSYSTEM='L')"
+        },
+        "ZITM_CATEGORY": "YYAN",
+        "ZSYSTEM": "L",
+        "ZITM_CATEGORY_DESC": "Standard Item cat",
+        "ZDEL_FLAG": ""
+      }
+    ]
+  }
+}

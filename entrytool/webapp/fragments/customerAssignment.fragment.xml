@@ -1,0 +1,110 @@
+<core:FragmentDefinition
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:uxap="sap.uxap"
+    xmlns:table="sap.ui.table"
+    xmlns:sl="sap.ui.comp.navpopover"
+    xmlns:u="sap.ui.unified"
+    xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+>
+    <Dialog contentHeight="auto" contentWidth="90%" showHeader="false" resizable="false">
+        <uxap:ObjectPageLayout enableLazyLoading="true" headerContentPinnable="false" showTitleInHeaderContent="true" showHeaderContent="false" class="newOrder" height="350px">
+            <uxap:headerTitle>
+                <uxap:ObjectPageHeader
+                    objectImageURI="/img/merck-logo.png"
+                    objectImageShape="Circle"
+                    objectTitle=""
+                    objectImageAlt=""
+                    isObjectIconAlwaysVisible="true"
+                    isObjectTitleAlwaysVisible="true"
+                    isObjectSubtitleAlwaysVisible="true"
+                    isActionAreaAlwaysVisible="true"
+                    showPlaceholder="true"
+                    class="newOrderH"
+                >
+                    <HBox justifyContent="End" width="100%" height="100%">
+                        <Button icon="sap-icon://add" text="{i18n>AssignCustomer}" class="ordbtn sapUiSmallMarginEnd" press="onAssignCustPress" />
+                        <Button tooltip="{i18n>Close}" text="{i18n>Close}" icon="sap-icon://decline" press="onCusAssignClose1" />
+                    </HBox>
+                </uxap:ObjectPageHeader>
+            </uxap:headerTitle>
+            <uxap:sections>
+                <uxap:ObjectPageSection title="{i18n>AssignedCustomers}">
+                    <uxap:subSections>
+                        <uxap:ObjectPageSubSection>
+                            <table:Table class="shipclass" rows="{userCustomer1>/}" rowActionCount="2" selectionMode="None" visibleRowCount="8" ariaLabelledBy="title">
+                                <table:columns>
+                                    <table:Column filterProperty="ZCUST_NUM" sortProperty="ZCUST_NUM" defaultFilterOperator="StartsWith">
+                                        <Label text="{i18n>CustomerNumber}" />
+                                        <table:template>
+                                            <Text text="{userCustomer1>ZCUST_NUM}" wrapping="false" />
+                                        </table:template>
+                                    </table:Column>
+                                    <table:Column filterProperty="ZCUSTOMER_NAME" sortProperty="ZCUSTOMER_NAME" defaultFilterOperator="StartsWith">
+                                        <Label text="{i18n>CustomerName}" />
+                                        <table:template>
+                                            <Text text="{userCustomer1>ZCUSTOMER_NAME}" wrapping="false" />
+                                        </table:template>
+                                    </table:Column>
+                                    <table:Column filterProperty="ZSYSTEM" sortProperty="ZSYSTEM" defaultFilterOperator="StartsWith">
+                                        <Label text="{i18n>System}" />
+                                        <table:template>
+                                            <Text text="{= (${userCustomer1>ZSYSTEM} === 'L') ? 'LEAN' : 'TEMPO'}" wrapping="false" />
+                                        </table:template>
+                                    </table:Column>
+                                    <table:Column filterProperty="ZCOMMENTS" sortProperty="ZCOMMENTS" defaultFilterOperator="StartsWith">
+                                        <Label text="{i18n>Comment}" />
+                                        <table:template>
+                                            <Text text="{userCustomer1>ZCOMMENTS}" wrapping="false" />
+                                        </table:template>
+                                    </table:Column>
+                                    <table:Column filterProperty="ZUSR_STATUS_TXT" sortProperty="ZUSR_STATUS_TXT" defaultFilterOperator="StartsWith">
+                                        <Label text="{i18n>Status} / Flag for deletion" />
+                                        <table:template>
+                                            <Text text="{userCustomer1>ZUSR_STATUS_TXT}" wrapping="false" />
+                                        </table:template>
+                                    </table:Column>
+                                    <!--	<table:Column filterProperty="ZREGION" sortProperty="ZREGION" defaultFilterOperator="StartsWith">
+										<Label text="{i18n>Region}"/>
+										<table:template>
+											<Text text="{userCustomer1>ZREGION}" wrapping="false"/>
+										</table:template>
+									</table:Column>
+									<table:Column filterProperty="ZPOSTAL_CODE" sortProperty="ZPOSTAL_CODE" defaultFilterOperator="StartsWith">
+										<Label text="{i18n>PostalCode}"/>
+										<table:template>
+											<Text text="{userCustomer1>ZPOSTAL_CODE}" wrapping="false"/>
+										</table:template>
+									</table:Column>-->
+                                    <!--<table:Column filterProperty="ZDEL_FLAG" sortProperty="ZDEL_FLAG" defaultFilterOperator="StartsWith">
+										<Label text="{i18n>DeletionFlag}"/>
+										<table:template>
+											<Text text="{ftradeAssignment>ZDEL_FLAG}" wrapping="false"/>
+										</table:template>
+									</table:Column>-->
+                                    <!--<table:Column  defaultFilterOperator="StartsWith">
+                                        <Label text="{i18n>DeletionFlag}"/>
+                                        <table:template>
+                                            <Switch change="onUpdateFtrademaster" enabled="{= (${ftradeAssignment>ZDEL_FLAG} === 'X') ? true : false }" type="AcceptReject"
+                                                state="{= (${ftradeAssignment>ZDEL_FLAG} === 'X') ? true : false }"/>
+                                        </table:template>
+                                    </table:Column>-->
+                                </table:columns>
+                                <table:rowActionTemplate>
+                                    <table:RowAction>
+                                        <table:items>
+                                            <table:RowActionItem icon="sap-icon://edit" text="{i18n>Edit}" press="onEditCustAssignPress" />
+                                            <table:RowActionItem icon="sap-icon://delete" text="{i18n>Delete}" press="_onDeleteCustAssign" />
+                                        </table:items>
+                                    </table:RowAction>
+                                </table:rowActionTemplate>
+                            </table:Table>
+                        </uxap:ObjectPageSubSection>
+                    </uxap:subSections>
+                </uxap:ObjectPageSection>
+            </uxap:sections>
+        </uxap:ObjectPageLayout>
+    </Dialog>
+</core:FragmentDefinition>

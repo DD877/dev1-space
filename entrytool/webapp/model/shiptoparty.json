@@ -1,0 +1,23 @@
+{
+    "CustomerShipToPartyAssignDetails": [
+        {
+            "__metadata": {
+                "type": "com.merckgroup.moet.services.odata.moet.CustomerShipToPartyAssignDetailsType",
+                "uri": "https://jx4aa4d355e1.hana.ondemand.com:443/com/merckgroup/moet/services/odata/moet.xsodata/CustomerShipToPartyAssignDetails(ZCUSTMR_NUM='10019973',ZSHIP_TO_PARTY='10019973',ZSYSTEM='T')"
+            },
+            "ZCUSTMR_NUM": "10019973",
+            "ZSHIP_TO_PARTY": "10019973",
+            "ZSYSTEM": "T",
+            "ZNAME_1": "APHP PHARMACIE CENTRALE NANTER",
+            "ZSHIP_TO_PARTY_DESC": "APHP PHARMACIE CENTRALE NANTERRE",
+            "ZDEL_FLAG": "",
+            "ZCREATED_BY": "KK1",
+            "ZCREATED_ON": "\/Date(1617795834429)\/",
+            "ZCHANGED_BY": null,
+            "ZCHANGED_ON": null,
+            "ZCITY": "NANTERRE CEDEX",
+            "ZREGION": "",
+            "ZPOSTAL_CODE": "92023"
+        }
+    ]
+}

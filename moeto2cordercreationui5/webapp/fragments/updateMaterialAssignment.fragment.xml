@@ -1,0 +1,36 @@
+<core:FragmentDefinition xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:uxap="sap.uxap"
+	xmlns:table="sap.ui.table" xmlns:u="sap.ui.unified" xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Dialog contentHeight="auto" contentWidth="90%" showHeader="false" resizable="false">
+		<uxap:ObjectPageLayout enableLazyLoading="true" headerContentPinnable="false" showTitleInHeaderContent="true" showHeaderContent="false"
+			class="newOrder" height="350px">
+			<uxap:headerTitle>
+				<uxap:ObjectPageHeader objectImageURI="/img/merck-logo.png" objectImageShape="Circle" objectTitle="{i18n>MaterialAssignment}"
+					objectImageAlt="" isObjectIconAlwaysVisible="true" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true"
+					isActionAreaAlwaysVisible="true" showPlaceholder="true" class="newOrderHP"></uxap:ObjectPageHeader>
+			</uxap:headerTitle>
+			<uxap:sections>
+				<uxap:ObjectPageSection title="{i18n>UpdateMaterialAssignment}" class="tabsc">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection>
+							<f:SimpleForm maxContainerCols="2" editable="true" backgroundDesign="Translucent" layout="ResponsiveGridLayout" labelSpanL="4"
+								labelSpanM="4" labelSpanS="12" emptySpanL="0" emptySpanM="0" columnsL="2" columnsM="2">
+								<f:content>
+									<Label text="{i18n>Customer}" required="true" visible="true"/>
+									<Input enabled="false" type="Text" value="{matAssign>/ZCUST_NUM}"/>
+									<Label text="{i18n>Material}" required="true"/>
+									<Input liveChange="handleChange" value="{matAssign>/ZMAT_NUM}" enabled="true" width="100%"></Input>
+									<Button text="{i18n>Validate}" press="onValidate" width="30%" type="Accept"/>
+									<Label text="{i18n>BasicUnitofMeasure}" required="true"/>
+									<Input change="handleChange" enabled="true" editable="false" value="" id="idQuantityinputb"></Input>
+									<Label visible="false"/>
+									<Button text="{i18n>Save}" press="_onUpdateMatAssign" type="Accept"/>
+									<Button text="{i18n>Cancel}" type="Reject" press="_onCancelCommentsLabel"/>
+								</f:content>
+							</f:SimpleForm>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+			</uxap:sections>
+		</uxap:ObjectPageLayout>
+	</Dialog>
+</core:FragmentDefinition>
